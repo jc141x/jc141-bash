@@ -4,7 +4,6 @@
 
 - Also applies to Sparky Rolling, Siduction, Nitrux which are rolling by default.
 
----------------------------------------------------
 
 ### How to switch Debian 11 to Rolling/Sid.
 ```sh
@@ -21,8 +20,6 @@ deb-src http://deb.debian.org/debian/ sid main
 sudo apt update && sudo apt full-upgrade && sudo reboot
 ```
 - Optionally you can install `apt-listbugs apt-listchanges` to read the bugs and see if any of them will break your distro.
-
----------------------------------------------------
 
 ### MPR and MPR helper
 ```sh
