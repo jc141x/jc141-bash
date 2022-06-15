@@ -10,8 +10,8 @@ BINDIR="$F/groot"; BIN="game.bin"; CMD=(./"$BIN")
 [ ! -f "$BINDIR/$BIN" ] && mkdir -p {"$F/groot-mnt","$F/groot-rw","$F/groot-work","$F/groot"} && dwarfs "$F/groot.dwarfs" "$F/groot-mnt" -o cache_image && fuse-overlayfs -o lowerdir="$F/groot-mnt",upperdir="$F/groot-rw",workdir="$F/groot-work" "$F/groot"
 function cleanup {
 cd "$R" && wineserver -k && fuser -k "$F/groot-mnt"
-[ -d "$F/groot" ] && fusermount -u "$F/groot";
-[ -d "$F/groot-mnt" ] && fusermount -u "$F/groot-mnt" && rm -d -f "$F/groot-mnt"; }
+[ -d "$F/groot" ] && sleep 5 && fusermount -u "$F/groot";
+[ -d "$F/groot-mnt" ] && sleep 5 && fusermount -u "$F/groot-mnt" && rm -d -f "$F/groot-mnt"; }
 trap 'cleanup' EXIT SIGINT SIGTERM
 echo -e "\e[38;5;$((RANDOM%257))m" && cat << 'EOF'
        ⠀⠀⠀  ⠀ ⣴⣶⣤⡤⠦⣤⣀⣤⠆⠀⠀⠀⠀⠀⣈⣭⣿⣶⣿⣦⣼⣆
