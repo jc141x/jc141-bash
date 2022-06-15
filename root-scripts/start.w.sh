@@ -1,23 +1,18 @@
 #!/bin/bash
-cd "$(dirname "$0")" || exit; [ "$EUID" = "0" ] && exit
-RMT="$PWD/files/rumtricks.sh"; WHA="$PWD/files/wha.sh"; [ ! -e "$RMT" ] && cp /usr/bin/rumtricks "$RMT"; [ ! -e "$WHA" ] && cp /usr/bin/wha "$WHA";
-export WINEPREFIX="$PWD/files/prefix"; export WINE_LARGE_ADDRESS_AWARE=1;
+cd "$(dirname "$0")" || exit; [ "$EUID" = "0" ] && exit; R="$PWD"; F="$PWD/files"; RMT="$F/rumtricks.sh"; WHA="$F/wha.sh"; [ ! -e "$RMT" ] && cp /usr/bin/rumtricks "$RMT"; [ ! -e "$WHA" ] && cp /usr/bin/wha "$WHA"; export WINEPREFIX="$F/prefix"; export WINE_LARGE_ADDRESS_AWARE=1;
 
-export BINDIR="$PWD/files/groot"; BIN="game.exe"; echo "$BIN" >"$PWD/files/binval.txt"; ROOTDIR="$PWD";
-export WINEFSYNC=1; export WINEDLLOVERRIDES="mscoree=d;mshtml=d;"
+export WINEFSYNC=1; export WINEDLLOVERRIDES="mscoree=d;mshtml=d;"; export BINDIR="$F/groot"; BIN="game.exe";
 [ -x "/bin/wine-tkg" ] && export WINE="$(command -v wine)" || export WINE="$BINDIR/wine/bin/wine"; CMD=("$WINE" "$BIN")
 
 # gamescope/FSR
-: ${GAMESCOPE:=$(command -v gamescope)}; RRES=$(command -v rres); FSR_MODE="${FSR:=}"
-[ -x "$GAMESCOPE" ] && { [[ -x "$RRES" && -n "$FSR_MODE" ]] && CMD=("$GAMESCOPE" -f $("$RRES" -g "$FSR_MODE") -- "${CMD[@]}") || CMD=("$GAMESCOPE" -f -- "${CMD[@]}"); }
+: ${GAMESCOPE:=$(command -v gamescope)}; RRES=$(command -v rres); FSR_MODE="${FSR:=}"; [ -x "$GAMESCOPE" ] && { [[ -x "$RRES" && -n "$FSR_MODE" ]] && CMD=("$GAMESCOPE" -f $("$RRES" -g "$FSR_MODE") -- "${CMD[@]}") || CMD=("$GAMESCOPE" -f -- "${CMD[@]}"); }
 
 # dwarfs
-[ ! -f "$BINDIR/$BIN" ] && mkdir -p {"$PWD/files/groot-mnt","$PWD/files/groot-rw","$PWD/files/groot-work","$PWD/files/groot"} && dwarfs "$PWD/files/groot.dwarfs" "$PWD/files/groot-mnt" -o cache_image && fuse-overlayfs -o lowerdir="$PWD/files/groot-mnt",upperdir="$PWD/files/groot-rw",workdir="$PWD/files/groot-work" "$PWD/files/groot"
+[ ! -f "$BINDIR/$BIN" ] && mkdir -p {"$F/groot-mnt","$F/groot-rw","$F/groot-work","$F/groot"} && dwarfs "$F/groot.dwarfs" "$F/groot-mnt" -o cache_image && fuse-overlayfs -o lowerdir="$F/groot-mnt",upperdir="$F/groot-rw",workdir="$F/groot-work" "$F/groot"
 function cleanup {
-    cd "$ROOTDIR" && wineserver -k && killall $(<"$PWD/files/binval.txt") && killall gamescope && sleep 10;
-    [ -d "$PWD/files/groot" ] && fusermount -u "$PWD/files/groot";
-    [ -d "$PWD/files/groot-mnt" ] && fusermount -u "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt"
-}
+cd "$R" && wineserver -k && fuser -k "$F/groot-mnt"
+[ -d "$F/groot" ] && fusermount -u "$F/groot";
+[ -d "$F/groot-mnt" ] && fusermount -u "$F/groot-mnt" && rm -d -f "$F/groot-mnt"; }
 trap 'cleanup' EXIT SIGINT SIGTERM
 
 bash "$WHA" wine-tkg; bash "$RMT" isolation
