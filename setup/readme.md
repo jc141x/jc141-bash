@@ -14,10 +14,10 @@
 
 ## Supported distros and their list of required packages
 
-### [Arch](https://johncena141.eu.org:8141/johncena141/jc141-bash/src/branch/main/setup/arch.md) (EndeavourOS (recommended), Arco, Artix, Manjaro etc.)
-### [Debian Sid](https://johncena141.eu.org:8141/johncena141/jc141-bash/src/branch/main/setup/debiansid.md) (Sparky Rolling, Siduction, Nitrux)
-### [openSUSE Tumbleweed](https://johncena141.eu.org:8141/johncena141/jc141-bash/src/branch/main/setup/opensuse.md)
-### [Fedora](https://johncena141.eu.org:8141/johncena141/jc141-bash/src/branch/main/setup/fedora.md) (and Rawhide)
+### [Arch](arch.md) (EndeavourOS (recommended), Arco, Artix, Manjaro etc.)
+### [Debian Sid](debiansid.md) (Sparky Rolling, Siduction, Nitrux)
+### [openSUSE Tumbleweed](opensuse.md)
+### [Fedora](fedora.md) (and Rawhide)
 
 
 ## How to extract the archives
