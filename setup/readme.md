@@ -30,12 +30,6 @@
 
 - Games that run badly mounted, mostly open worlds are automatically extracted at first run.
 
-- Extracting manually
-
-```
-bash dwarfsettings.sh extract
-```
-
 ### zpaq archives:
 ```sh
 cd "path to archive"
@@ -62,5 +56,16 @@ FSR=mode - Universal support for FSR through Gamescope
 
 prime-run - for using Nvidia.
   ```
+## Available commands for dwarfsettings.sh
+```sh
+bash dwarfsettings.sh extract
+extracts groot.dwarfs to groot directory.
+
+bash dwarfsettings.sh force-unmount
+umounts groot-mnt
+
+bash dwarfsettings.sh mount
+mounts groot.dwarfs to groot-mnt
+```
 
 - You can also use [Rum](https://johncena141.eu.org:8141/johncena141/rum) for creating your own game library.
