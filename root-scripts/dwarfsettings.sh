@@ -8,7 +8,7 @@ mount() {
 }
 
 force-unmount() {
-    wineserver -k && killall -f $(<"$PWD/files/binval.txt") && sleep 2
+    wineserver -k && fuser -k "$F/groot-mnt"
     [ -d "$PWD/files/groot" ] && fusermount -u "$PWD/files/groot"
     [ -d "$PWD/files/groot-mnt" ] && fusermount -u "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt"
 }
