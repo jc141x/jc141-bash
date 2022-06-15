@@ -14,7 +14,7 @@ export WINEFSYNC=1; export WINEDLLOVERRIDES="mscoree=d;mshtml=d;"
 # dwarfs
 [ ! -f "$BINDIR/$BIN" ] && mkdir -p {"$PWD/files/groot-mnt","$PWD/files/groot-rw","$PWD/files/groot-work","$PWD/files/groot"} && dwarfs "$PWD/files/groot.dwarfs" "$PWD/files/groot-mnt" -o cache_image && fuse-overlayfs -o lowerdir="$PWD/files/groot-mnt",upperdir="$PWD/files/groot-rw",workdir="$PWD/files/groot-work" "$PWD/files/groot"
 function cleanup {
-    cd "$ROOTDIR" && wineserver -k && killall $(<"$PWD/files/binval.txt") && killall gamescope && sleep 2;
+    cd "$ROOTDIR" && wineserver -k && killall $(<"$PWD/files/binval.txt") && killall gamescope && sleep 10;
     [ -d "$PWD/files/groot" ] && fusermount -u "$PWD/files/groot";
     [ -d "$PWD/files/groot-mnt" ] && fusermount -u "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt"
 }
