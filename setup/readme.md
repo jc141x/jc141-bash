@@ -6,10 +6,12 @@
   <h1>Setup Guide - General</h1>
 </div>
 
+- Support for SteamDeck is work in progress. Documented [here](https://johncena141.eu.org:8141/silentnoodlemaster/steamdeck). SteamDeck testers needed.
+
 ## Not supported:
    - NTFS, because the very different attrs system.
    - LTS distros (Ubuntu LTS, Mint, etc.), because outdated dependencies are hard to support.
-   - Immutable os (SteamOS, Fedora Silverblue), because dependencies are hard to install
+   - Immutable os (SteamOS, Fedora Silverblue), because dependencies are hard to install.
    - Third party programs which override config (Lutris).
 
 ## Supported distros and their list of required packages
@@ -60,7 +62,3 @@ prime-run - for using Nvidia.
   ```
 
 - You can also use [Rum](https://johncena141.eu.org:8141/johncena141/rum) for creating your own game library.
-
----
- 
-- Support for SteamDeck is work in progress. Documented [here](https://johncena141.eu.org:8141/silentnoodlemaster/steamdeck)
