@@ -6,7 +6,7 @@
   <h1>Setup Guide - General</h1>
 </div>
 
-- Support for SteamDeck is work in progress. Documented [here](https://johncena141.eu.org:8141/silentnoodlemaster/steamdeck). SteamDeck testers needed.
+- Support for SteamDeck is work in progress. Documented [here](steamdeck.md). SteamDeck testers needed.
 
 ## Not supported:
    - NTFS, because the very different attrs system.
@@ -26,9 +26,11 @@
 
 ### dwarfs archives:
   
-- They don't need to be extracted, you can play as provided by running the start script.
+- Most of them don't to be extracted, you can play as provided by running the start script.
 
-- However, we do support extracting it for hardware that has very low reading speed like 12 year old laptops.
+- Games that run badly mounted, mostly open worlds are automatically extracted at first run.
+
+- Extracting manually
 
 ```
 bash dwarfsettings.sh extract
