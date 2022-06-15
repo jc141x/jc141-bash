@@ -7,10 +7,6 @@ BINDIR="$F/groot"; BIN="game.nsp"; CMD=("$YUZU" "$BIN");
 # copy backup data to real path
 cp -r "data" "files"
 
-# gamescope/FSR
-: ${GAMESCOPE:=$(command -v gamescope)}; RRES=$(command -v rres); FSR_MODE="${FSR:=}";
-[ -x "$GAMESCOPE" ] && { [[ -x "$RRES" && -n "$FSR_MODE" ]] && CMD=("$GAMESCOPE" -f $("$RRES" -g "$FSR_MODE") -- "${CMD[@]}") || CMD=("$GAMESCOPE" -f -- "${CMD[@]}"); }
-
 echo -e "\e[38;5;$((RANDOM%257))m" && cat << 'EOF'
        ⠀⠀⠀  ⠀ ⣴⣶⣤⡤⠦⣤⣀⣤⠆⠀⠀⠀⠀⠀⣈⣭⣿⣶⣿⣦⣼⣆
        ⠀⠀⠀ ⠀  ⠀⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦
