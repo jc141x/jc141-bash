@@ -7,7 +7,7 @@
 ### DWARFS
 Dwarfs isn't available in the repos and copr, so our temporarily solution is this rpm we made.
 ```sh
-wget -qO ~/Downloads/dwarfs-0.5.6-1.fc36.x86_64.rpm https://johncena141.eu.org:8141/attachments/32d081fa-5109-4db9-8359-8da846e4964d && sudo dnf install ~/Downloads/dwarfs-0.5.6-1.fc36.x86_64.rpm
+wget -qO ~/Downloads/dwarfs-0.6.1-1.fc36.x86_64.rpm https://github.com/jc141x/jc141-bash/releases/download/420/dwarfs-0.6.1-1.fc36.x86_64.rpm && sudo dnf install ~/Downloads/dwarfs-0.6.1-1.fc36.x86_64.rpm
 ```
 
 #### ZPAQ
