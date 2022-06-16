@@ -11,8 +11,8 @@ export WINEFSYNC=1; export WINEDLLOVERRIDES="mscoree=d;mshtml=d;"; export BINDIR
 [ ! -f "$BINDIR/$BIN" ] && mkdir -p {"$F/groot-mnt","$F/groot-rw","$F/groot-work","$F/groot"} && dwarfs "$F/groot.dwarfs" "$F/groot-mnt" -o cache_image && fuse-overlayfs -o lowerdir="$F/groot-mnt",upperdir="$F/groot-rw",workdir="$F/groot-work" "$F/groot"
 function cleanup {
 cd "$R" && wineserver -k && fuser -k "$F/groot-mnt"
-[ -d "$F/groot" ] && sleep 5 && fusermount -u "$F/groot";
-[ -d "$F/groot-mnt" ] && sleep 5 && fusermount -u "$F/groot-mnt" && rm -d -f "$F/groot-mnt"; }
+[ -d "$F/groot" ] && sleep 3 && fusermount -u "$F/groot";
+[ -d "$F/groot-mnt" ] && sleep 3 && fusermount -u "$F/groot-mnt" && rm -d -f "$F/groot-mnt"; }
 trap 'cleanup' EXIT SIGINT SIGTERM
 
 bash "$WHA" wine-tkg; bash "$RMT" isolation
