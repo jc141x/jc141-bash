@@ -50,7 +50,7 @@ run `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 
 reboot and select the option with `linux neptune` using the arrow keys.
 
-follow our [requirements guide](https://johncena141.eu.org:8141/reqs) for Arch, and reboot once more.
+follow our [requirements guide](arch.md) for Arch, and reboot once more.
 
 <br>
 
