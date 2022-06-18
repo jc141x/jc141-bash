@@ -62,7 +62,7 @@ bash dwarfsettings.sh extract
 extracts groot.dwarfs to groot directory.
 
 bash dwarfsettings.sh force-unmount
-umounts groot-mnt
+unmounts groot-mnt
 
 bash dwarfsettings.sh mount
 mounts groot.dwarfs to groot-mnt
