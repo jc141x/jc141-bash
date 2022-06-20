@@ -8,35 +8,38 @@
 
 - Support for SteamDeck is work in progress. Documented [here](steamdeck.md). SteamDeck testers who are open to try other distros are needed. SteamOS users who don't want to try anything else are useless to us. SteamOS is garbage if you seek freedom to play however you want.
 
-## Not supported:
+### Not supported:
    - NTFS, because the very different attrs system.
    - LTS distros (Ubuntu LTS, Mint, etc.), because outdated dependencies are hard to support.
    - Immutable os (SteamOS, Fedora Silverblue), because dependencies are hard to install.
    - Third party programs which override config (Lutris).
 
-## Supported distros and their list of required packages
+### Supported distros and their list of required packages
 
-### [Arch](arch.md) (EndeavourOS (recommended), Arco, Artix, Manjaro etc.)
-### [Debian Sid](debiansid.md) (Sparky Rolling, Siduction, Nitrux)
-### [openSUSE Tumbleweed](opensuse.md)
-### [Fedora](fedora.md) (and Rawhide)
+#### [Arch](arch.md)
+ - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
+#### [Debian Sid](debiansid.md)
+ - or: Sparky Rolling, Siduction, Nitrux
+#### [Fedora](fedora.md)
+ - or: Rawhide
+#### [openSUSE Tumbleweed](opensuse.md)
 
 
-## How to extract the archives
+### How to extract the archives
 
-### dwarfs archives:
+#### dwarfs archives:
   
 - Most of them don't to be extracted, you can play as provided by running the start script.
 
 - Games that run badly mounted, mostly open worlds are automatically extracted at first run.
 
-### zpaq archives:
+#### zpaq archives:
 ```sh
 cd "path to archive"
 zpaq x Game.zpaq
 ``` 
 
-## How to run the games
+### How to run the games
 
 ```sh
 cd "path to extracted game"
@@ -56,7 +59,7 @@ FSR=mode - Universal support for FSR through Gamescope
 
 prime-run - for using Nvidia.
   ```
-## Available commands for dwarfsettings.sh
+### Available commands for dwarfsettings.sh
 ```sh
 bash dwarfsettings.sh extract
 extracts groot.dwarfs to groot directory.
