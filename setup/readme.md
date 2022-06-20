@@ -6,7 +6,7 @@
   <h1>Setup Guide - General</h1>
 </div>
 
-- Support for SteamDeck is work in progress. Documented [here](steamdeck.md). SteamDeck testers needed.
+- Support for SteamDeck is work in progress. Documented [here](steamdeck.md). SteamDeck testers who are open to try other distros are needed. SteamOS users who don't want to try anything else are useless to us. SteamOS is garbage if you seek freedom to play however you want.
 
 ## Not supported:
    - NTFS, because the very different attrs system.
