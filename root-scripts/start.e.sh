@@ -5,7 +5,7 @@ YUZU="$(command -v yuzu)"; export QT_QPA_PLATFORM=xcb
 BINDIR="$F/groot"; BIN="game.nsp"; CMD=("$YUZU" "$BIN");
 
 # copy backup data to real path
-cp -r "data" "files"
+[ ! -d "$F/data" ] && cd "$F" && cp -r "data-backup" "data"
 
 echo -e "\e[38;5;$((RANDOM%257))m" && cat << 'EOF'
        ⠀⠀⠀     ⠀ ⣴⣶⣤⡤⠦⣤⣀⣤⠆⠀⠀⠀⠀⠀⣈⣭⣿⣶⣿⣦⣼⣆
