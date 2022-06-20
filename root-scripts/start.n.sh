@@ -29,6 +29,5 @@ echo -e "\e[38;5;$((RANDOM%257))m" && cat << 'EOF'
                 jc141 - 1337x.to -⠀rumpowered.org
 EOF
 echo -e "\e[0m"
-trap 'cleanup' EXIT SIGINT SIGTERM
 [ "${DBG:=0}" = "1" ] || exec &>/dev/null
 cd "$BINDIR"; "${CMD[@]}" "$@"
