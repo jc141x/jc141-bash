@@ -8,7 +8,6 @@
 
 ### YAY
 - Does not apply to EndeavourOS.
-- paru can be used instead.
 ```sh
 git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 ```
