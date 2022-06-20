@@ -26,7 +26,7 @@ echo -e "\e[38;5;$((RANDOM%257))m" && cat << 'EOF'
           ⠀ ⠀  ⠀⠀⠀⠀⠀⢻⣿⣿⣄⠀⠀⠀⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟⠀⠫⢿⣿⡆
            ⠀  ⠀⠀⠀⠀⠀⠀⠀⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃
           Pain⠀heals,⠀chicks⠀dig⠀scars,⠀glory⠀lasts⠀forever!
-                JC141 - 1337x.to -⠀rumpowered.org
+                jc141 - 1337x.to -⠀rumpowered.org
 EOF
 echo -e "\e[0m"
 trap 'cleanup' EXIT SIGINT SIGTERM
