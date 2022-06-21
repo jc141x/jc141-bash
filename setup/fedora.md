@@ -1,6 +1,4 @@
-<div align="center">
-  <h1>Setup Guide - Fedora</h1>
-</div>
+<h2>Setup Guide - Fedora</h21>
 
 - Also applies to [Fedora Rawhide](https://docs.fedoraproject.org/en-US/releases/rawhide/) but the repo link of wine needs to be adapted.
 
