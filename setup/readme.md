@@ -1,10 +1,6 @@
-<div align="center">
-  <img src="https://i.postimg.cc/tC3VR1vD/jc141v4.png">
-</div>
+<img src="https://i.postimg.cc/5yfZCY7b/43534534.png">
 
-<div align="center">
-  <h1>Setup Guide - General</h1>
-</div>
+<h2>Setup Guide - General</h2>
 
 - Support for SteamDeck is work in progress. Documented [here](steamdeck.md). SteamDeck testers who are open to try other distros are needed. SteamOS users who don't want to try anything else are useless to us. SteamOS is garbage if you seek freedom to play however you want.
 
