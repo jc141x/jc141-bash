@@ -1,4 +1,4 @@
-<h2>Setup Guide - Fedora</h21>
+<h2>Setup Guide - Fedora</h2>
 
 - Also applies to [Fedora Rawhide](https://docs.fedoraproject.org/en-US/releases/rawhide/) but the repo link of wine needs to be adapted.
 
