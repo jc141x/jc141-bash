@@ -1,6 +1,4 @@
-<div align="center">
-  <h1>Setup Guide - openSUSE Tumbleweed</h1>
-</div>
+<h2>Setup Guide - openSUSE Tumbleweed</h2>
 
 ### DWARFS
 Read the [following](https://build.opensuse.org/package/show/home:dsme/dwarfs).
