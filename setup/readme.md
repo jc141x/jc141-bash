@@ -25,7 +25,7 @@
 
 #### dwarfs archives:
   
-- Most of them don't to be extracted, you can play as provided by running the start script.
+- Most of them don't need to be extracted, you can play as provided by running the start script.
 
 - Games that run badly mounted, mostly open worlds are automatically extracted at first run.
 
