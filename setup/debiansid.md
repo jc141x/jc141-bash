@@ -29,7 +29,7 @@ sudo tee /etc/apt/sources.list.d/makedeb.list && sudo apt update && sudo apt ins
 
 ### DWARFS
 ```
-una install dwarfs-bin
+git clone https://mpr.makedeb.org/dwarfs-bin.git && cd dwarfs-bin && makedeb -si
 sudo apt install fuse-overlayfs
 
 ```
