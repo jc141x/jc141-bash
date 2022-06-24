@@ -18,8 +18,8 @@ mount-prefix() {
 
 unmount-game() {
     wineserver -k && sleep 1 && fuser -k "$PWD/files/groot-mnt"
-    [ -d "$PWD/files/groot" ] && sleep 4 && fusermount -u "$PWD/files/groot"
-    [ -d "$PWD/files/groot-mnt" ] && sleep 4 && fusermount -u "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt"
+    [ -d "$PWD/files/groot" ] && sleep 3 && fusermount -u "$PWD/files/groot"
+    [ -d "$PWD/files/groot-mnt" ] && sleep 3 && fusermount -u "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt"
     echo "DWRFS: Unmounted game."
 }
 
