@@ -7,6 +7,7 @@ mount-game() {
 }
 
 mount-prefix() {
+    [ -f "$JCPRF" ] && find "$JCDIR/prefix.dwarfs" -mtime +60 -type f -delete
     [ ! -d "$JCDIR" ] && mkdir -p "$JCDIR"; export WINEPREFIX="$HOME/jc141/prefix"
     [ ! -f "$JCPRF" ] && wineboot -e -u && sleep 5 && mkdwarfs -l7 -B5 -i "$HOME/jc141/prefix" -o "$JCDIR/prefix.dwarfs" && rm -Rf "$WINEPREFIX"
     export WINEPREFIX="$PWD/files/data/prefix-tmp"
