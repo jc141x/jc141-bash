@@ -32,4 +32,13 @@ extract-game() {
     [ ! -d "$PWD/files/groot" ] && echo "DWRFS: Extracting game, this may take a while. Do not cancel the process or the files will be incomplete."; tstart="$(date +%s)" && mkdir "$PWD/files/groot" && dwarfsextract -i "$PWD/files/groot.dwarfs" -o "$PWD/files/groot" && tend="$(date +%s)"; elapsed="$((tend - tstart))" && echo "done in $((elapsed / 60)) min and $((elapsed % 60)) sec"
 }
 
-"$1"
+for i in "$@"; do
+    # Check if function exists
+    if type "$i" &>/dev/null; then
+        "$i"
+    else
+        echo "WARN: Command: '$i' does not exists. Try another command/option."
+        echo
+        print-usage
+    fi
+done
