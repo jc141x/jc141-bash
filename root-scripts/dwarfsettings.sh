@@ -9,7 +9,7 @@ mount-game() {
 mount-prefix() {
     [ -f "$JCPRF" ] && find "$JCDIR/prefix.dwarfs" -mtime +60 -type f -delete
     [ ! -d "$JCDIR" ] && mkdir -p "$JCDIR"; export WINEPREFIX="$HOME/jc141/prefix"
-    [ ! -e "$RMT" ] && cp /usr/bin/rumtricks "$RMT";
+    [ ! -e "$RMT" ] && cp "$PWD/files/rumtricks.sh" "$RMT";
     [ ! -f "$JCPRF" ] && WINEPREFIX="$JCDIR/prefix" bash "$RMT" directx vcrun2003 vcrun2005 vcrun2008 vcrun2010 vcrun2012 vcrun2013 vcrun2015 vcrun2017 vcrun2019 && sleep 2 && mkdwarfs -l7 -B5 -i "$HOME/jc141/prefix" -o "$JCDIR/prefix.dwarfs" && rm -Rf "$WINEPREFIX"
     export WINEPREFIX="$PWD/files/data/prefix-tmp"
     [ ! -d "$WINEPREFIX" ] && mkdir -p {"$JCDIR/prefix-mnt","$PWD/files/data/user-data","$PWD/files/data/work","$PWD/files/data/prefix-tmp"} && dwarfs "$JCDIR/prefix.dwarfs" "$JCDIR/prefix-mnt" -o cache_image && fuse-overlayfs -o lowerdir="$JCDIR/prefix-mnt",upperdir="$PWD/files/data/user-data",workdir="$PWD/files/data/work" "$PWD/files/data/prefix-tmp";
