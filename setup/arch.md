@@ -86,11 +86,6 @@ sudo pacman -Syyu
 sudo pacman -S --needed wine-tkg-staging-fsync-git
 ```
 
-### Offline support for dxvk and vkd3d
-```sh
-yay -S dxvk-bin vkd3d-proton-bin
-```
-
 ## Optional packages
 
 #### Yuzu - for Nintendo games
