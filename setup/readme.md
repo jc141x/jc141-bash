@@ -57,14 +57,20 @@ prime-run - for using Nvidia.
   ```
 ### Available commands for dwarfsettings.sh
 ```sh
-bash dwarfsettings.sh extract
+bash dwarfsettings.sh extract-game
 extracts groot.dwarfs to groot directory.
 
-bash dwarfsettings.sh force-unmount
+bash dwarfsettings.sh unmount-game
 unmounts groot-mnt
 
-bash dwarfsettings.sh mount
-mounts groot.dwarfs to groot-mnt
+bash dwarfsettings.sh mount-game
+mounts groot.dwarfs to groot-mnt and overlayfs to groot
+
+bash dwarfsettings.sh mount-prefix
+mounts prefix.dwarfs to prefix-mnt and overlayfs to prefix-tmp
+
+bash dwarfsettings.sh unmount-prefix
+unmounts prefix.dwarfs from prefix-mnt and overlayfs to prefix-tmp
 ```
 
 - You can also use [Rum](https://johncena141.eu.org:8141/johncena141/rum) for creating your own game library.
