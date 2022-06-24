@@ -44,7 +44,7 @@ sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia
 
 Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
-# NVIDIA legacy (ignore above commands if GPU old, GTX 700 etc)
+# NVIDIA legacy (ignore above commands for NVIDIA if GPU is old, GTX 700 etc)
 yay -S --needed lib32-libglvnd lib32-nvidia-470xx-utils libglvnd nvidia-470xx-dkms
 ```
 
