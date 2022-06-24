@@ -17,16 +17,16 @@ mount-prefix() {
 }
 
 unmount-game() {
-    wineserver -k && sleep 2 && fuser -k "$PWD/files/groot-mnt"
-    [ -d "$PWD/files/groot" ] && sleep 2 && fusermount -u "$PWD/files/groot"
-    [ -d "$PWD/files/groot-mnt" ] && sleep 2 && fusermount -u "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt"
+    wineserver -k && sleep 1 && fuser -k "$PWD/files/groot-mnt"
+    [ -d "$PWD/files/groot" ] && sleep 4 && fusermount -u "$PWD/files/groot"
+    [ -d "$PWD/files/groot-mnt" ] && sleep 4 && fusermount -u "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt"
     echo "DWRFS: Unmounted game."
 }
 
 unmount-prefix() {
     wineserver -k && sleep 2 && fuser -k "$JCDIR/prefix-mnt"
-    sleep 2 && fusermount -u "$PWD/files/data/prefix-tmp" && rm -d -f "$PWD/files/data/prefix-tmp";
-    sleep 2 && fusermount -u "$JCDIR/prefix-mnt" && rm -d -f "$JCDIR/prefix-mnt"
+    fusermount -u "$PWD/files/data/prefix-tmp" && rm -d -f "$PWD/files/data/prefix-tmp";
+    fusermount -u "$JCDIR/prefix-mnt" && rm -d -f "$JCDIR/prefix-mnt"
     echo "DWRFS: Unmounted prefix."
 }
 
