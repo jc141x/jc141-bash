@@ -10,7 +10,7 @@ export BINDIR="$PWD/files/groot"; BIN="game.exe";
 # dwarfs
 bash "$R/dwarfsettings.sh" mount-prefix mount-game
 function cleanup {
-cd "$OLDPWD" && bash "$R/dwarfsettings.sh" unmount-prefix; }
+cd "$OLDPWD" && bash "$R/dwarfsettings.sh" unmount-prefix unmount-game; }
 trap 'cleanup' EXIT SIGINT SIGTERM
 
 export WINEPREFIX="$PWD/files/data/prefix-tmp"; bash "$WHA" wine-tkg; bash "$RMT" isolation
