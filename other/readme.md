@@ -1,8 +1,3 @@
-extract instead of mount on start
-```sh
-[ ! -d "$PWD/files/groot" ] && echo "Extracting game root..."; mkdir "$PWD/files/groot" && dwarfsextract -i "$PWD/files/groot.dwarfs" -o "$PWD/files/groot"
-```
-
 native steamclient
 ```sh
 mkdir -p $HOME/.steam/sdk64 && cp steamclient.so $HOME/.steam/sdk64/steamclient.so && cp -r steam_settings ~/.steam/sdk64/ && echo $BASHPID > $HOME/.steam/steam.pid
