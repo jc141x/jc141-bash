@@ -1,10 +1,14 @@
 native steamclient
 ```sh
+CMD=(SteamAppId=000000 SteamGameId=000000 ./"$BIN" "GAME")
+
+function cleanup {
+rm -rf "$HOME/.steam"
+
+cd "$BINDIR";
 mkdir -p $HOME/.steam/sdk64 && cp steamclient.so $HOME/.steam/sdk64/steamclient.so && cp -r steam_settings ~/.steam/sdk64/ && echo $BASHPID > $HOME/.steam/steam.pid
 # or
 mkdir -p $HOME/.steam/sdk32 && cp steamclient.so $HOME/.steam/sdk32/steamclient.so && cp -r steam_settings ~/.steam/sdk32/ && echo $BASHPID > $HOME/.steam/steam.pid
-
-[ ! -x "$GAMESCOPE" ] && exec env SteamAppId=000000 SteamGameId=000000 "$BIN" "GAME" && rm -rf "$HOME/.steam" || exec env SteamAppId=000000 SteamGameId=000000 gamescope -f -- "$BIN" "GAME" && rm -rf "$HOME/.steam"
 ```
 
 sed array
