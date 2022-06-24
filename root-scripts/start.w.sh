@@ -12,6 +12,7 @@ bash "$DWRFST" mount-game mount-prefix
 function cleanup {
 cd "$OLDPWD" && bash "$DWRFST" unmount-prefix unmount-game
 }
+trap 'cleanup' EXIT SIGINT SIGTERM
 
 export WINEPREFIX="$PWD/files/data/prefix-tmp"; bash "$WHA" wine-tkg; bash "$RMT" isolation
 
