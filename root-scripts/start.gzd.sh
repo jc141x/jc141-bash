@@ -1,8 +1,7 @@
 #!/bin/bash
-cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit
-export HOME="$PWD/files/data"; export XDG_DATA_HOME="$PWD/files/data/.local"; export XDG_CONFIG_HOME="$PWD/files/data/.config"; mkdir -p {"$HOME","$XDG_CONFIG_HOME","$XDG_DATA_HOME"};
+cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; R="$PWD"; DWRFST="$R/dwarfsettings.sh"; export HOME="$R/files/data"; export XDG_DATA_HOME="$R/files/data/.local"; export XDG_CONFIG_HOME="$R/files/data/.config"; mkdir -p {"$HOME","$XDG_CONFIG_HOME","$XDG_DATA_HOME"}
 
-GROOT="$PWD/files/groot"; BINDIR="$GROOT/gzdoom"; BIN="gzdoom"; echo "$BIN" >"$PWD/files/binval.txt";
+BINDIR="$R/files/groot"; BIN="gzdoom/gzdoom"
 
 # Internal WAD: https://zdoom.org/wiki/IWAD
 IWAD="GAME/GAME.WAD"
@@ -17,13 +16,12 @@ PWADS=(
 CMD=("$BINDIR/$BIN" -iwad "$IWAD" -file "${PWADS[@]}");
 
 # gamescope/FSR
-: ${GAMESCOPE:=$(command -v gamescope)}; RRES=$(command -v rres); FSR_MODE="${FSR:=}";
-[ -x "$GAMESCOPE" ] && { [[ -x "$RRES" && -n "$FSR_MODE" ]] && CMD=("$GAMESCOPE" -f $("$RRES" -g "$FSR_MODE") -- "${CMD[@]}") || CMD=("$GAMESCOPE" -f -- "${CMD[@]}"); };
+: ${GAMESCOPE:=$(command -v gamescope)}; RRES=$(command -v rres); FSR_MODE="${FSR:=}"; [ -x "$GAMESCOPE" ] && { [[ -x "$RRES" && -n "$FSR_MODE" ]] && CMD=("$GAMESCOPE" -f $("$RRES" -g "$FSR_MODE") -- "${CMD[@]}") || CMD=("$GAMESCOPE" -f -- "${CMD[@]}"); }
 
 # dwarfs
-DFS="$PWD/dwarfsettings.sh"; [ ! -f "$BINDIR/$BIN" ] && "$DFS" mount
-
-cleanup() { "$DFS" force-unmount; }
+bash "$DWRFST" mount-game
+function cleanup { cd "$OLDPWD" && bash "$DWRFST" unmount-game; }
+trap 'cleanup' EXIT SIGINT SIGTERM
 
 echo -e "\e[38;5;$((RANDOM%257))m" && cat << 'EOF'
        ⠀⠀⠀     ⠀ ⣴⣶⣤⡤⠦⣤⣀⣤⠆⠀⠀⠀⠀⠀⣈⣭⣿⣶⣿⣦⣼⣆
@@ -41,8 +39,5 @@ echo -e "\e[38;5;$((RANDOM%257))m" && cat << 'EOF'
                 jc141 - 1337x.to -⠀rumpowered.org
 EOF
 echo -e "\e[0m"
-
-trap 'cleanup' EXIT SIGINT SIGTERM
-
 [ "${DBG:=0}" = "1" ] || exec &>/dev/null
-cd "$GROOT"; "${CMD[@]}" "$@"
+cd "$BINDIR"; "${CMD[@]}" "$@"
