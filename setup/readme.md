@@ -20,16 +20,13 @@
  - or: Rawhide
 #### [openSUSE Tumbleweed](opensuse.md)
 
-
-### How to extract the archives
-
-#### dwarfs archives:
+#### dwarfs torrent type:
   
 - Most of them don't need to be extracted, you can play as provided by running the start script.
 
 - Games that run badly mounted, mostly open worlds are automatically extracted at first run.
 
-#### zpaq archives:
+#### How to extract zpaq archives:
 ```sh
 cd "path to archive"
 zpaq x Game.zpaq
