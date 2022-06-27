@@ -20,25 +20,19 @@
  - or: Rawhide
 #### [openSUSE Tumbleweed](opensuse.md)
 
-#### dwarfs torrent type:
-  
-- Most of them don't need to be extracted, you can play as provided by running the start script.
-
-- Games that run badly mounted, mostly open worlds are automatically extracted at first run.
-
-#### How to extract zpaq archives:
+#### extracting zpaq
 ```sh
 cd "path to archive"
 zpaq x Game.zpaq
 ``` 
 
-### How to run the games
+#### running
 
 ```sh
 cd "path to extracted game"
 bash wstart.sh or however the script is named.
 ```
-- Available variables are: (added before bash)
+Available variables are: (added before bash)
 ```sh
 DBG=1 - for enabling output from the game binary.
 
@@ -52,7 +46,7 @@ FSR=mode - Universal support for FSR through Gamescope
 
 prime-run - for using Nvidia.
   ```
-### Available commands for dwarfsettings.sh
+#### dwarfsettings.sh commands
 ```sh
 bash dwarfsettings.sh extract-game
 extracts groot.dwarfs to groot directory.
@@ -69,5 +63,3 @@ mounts prefix.dwarfs to prefix-mnt and overlayfs to prefix-tmp
 bash dwarfsettings.sh unmount-prefix
 unmounts prefix.dwarfs from prefix-mnt and overlayfs to prefix-tmp
 ```
-
-- You can also use [Rum](https://johncena141.eu.org:8141/johncena141/rum) for creating your own game library.
