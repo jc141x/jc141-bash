@@ -23,6 +23,8 @@
  - or: Rawhide
 #### [openSUSE Tumbleweed](opensuse.md)
 
+<br><br>
+
 - Support for SteamDeck is work in progress. Documented [here](steamdeck.md). SteamDeck testers who are open to try other distros are needed.
 
 #### extracting zpaq
