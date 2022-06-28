@@ -30,7 +30,7 @@ zpaq x Game.zpaq
 
 ```sh
 cd "path to extracted game"
-bash wstart.sh or however the script is named.
+bash start.w.sh or however the script is named.
 ```
 Available variables are: (added before bash)
 ```sh
