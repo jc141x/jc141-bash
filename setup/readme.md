@@ -1,8 +1,11 @@
 <img src="https://i.postimg.cc/5yfZCY7b/43534534.png">
 
-<h2>Setup Guide - General</h2>
-
-- Support for SteamDeck is work in progress. Documented [here](steamdeck.md). SteamDeck testers who are open to try other distros are needed.
+### General features:
+- Games are mounted and unmounted automatically when dwarfs mount is used.
+- Uses a very efficient wine prefix scheme which involves using one dwarfed prefix on everything and overlayfs files created for specific games to their data directories, for isolation.
+- FSR is supported by default with gamescope.
+- Output muted by default against terminal spam.
+- Supports to be ran offline from first run. (currently work in progress for wine, dxvk and vkd3d. Checks for system packages being present are already used.)
 
 ### Not supported:
    - NTFS, because the very different attrs system.
@@ -19,6 +22,8 @@
 #### [Fedora](fedora.md)
  - or: Rawhide
 #### [openSUSE Tumbleweed](opensuse.md)
+
+- Support for SteamDeck is work in progress. Documented [here](steamdeck.md). SteamDeck testers who are open to try other distros are needed.
 
 #### extracting zpaq
 ```sh
