@@ -3,7 +3,7 @@
 ### General features:
 - Games are mounted and unmounted automatically when dwarfs mount is used.
 - Uses a very efficient wine prefix scheme which involves using one dwarfed prefix on everything and overlayfs files created for specific games to their data directories, for isolation.
-- FSR is supported by default with gamescope.
+- FSR is supported by default with gamescope (if gamescope is enabled).
 - Output muted by default against terminal spam.
 - Supports to be ran offline from first run. (currently work in progress for wine, dxvk and vkd3d. Checks for system packages being present are already used.)
 
