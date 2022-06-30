@@ -84,14 +84,6 @@ sudo apt install libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386
 ```sh
 una install yuzu-mainline-bin
 ```
-#### Rumtricks - If you want to use our scripts separately.
-```sh
-una install rumtricks-git
-```
-#### Rres - FSR support through start scripts with gamescope.
-```sh
-una install rres-bin
-```
 #### Dosbox
 ```sh
 sudo apt install dosbox
