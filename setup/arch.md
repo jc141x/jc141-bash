@@ -93,10 +93,6 @@ sudo pacman -S --needed wine-tkg-staging-fsync-git
 ```sh
 yay -S yuzu-mainline-bin
 ```
-#### Rumtricks - If you want to use our scripts separately
-```sh
-yay -S rumtricks
-```
 #### Dosbox
 ```sh
 sudo pacman -S --needed dosbox
