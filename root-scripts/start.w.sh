@@ -5,7 +5,7 @@ export BINDIR="$PWD/files/groot"; BIN="game.exe";
 [ -x "/bin/wine-tkg" ] && export WINE="$(command -v wine)" || export WINE="$BINDIR/wine/bin/wine"; CMD=("$WINE" "$BIN");
 
 # gamescope/FSR
-: ${GAMESCOPE:=$(command -v gamescope)}; RRES=$(command -v rres); FSR_MODE="${FSR:=}"; [ -x "$GAMESCOPE" ] && { [[ -x "$RRES" && -n "$FSR_MODE" ]] && CMD=("$GAMESCOPE" -f $("$RRES" -g "$FSR_MODE") -- "${CMD[@]}") || CMD=("$GAMESCOPE" -f -- "${CMD[@]}"); }
+: ${GAMESCOPE:=$(command -v gamescope)}; [ -x "$GAMESCOPE" ] && CMD=("$GAMESCOPE" -f -- "${CMD[@]}");
 
 # dwarfs
 bash "$DWRFST" mount-game; bash "$WHA" wine-tkg; bash "$DWRFST" mount-prefix;
