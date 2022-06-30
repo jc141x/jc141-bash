@@ -97,10 +97,6 @@ yay -S yuzu-mainline-bin
 ```sh
 yay -S rumtricks
 ```
-#### Rres - FSR support through start scripts with gamescope.
-```sh
-yay -S rres-bin
-```
 #### Dosbox
 ```sh
 sudo pacman -S --needed dosbox
