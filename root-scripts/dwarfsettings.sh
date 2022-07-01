@@ -13,7 +13,7 @@ DLRLS="$(echo "$RMTRLS" | awk -F '["]' '/"browser_download_url":/ && /tar.lzma/ 
 [ ! -d "$WINEPREFIX" ] && mkdir -p {"$RMTDIR/prefix-mnt","$PWD/files/data/user-data","$PWD/files/data/work","$PWD/files/data/prefix-tmp"} && dwarfs "$RMTDIR/prefix.dwarfs" "$RMTDIR/prefix-mnt" -o cache_image && fuse-overlayfs -o lowerdir="$RMTDIR/prefix-mnt",upperdir="$PWD/files/data/user-data",workdir="$PWD/files/data/work" "$PWD/files/data/prefix-tmp";
 echo "DWRFS: Mounted prefix."; }
 
-unmount-game() { wineserver -k && sleep 1 && fuser -k "$PWD/files/groot-mnt"
+unmount-game() { wineserver -k && killall gamescope && sleep 1 && fuser -k "$PWD/files/groot-mnt"
 [ -d "$PWD/files/groot" ] && sleep 3 && fusermount -u "$PWD/files/groot"
 [ -d "$PWD/files/groot-mnt" ] && sleep 3 && fusermount -u "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt"
 echo "DWRFS: Unmounted game."; }
