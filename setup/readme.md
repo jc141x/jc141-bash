@@ -1,5 +1,3 @@
-<img src="https://i.postimg.cc/5yfZCY7b/43534534.png">
-
 ### Not supported:
    - NTFS, because the very different attrs system.
    - LTS distros (Ubuntu LTS, Mint, etc.), because outdated dependencies are hard to support.
