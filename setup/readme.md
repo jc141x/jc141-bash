@@ -6,6 +6,8 @@
 
 ### Supported distros and their list of required packages
 
+- Support for SteamDeck is work in progress. Documented [here](steamdeck.md). SteamDeck testers who are open to try other distros are needed.
+
 #### [Arch](arch.md)
  - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
 #### [Debian Sid](debiansid.md)
@@ -13,10 +15,6 @@
 #### [Fedora](fedora.md)
  - or: Rawhide
 #### [openSUSE Tumbleweed](opensuse.md)
-
-<br><br>
-
-- Support for SteamDeck is work in progress. Documented [here](steamdeck.md). SteamDeck testers who are open to try other distros are needed.
 
 #### extracting zpaq
 ```sh
