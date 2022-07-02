@@ -43,7 +43,7 @@ sudo apt install zpaq
 ```sh
 # Universal (AMD/Intel/Nvidia)
 sudo apt install libvulkan1 vulkan-tools
-git clone https://johncena141.eu.org:8141/johncena141/gamescope-git.git && cd gamescope-git && makedeb -si
+git clone https://github.com/jc141x/gamescope-git.git && cd gamescope-git && makedeb -si
 sudo apt remove amdvlk
 
 Gamescope not supported on Nvidia yet, but coming soon. Meanwhile don't install it or it will get used and fail to boot games.
