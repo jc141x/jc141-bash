@@ -16,12 +16,6 @@
  - or: Rawhide
 #### [openSUSE Tumbleweed](opensuse.md)
 
-#### extracting zpaq
-```sh
-cd "path to archive"
-zpaq x Game.zpaq
-``` 
-
 #### running
 
 ```sh
