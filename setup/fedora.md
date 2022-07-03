@@ -1,4 +1,4 @@
-<h2>Setup Guide - Fedora</h2>
+<h3>Setup Guide - Fedora</h3>
 
 ### dwarfs
 Dwarfs isn't available in the repos and copr, so our temporarily solution is this rpm we made.
@@ -10,14 +10,21 @@ wget -qO ~/Downloads/dwarfs-0.6.1-1.fc36.x86_64.rpm https://github.com/jc141x/jc
 
 ```sh
 # Universal (AMD/Intel/Nvidia)
-sudo dnf install gamescope vulkan vulkan-loader
-Gamescope not supported on Nvidia yet, but coming soon. Meanwhile don't install it or it will get used and fail to boot games.
+sudo dnf install vulkan vulkan-loader
 
 # NVIDIA specific
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && sudo dnf install xorg-x11-drv-nvidia akmod-nvidia
 
 Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 ```
+
+#### gamescope
+```sh
+sudo dnf install gamescope
+```
+- Gamescope not supported on Nvidia yet, but coming soon. Meanwhile don't install it or it will get used and fail to boot games.
+
+- Technically optional, highly recommended against alt-tab freezes and isolation from system display server.
 
 #### other libraries
 ```sh
