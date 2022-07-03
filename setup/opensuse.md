@@ -1,6 +1,6 @@
-<h2>Setup Guide - openSUSE Tumbleweed</h2>
+<h#>Setup Guide - openSUSE Tumbleweed</h3>
 
-### dwarfs
+#### dwarfs
 Read the [following](https://build.opensuse.org/package/show/home:dsme/dwarfs).
 
 Also needed:
@@ -15,7 +15,7 @@ sudo zypper install vulkan-loader vulkan libvulkan1 vulkan-utils mesa-vulkan-dri
 
 #### other libraries
 ```sh
-sudo zypper install giflib-devel gstreamer-plugins-ugly gstreamer-plugins-libav gstreamer-plugins-good gstreamer-plugins-bad gstreamer-plugins-base gstreamer-plugins-ugly-32bit gstreamer-plugins-libav-32bit gstreamer-plugins-good-32bit gstreamer-plugins-bad-32bit gstreamer-plugins-base-32bit jq giflib-32bit gnutls-32bit libjpeg-turbo libldap-2_4-2 libldap-2_4-2-32bit libpng16-16 libpng16-16-32bit libXcomposite libXcomposite1-32bit libXinerama1 libXinerama1-32bit libxslt libxslt1-32bit libmpg123-0 libmpg123-0-32bit ocl-icd libSDL2-2_0-0-32bit libSDL2-2_0-0-32bit v4l-utils libgphoto2-6-32bit libgphoto2 libxslt1-32bit libxslt libz1
+sudo zypper install giflib-devel gstreamer-plugins-ugly gstreamer-plugins-libav gstreamer-plugins-good gstreamer-plugins-bad gstreamer-plugins-base gstreamer-plugins-ugly-32bit gstreamer-plugins-libav-32bit gstreamer-plugins-good-32bit gstreamer-plugins-bad-32bit gstreamer-plugins-base-32bit jq giflib-32bit gnutls-32bit libjpeg-turbo libldap-2_4-2 libldap-2_4-2-32bit libpng16-16 libpng16-16-32bit libXcomposite libXcomposite1-32bit libXinerama1 libXinerama1-32bit libxslt libxslt1-32bit libmpg123-0 libmpg123-0-32bit libSDL2-2_0-0-32bit libSDL2-2_0-0-32bit v4l-utils libgphoto2-6-32bit libgphoto2 libxslt1-32bit libxslt libz1
 ```
 
 #### audio drivers
