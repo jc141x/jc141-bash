@@ -1,19 +1,12 @@
 <h2>Setup Guide - Fedora</h2>
 
-- Also applies to [Fedora Rawhide](https://docs.fedoraproject.org/en-US/releases/rawhide/) but the repo link of wine needs to be adapted.
-
-### DWARFS
+### dwarfs
 Dwarfs isn't available in the repos and copr, so our temporarily solution is this rpm we made.
 ```sh
 wget -qO ~/Downloads/dwarfs-0.6.1-1.fc36.x86_64.rpm https://github.com/jc141x/jc141-bash/releases/download/420/dwarfs-0.6.1-1.fc36.x86_64.rpm && sudo dnf install ~/Downloads/dwarfs-0.6.1-1.fc36.x86_64.rpm
 ```
 
-#### ZPAQ
-```sh
-sudo dnf install zpaq
-```
-
-### GRAPHICS Packages
+### graphics packages
 
 ```sh
 # Universal (AMD/Intel/Nvidia)
@@ -26,29 +19,24 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 ```
 
-#### Other libraries
+#### other libraries
 ```sh
 sudo dnf install jq libxcrypt zlib
 ```
 
-#### Audio drivers
+#### audio drivers
 ```sh
 sudo dnf install alsa-lib alsa-plugins fluidsynth pulseaudio openal
 ```
 
-### Wine-staging
-```sh
-sudo dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/35/winehq.repo && sudo dnf install winehq-staging
-```
+## optional packages
 
-## Optional packages
-
-#### Yuzu
+#### yuzu
 ```sh
 export API_URL="https://api.github.com/repos/yuzu-emu/yuzu-mainline/releases/latest" && export DOWNLOAD_URL=$(curl -s $API_URL | grep -oP '"browser_download_url": "\K(.*AppImage)(?=")') && curl -Lo /tmp/yuzu --progress-meter $DOWNLOAD_URL && chmod +x /tmp/yuzu && sudo mv /tmp/yuzu /usr/local/bin/yuzu
 ```
 
-#### Dosbox
+#### dosbox
 ```sh
 sudo dnf install dosbox
 ```
