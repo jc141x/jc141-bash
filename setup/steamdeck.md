@@ -1,3 +1,7 @@
+<h3>Setup Guide - SteamDeck</h3>
+
+<br>
+
 > When the guide says `edit` it means you edit the file with sudo using an editor like `nano` or `vim`.
 > 
 > e.g. `sudo nano /etc/pacman.conf` OR `sudoedit /etc/pacman.conf`
@@ -6,7 +10,7 @@
 
 > If you need to revert back to steamOS, follow the [guide by valve](https://help.steampowered.com/en/faqs/view/1B71-EDF2-EB6D-2BB3)
 
-### Install EndeavourOS
+#### install EndeavourOS
 
 1. Create a bootable EndeavourOS usb drive ([link](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/))
 2. Use a usb-c adapter to connect the drive to your deck
@@ -15,7 +19,7 @@
 5. Follow the instructions on the screen (online install)
 
 
-### Prepare download sources
+#### prepare download sources
 
 Do a full system update before you start. `sudo pacman -Syyu`, and reboot.
 
@@ -35,7 +39,7 @@ SigLevel = Never
 
 `sudo pacman -Syyu` to update the package database and install any replacement packages.
 
-### Finalize
+#### finalize
 
 to get drivers for the hardware (based on guesses), install the following packages with `sudo pacman -S`
 
