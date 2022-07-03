@@ -66,24 +66,17 @@ sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libx
 yay -S lib32-gst-plugins-base gst-plugins-base lib32-gst-plugins-good gst-plugins-good lib32-gst-plugins-ugly gst-plugins-ugly lib32-gst-plugins-bad gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-libav
 ```
 
-### Wine-staging
+### Wine-staging-tkg
 ```sh
-sudo pacman -S --needed wine-staging
-```
-
-### EXPERIMENTAL - Wine-staging-tkg
-```sh
-sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
-sudo pacman-key --lsign-key FBA220DFC880C036
-sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 echo '
 
-[chaotic-aur]
-Include = /etc/pacman.d/chaotic-mirrorlist ' | sudo tee -a /etc/pacman.conf
+[rumpowered]
+SigLevel = Never
+Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
 
 sudo pacman -Syyu
 
-sudo pacman -S --needed wine-tkg-staging-fsync-git
+sudo pacman -S --needed wine-staging-tkg
 ```
 
 ## Optional packages
