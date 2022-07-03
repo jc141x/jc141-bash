@@ -22,9 +22,9 @@
 ```sh
 cd "path to extracted game"
 bash start.w.sh or however the script is named.
-```
+
 Available variables are: (added before bash)
-```sh
+
 DBG=1 - for enabling output from the game binary.
 
 GAMESCOPE=0 - for disabling gamescope.
