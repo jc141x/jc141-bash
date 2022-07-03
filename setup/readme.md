@@ -39,7 +39,7 @@ bash dwarfsettings.sh extract-game
 extracts groot.dwarfs to groot directory.
 
 bash dwarfsettings.sh unmount-game
-unmounts groot-mnt
+unmounts groot
 
 bash dwarfsettings.sh mount-game
 mounts groot.dwarfs to groot-mnt and overlayfs to groot
