@@ -1,10 +1,12 @@
-### Not supported:
+<h1>jc141 setup guide</h1>
+
+### not supported:
    - NTFS, because the very different attrs system.
    - LTS distros (Ubuntu LTS, Mint, etc.), because outdated dependencies are hard to support.
    - Immutable os (SteamOS, Fedora Silverblue), because dependencies are hard to install.
    - Third party programs which override config (Lutris).
 
-### Supported distros and their list of required packages
+### supported distros
 
 - Support for SteamDeck is work in progress. Documented [here](steamdeck.md). SteamDeck testers who are open to try other distros are needed.
 
@@ -13,7 +15,6 @@
 #### [Debian Sid](debiansid.md)
  - or: Sparky Rolling, Siduction, Nitrux
 #### [Fedora](fedora.md)
- - or: Rawhide
 #### [openSUSE Tumbleweed](opensuse.md)
 
 #### running
