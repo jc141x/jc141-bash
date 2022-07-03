@@ -3,7 +3,10 @@ cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; export
 [ ! -e "$RMT" ] && cp /usr/bin/rumtricks "$RMT"; [ ! -e "$WHA" ] && cp /usr/bin/wha "$WHA"; export WINE_LARGE_ADDRESS_AWARE=1;
 export WINEFSYNC=1; export WINEDLLOVERRIDES="mscoree=d;mshtml=d;";
 export BINDIR="$PWD/files/groot"; BIN="game.exe";
-export WINE="$(command -v wine-tkg || command -v wine-ge || command -v wine-tkg-nomingw )"; [ ! -x "$WINE" ] && export WINE="$BINDIR/wine/bin/wine"; bash "$WHA" "$(basename $WINE)"; CMD=("$WINE" "$BIN");
+export WINE="$(command -v wine)" || export WINE="$BINDIR/wine/bin/wine"; CMD=("$WINE" "$BIN");
+
+# WINE handler
+_WINE="$(command -v wine-tkg || command -v wine-ge || command -v wine-tkg-nomingw )"; [ -x "$_WINE" ] && bash "$WHA" "$(basename $_WINE)"
 
 # gamescope/FSR
 : ${GAMESCOPE:=$(command -v gamescope)}; [ -x "$GAMESCOPE" ] && CMD=("$GAMESCOPE" -f -- "${CMD[@]}");
