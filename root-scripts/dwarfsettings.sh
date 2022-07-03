@@ -14,13 +14,13 @@ DLRLS="$(echo "$RMTRLS" | awk -F '["]' '/"browser_download_url":/ && /tar.lzma/ 
 echo "DWRFS: Mounted prefix."; }
 
 unmount-game() { wineserver -k && killall gamescope && sleep 1 && fuser -k "$PWD/files/groot-mnt"
-[ -d "$PWD/files/groot" ] && sleep 3 && fusermount -u "$PWD/files/groot"
-[ -d "$PWD/files/groot-mnt" ] && sleep 3 && fusermount -u "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt"
+fusermount -u -z "$PWD/files/groot"
+fusermount -u -z "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt"
 echo "DWRFS: Unmounted game."; }
 
 unmount-prefix() { wineserver -k && sleep 2 && fuser -k "$RMTDIR/prefix-mnt"
-fusermount -u "$PWD/files/data/prefix-tmp" && rm -d -f "$PWD/files/data/prefix-tmp";
-fusermount -u "$RMTDIR/prefix-mnt" && rm -d -f "$RMTDIR/prefix-mnt"
+fusermount -u -z "$PWD/files/data/prefix-tmp" && rm -d -f "$PWD/files/data/prefix-tmp";
+fusermount -u -z "$RMTDIR/prefix-mnt" && rm -d -f "$RMTDIR/prefix-mnt"
 echo "DWRFS: Unmounted prefix."; }
 
 extract-game() { [ ! -d "$PWD/files/groot" ] && echo "DWRFS: Extracting game, this may take a while. Do not cancel the process or the files will be incomplete."; tstart="$(date +%s)" && mkdir "$PWD/files/groot" && dwarfsextract -i "$PWD/files/groot.dwarfs" -o "$PWD/files/groot" && tend="$(date +%s)"; elapsed="$((tend - tstart))" && echo "done in $((elapsed / 60)) min and $((elapsed % 60)) sec"; }
