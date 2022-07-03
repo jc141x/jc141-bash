@@ -55,7 +55,7 @@ Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
 
 sudo pacman -Syyu
 
-sudo pacman -S --needed wine-staging-tkg
+sudo pacman -S --needed rumpowered/wine-staging-tkg
 ```
 
 ### MULTILIB libraries
