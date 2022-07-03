@@ -56,6 +56,11 @@ yay -S --needed lib32-libglvnd lib32-nvidia-470xx-utils libglvnd nvidia-470xx-dk
 
 - NVIDIA legacy: check [Nvidia's  website](https://nvidia.custhelp.com/app/answers/detail/a_id/3142) for details on which version is right for your GPU.
 
+### wine-staging-tkg
+```sh
+sudo pacman -S --needed rumpowered/wine-staging-tkg
+```
+
 ### multilib libraries
 
 ```sh
