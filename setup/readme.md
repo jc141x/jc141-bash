@@ -1,6 +1,6 @@
 <h1>jc141 setup guide</h1>
 
-### not supported:
+### not supported
    - NTFS, because the very different attrs system.
    - LTS distros (Ubuntu LTS, Mint, etc.), because outdated dependencies are hard to support.
    - Immutable os (SteamOS, Fedora Silverblue), because dependencies are hard to install.
@@ -30,10 +30,6 @@ DBG=1 - for enabling output from the game binary.
 GAMESCOPE=0 - for disabling gamescope.
 
 WINEESYNC=0 WINEFSYNC=0 - for disabling fsync and esync.
-
-FSR=mode - Universal support for FSR through Gamescope 
-- Supported modes: ultra, quality, balanced, performance
-- Requires rres to be installed, currently supported on Arch and Debian Sid setup pages.
 
 prime-run - for using Nvidia.
   ```
