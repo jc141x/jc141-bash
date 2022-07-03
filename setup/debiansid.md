@@ -1,9 +1,9 @@
-<h2>Setup Guide - Debian Sid</h2>
+<h3>Setup Guide - Debian Sid</h3>
 
 - Also applies to Sparky Rolling, Siduction, Nitrux which are rolling by default.
 
 
-### How to switch Debian 11 to Rolling/Sid.
+#### How to switch Debian 11 to Rolling/Sid.
 ```sh
 1. Edit /etc/apt/sources.list:
 sudo nano /etc/apt/sources.list
@@ -19,7 +19,7 @@ sudo apt update && sudo apt full-upgrade && sudo reboot
 ```
 - Optionally you can install `apt-listbugs apt-listchanges` to read the bugs and see if any of them will break your distro.
 
-### MPR and MPR helper
+#### MPR and MPR helper
 ```sh
 wget -qO - 'https://proget.hunterwittenborn.com/debian-feeds/makedeb.pub' | \
 gpg --dearmor | \
@@ -27,13 +27,13 @@ sudo tee /usr/share/keyrings/makedeb-archive-keyring.gpg &> /dev/null && echo 'd
 sudo tee /etc/apt/sources.list.d/makedeb.list && sudo apt update && sudo apt install makedeb git && git clone https://mpr.hunterwittenborn.com/una-bin.git && cd una-bin && makedeb -si
 ```
 
-### dwarfs and overlayfs
+#### dwarfs and overlayfs
 ```sh
 git clone https://mpr.makedeb.org/dwarfs-bin.git && cd dwarfs-bin && makedeb -si
 sudo apt install fuse-overlayfs
 ```
 
-### graphics packages
+#### graphics packages
 ```sh
 # Universal (AMD/Intel/Nvidia)
 sudo apt install libvulkan1 vulkan-tools
@@ -49,7 +49,7 @@ Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 - NVIDIA legacy: check [Nvidia's  website](https://nvidia.custhelp.com/app/answers/detail/a_id/3142) for details on which version is right for your GPU.
 
 
-### gamescope
+#### gamescope
 ```sh
 git clone https://github.com/jc141x/gamescope-git.git && cd gamescope-git && makedeb -si
 ```
@@ -57,24 +57,24 @@ git clone https://github.com/jc141x/gamescope-git.git && cd gamescope-git && mak
 
 - Technically optional, highly recommended against alt-tab freezes and isolation from system display server.
 
-### other libraries
+#### other libraries
 ```sh
 sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly jq libva2 zstd
 ```
 
-### multilib libraries
+#### multilib libraries
 ```sh
 sudo dpkg --add-architecture i386
 sudo apt install libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386
 ```
 
-## optional packages
+#### optional packages
 
-#### yuzu
+##### yuzu
 ```sh
 una install yuzu-mainline-bin
 ```
-#### dosbox
+##### dosbox
 ```sh
 sudo apt install dosbox
 ```
