@@ -25,7 +25,7 @@ bash start.w.sh or however the script is named.
 
 Available variables are: (added before bash)
 
-DBG=1 - for enabling output from the game binary.
+DBG=1 - for enabling terminal output from the game binary and other software ran.
 
 GAMESCOPE=0 - for disabling gamescope.
 
