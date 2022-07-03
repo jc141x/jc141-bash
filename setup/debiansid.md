@@ -27,19 +27,14 @@ sudo tee /usr/share/keyrings/makedeb-archive-keyring.gpg &> /dev/null && echo 'd
 sudo tee /etc/apt/sources.list.d/makedeb.list && sudo apt update && sudo apt install makedeb git && git clone https://mpr.hunterwittenborn.com/una-bin.git && cd una-bin && makedeb -si
 ```
 
-### DWARFS
+### dwarfs and overlayfs
 ```
 git clone https://mpr.makedeb.org/dwarfs-bin.git && cd dwarfs-bin && makedeb -si
 sudo apt install fuse-overlayfs
 
 ```
 
-### ZPAQ
-```sh
-sudo apt install zpaq
-```
-
-### GRAPHICS Packages
+### graphics packages
 ```sh
 # Universal (AMD/Intel/Nvidia)
 sudo apt install libvulkan1 vulkan-tools
@@ -57,34 +52,25 @@ Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
 - NVIDIA legacy: check [Nvidia's  website](https://nvidia.custhelp.com/app/answers/detail/a_id/3142) for details on which version is right for your GPU.
 
-### Wine-staging
-```sh
-grep winehq /etc/apt/sources.list || (echo "deb https://dl.winehq.org/wine-builds/debian/ bullseye main" | sudo tee -a /etc/apt/sources.list) && wget -nc https://dl.winehq.org/wine-builds/winehq.key && sudo apt-key add winehq.key && sudo apt update && sudo apt upgrade && sudo apt install winehq-staging
-```
 
-### Offline support for dxvk and vkd3d
-```sh
-una install dxvk-bin && una install vkd3d-proton-bin
-```
-
-### Other libraries
+### other libraries
 ```sh
 sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly jq libva2 zstd
 ```
 
-### MULTILIB libraries
+### multilib libraries
 ```sh
 sudo dpkg --add-architecture i386
 sudo apt install libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386
 ```
 
-## Optional packages
+## optional packages
 
-#### Yuzu (for Nintendo games)
+#### yuzu
 ```sh
 una install yuzu-mainline-bin
 ```
-#### Dosbox
+#### dosbox
 ```sh
 sudo apt install dosbox
 ```
