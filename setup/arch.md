@@ -15,11 +15,6 @@ git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 yay -S dwarfs-bin fuse-overlayfs
 ```
 
-### ZPAQ
-```sh
-git clone https://aur.archlinux.org/zpaq.git && cd zpaq && makepkg -si
-```
-
 ### MULTILIB
 ```sh
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf && sudo pacman -Syyu
@@ -50,9 +45,17 @@ yay -S --needed lib32-libglvnd lib32-nvidia-470xx-utils libglvnd nvidia-470xx-dk
 
 - NVIDIA legacy: check [Nvidia's  website](https://nvidia.custhelp.com/app/answers/detail/a_id/3142) for details on which version is right for your GPU.
 
-### Other libraries
+### Wine-staging-tkg
 ```sh
-sudo pacman -S --needed giflib jq libgphoto2 libxcrypt-compat zlib
+echo '
+
+[rumpowered]
+SigLevel = Never
+Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
+
+sudo pacman -Syyu
+
+sudo pacman -S --needed wine-staging-tkg
 ```
 
 ### MULTILIB libraries
@@ -66,17 +69,9 @@ sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libx
 yay -S lib32-gst-plugins-base gst-plugins-base lib32-gst-plugins-good gst-plugins-good lib32-gst-plugins-ugly gst-plugins-ugly lib32-gst-plugins-bad gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-libav
 ```
 
-### Wine-staging-tkg
+### Other libraries
 ```sh
-echo '
-
-[rumpowered]
-SigLevel = Never
-Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
-
-sudo pacman -Syyu
-
-sudo pacman -S --needed wine-staging-tkg
+sudo pacman -S --needed giflib jq libgphoto2 libxcrypt-compat zlib
 ```
 
 ## Optional packages
