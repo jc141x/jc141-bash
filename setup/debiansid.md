@@ -28,10 +28,9 @@ sudo tee /etc/apt/sources.list.d/makedeb.list && sudo apt update && sudo apt ins
 ```
 
 ### dwarfs and overlayfs
-```
+```sh
 git clone https://mpr.makedeb.org/dwarfs-bin.git && cd dwarfs-bin && makedeb -si
 sudo apt install fuse-overlayfs
-
 ```
 
 ### graphics packages
@@ -51,7 +50,7 @@ Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
 
 ### gamescope
-```
+```sh
 git clone https://github.com/jc141x/gamescope-git.git && cd gamescope-git && makedeb -si
 ```
 - Nvidia not supported yet, but coming soon. Meanwhile don't install it or it will get used and fail to boot games.
