@@ -36,14 +36,14 @@ sudo dnf install jq libxcrypt zlib
 sudo dnf install alsa-lib alsa-plugins fluidsynth pulseaudio openal
 ```
 
-## optional packages
+#### optional packages
 
-#### yuzu
+##### yuzu
 ```sh
 export API_URL="https://api.github.com/repos/yuzu-emu/yuzu-mainline/releases/latest" && export DOWNLOAD_URL=$(curl -s $API_URL | grep -oP '"browser_download_url": "\K(.*AppImage)(?=")') && curl -Lo /tmp/yuzu --progress-meter $DOWNLOAD_URL && chmod +x /tmp/yuzu && sudo mv /tmp/yuzu /usr/local/bin/yuzu
 ```
 
-#### dosbox
+##### dosbox
 ```sh
 sudo dnf install dosbox
 ```
