@@ -91,7 +91,7 @@ sudo pacman -S --needed giflib jq libgphoto2 libxcrypt-compat zlib
 ##### yuzu
 
 ```sh
-yay -S yuzu-mainline-bin
+sudo pacman -S rumpowered/yuzu-mainline-bin
 ```
 ##### dosbox
 ```sh
