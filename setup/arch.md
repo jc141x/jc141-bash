@@ -23,7 +23,7 @@ sudo pacman -Syyu
 
 #### dwarfs
 ```sh
-yay -S dwarfs-bin fuse-overlayfs
+sudo pacman -S --needed rumpoweded/dwarfs-bin fuse-overlayfs
 ```
 
 #### multilib
