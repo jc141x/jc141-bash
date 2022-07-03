@@ -35,7 +35,7 @@ sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf && sudo pacman -
 
 ```sh
 # Universal
-sudo pacman -S --needed gamescope lib32-vulkan-icd-loader vulkan-icd-loader
+sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader
 Gamescope not supported on Nvidia yet, but coming soon. Meanwhile don't install it or it will get used and fail to boot games.
 
 # INTEL specific
@@ -59,6 +59,13 @@ yay -S --needed lib32-libglvnd lib32-nvidia-470xx-utils libglvnd nvidia-470xx-dk
 ### wine-staging-tkg
 ```sh
 sudo pacman -S --needed rumpowered/wine-staging-tkg
+```
+
+### gamescope
+
+- Technically optional, highly recommended against alt-tab freezes and isolation from system display server.
+```
+sudo pacman -S --needed gamescope
 ```
 
 ### multilib libraries
