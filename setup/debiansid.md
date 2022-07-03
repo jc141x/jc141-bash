@@ -38,10 +38,7 @@ sudo apt install fuse-overlayfs
 ```sh
 # Universal (AMD/Intel/Nvidia)
 sudo apt install libvulkan1 vulkan-tools
-git clone https://github.com/jc141x/gamescope-git.git && cd gamescope-git && makedeb -si
 sudo apt remove amdvlk
-
-Gamescope not supported on Nvidia yet, but coming soon. Meanwhile don't install it or it will get used and fail to boot games.
 
 # NVIDIA specific
 sudo add-apt-repository ppa:oibaf/graphics-drivers
@@ -52,6 +49,14 @@ Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
 - NVIDIA legacy: check [Nvidia's  website](https://nvidia.custhelp.com/app/answers/detail/a_id/3142) for details on which version is right for your GPU.
 
+
+### gamescope
+```
+git clone https://github.com/jc141x/gamescope-git.git && cd gamescope-git && makedeb -si
+```
+- Nvidia not supported yet, but coming soon. Meanwhile don't install it or it will get used and fail to boot games.
+
+- Technically optional, highly recommended against alt-tab freezes and isolation from system display server.
 
 ### other libraries
 ```sh
