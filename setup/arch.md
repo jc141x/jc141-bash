@@ -4,23 +4,34 @@
 
 - This is based on the assumption that you have common packages that come on distros like EndeavourOS, so on bare Arch you may have to install additional libraries.
 
-### YAY
+### yay
 - Does not apply to EndeavourOS.
 ```sh
 git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 ```
 
-### DWARFS
+### rumpowered arch repo
+```sh
+echo '
+
+[rumpowered]
+SigLevel = Never
+Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
+
+sudo pacman -Syyu
+```
+
+### dwarfs
 ```sh
 yay -S dwarfs-bin fuse-overlayfs
 ```
 
-### MULTILIB
+### multilib
 ```sh
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf && sudo pacman -Syyu
 ```
 
-### GRAPHICS Packages
+### graphics packages
 
 ```sh
 # Universal
@@ -45,43 +56,35 @@ yay -S --needed lib32-libglvnd lib32-nvidia-470xx-utils libglvnd nvidia-470xx-dk
 
 - NVIDIA legacy: check [Nvidia's  website](https://nvidia.custhelp.com/app/answers/detail/a_id/3142) for details on which version is right for your GPU.
 
-### Wine-staging-tkg
+### wine-staging-tkg
 ```sh
-echo '
-
-[rumpowered]
-SigLevel = Never
-Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
-
-sudo pacman -Syyu
-
 sudo pacman -S --needed rumpowered/wine-staging-tkg
 ```
 
-### MULTILIB libraries
+### multilib libraries
 
 ```sh
 sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-v4l-utils lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib
 ```
 
-### GSTREAMER
+### gstreamer
 ```
 yay -S lib32-gst-plugins-base gst-plugins-base lib32-gst-plugins-good gst-plugins-good lib32-gst-plugins-ugly gst-plugins-ugly lib32-gst-plugins-bad gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-libav
 ```
 
-### Other libraries
+### other libraries
 ```sh
 sudo pacman -S --needed giflib jq libgphoto2 libxcrypt-compat zlib
 ```
 
-## Optional packages
+### optional packages
 
-#### Yuzu - for Nintendo games
+#### yuzu
 
 ```sh
 yay -S yuzu-mainline-bin
 ```
-#### Dosbox
+#### dosbox
 ```sh
 sudo pacman -S --needed dosbox
 ```
