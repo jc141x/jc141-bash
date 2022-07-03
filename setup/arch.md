@@ -1,16 +1,16 @@
-<h2>Setup Guide - Arch</h2>
+<h3>Setup Guide - Arch</h3>
 
 - Also applies to EndeavourOS, Artix, ArcoLinux, Manjaro etc.
 
 - This is based on the assumption that you have common packages that come on distros like EndeavourOS, so on bare Arch you may have to install additional libraries.
 
-### yay
+#### yay
 - Does not apply to EndeavourOS.
 ```sh
 git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 ```
 
-### rumpowered arch repo
+#### rumpowered arch repo
 ```sh
 echo '
 
@@ -21,17 +21,17 @@ Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
 sudo pacman -Syyu
 ```
 
-### dwarfs
+#### dwarfs
 ```sh
 yay -S dwarfs-bin fuse-overlayfs
 ```
 
-### multilib
+#### multilib
 ```sh
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf && sudo pacman -Syyu
 ```
 
-### graphics packages
+#### graphics packages
 
 ```sh
 # Universal
@@ -55,12 +55,12 @@ yay -S --needed lib32-libglvnd lib32-nvidia-470xx-utils libglvnd nvidia-470xx-dk
 
 - NVIDIA legacy: check [Nvidia's  website](https://nvidia.custhelp.com/app/answers/detail/a_id/3142) for details on which version is right for your GPU.
 
-### wine-staging-tkg
+#### wine-staging-tkg
 ```sh
 sudo pacman -S --needed rumpowered/wine-staging-tkg
 ```
 
-### gamescope
+#### gamescope
 
 ```
 sudo pacman -S --needed gamescope
@@ -70,30 +70,30 @@ sudo pacman -S --needed gamescope
 
 - Technically optional, highly recommended against alt-tab freezes and isolation from system display server.
 
-### multilib libraries
+#### multilib libraries
 
 ```sh
 sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-v4l-utils lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib
 ```
 
-### gstreamer
+#### gstreamer
 ```
 yay -S lib32-gst-plugins-base gst-plugins-base lib32-gst-plugins-good gst-plugins-good lib32-gst-plugins-ugly gst-plugins-ugly lib32-gst-plugins-bad gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-libav
 ```
 
-### other libraries
+#### other libraries
 ```sh
 sudo pacman -S --needed giflib jq libgphoto2 libxcrypt-compat zlib
 ```
 
-### optional packages
+#### optional packages
 
-#### yuzu
+##### yuzu
 
 ```sh
 yay -S yuzu-mainline-bin
 ```
-#### dosbox
+##### dosbox
 ```sh
 sudo pacman -S --needed dosbox
 ```
