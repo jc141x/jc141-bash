@@ -22,7 +22,7 @@ echo "DWRFS: Mounted prefix."; }
 
 unmount-game() { wineserver -k && killall gamescope && fuser -k "$PWD/files/groot-mnt"
 fusermount -u -z "$PWD/files/groot"
-fusermount -u -z "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt" && rm -d "$PWD/files/groot-work"
+fusermount -u -z "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-work"
 echo "DWRFS: Unmounted game."; }
 
 unmount-prefix() { wineserver -k && fuser -k "$RMTDIR/prefix-mnt"
