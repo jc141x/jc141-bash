@@ -66,7 +66,7 @@ sudo pacman -S --needed rumpowered/wine-staging-tkg rumpowered/dxvk-bin rumpower
 sudo pacman -S --needed gamescope
 ```
 
-- Nvidia not supported yet, but coming soon. Meanwhile don't install it or it will get used and fail to boot games.
+- Nvidia not supported yet, but coming soon. Meanwhile don't install it or it will get used and fail to boot games. This also applies to old GPUs with no vulkan support or semi-supported.
 
 - Technically optional, highly recommended against alt-tab freezes and isolation from system display server.
 
