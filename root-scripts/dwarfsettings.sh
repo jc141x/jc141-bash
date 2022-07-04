@@ -5,7 +5,7 @@ PRF="$RMTDIR/prefix.dwarfs"; RMT="$RMTDIR/rumtricks.sh";
 mount-game() { [ ! -f "$BINDIR/$BIN" ] && mkdir -p {"$PWD/files/groot-mnt","$PWD/files/groot-rw","$PWD/files/groot-work","$PWD/files/groot"} && dwarfs "$PWD/files/groot.dwarfs" "$PWD/files/groot-mnt" && fuse-overlayfs -o lowerdir="$PWD/files/groot-mnt",upperdir="$PWD/files/groot-rw",workdir="$PWD/files/groot-work" "$PWD/files/groot" && echo "DWRFS: Mounted game."; }
 
 mount-prefix() {
-RMTRLS="$(curl -s https://api.github.com/repos/jc141x/rumtricks/releases)"
+RMTRLS="$(curl -s https://api.github.com/repos/jc141x/rumtricks/releases/latest)"
 DLRLS="$(echo "$RMTRLS" | awk -F '["]' '/"browser_download_url":/ && /tar.lzma/ {print $4}')"
 [ ! -f "$RMTDIR/$RMTARCH" ] && [ ! -d "$RMTCONTENT" ] && curl -L "$DLRLS" -o "$RMTDIR/$RMTARCH" && [ ! -f "$RMTDIR/$RMTARCH" ] && echo "RMT: Download failed. " && exit || [ ! -d "$RMTCONTENT" ] && tar -xvf "$RMTDIR/$RMTARCH" -C "$RMTDIR" && rm -Rf "$RMTDIR/$RMTARCH"
 [ -f "$PRF" ] && find "$RMTDIR/prefix.dwarfs" -mtime +60 -type f -delete; export WINEPREFIX="$RMTDIR/prefix"; [ ! -f "$RMT" ] && cp "$PWD/files/rumtricks.sh" "$RMT";
