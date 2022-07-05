@@ -6,7 +6,7 @@ cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; export
 bash "$DWRFST" mount-game; bash "$DWRFST" mount-prefix
 
 # prefix + game files
-export WINEPREFIX="$PWD/files/data/prefix-tmp"; BINDIR="$PWD/files/groot"; BIN="game.exe"
+export WINEPREFIX="$PWD/files/data/prefix-tmp"; export BINDIR="$PWD/files/groot"; BIN="game.exe"
 
 # WINE handler (choices: wine-tkg, wine-ge, wine-tkg-nomingw)
 _WINE="wine-tkg"; bash "$WHA" "$_WINE"; [ -x "$BINDIR/wine/bin/wine" ] && export WINE="$BINDIR/wine/bin/wine" || export WINE="$(command -v wine)"; CMD=("$WINE" "$BIN");
