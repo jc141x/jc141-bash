@@ -62,11 +62,11 @@ follow our [requirements guide](arch.md) for Arch, and reboot once more.
 |---|---|---|
 | GPU | Yes ||
 | Wireless | Yes ||
-| Audio | Yes | After drivers |
+| Audio | Partial | Speakers don't work |
 | Touchpad | Yes ||
 | Touchscreen | Yes ||
-| Controller | No | user error? needs investigation |
+| Controller | Partial | Buttons yes, Joysticks no |
 | Gyroscope | Untested ||
-| Card reader (microSD) | No | Worked with LiveCD, driver? user error?|
+| Card reader (microSD) | Yes ||
 | Bluetooth | Yes ||
 | Battery | Yes ||
