@@ -2,11 +2,11 @@
 RMTDIR="${XDG_DATA_HOME:-$HOME/.local/share}/rumtricks"; RMTCONTENT="$RMTDIR/rumtricks-content"; RMTARCH="rumtricks-content.tar.lzma";
 PRF="$RMTDIR/prefix.dwarfs"; RMT="$RMTDIR/rumtricks.sh";
 
-mount-game() { unmount-game;
+mount-game() { [ -d "$PWD/files/groot-mnt" ] && unmount-game;
 [ -d "$PWD/files/groot" ] && echo "DWRFS: Mounting path exists." && [ "$( ls -A "$PWD/files/groot")" ] && echo "DWRFS: Game is already mounted or extracted." && exit
 mkdir -p {"$PWD/files/groot-mnt","$PWD/files/groot-rw","$PWD/files/groot-work","$PWD/files/groot"} && dwarfs "$PWD/files/groot.dwarfs" "$PWD/files/groot-mnt" && fuse-overlayfs -o lowerdir="$PWD/files/groot-mnt",upperdir="$PWD/files/groot-rw",workdir="$PWD/files/groot-work" "$PWD/files/groot" && echo "DWRFS: Mounted game."; }
 
-mount-prefix() { unmount-prefix;
+mount-prefix() { [ -d "$RMTDIR/prefix-mnt" ] && unmount-prefix;
 # downloading
 RMTRLS="$(curl -s https://api.github.com/repos/jc141x/rumtricks/releases/latest)"
 DLRLS="$(echo "$RMTRLS" | awk -F '["]' '/"browser_download_url":/ && /tar.lzma/ {print $4}')"
