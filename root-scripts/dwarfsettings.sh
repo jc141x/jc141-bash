@@ -10,7 +10,7 @@ mount-prefix() { [ -d "$RMTDIR/prefix-mnt" ] && unmount-prefix;
 # downloading
 RMTRLS="$(curl -s https://api.github.com/repos/jc141x/rumtricks/releases/latest)"
 DLRLS="$(echo "$RMTRLS" | awk -F '["]' '/"browser_download_url":/ && /tar.lzma/ {print $4}')"
-[ ! -f "$RMTDIR/$RMTARCH" ] && [ ! -d "$RMTCONTENT" ] && curl -L "$DLRLS" -o "$RMTDIR/$RMTARCH" && [ ! -f "$RMTDIR/$RMTARCH" ] && echo -n "RMT: Download failed. | " && exit || [ ! -d "$RMTCONTENT" ] && tar -xvf "$RMTDIR/$RMTARCH" -C "$RMTDIR" && rm -Rf "$RMTDIR/$RMTARCH"
+[ ! -f "$RMTDIR/$RMTARCH" ] && [ ! -d "$RMTCONTENT" ] && curl -L "$DLRLS" -o "$RMTDIR/$RMTARCH" && [ ! -f "$RMTDIR/$RMTARCH" ] && echo -n "RMT: Download failed. | " && exit || [ ! -d "$RMTCONTENT" ] && tar -xvf "$RMTDIR/$RMTARCH" -C "$RMTDIR" > /dev/null && rm -Rf "$RMTDIR/$RMTARCH"
 
 # prefix generation
 [ -f "$PRF" ] && find "$RMTDIR/prefix.dwarfs" -mtime +60 -type f -delete; export WINEPREFIX="$RMTDIR/prefix"; [ ! -f "$RMT" ] && cp "$PWD/files/rumtricks.sh" "$RMT";
