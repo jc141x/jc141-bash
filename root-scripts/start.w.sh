@@ -1,6 +1,6 @@
 #!/bin/bash
 cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; export R="$PWD"; DWRFST="$R/dwarfsettings.sh"; RMT="$PWD/files/rumtricks.sh"; WHA="$PWD/files/wha.sh";
-[ ! -e "$RMT" ] && cp /usr/bin/rumtricks "$RMT"; [ ! -e "$WHA" ] && cp /usr/bin/wha "$WHA"; export WINE_LARGE_ADDRESS_AWARE=1; export WINEFSYNC=1; export WINEDLLOVERRIDES="mscoree=d;mshtml=d;";
+[ ! -e "$RMT" ] && cp /usr/bin/rumtricks "$RMT"; [ ! -e "$WHA" ] && cp /usr/bin/wha "$WHA"; export WINE_LARGE_ADDRESS_AWARE=1; export WINEFSYNC=1; export WINEDLLOVERRIDES="mshtml=d;";
 
 # dwarfs
 bash "$DWRFST" mount-game; bash "$DWRFST" mount-prefix
