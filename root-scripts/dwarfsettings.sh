@@ -1,5 +1,5 @@
 #!/bin/bash
-RMTDIR="${XDG_DATA_HOME:-$HOME/.local/share}/rumtricks"; RMTCONTENT="$RMTDIR/rumtricks-content"; RMTARCH="rumtricks-content.tar.lzma";
+RMTDIR="${XDG_DATA_HOME:-$HOME/.local/share}/rumtricks"; [ -d "$RMTDIR" ] && mkdir -p "$RMTDIR"; RMTCONTENT="$RMTDIR/rumtricks-content"; RMTARCH="rumtricks-content.tar.lzma";
 PRF="$RMTDIR/prefix.dwarfs"; RMT="$RMTDIR/rumtricks.sh";
 
 mount-game() { [ -d "$PWD/files/groot-mnt" ] && unmount-game;
@@ -39,4 +39,4 @@ for i in "$@"; do
         "$i"
     else exit
     fi
-done
+don
