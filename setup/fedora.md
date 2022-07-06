@@ -26,6 +26,11 @@ sudo dnf install gamescope
 
 - Technically optional, highly recommended against alt-tab freezes and isolation from system display server.
 
+#### wine-mono
+```sh
+sudo dnf install wine-mono
+```
+
 #### other libraries
 ```sh
 sudo dnf install jq libxcrypt zlib
