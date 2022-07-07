@@ -33,4 +33,4 @@ echo -n "unmounted prefix | "; }
 extract-game() { [ -d "$PWD/files/groot" ] && echo -n "extraction path exists. | " && [ "$( ls -A "$PWD/files/groot")" ] && echo -n "game is already mounted or extracted. | " && exit
 rm -d "$PWD/files/groot" && echo "extracting game, this may take a while"; tstart="$(date +%s)" && mkdir "$PWD/files/groot" && dwarfsextract -i "$PWD/files/groot.dwarfs" -o "$PWD/files/groot" && tend="$(date +%s)"; elapsed="$((tend - tstart))" && echo "done in $((elapsed / 60)) min and $((elapsed % 60)) sec"; }
 
-for i in "$@"; do if type "$i" &>/dev/null; then; "$i"; else exit; fi; done
+for i in "$@"; do if type "$i" &>/dev/null; then "$i"; else exit; fi; done
