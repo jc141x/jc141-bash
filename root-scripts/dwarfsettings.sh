@@ -39,4 +39,4 @@ for i in "$@"; do
         "$i"
     else exit
     fi
-don
+done
