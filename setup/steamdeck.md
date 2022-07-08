@@ -62,10 +62,10 @@ follow our [requirements guide](arch.md) for Arch, and reboot once more.
 |---|---|---|
 | GPU | Yes ||
 | Wireless | Yes ||
-| Audio | Partial | Speakers don't work |
+| Audio | No | External devices with sound cards work |
 | Touchpad | Yes ||
 | Touchscreen | Yes ||
-| Controller | Partial | Buttons yes, Joysticks no |
+| Controller | Partial | Some buttons work |
 | Gyroscope | Untested ||
 | Card reader (microSD) | Yes ||
 | Bluetooth | Yes ||
