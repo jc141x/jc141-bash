@@ -18,7 +18,7 @@ echo -e "\e[38;5;$((RANDOM%257))m" && cat << 'EOF'
                     ⢑⢕⠃⡈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢃⢕⢕⢕
                     ⣆⢕⠄⢱⣄⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⢁⢕⢕⠕⢁
                     ⣿⣦⡀⣿⣿⣷⣶⣬⣍⣛⣛⣛⡛⠿⠿⠿⠛⠛⢛⣛⣉⣭⣤⣂⢜⠕⢑⣡⣴⣿
-            Pain⠀hweals,⠀chicks⠀dwig⠀scwas,⠀gwory⠀wasts⠀foweva!
+            Pain⠀hweals,⠀chicks⠀dwig⠀scwas,⠀gwory⠀lasts⠀foweva!
                   jc141 - 1337x.to -⠀rumpowered.org
 EOF
 echo -e "\e[0m"
