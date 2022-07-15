@@ -36,7 +36,7 @@ prime-run - for using Nvidia.
 #### dwarfsettings.sh commands
 ```sh
 bash dwarfsettings.sh extract-game
-extracts groot.dwarfs to groot directory.
+extracts groot.dwarfs to groot directory if it is empty
 
 bash dwarfsettings.sh unmount-game
 unmounts groot
