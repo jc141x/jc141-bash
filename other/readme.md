@@ -1,14 +1,10 @@
 native steamclient
 ```sh
-CMD=(SteamAppId=000000 SteamGameId=000000 ./"$BIN" "GAME")
-
-function cleanup {
-rm -rf "$HOME/.steam"
-
-cd "$BINDIR";
-mkdir -p $HOME/.steam/sdk64 && cp steamclient.so $HOME/.steam/sdk64/steamclient.so && cp -r steam_settings ~/.steam/sdk64/ && echo $BASHPID > $HOME/.steam/steam.pid
+mkdir -p "$PWD/files/data/.steam/sdk64" && cp "$PWD/files/steamclient.so" "$PWD/files/data/.steam/sdk64/steamclient.so" && cp -r "$PWD/files/steam_settings" "$PWD/files/data/.steam/sdk64/" && echo $BASHPID > "$PWD/files/data/.steam/steam.pid"
 # or
-mkdir -p $HOME/.steam/sdk32 && cp steamclient.so $HOME/.steam/sdk32/steamclient.so && cp -r steam_settings ~/.steam/sdk32/ && echo $BASHPID > $HOME/.steam/steam.pid
+mkdir -p "$PWD/files/data/.steam/sdk32" && cp "$PWD/files/steamclient.so" "$PWD/files/data/.steam/sdk32/steamclient.so" && cp -r "$PWD/files/steam_settings" "$PWD/files/data/.steam/sdk32/" && echo $BASHPID > "$PWD/files/data/.steam/steam.pid"
+cd "$BINDIR";
+SteamAppId=594570 SteamGameId=594570 ./"$BIN"
 ```
 
 sed array
