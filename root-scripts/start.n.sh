@@ -4,7 +4,7 @@ export HOME="$R/files/data"; export XDG_DATA_HOME="$R/files/data/.local"; export
 
 BINDIR="$R/files/groot"; BIN="game.bin"; CMD=(./"$BIN")
 
-# gamescope/FSR
+# gamescope
 : ${GAMESCOPE:=$(command -v gamescope)}; [ -x "$GAMESCOPE" ] && CMD=("$GAMESCOPE" -f -- "${CMD[@]}");
 
 # dwarfs
