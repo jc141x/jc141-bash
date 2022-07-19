@@ -16,7 +16,7 @@ PWADS=(
 # launcher
 CMD=("$BINDIR/$BIN" -iwad "$IWAD" -file "${PWADS[@]}");
 
-# gamescope/FSR
+# gamescope
 : ${GAMESCOPE:=$(command -v gamescope)}; [ -x "$GAMESCOPE" ] && CMD=("$GAMESCOPE" -f -- "${CMD[@]}");
 
 # dwarfs
