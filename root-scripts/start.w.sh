@@ -11,10 +11,10 @@ export WINEPREFIX="$PWD/files/data/prefix-tmp"; export BINDIR="$PWD/files/groot"
 # WINE handler (choices: wine-tkg, wine-ge, wine-tkg-nomingw)
 _WINE="wine-tkg"; bash "$WHA" "$_WINE"; [ -x "$BINDIR/wine/bin/wine" ] && export WINE="$BINDIR/wine/bin/wine" || export WINE="$(command -v wine)"; CMD=("$WINE" "$BIN");
 
-# gamescope/FSR
+# gamescope
 : ${GAMESCOPE:=$(command -v gamescope)}; [ -x "$GAMESCOPE" ] && CMD=("$GAMESCOPE" -f -- "${CMD[@]}");
 
-# Rumtricks
+# rumtricks
 bash "$RMT" isolation
 
 # Cleanup (runs when game exits/crashes)
