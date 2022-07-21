@@ -21,13 +21,13 @@ DLRLS="$(echo "$RMTRLS" | awk -F '["]' '/"browser_download_url":/ && /tar.lzma/ 
 echo -n "mounted prefix | "; }
 
 unmount-game() { wineserver -k && killall gamescope && fuser -k "$PWD/files/groot-mnt"
-fusermount -u -z "$PWD/files/groot"
-fusermount -u -z "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-work"
+fusermount3 -u -z "$PWD/files/groot"
+fusermount3 -u -z "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-work"
 echo -n "unmounted game | "; }
 
 unmount-prefix() { wineserver -k && fuser -k "$RMTDIR/prefix-mnt"
-fusermount -u -z "$PWD/files/data/prefix-tmp" && rm -d -f "$PWD/files/data/prefix-tmp";
-fusermount -u -z "$RMTDIR/prefix-mnt" && rm -d -f "$RMTDIR/prefix-mnt"
+fusermount3 -u -z "$PWD/files/data/prefix-tmp" && rm -d -f "$PWD/files/data/prefix-tmp";
+fusermount3 -u -z "$RMTDIR/prefix-mnt" && rm -d -f "$RMTDIR/prefix-mnt"
 echo -n "unmounted prefix | "; }
 
 extract-game() { [ -d "$PWD/files/groot" ] && echo -n "extraction path exists. | " && [ "$( ls -A "$PWD/files/groot")" ] && echo -n "game is already mounted or extracted | " && exit
