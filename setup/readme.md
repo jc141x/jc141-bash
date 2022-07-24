@@ -1,5 +1,7 @@
 <h1>jc141 setup guide</h1>
 
+- Your system requires vulkan support to play a majority of our releases. Native ones are mostly playable without vulkan support.
+
 ### not supported
    - NTFS, because the very different attrs system.
    - LTS distros (Ubuntu LTS, Mint, etc.), because outdated dependencies are hard to support.
