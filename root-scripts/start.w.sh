@@ -15,7 +15,7 @@ _WINE="wine-tkg"; bash "$WHA" "$_WINE"; [ -x "$BINDIR/wine/bin/wine" ] && export
 : ${GAMESCOPE:=$(command -v gamescope)}; [ -x "$GAMESCOPE" ] && CMD=("$GAMESCOPE" -f -- "${CMD[@]}");
 
 # rumtricks
-bash "$RMT" isolation
+bash "$RMT" isolation dxvk
 
 # Cleanup (runs when game exits/crashes)
 function cleanup { cd "$OLDPWD" && bash "$DWRFST" unmount-prefix unmount-game; }
