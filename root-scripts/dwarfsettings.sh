@@ -14,7 +14,7 @@ DLRLS="$(echo "$RMTRLS" | awk -F '["]' '/"browser_download_url":/ && /tar.lzma/ 
 
 # prefix generation
 [ -f "$PRF" ] && find "$RMTDIR/prefix.dwarfs" -mtime +60 -type f -delete; export WINEPREFIX="$RMTDIR/prefix"; [ ! -f "$RMT" ] && cp "$PWD/files/rumtricks.sh" "$RMT";
-[ ! -f "$PRF" ] && WINEPREFIX="$RMTDIR/prefix" bash "$RMT" directx vcrun && sleep 2 && mkdwarfs -l7 -B5 -i "$RMTDIR/prefix" -o "$RMTDIR/prefix.dwarfs" && rm -Rf "$WINEPREFIX"
+[ ! -f "$PRF" ] && WINEPREFIX="$RMTDIR/prefix" bash "$RMT" isolate directx vcrun && sleep 2 && mkdwarfs -l7 -B5 -i "$RMTDIR/prefix" -o "$RMTDIR/prefix.dwarfs" && rm -Rf "$WINEPREFIX"
 
 # mounting prefix
 [ ! -d "$WINEPREFIX" ] && mkdir -p {"$RMTDIR/prefix-mnt","$PWD/files/data/user-data","$PWD/files/data/work","$PWD/files/data/prefix-tmp"} && dwarfs "$RMTDIR/prefix.dwarfs" "$RMTDIR/prefix-mnt" -o cache_image && fuse-overlayfs -o lowerdir="$RMTDIR/prefix-mnt",upperdir="$PWD/files/data/user-data",workdir="$PWD/files/data/work" "$PWD/files/data/prefix-tmp";
