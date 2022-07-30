@@ -1,9 +1,9 @@
 #!/bin/bash
-cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; export R="$PWD"; DWRFST="$R/dwarfsettings.sh"; RMT="$PWD/files/rumtricks.sh"; WHA="$PWD/files/wha.sh";
+cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; export R="$PWD"; DWRF="$R/dwarfsettings.sh"; RMT="$PWD/files/rumtricks.sh"; WHA="$PWD/files/wha.sh";
 [ ! -e "$RMT" ] && cp /usr/bin/rumtricks "$RMT"; [ ! -e "$WHA" ] && cp /usr/bin/wha "$WHA"; export WINE_LARGE_ADDRESS_AWARE=1; export WINEFSYNC=1; export WINEDLLOVERRIDES="mshtml=d;";
 
 # dwarfs
-bash "$DWRFST" mount-game; bash "$DWRFST" mount-prefix
+bash "$DWRF" mount-game; bash "$DWRF" mount-prefix
 
 # prefix + game files
 export WINEPREFIX="$PWD/files/data/prefix-tmp"; export BINDIR="$PWD/files/groot"; BIN="game.exe"
@@ -18,7 +18,7 @@ _WINE="wine-tkg"; bash "$WHA" "$_WINE"; [ -x "$BINDIR/wine/bin/wine" ] && export
 bash "$RMT" dxvk
 
 # Cleanup (runs when game exits/crashes)
-function cleanup { cd "$OLDPWD" && bash "$DWRFST" unmount-prefix unmount-game; }
+function cleanup { cd "$OLDPWD" && bash "$DWRF" unmount-prefix unmount-game; }
 trap 'cleanup' EXIT SIGINT SIGTERM
 
 echo -e "\e[38;5;$((RANDOM%257))m" && cat << 'EOF'
