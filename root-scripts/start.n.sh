@@ -11,7 +11,7 @@ BINDIR="$R/files/groot"; BIN="game.bin"; CMD=(./"$BIN")
 # dwarfs
 bash "$DWRF" mount-game
 function cleanup { cd "$OLDPWD" && bash "$DWRF" unmount-game; }
-trap 'cleanup' EXIT SIGINT SIGTERM
+trap 'cleanup' EXIT INT SIGINT SIGTERM
 
 echo -e "\e[38;5;$((RANDOM%257))m" && cat << 'EOF'
                      ⣐⢕⢕⢕⢕⢕⢕⢕⢕⠅⢗⢕⢕⢕⢕⢕⢕⢕⠕⠕⢕⢕⢕⢕⢕⢕⢕⢕⢕
