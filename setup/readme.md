@@ -31,9 +31,7 @@ DBG=1 - for enabling terminal output from the game binary and other software ran
 
 GAMESCOPE=0 - for disabling gamescope.
 
-WINEESYNC=0 WINEFSYNC=0 - for disabling fsync and esync.
-
-prime-run - for using Nvidia.
+WINEFSYNC=0 - for disabling fsync.
 ```
 
 - game can also be ran directly from file manager by right clicking on start.x.sh and giving executable permission.
