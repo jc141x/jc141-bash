@@ -54,4 +54,12 @@ mounts prefix.dwarfs to prefix-mnt and overlayfs to prefix-tmp
 
 bash dwarfsettings.sh unmount-prefix
 unmounts prefix.dwarfs from prefix-mnt and overlayfs to prefix-tmp
+
+From August 2022
+
+bash dwarfsettings.sh delete-dwarfs-image
+deletes dwarfs image which contains the game files
+
+bash dwarfsettings.sh compress-game
+compresses extracted game files to groot.dwarfs
 ```
