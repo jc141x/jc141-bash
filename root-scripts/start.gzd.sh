@@ -1,4 +1,5 @@
 #!/bin/bash
+[ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed" && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed" && exit
 cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; R="$PWD"; DWRF="$R/dwarfsettings.sh"; 
 export HOME="$R/files/data"; export XDG_DATA_HOME="$R/files/data/.local"; export XDG_CONFIG_HOME="$R/files/data/.config"; mkdir -p {"$HOME","$XDG_CONFIG_HOME","$XDG_DATA_HOME"}
 
