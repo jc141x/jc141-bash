@@ -1,5 +1,5 @@
 #!/bin/bash
-cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; R="$PWD"; DWRFST="$R/dwarfsettings.sh"; 
+cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; R="$PWD"; DWRF="$R/dwarfsettings.sh"; 
 export HOME="$R/files/data"; export XDG_DATA_HOME="$R/files/data/.local"; export XDG_CONFIG_HOME="$R/files/data/.config"; mkdir -p {"$HOME","$XDG_CONFIG_HOME","$XDG_DATA_HOME"}
 
 BINDIR="$R/files/groot"; BIN="gzdoom/gzdoom"
@@ -20,8 +20,8 @@ CMD=("$BINDIR/$BIN" -iwad "$IWAD" -file "${PWADS[@]}");
 : ${GAMESCOPE:=$(command -v gamescope)}; [ -x "$GAMESCOPE" ] && CMD=("$GAMESCOPE" -f -- "${CMD[@]}");
 
 # dwarfs
-bash "$DWRFST" mount-game
-function cleanup { cd "$OLDPWD" && bash "$DWRFST" unmount-game; }
+bash "$DWRF" mount-game
+function cleanup { cd "$OLDPWD" && bash "$DWRF" unmount-game; }
 trap 'cleanup' EXIT SIGINT SIGTERM
 
 echo -e "\e[38;5;$((RANDOM%257))m" && cat << 'EOF'
