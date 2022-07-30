@@ -31,7 +31,11 @@ fusermount3 -u -z "$PWD/files/data/prefix-tmp" && rm -d -f "$PWD/files/data/pref
 fusermount3 -u -z "$RMTDIR/prefix-mnt" && rm -d -f "$RMTDIR/prefix-mnt"
 echo -n "unmounted prefix | "; }
 
-extract-game() { [ -d "$PWD/files/groot" ] && echo -n "extraction path exists. | " && [ "$( ls -A "$PWD/files/groot")" ] && echo -n "game is already mounted or extracted | " && exit
+extract-game() { [ -d "$PWD/files/groot" ] && echo -n "extraction path exists | " && [ "$( ls -A "$PWD/files/groot")" ] && echo -n "game is already mounted or extracted | " && exit
 echo "extracting game, this may take a while"; tstart="$(date +%s)" && mkdir "$PWD/files/groot"; dwarfsextract -i "$PWD/files/groot.dwarfs" -o "$PWD/files/groot" && tend="$(date +%s)"; elapsed="$((tend - tstart))" && echo "done in $((elapsed / 60)) min and $((elapsed % 60)) sec"; }
+
+delete-dwarfs-image() { rm -Rf "$PWD/files/groot.dwarfs" && echo "deleting dwarfs image"; }
+
+compress-game() { [ ! -f "$PWD/files/groot.dwarfs" ] && mkdwarfs -l7 -B30 -i "$PWD/files/groot" -o "$PWD/files/groot.dwarfs"; }
 
 for i in "$@"; do if type "$i" &>/dev/null; then "$i"; else exit; fi; done
