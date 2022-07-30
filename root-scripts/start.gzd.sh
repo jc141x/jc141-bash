@@ -23,7 +23,7 @@ CMD=("$BINDIR/$BIN" -iwad "$IWAD" -file "${PWADS[@]}");
 # dwarfs
 bash "$DWRF" mount-game
 function cleanup { cd "$OLDPWD" && bash "$DWRF" unmount-game; }
-trap 'cleanup' EXIT SIGINT SIGTERM
+trap 'cleanup' EXIT INT SIGINT SIGTERM
 
 echo -e "\e[38;5;$((RANDOM%257))m" && cat << 'EOF'
                      ⣐⢕⢕⢕⢕⢕⢕⢕⢕⠅⢗⢕⢕⢕⢕⢕⢕⢕⠕⠕⢕⢕⢕⢕⢕⢕⢕⢕⢕
