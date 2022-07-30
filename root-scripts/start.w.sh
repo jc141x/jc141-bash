@@ -20,7 +20,7 @@ bash "$RMT" dxvk
 
 # Cleanup (runs when game exits/crashes)
 function cleanup { cd "$OLDPWD" && bash "$DWRF" unmount-prefix unmount-game; }
-trap 'cleanup' EXIT SIGINT SIGTERM
+trap 'cleanup' EXIT INT SIGINT SIGTERM
 
 echo -e "\e[38;5;$((RANDOM%257))m" && cat << 'EOF'
                      ⣐⢕⢕⢕⢕⢕⢕⢕⢕⠅⢗⢕⢕⢕⢕⢕⢕⢕⠕⠕⢕⢕⢕⢕⢕⢕⢕⢕⢕
