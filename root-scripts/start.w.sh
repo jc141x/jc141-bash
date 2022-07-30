@@ -1,4 +1,5 @@
 #!/bin/bash
+[ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed" && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed" && exit
 cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; export R="$PWD"; DWRF="$R/dwarfsettings.sh"; RMT="$PWD/files/rumtricks.sh"; WHA="$PWD/files/wha.sh";
 [ ! -e "$RMT" ] && cp /usr/bin/rumtricks "$RMT"; [ ! -e "$WHA" ] && cp /usr/bin/wha "$WHA"; export WINE_LARGE_ADDRESS_AWARE=1; export WINEFSYNC=1; export WINEDLLOVERRIDES="mshtml=d;";
 
