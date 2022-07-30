@@ -1,12 +1,13 @@
 #!/bin/bash
+[ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed" && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed" && exit
 RMTDIR="${XDG_DATA_HOME:-$HOME/.local/share}/rumtricks"; [ -d "$RMTDIR" ] && mkdir -p "$RMTDIR"; RMTCONTENT="$RMTDIR/rumtricks-content"; RMTARCH="rumtricks-content.tar.lzma";
 PRF="$RMTDIR/prefix.dwarfs"; RMT="$RMTDIR/rumtricks.sh";
 
-mount-game() { [ -d "$PWD/files/groot-mnt" ] && unmount-game;
+mount-game() { unmount-game &> /dev/null;
 [ -d "$PWD/files/groot" ] && echo -n "mounting path exists | " && [ "$( ls -A "$PWD/files/groot")" ] && echo -n "game is already mounted or extracted | " && exit
 mkdir -p {"$PWD/files/groot-mnt","$PWD/files/groot-rw","$PWD/files/groot-work","$PWD/files/groot"} && dwarfs "$PWD/files/groot.dwarfs" "$PWD/files/groot-mnt" && fuse-overlayfs -o lowerdir="$PWD/files/groot-mnt",upperdir="$PWD/files/groot-rw",workdir="$PWD/files/groot-work" "$PWD/files/groot" && echo -n "mounted game | "; }
 
-mount-prefix() { [ -d "$RMTDIR/prefix-mnt" ] && unmount-prefix;
+mount-prefix() { unmount-prefix &> /dev/null;
 # downloading
 RMTRLS="$(curl -s https://api.github.com/repos/jc141x/rumtricks/releases/latest)"
 DLRLS="$(echo "$RMTRLS" | awk -F '["]' '/"browser_download_url":/ && /tar.lzma/ {print $4}')"
