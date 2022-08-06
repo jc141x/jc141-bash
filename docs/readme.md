@@ -66,7 +66,7 @@ bash "$DWRF" mount-prefix
 
 - creating prefix.dwarfs happens only when it did not exist or when the dwarfs image is older than 60 days. (to prevent incompatibilities with future wine versions)
 
-- on each run, prefix.dwarfs is mounted to prefix-mnt and overlayed to files/data/prefix-tmp. Files created by the game or wine are stored in files/data/user-data.
+- on each run, prefix.dwarfs is mounted to prefix-mnt and overlayed to files/data/prefix-tmp.
 
 <br>
 
