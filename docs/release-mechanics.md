@@ -164,6 +164,8 @@ function cleanup { cd "$OLDPWD" && bash "$DWRF" unmount-game; }
 - cleanup is a function that changes directory back to start script directory and calls "unmount-game"
 function from dwarfsettings. If the game is using wine prefix also needs to be unmounted.
 
+<br>
+
 ```sh
 trap 'cleanup' EXIT INT SIGINT SIGTERM
 ``` 
