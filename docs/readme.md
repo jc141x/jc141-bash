@@ -170,7 +170,7 @@ function from dwarfsettings. If the game is using wine prefix also needs to be u
 trap 'cleanup' EXIT INT SIGINT SIGTERM
 ``` 
 
-- will call cleanup function the game exits or crashes.
+- will call cleanup function if the game exits or crashes.
 
 - there can be cases where zombie processes exist and unmounting is postponed or never happens without user input. 
 
