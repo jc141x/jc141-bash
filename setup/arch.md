@@ -4,11 +4,6 @@
 
 - This is based on the assumption that you have common packages that come on distros like EndeavourOS, so on bare Arch you may have to install additional libraries.
 
-#### dwarfs and fuse-overlayfs
-```sh
-sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs
-```
-
 #### rumpowered arch repo
 ```sh
 echo '
@@ -18,6 +13,11 @@ SigLevel = Never
 Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
 
 sudo pacman -Syyu
+```
+
+#### dwarfs and fuse-overlayfs
+```sh
+sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs
 ```
 
 #### multilib
