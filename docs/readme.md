@@ -2,7 +2,7 @@
 
 - groot.dwarfs is created with the -l7 -B30 settings. This means it uses zstd level 22 with block size 30.
 
-- the game will usually mount groot.dwarfs to files/groot-mnt and then overlay to groot (unless it is configured to be extracted). 
+- the script will usually mount groot.dwarfs to files/groot-mnt and then overlay to groot (unless it is configured to be extracted). 
 
 - files created by the game, wine or other programs are created in groot and then stored in groot-rw (if with wine then also files/data/user-data). On next mounting groot-rw will overlay above groot and provide the mentioned files.
 
