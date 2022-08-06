@@ -15,7 +15,7 @@
 ``` sh
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed" && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed" && exit
 ```
-- with Conditions `-x` is a condition that a file exists and is executable. `!` Means NOT. So what these commands do is check if dwarfs and fuse-overlayfs don't exist and are not executable, then output that the dependencies (dwarfs and overlayfs are not installed).
+- with conditions `-x` is a condition that a file exists and is executable. `!` Means NOT. So what these commands do is check if dwarfs and fuse-overlayfs don't exist and are not executable, then output that the dependencies (dwarfs and overlayfs are not installed).
 
 <br>
 
