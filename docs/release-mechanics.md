@@ -178,5 +178,3 @@ trap 'cleanup' EXIT INT SIGINT SIGTERM
 
 `[ "${DBG:=0}" = "1" ] || exec &>/dev/null` If The user didnt specify DBG=1 Then send all output messages to the void.
 `cd "$BINDIR"; "${CMD[@]}" "$@"` Change directory to the directory where the game binary is and execute the launch command defined previously.
-
----------------------------------------------------------------------------------------------------
