@@ -4,10 +4,9 @@
 
 - This is based on the assumption that you have common packages that come on distros like EndeavourOS, so on bare Arch you may have to install additional libraries.
 
-#### yay
-- Does not apply to EndeavourOS.
+#### dwarfs and fuse-overlayfs
 ```sh
-git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
+sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs
 ```
 
 #### rumpowered arch repo
@@ -21,14 +20,15 @@ Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
 sudo pacman -Syyu
 ```
 
-#### dwarfs
-```sh
-sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs
-```
-
 #### multilib
 ```sh
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf && sudo pacman -Syyu
+```
+
+#### yay
+- Does not apply to EndeavourOS.
+```sh
+git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 ```
 
 #### graphics packages
@@ -61,14 +61,13 @@ sudo pacman -S --needed rumpowered/wine-staging-tkg rumpowered/dxvk-bin rumpower
 ```
 
 #### gamescope
+- optional but recommended
 
 ```
 sudo pacman -S --needed gamescope
 ```
 
-- Nvidia not supported yet, but coming soon. Meanwhile don't install it or it will get used and fail to boot games. This also applies to old GPUs with no vulkan support or semi-supported.
-
-- Technically optional, highly recommended against alt-tab freezes and isolation from system display server.
+- Nvidia not supported yet. Meanwhile don't install it or it will get used and fail to boot games. This also applies to old GPUs with no vulkan support or semi-supported.
 
 #### multilib libraries
 
@@ -77,6 +76,8 @@ sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libx
 ```
 
 #### gstreamer
+- expect some packages to fail at building process, we will create our own packages eventually.
+
 ```
 yay -S lib32-gst-plugins-base gst-plugins-base lib32-gst-plugins-good gst-plugins-good lib32-gst-plugins-ugly gst-plugins-ugly lib32-gst-plugins-bad gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-libav
 ```
