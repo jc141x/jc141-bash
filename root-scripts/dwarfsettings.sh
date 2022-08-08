@@ -11,12 +11,13 @@ mount-prefix() { unmount-prefix &> /dev/null;
 # downloading
 BASELNK="$(curl -s https://api.github.com/repos/jc141x/WINDEP/releases/latest)"
 DLRLS="$(echo "$BASELNK" | awk -F '["]' '/"browser_download_url":/ && /tar.lzma/ {print $4}')"
-[ ! -f "$JCD/$BASEARCH" ] && [ ! -d "$BASE" ] && curl -L "$DLRLS" -o "$JCD/$BASEARCH" && [ ! -f "$JCD/$BASEARCH" ] && echo -n "download failed | " && exit || [ ! -d "$BASE" ] && tar -xvf "$JCD/$BASEARCH" -C "$JCD" > /dev/null
+[ ! -f "$JCD/$BASEARCH" ] && [ ! -d "$BASE" ] && curl -L "$DLRLS" -o "$JCD/$BASEARCH" && [ ! -f "$JCD/$BASEARCH" ] && echo -n "download failed, trying to download from torrent with aria2" && aria2c -d "$JCD/$BASEARCH" --seed-time=0 "magnet:?xt=urn:btih:57C47B6A554BF5887850C28060F0AFE50924E5C8&dn=base.tar.lzma&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce" && [ ! -f "$JCD/$BASEARCH" ] && echo -n "download failed with aria2 as well" && exit
 
 # prefix generation
 export WINEPREFIX="$JCD/prefix"
-[ -f "$PRF" ] && find "$JCD/prefix.dwarfs" -mtime +60 -type f -delete && tar -xvf "$JCD/$BASEARCH" -C "$JCD"
-[ ! -f "$PRF" ] && WINEPREFIX="$JCD/prefix" bash "$BASEINSTALL" && sleep 2 && mkdwarfs -l7 -B5 -i "$JCD/prefix" -o "$JCD/prefix.dwarfs" && rm -Rf "$WINEPREFIX" && rm -Rf "$BASE";
+[ -f "$PRF" ] && find "$PRF" -mtime +60 -type f -delete
+[ -f "$JCD/$BASEARCH" ] && [ ! -f "$PRF" ] && tar -xvf "$JCD/$BASEARCH" -C "$JCD" > /dev/null
+[ -f "$JCD/$BASEARCH" ] && [ ! -f "$PRF" ] && WINEPREFIX="$JCD/prefix" bash "$BASEINSTALL" && sleep 2 && mkdwarfs -l7 -B5 -i "$JCD/prefix" -o "$JCD/prefix.dwarfs" && rm -Rf "$WINEPREFIX" && rm -Rf "$BASE";
 
 # mounting prefix
 [ ! -d "$WINEPREFIX" ] && mkdir -p {"$JCD/prefix-mnt","$PWD/files/data/user-data","$PWD/files/data/work","$PWD/files/data/prefix-tmp"} && dwarfs "$JCD/prefix.dwarfs" "$JCD/prefix-mnt" -o cache_image && fuse-overlayfs -o lowerdir="$JCD/prefix-mnt",upperdir="$PWD/files/data/user-data",workdir="$PWD/files/data/work" "$PWD/files/data/prefix-tmp";
