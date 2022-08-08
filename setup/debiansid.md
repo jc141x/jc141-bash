@@ -33,6 +33,11 @@ git clone https://mpr.makedeb.org/dwarfs-bin.git && cd dwarfs-bin && makedeb -si
 sudo apt install fuse-overlayfs
 ```
 
+#### aria2
+```sh
+sudo apt install aria2
+```
+
 #### graphics packages
 ```sh
 # Universal (AMD/Intel/Nvidia)
