@@ -31,6 +31,12 @@ sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf && sudo pacman -
 git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 ```
 
+#### aria2
+
+```sh
+sudo pacman -S aria2
+```
+
 #### graphics packages
 
 ```sh
