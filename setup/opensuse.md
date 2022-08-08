@@ -8,6 +8,11 @@ Also needed:
 sudo zypper install fuse-overlayfs
 ```
 
+#### aria2
+```sh
+sudo zypper install aria2
+```
+
 #### AMD graphics packages
 ```sh
 sudo zypper install vulkan-loader vulkan libvulkan1 vulkan-utils mesa-vulkan-drivers
