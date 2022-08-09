@@ -1,7 +1,7 @@
 #!/bin/bash
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed" && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed" && exit
-cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; export R="$PWD"; DWRF="$R/dwarfsettings.sh"; WHA="$R/files/wha.sh"; VLK="$R/files/vulkan.sh"
-[ ! -e "$WHA" ] && cp /opt/jc141-bash/wha.sh "$WHA"; [ ! -e "$VLK" ] && cp /opt/jc141-bash/vulkan.sh "$VLK"; export WINE_LARGE_ADDRESS_AWARE=1; export WINEFSYNC=1; export WINEDLLOVERRIDES="mshtml=d;"; BIND_INTERFACE=lo; LD_PRELOAD="/home/$USER/.local/share/jc141/bindToInterface.so"
+cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; export R="$PWD"; DWRF="$R/dwarfsettings.sh"; WHA="$R/files/wha.sh";
+[ ! -e "$WHA" ] && cp /usr/bin/wha "$WHA"; export WINE_LARGE_ADDRESS_AWARE=1; export WINEFSYNC=1; export WINEDLLOVERRIDES="mshtml=d;"; BIND_INTERFACE=lo; BIND_EXCLUDE=10.,172.16.,192.168.; LD_PRELOAD="/home/$USER/.local/share/jc141/bindToInterface.so"
 
 bash "$DWRF" mount-game; bash "$DWRF" mount-prefix
 
