@@ -42,3 +42,20 @@ winprefix version set
 wine winecfg -v "version"
 available: win10 win81 win8 win2008r2 win2008 win7 winvista win2003 win2k winme win98 win95 win98 winnt40 winnt351 win31 win30 win20 winxp64 winxp
 ```
+
+gzdoom
+```sh
+BINDIR="$R/files/groot"; BIN="gzdoom/gzdoom"
+
+# Internal WAD: https://zdoom.org/wiki/IWAD
+IWAD="GAME/GAME.WAD"
+
+# Patch WADs: https://zdoom.org/wiki/PWAD
+PWADS=(
+    "PWADs/MOD1/MOD1.wad" # MOD1
+    "PWADs/MOD2.pk3" # MOD2
+)
+
+# launcher
+CMD=("$BINDIR/$BIN" -iwad "$IWAD" -file "${PWADS[@]}");
+```
