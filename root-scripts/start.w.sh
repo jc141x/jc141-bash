@@ -10,6 +10,8 @@ export WINEPREFIX="$PWD/files/data/prefix-tmp"; export BINDIR="$PWD/files/groot"
 _WINE="wine-tkg"; bash "$WHA" "$_WINE"; [ -x "$BINDIR/wine/bin/wine" ] && export WINE="$BINDIR/wine/bin/wine" || export WINE="$(command -v wine)"; CMD=("$WINE" "$BIN");
 bash "$PWD/files/vulkan.sh" dxvk
 
+: ${GAMESCOPE:=$(command -v gamescope)}; [ -x "$GAMESCOPE" ] && CMD=("$GAMESCOPE" -f -- "${CMD[@]}");
+
 function cleanup { cd "$OLDPWD" && bash "$DWRF" unmount-prefix unmount-game; }
 trap 'cleanup' EXIT INT SIGINT SIGTERM
 
