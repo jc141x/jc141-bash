@@ -5,10 +5,8 @@ export HOME="$R/files/data"; export XDG_DATA_HOME="$R/files/data/.local"; export
 
 BINDIR="$R/files/groot"; BIN="game.bin"; CMD=(./"$BIN")
 
-# gamescope
 : ${GAMESCOPE:=$(command -v gamescope)}; [ -x "$GAMESCOPE" ] && CMD=("$GAMESCOPE" -f -- "${CMD[@]}");
 
-# dwarfs
 bash "$DWRF" mount-game
 function cleanup { cd "$OLDPWD" && bash "$DWRF" unmount-game; }
 trap 'cleanup' EXIT INT SIGINT SIGTERM
