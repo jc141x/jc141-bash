@@ -8,7 +8,7 @@
    - Immutable os (SteamOS, Fedora Silverblue), because dependencies are hard to install.
    - Third party programs which override config (Lutris).
 
-### supported distros
+### supported distros (click on one of the links)
 
 - Support for SteamDeck is work in progress. Documented [here](steamdeck.md). SteamDeck testers who are open to try other distros are needed.
 
