@@ -2,6 +2,7 @@
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed" && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed" && exit
 JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ -d "$JCD" ] && mkdir -p "$JCD"; BASE="$JCD/base"; BASEARCH="base.tar.lzma";
 PRF="$JCD/prefix.dwarfs"; BASEINSTALL="$JCD/base/install.sh";
+BTI="$JCD/bindToInterface.so"; BTIARCH="bindToInterface.tar.lzma"; [ ! -f "$BTI" ] && BTILNK="$(curl -s https://api.github.com/repos/jc141x/BindToInterface/releases/latest)" && DLBTI="$(echo "$BTILNK" | awk -F '["]' '/"browser_download_url":/ && /tar.lzma/ {print $4}')" && curl -L "$DLBTI" -o "$JCD/$BTIARCH" && tar -xvf "$JCD/$BTIARCH" -C "$JCD" && [ ! -f "$BTI" ] && aria2c -d "$JCD" --seed-time=0 "magnet:?xt=urn:btih:B4A7E30D153FD5B44856AE95EF015496F1D114C8&dn=bindToInterface.tar.lzma&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce" && tar -xvf "$JCD/$BTIARCH" -C "$JCD" && rm -Rf "$JCD/$BTIARCH"
 
 mount-game() { unmount-game &> /dev/null;
 [ -d "$PWD/files/groot" ] && echo -n "mounting path exists | " && [ "$( ls -A "$PWD/files/groot")" ] && echo -n "game is already mounted or extracted | " && exit
