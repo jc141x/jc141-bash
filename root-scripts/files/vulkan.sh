@@ -5,7 +5,7 @@ export VLKLOG="$WINEPREFIX/vlk.log";
 update() { echo -n "applying ${FUNCNAME[1]} | " && wine wineboot > /dev/null && wineserver -w; }; regedit() { wine regedit "$1" & wine64 regedit "$1" && wineserver -w; }
 extract() { tar -xvf "$1" &>/dev/null; }; applied() { echo "${FUNCNAME[1]}" >>"$VLKLOG"; echo -n "${FUNCNAME[1]} applied | "; }
 status() { [[ ! -f "$VLKLOG" || -z "$(awk "/^${FUNCNAME[1]}\$/ {print \$1}" "$VLKLOG" 2>/dev/null)" ]] || { echo -n "${FUNCNAME[1]} present | " && return 1; }; }
-download() { command -v curl >/dev/null 2>&1 && curl -LO "$1"; cp "$PWD/${1##*/}" "./"; }
+download() { command -v curl >/dev/null 2>&1 && curl -LO "$1"; }
 
 github_dxvk() { DL_URL="$(curl -s https://api.github.com/repos/jc141x/dxvk/releases/latest | awk -F '["]' '/"browser_download_url":/ {print $4}')"; DXVK="$(basename "$DL_URL")"
 [ ! -f "$DXVK" ] && download "$DL_URL"; extract "$DXVK" || { rm "$DXVK" && echo "ERROR: failed to extract dxvk | " && return 1; }
