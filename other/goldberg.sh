@@ -1,11 +1,10 @@
 #!/bin/bash
-############################################################
-# Usage: APPID=736260 ./goldberg.sh username interfaces dlc#
-# If the script is ran without the verbs, it will just copy#
-# the emu to the folder. You need to set EMU_DIR to the    #
-# extracted goldberg emulator directory.		   #
-############################################################
-
+########################################################################
+# Usage: APPID=736260 ./goldberg.s	   			       #
+# You need to set EMU_DIR to the extracted goldberg emulator directory.#
+# To be able to use genconf get the scripts from the goldberg source   #
+# code and put it in $EMU_DIR/scripts				       #
+########################################################################
 
 #config
 EMU_DIR="/path/to/emu"
@@ -59,15 +58,15 @@ interfaces() {
 	fi
 }
 
-for i in "$@"; do "$i" 
-done
+genconf() {
+	python "$EMU_DIR/scripts/generate_emu_config.py" $APPID && mv "$APPID"_output/steam_settings "$PWD/steam_settings" && rm -rf "$PWD/login_temp" && rm -rf "$PWD/backup" && rm -rf "$APPID"_output
+}
 
 echo "$APPID" > steam_appid.txt
 
 if [ -e libsteam_api.so ];
 then
-	native
+	native && interfaces && username && dlc && genconf
 else
-	windows
+	windows && interfaces && username && dlc && genconf
 fi
-
