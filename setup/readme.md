@@ -17,7 +17,6 @@
 #### [Debian Sid](debiansid.md)
  - or: Sparky Rolling, Siduction, Nitrux
 #### [Fedora](fedora.md)
-#### [openSUSE Tumbleweed](opensuse.md)
 
 #### running
 
