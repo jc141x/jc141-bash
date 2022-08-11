@@ -79,7 +79,3 @@ sudo apt install libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386
 ```sh
 una install yuzu-mainline-bin
 ```
-##### dosbox
-```sh
-sudo apt install dosbox
-```
