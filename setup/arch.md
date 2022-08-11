@@ -100,7 +100,3 @@ sudo pacman -S --needed giflib jq libgphoto2 libxcrypt-compat zlib
 ```sh
 sudo pacman -S rumpowered/yuzu-mainline-bin
 ```
-##### dosbox
-```sh
-sudo pacman -S --needed dosbox
-```
