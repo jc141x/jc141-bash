@@ -1,6 +1,6 @@
 #!/bin/bash
 ########################################################################
-# Usage: APPID=736260 ./goldberg.s	   			       #
+# Usage: APPID=736260 ./goldberg.sh	   			       #
 # You need to set EMU_DIR to the extracted goldberg emulator directory.#
 # To be able to use genconf get the scripts from the goldberg source   #
 # code and put it in $EMU_DIR/scripts				       #
