@@ -43,9 +43,9 @@ native() {
 windows() {
 	if [ -e steam_api64.dll ];
 	then
-		mv steam_api64.dll steam_api64.dll.orig && cp "$EMU_DIR/steam_api64.dll" steam_api64.dll
+		mv steam_api64.dll steam_api64.dll.orig && cp "$EMU_DIR/experimental/steam_api64.dll" steam_api64.dll
 	else
-		mv steam_api.dll steam_api.dll.orig && cp "$EMU_DIR/steam_api.dll" steam_api.dll
+		mv steam_api.dll steam_api.dll.orig && cp "$EMU_DIR/experimental/steam_api.dll" steam_api.dll
 	fi
 }
 
