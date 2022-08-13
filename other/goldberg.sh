@@ -59,7 +59,7 @@ interfaces() {
 }
 
 genconf() {
-	python "$EMU_DIR/scripts/generate_emu_config.py" $APPID && mv "$APPID"_output/steam_settings "$PWD/steam_settings" && rm -rf "$PWD/login_temp" && rm -rf "$PWD/backup" && rm -rf "$APPID"_output
+	python "$EMU_DIR/scripts/generate_emu_config.py" $APPID && cp -r "$APPID"_output/steam_settings "$PWD" && rm -rf "$PWD/login_temp" && rm -rf "$PWD/backup" && rm -rf "$APPID"_output
 }
 
 echo "$APPID" > steam_appid.txt
