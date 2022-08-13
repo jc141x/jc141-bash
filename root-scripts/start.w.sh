@@ -35,5 +35,5 @@ echo -e "\e[38;5;$((RANDOM%257))m" && cat << 'EOF'
 EOF
 echo -e "\e[0m"
 [ "${DBG:=0}" = "1" ] || exec &>/dev/null
-BIND_INTERFACE=lo; BIND_EXCLUDE=10.,172.16.,192.168.; LD_PRELOAD="/home/$USER/.local/share/jc141/bindToInterface.so"
+export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD="/home/$USER/.local/share/jc141/bindToInterface.so"
 cd "$BINDIR"; "${CMD[@]}" "$@"
