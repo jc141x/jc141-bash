@@ -66,7 +66,7 @@ echo "$APPID" > steam_appid.txt
 
 if [ -e libsteam_api.so ];
 then
-	native && interfaces && username && dlc && genconf
+	interfaces && native && username && dlc && genconf
 else
-	windows && interfaces && username && dlc && genconf
+	interfaces && windows && username && dlc && genconf
 fi
