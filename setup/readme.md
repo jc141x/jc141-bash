@@ -4,7 +4,7 @@
 
 ### not supported
    - NTFS, because the very different attrs system.
-   - LTS distros (Ubuntu LTS, Mint, etc.), because outdated dependencies are hard to support.
+   - LTS distros (Ubuntu (also malware), Mint, etc.), because outdated dependencies are hard to support.
    - Immutable os (SteamOS, Fedora Silverblue), because dependencies are hard to install.
    - Third party programs which override config (Lutris).
 
