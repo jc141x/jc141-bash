@@ -9,7 +9,7 @@
           - Kubuntu, Lubuntu, Xubuntu
           - Mint, Elementary OS, Zorin OS, POP! OS
           - LXLE, KDE Neon 
-   - SteamOS (big ass malware, read-only)
+   - SteamOS (big ass malware, read-only, lack of packages)
    - Fedora Silverblue (read-only)
    - OpenSUSE (outdated/lack of packages)
 
