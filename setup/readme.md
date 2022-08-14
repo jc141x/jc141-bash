@@ -4,10 +4,11 @@
 - NTFS partitions are not supported.
 
 ### not supported distros (as well as any others based on them)
-   - Ubuntu (malware, outdated)
-        - Kubuntu, Lubuntu, Xubuntu
-        - Mint, Elementary OS, Zorin OS, POP! OS
-        - LXLE, KDE Neon 
+   - Debian non-sid (outdated)
+     - Ubuntu (malware, outdated)
+          - Kubuntu, Lubuntu, Xubuntu
+          - Mint, Elementary OS, Zorin OS, POP! OS
+          - LXLE, KDE Neon 
    - SteamOS (big ass malware, read-only)
    - Fedora Silverblue (read-only)
    - OpenSUSE (outdated/lack of packages)
