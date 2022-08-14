@@ -1,16 +1,22 @@
 <h1>jc141 setup guide</h1>
 
 - Your system requires vulkan support to play a majority of our releases. Native ones are mostly playable without vulkan support.
+- NTFS partitions are not supported.
 
-### not supported
-   - Distros: Ubuntu (also malware), Kubuntu, Lubuntu, Xubuntu, Mint, Elementary OS, Zorin OS, POP! OS, LXLE, KDE Neon, SteamOS, Fedora Silverblue and OpenSUSE. (as well as any other distros based on them)
-   - NTFS
+### not supported distros (as well as any others based on them)
+   - Ubuntu (malware)
+        - Kubuntu, Lubuntu, Xubuntu
+        - Mint, Elementary OS, Zorin OS, POP! OS
+        - LXLE, KDE Neon 
+   - SteamOS
+   - Fedora Silverblue
+   - OpenSUSE
 
 ### supported distros (click on one of the links)
 
 - Support for SteamDeck is work in progress. Documented [here](steamdeck.md). SteamDeck testers who are open to try other distros are needed.
 
-#### [Arch](arch.md) - Full support
+#### [Arch](arch.md) - Full offline support
  - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
 #### [Debian Sid](debiansid.md) - Almost full support
  - or: Sparky Rolling, Siduction, Nitrux
