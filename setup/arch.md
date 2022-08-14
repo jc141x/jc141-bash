@@ -55,17 +55,13 @@ sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia
 
 Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
-# NVIDIA legacy (ignore above commands for NVIDIA if GPU is old, GTX 700 etc)
-yay -S --needed lib32-libglvnd lib32-nvidia-470xx-utils libglvnd nvidia-470xx-dkms
+kepler architecture support (TITAN, 7xx, 6xx)
+yay -S --needed lib32-nvidia-470xx-utils nvidia-470xx-dkms
 ```
-
-- NVIDIA legacy: check [Nvidia's  website](https://nvidia.custhelp.com/app/answers/detail/a_id/3142) for details on which version is right for your GPU.
-
 #### wine-staging-tkg + wine-mono + dxvk + vkd3d
 ```sh
 sudo pacman -S --needed rumpowered/wine-staging-tkg rumpowered/dxvk-bin rumpowered/vkd3d-proton-bin wine-mono
 ```
-
 - Using AUR versions of dxvk and vkd3d will cause exponentially bigger disk usage in files/user-data. (duplicates wineprefix files)
 
 #### gamescope
