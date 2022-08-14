@@ -3,10 +3,8 @@
 - Your system requires vulkan support to play a majority of our releases. Native ones are mostly playable without vulkan support.
 
 ### not supported
-   - NTFS, because the very different attrs system.
-   - LTS distros: Ubuntu (also malware), Mint, Elementary OS, Zorin OS, POP! OS, LXLE, Kubuntu, Lubuntu, Xubuntu, KDE Neon.
-   - Immutable os (SteamOS, Fedora Silverblue), because dependencies are hard to install.
-   - Third party programs which override config (Lutris).
+   - Distros: Ubuntu (also malware), Kubuntu, Lubuntu, Xubuntu, Mint, Elementary OS, Zorin OS, POP! OS, LXLE, KDE Neon, SteamOS, Fedora Silverblue and OpenSUSE. (as well as any other distros based on them)
+   - NTFS
 
 ### supported distros (click on one of the links)
 
