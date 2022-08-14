@@ -62,8 +62,6 @@ genconf() {
 	python "$EMU_DIR/scripts/generate_emu_config.py" $APPID && cp -r "$APPID"_output/steam_settings "$PWD" && rm -rf "$PWD/login_temp" && rm -rf "$PWD/backup" && rm -rf "$APPID"_output
 }
 
-echo "$APPID" > steam_appid.txt
-
 if [ -e libsteam_api.so ];
 then
 	interfaces && native && username && dlc && genconf
