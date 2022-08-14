@@ -36,7 +36,7 @@ WINEFSYNC=0 - for disabling fsync.
 - game can also be ran directly from file manager by right clicking on start.x.sh and giving executable permission.
 
 #### dwarfsettings.sh commands
-```sh
+```
 bash dwarfsettings.sh extract-game
 extracts groot.dwarfs to groot directory if it is empty
 
