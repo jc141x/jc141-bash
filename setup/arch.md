@@ -66,6 +66,8 @@ yay -S --needed lib32-libglvnd lib32-nvidia-470xx-utils libglvnd nvidia-470xx-dk
 sudo pacman -S --needed rumpowered/wine-staging-tkg rumpowered/dxvk-bin rumpowered/vkd3d-proton-bin wine-mono
 ```
 
+- Using AUR versions of dxvk and vkd3d will cause exponentially bigger disk usage in files/user-data. (duplicates wineprefix files)
+
 #### gamescope
 - optional but recommended
 
