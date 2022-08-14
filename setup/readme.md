@@ -4,7 +4,7 @@
 - NTFS partitions are not supported.
 
 ### not supported distros (as well as any others based on them)
-   - Ubuntu (malware)
+   - Ubuntu (malware, outdated)
         - Kubuntu, Lubuntu, Xubuntu
         - Mint, Elementary OS, Zorin OS, POP! OS
         - LXLE, KDE Neon 
