@@ -4,7 +4,7 @@
 
 ### not supported
    - NTFS, because the very different attrs system.
-   - LTS distros: Ubuntu (also malware), Mint, etc. because outdated dependencies are hard to support.
+   - LTS distros: Ubuntu (also malware), Mint, Elementary OS, Zorin OS, POP! OS, LXLE, Kubuntu, Lubuntu, Xubuntu, KDE Neon.
    - Immutable os (SteamOS, Fedora Silverblue), because dependencies are hard to install.
    - Third party programs which override config (Lutris).
 
