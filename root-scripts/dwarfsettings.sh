@@ -3,6 +3,7 @@
 JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD" ] && mkdir -p "$JCD"; BASE="$JCD/base"; BASEARCH="base.tar.lzma";
 PRF="$JCD/prefix.dwarfs"; BASEINSTALL="$JCD/base/install.sh";
 BTI="$JCD/bindToInterface.so"; BTIARCH="bindToInterface.tar.lzma"; 
+[ -f "/opt/jc141-bash/base.tar.lzma" ] && rm -Rf "$JCD/$BASEARCH" && ln -s "/opt/jc141-bash/base.tar.lzma" "$JCD/$BASEARCH"
 
 [ ! -f "$BTI" ] && BTILNK="$(curl -s https://api.github.com/repos/jc141x/BindToInterface/releases/latest)" && DLBTI="$(echo "$BTILNK" | awk -F '["]' '/"browser_download_url":/ && /tar.lzma/ {print $4}')" && curl -L "$DLBTI" -o "$JCD/$BTIARCH" && tar -xvf "$JCD/$BTIARCH" -C "$JCD"
 
