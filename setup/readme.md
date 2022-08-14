@@ -8,7 +8,7 @@
         - Kubuntu, Lubuntu, Xubuntu
         - Mint, Elementary OS, Zorin OS, POP! OS
         - LXLE, KDE Neon 
-   - SteamOS
+   - SteamOS (big ass malware)
    - Fedora Silverblue
    - OpenSUSE
 
