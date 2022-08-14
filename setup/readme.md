@@ -12,11 +12,11 @@
 
 - Support for SteamDeck is work in progress. Documented [here](steamdeck.md). SteamDeck testers who are open to try other distros are needed.
 
-#### [Arch](arch.md) (Full support)
+#### [Arch](arch.md) - Full support
  - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
-#### [Debian Sid](debiansid.md) (Almost full support)
+#### [Debian Sid](debiansid.md) - Almost full support
  - or: Sparky Rolling, Siduction, Nitrux
-#### [Fedora](fedora.md) (Base support)
+#### [Fedora](fedora.md) - Base support
 
 #### running
 
