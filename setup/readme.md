@@ -9,7 +9,7 @@
         - Mint, Elementary OS, Zorin OS, POP! OS
         - LXLE, KDE Neon 
    - SteamOS (big ass malware, read-only)
-   - Fedora Silverblue (readonly)
+   - Fedora Silverblue (read-only)
    - OpenSUSE (outdated/lack of packages)
 
 ### supported distros (click on one of the links)
