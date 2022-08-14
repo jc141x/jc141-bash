@@ -2,8 +2,6 @@
 
 - Also applies to EndeavourOS, Artix, ArcoLinux, Manjaro etc.
 
-- This is based on the assumption that you have common packages that come on distros like EndeavourOS, so on bare Arch you may have to install additional libraries.
-
 #### rumpowered arch repo
 ```sh
 echo '
