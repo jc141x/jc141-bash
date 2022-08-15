@@ -2,6 +2,8 @@
 
 - Also applies to EndeavourOS, Artix, ArcoLinux, Manjaro etc.
 
+### pre-configuration
+
 #### rumpowered arch repo
 ```sh
 echo '
@@ -13,11 +15,6 @@ Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
 sudo pacman -Syyu
 ```
 
-#### dwarfs and fuse-overlayfs
-```sh
-sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs
-```
-
 #### multilib
 ```sh
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf && sudo pacman -Syyu
@@ -27,6 +24,15 @@ sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf && sudo pacman -
 - Does not apply to EndeavourOS.
 ```sh
 git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
+```
+
+------------------------------------------------------------------------------------------------------
+
+### main packages
+
+#### dwarfs and fuse-overlayfs
+```sh
+sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs
 ```
 
 #### graphics packages
@@ -74,18 +80,20 @@ sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libx
 sudo pacman -S --needed giflib libgphoto2 libxcrypt-compat zlib aria2
 ```
 
-#### optional packages
+-------------------------------------------------------------------------------------------------------------------
+
+### optional packages
 
 #### gamescope
 - highly recommended
-- Nvidia not supported yet.
+- Nvidia not supported yet
 
 ```
 sudo pacman -S --needed gamescope
 ```
 
-##### yuzu
-
+#### yuzu
+- for Nintendo
 ```sh
 sudo pacman -S --needed rumpowered/yuzu-mainline-bin
 ```
