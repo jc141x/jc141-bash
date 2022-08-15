@@ -35,7 +35,6 @@ sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs
 ```
 
 #### graphics packages
-
 ```sh
 # Universal
 sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader
@@ -63,7 +62,7 @@ sudo pacman -S --needed rumpowered/wine-staging-tkg rumpowered/dxvk-bin rumpower
 - Using AUR versions of dxvk and vkd3d will cause exponentially bigger disk usage in files/user-data. (duplicates wineprefix files)
 
 #### gstreamer
-```
+```sh
 yay -S --needed gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
 # 32bit
 yay -S --needed lib32-gst-plugins-base lib32-gst-plugins-good lib32-gst-plugins-ugly lib32-gst-plugins-bad
@@ -88,7 +87,7 @@ sudo pacman -S --needed giflib libgphoto2 libxcrypt-compat zlib aria2
 - Nvidia not supported yet
 - requires full vulkan support, old architectures with none or semi are not compatible
 
-```
+```sh
 sudo pacman -S --needed gamescope
 ```
 
