@@ -86,6 +86,7 @@ sudo pacman -S --needed giflib libgphoto2 libxcrypt-compat zlib aria2
 #### gamescope
 - highly recommended
 - Nvidia not supported yet
+- requires full vulkan support, old architectures with none or semi are not compatible
 
 ```
 sudo pacman -S --needed gamescope
