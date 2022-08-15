@@ -2,6 +2,7 @@
 
 - Also applies to Sparky Rolling, Siduction, Nitrux which are rolling by default.
 
+### pre-configuration
 
 #### How to switch Debian 11 to Rolling/Sid.
 ```sh
@@ -27,20 +28,19 @@ sudo tee /usr/share/keyrings/makedeb-archive-keyring.gpg &> /dev/null && echo 'd
 sudo tee /etc/apt/sources.list.d/makedeb.list && sudo apt update && sudo apt install makedeb git && git clone https://mpr.hunterwittenborn.com/una-bin.git && cd una-bin && makedeb -si
 ```
 
+------------------------------------------------------------------------------------------------------
+
+### main packages
+
 #### dwarfs and overlayfs
 ```sh
 git clone https://mpr.makedeb.org/dwarfs-bin.git && cd dwarfs-bin && makedeb -si
 sudo apt install fuse-overlayfs
 ```
 
-#### aria2
-```sh
-sudo apt install aria2
-```
-
 #### graphics packages
 ```sh
-# Universal (AMD/Intel/Nvidia)
+# Universal
 sudo apt install libvulkan1 vulkan-tools
 sudo apt remove amdvlk
 
@@ -51,20 +51,9 @@ sudo apt install nvidia-driver-510 nvidia-settings libvulkan1 vulkan-tools
 Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 ```
 
-- NVIDIA legacy: check [Nvidia's  website](https://nvidia.custhelp.com/app/answers/detail/a_id/3142) for details on which version is right for your GPU.
-
-
-#### gamescope
-```sh
-git clone https://github.com/jc141x/gamescope-git.git && cd gamescope-git && makedeb -si
+#### gstreamer
 ```
-- Nvidia not supported yet, but coming soon. Meanwhile don't install it or it will get used and fail to boot games.
-
-- Technically optional, highly recommended against alt-tab freezes and isolation from system display server.
-
-#### other libraries
-```sh
-sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly jq libva2 zstd
+sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi libav-tools
 ```
 
 #### multilib libraries
@@ -73,9 +62,22 @@ sudo dpkg --add-architecture i386
 sudo apt install libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386
 ```
 
+#### other libraries
+```sh
+sudo apt install libva2 zstd aria2 giflib-tools libgphoto2-6 libxcrypt-source
+```
+
 #### optional packages
 
+##### gamescope
+- highly recommended
+- Nvidia not supported yet
+```sh
+sudo apt install gamescope
+```
+
 ##### yuzu
+- for Nintendo
 ```sh
 una install yuzu-mainline-bin
 ```
