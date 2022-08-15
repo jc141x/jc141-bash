@@ -4,7 +4,7 @@
 - NTFS partitions are not supported.
 
 ### not supported distros (as well as any others based on them)
-   - Debian non-sid (outdated)
+   - Debian Stable (outdated)
      - Ubuntu (malware, outdated)
           - Kubuntu, Lubuntu, Xubuntu
           - Mint, Elementary OS, Zorin OS, POP! OS
