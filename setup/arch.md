@@ -32,7 +32,7 @@ git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 #### aria2
 
 ```sh
-sudo pacman -S aria2
+sudo pacman -S --needed aria2
 ```
 
 #### graphics packages
@@ -78,7 +78,7 @@ sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libx
 
 #### gstreamer
 ```
-yay -S lib32-gst-plugins-base gst-plugins-base lib32-gst-plugins-good gst-plugins-good lib32-gst-plugins-ugly gst-plugins-ugly lib32-gst-plugins-bad gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-libav
+yay -S --needed lib32-gst-plugins-base gst-plugins-base lib32-gst-plugins-good gst-plugins-good lib32-gst-plugins-ugly gst-plugins-ugly lib32-gst-plugins-bad gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-libav
 ```
 
 #### other libraries
@@ -91,5 +91,5 @@ sudo pacman -S --needed giflib jq libgphoto2 libxcrypt-compat zlib
 ##### yuzu
 
 ```sh
-sudo pacman -S rumpowered/yuzu-mainline-bin
+sudo pacman -S --needed rumpowered/yuzu-mainline-bin
 ```
