@@ -29,12 +29,6 @@ sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf && sudo pacman -
 git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 ```
 
-#### aria2
-
-```sh
-sudo pacman -S --needed aria2
-```
-
 #### graphics packages
 
 ```sh
@@ -56,37 +50,39 @@ Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 kepler architecture support (TITAN, 7xx, 6xx)
 yay -S --needed lib32-nvidia-470xx-utils nvidia-470xx-dkms
 ```
-#### wine-staging-tkg + wine-mono + dxvk + vkd3d
+
+#### wine-staging-tkg + wine-mono + dxvk + vkd3d (offline support)
 ```sh
 sudo pacman -S --needed rumpowered/wine-staging-tkg rumpowered/dxvk-bin rumpowered/vkd3d-proton-bin rumpowered/windep wine-mono
 ```
 - Using AUR versions of dxvk and vkd3d will cause exponentially bigger disk usage in files/user-data. (duplicates wineprefix files)
 
-#### gamescope
-- optional but recommended
-
+#### gstreamer
 ```
-sudo pacman -S --needed gamescope
+yay -S --needed gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
+32bit
+yay -S --needed lib32-gst-plugins-base lib32-gst-plugins-good lib32-gst-plugins-ugly lib32-gst-plugins-bad lib32-gst-libav
 ```
-
-- Nvidia not supported yet. Meanwhile don't install it or it will get used and fail to boot games. This also applies to old GPUs with no vulkan support or semi-supported.
 
 #### multilib libraries
 ```sh
 sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-v4l-utils lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib
 ```
 
-#### gstreamer
-```
-yay -S --needed lib32-gst-plugins-base gst-plugins-base lib32-gst-plugins-good gst-plugins-good lib32-gst-plugins-ugly gst-plugins-ugly lib32-gst-plugins-bad gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-libav
-```
-
 #### other libraries
 ```sh
-sudo pacman -S --needed giflib jq libgphoto2 libxcrypt-compat zlib
+sudo pacman -S --needed giflib libgphoto2 libxcrypt-compat zlib aria2
 ```
 
 #### optional packages
+
+#### gamescope
+- highly recommended
+- Nvidia not supported yet.
+
+```
+sudo pacman -S --needed gamescope
+```
 
 ##### yuzu
 
