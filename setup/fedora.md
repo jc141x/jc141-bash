@@ -7,15 +7,10 @@ wget -qO ~/Downloads/dwarfs-0.6.1-1.fc36.x86_64.rpm https://github.com/jc141x/jc
 sudo dnf install fuse-overlayfs
 ```
 
-#### aria2
-```sh
-sudo dnf install aria2
-```
-
 #### graphics packages
 
 ```sh
-# Universal (AMD/Intel/Nvidia)
+# Universal
 sudo dnf install vulkan vulkan-loader
 
 # NVIDIA specific
@@ -24,14 +19,6 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 ```
 
-#### gamescope
-```sh
-sudo dnf install gamescope
-```
-- Gamescope not supported on Nvidia yet, but coming soon. Meanwhile don't install it or it will get used and fail to boot games.
-
-- Technically optional, highly recommended against alt-tab freezes and isolation from system display server.
-
 #### wine-mono
 ```sh
 sudo dnf install wine-mono
@@ -39,17 +26,21 @@ sudo dnf install wine-mono
 
 #### other libraries
 ```sh
-sudo dnf install jq libxcrypt zlib
-```
-
-#### audio drivers
-```sh
-sudo dnf install alsa-lib alsa-plugins fluidsynth pulseaudio openal
+sudo dnf install libxcrypt zlib aria2 alsa-lib alsa-plugins fluidsynth pulseaudio openal
 ```
 
 #### optional packages
 
+##### gamescope
+- highly recommended
+- Nvidia not supported yet
+- requires full vulkan support, old architectures with none or semi are not compatible
+```sh
+sudo dnf install gamescope
+```
+
 ##### yuzu
+- for Nintendo
 ```sh
 export API_URL="https://api.github.com/repos/yuzu-emu/yuzu-mainline/releases/latest" && export DOWNLOAD_URL=$(curl -s $API_URL | grep -oP '"browser_download_url": "\K(.*AppImage)(?=")') && curl -Lo /tmp/yuzu --progress-meter $DOWNLOAD_URL && chmod +x /tmp/yuzu && sudo mv /tmp/yuzu /usr/local/bin/yuzu
 ```
