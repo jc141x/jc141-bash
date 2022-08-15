@@ -21,7 +21,6 @@ sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf && sudo pacman -
 ```
 
 #### yay
-- Does not apply to EndeavourOS.
 ```sh
 git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 ```
