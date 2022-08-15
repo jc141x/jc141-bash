@@ -65,7 +65,7 @@ sudo pacman -S --needed rumpowered/wine-staging-tkg rumpowered/dxvk-bin rumpower
 #### gstreamer
 ```
 yay -S --needed gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
-32bit
+# 32bit
 yay -S --needed lib32-gst-plugins-base lib32-gst-plugins-good lib32-gst-plugins-ugly lib32-gst-plugins-bad
 ```
 
