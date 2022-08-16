@@ -42,8 +42,11 @@ WINEFSYNC=0 - for disabling fsync.
 
 #### dwarfsettings.sh commands
 ```
-bash dwarfsettings.sh extract-game
+bash dwarfsettings.sh extract-dwarfs
 extracts groot.dwarfs to groot directory if it is empty
+
+bash dwarfsettings.sh extract-fxz
+extracts groot.tar.xz to groot directory if it is empty
 
 bash dwarfsettings.sh unmount-game
 unmounts groot
