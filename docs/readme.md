@@ -86,15 +86,6 @@ _WINE="wine-tkg"; bash "$WHA" "$_WINE";
 
 - checks if wine-tkg is installed on system, then uses it if it does or otherwise downloads and extracts it to $BINDIR
 
-<br>
-
-```sh
-  # rumtricks
-bash "$RMT" dxvk
-```
-
-- custom modifications to wineprefix such as vulkan translation layers or providing special dependencies.
-
 -----------------------------------------------------------------------------------
 
 ### paths and conditions
