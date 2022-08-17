@@ -43,7 +43,7 @@ extract-dwarfs() { [ -d "$PWD/files/groot" ] && echo -n "extraction path exists 
 echo "extracting game, this may take a while"; tstart="$(date +%s)" && mkdir "$PWD/files/groot"; dwarfsextract -i "$PWD/files/groot.dwarfs" -o "$PWD/files/groot" && tend="$(date +%s)"; elapsed="$((tend - tstart))" && echo "done in $((elapsed / 60)) min and $((elapsed % 60)) sec"; }
 
 extract-xz() { [ -d "$PWD/files/groot" ] && echo -n "extraction path exists | " && [ "$( ls -A "$PWD/files/groot")" ] && echo -n "game is already extracted | " && exit
-mkdir "$PWD/files/groot"; tar -xvf "$PWD/files/groot.tar.xz" -C "$PWD/files/groot"; }
+mkdir "$PWD/files/groot"; tar -xvf "$PWD/files/groot.tar.xz" -C "$PWD/files"; }
 
 delete-dwarfs-image() { rm -Rf "$PWD/files/groot.dwarfs" && echo "deleting dwarfs image"; }
 
