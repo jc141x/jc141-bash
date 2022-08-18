@@ -19,9 +19,11 @@
 
 #### [Arch](arch.md) - Full offline support
  - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
+   - don't install Manjaro but if you already have then ok
 #### [Debian Sid](debiansid.md) - Almost full support
  - or: Sparky Rolling, Siduction, Nitrux
 #### [Fedora](fedora.md) - Base support
+ - prefer Rawhide but 36 is ok
 
 #### running
 
