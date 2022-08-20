@@ -39,7 +39,7 @@ trap 'kill -9 $FLUIDSYNTH_PID 2>/dev/null' EXIT SIGINT SIGTERM
 
 winprefix version set
 ```sh
-wine winecfg -v "version"
+winecfg -v "version"
 available: win10 win81 win8 win2008r2 win2008 win7 winvista win2003 win2k winme win98 win95 win98 winnt40 winnt351 win31 win30 win20 winxp64 winxp
 ```
 
