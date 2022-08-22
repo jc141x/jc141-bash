@@ -9,7 +9,7 @@
           - Kubuntu, Lubuntu, Xubuntu
           - Mint, Elementary OS, Zorin OS, POP! OS
           - LXLE, KDE Neon 
-   - SteamOS (big ass malware, read-only, lack of packages)
+   - SteamOS (malware, read-only, lack of packages)
    - Fedora Silverblue (read-only)
    - OpenSUSE (outdated/lack of packages)
 
@@ -47,7 +47,7 @@ WINEFSYNC=0 - for disabling fsync.
 bash dwarfsettings.sh extract-dwarfs (formerly extract-game)
 extracts groot.dwarfs to groot directory if it is empty
 
-bash dwarfsettings.sh extract-fxz
+bash dwarfsettings.sh extract-xz
 extracts groot.tar.xz to groot directory if it is empty
 
 bash dwarfsettings.sh unmount-game
