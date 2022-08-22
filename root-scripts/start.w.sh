@@ -17,7 +17,7 @@ bash "$VLK" dxvk
 function cleanup { cd "$OLDPWD" && bash "$DWRF" unmount-prefix unmount-game; }
 trap 'cleanup' EXIT INT SIGINT SIGTERM
 
-[ "${DBG:=0}" = "1" ] || exec &>/dev/null
+zcat "$LOGO"; [ "${DBG:=0}" = "1" ] || exec &>/dev/null
 export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD="/home/$USER/.local/share/jc141/bindToInterface.so"
 
-zcat "$LOGO"; cd "$BINDIR"; "${CMD[@]}" "$@"
+cd "$BINDIR"; "${CMD[@]}" "$@"
