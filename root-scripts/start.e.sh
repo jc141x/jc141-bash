@@ -4,7 +4,8 @@ export HOME="$F/data"; export XDG_DATA_HOME="$F/data/.local"; export XDG_CONFIG_
 LOGO="$PWD/files/logo.txt.gz"; [ ! -e "$LOGO" ] && cp /opt/jc141-bash/logo.txt.gz "$LOGO";
 YUZU="$(command -v yuzu)"; BINDIR="$F/groot"; BIN="game.nsp"; CMD=("$YUZU" "$BIN");
 
-zcat "$LOGO"; [ "${DBG:=0}" = "1" ] || exec &>/dev/null
+zcat "$LOGO"
+[ "${DBG:=0}" = "1" ] || exec &>/dev/null
 BIND_INTERFACE=lo; LD_PRELOAD="/home/$USER/.local/share/jc141/bindToInterface.so"
 
 cd "$BINDIR"; exec "${CMD[@]}" "$@"
