@@ -6,7 +6,7 @@ BINDIR="$R/files/groot"; BIN="game.bin"; CMD=(./"$BIN")
 
 : ${GAMESCOPE:=$(command -v gamescope)}; [ -x "$GAMESCOPE" ] && CMD=("$GAMESCOPE" -f -- "${CMD[@]}");
 
-bash "$DWRF" mount-game
+bash "$DWRF" mount-game; echo ''
 function cleanup { cd "$OLDPWD" && bash "$DWRF" unmount-game; }
 trap 'cleanup' EXIT INT SIGINT SIGTERM
 
