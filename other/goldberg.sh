@@ -41,11 +41,11 @@ native() {
 }
 
 windows() {
-	if file steam_api*.dll | grep -q "PE32";
+	if [ -e steam_api64.dll ];
 	then
-		mv steam_api.dll steam_api.dll.orig && cp "$EMU_DIR/experimental/steam_api.dll" steam_api.dll
-	else
 		mv steam_api64.dll steam_api64.dll.orig && cp "$EMU_DIR/experimental/steam_api64.dll" steam_api64.dll
+	else
+		mv steam_api.dll steam_api.dll.orig && cp "$EMU_DIR/experimental/steam_api.dll" steam_api.dll
 	fi
 }
 
