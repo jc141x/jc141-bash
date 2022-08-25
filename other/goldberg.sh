@@ -41,11 +41,11 @@ native() {
 }
 
 windows() {
-	if [ -e steam_api64.dll ];
+	if file steam_api*.dll | grep -q "PE32";
 	then
-		mv steam_api64.dll steam_api64.dll.orig && cp "$EMU_DIR/experimental/steam_api64.dll" steam_api64.dll
-	else
 		mv steam_api.dll steam_api.dll.orig && cp "$EMU_DIR/experimental/steam_api.dll" steam_api.dll
+	else
+		mv steam_api64.dll steam_api64.dll.orig && cp "$EMU_DIR/experimental/steam_api64.dll" steam_api64.dll
 	fi
 }
 
@@ -64,7 +64,7 @@ genconf() {
 
 if [ -e libsteam_api.so ];
 then
-	interfaces && native && username && dlc && genconf
+	interfaces & sleep 1 && native && username && dlc && genconf
 else
-	interfaces && windows && username && dlc && genconf
+	interfaces & sleep 1 && windows && username && dlc && genconf
 fi
