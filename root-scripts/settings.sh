@@ -29,12 +29,12 @@ export WINEPREFIX="$JCD/prefix"
 [ ! -d "$WINEPREFIX" ] && mkdir -p {"$JCD/prefix-mnt","$PWD/files/data/user-data","$PWD/files/data/work","$PWD/files/data/prefix-tmp"} && dwarfs "$JCD/prefix.dwarfs" "$JCD/prefix-mnt" -o cache_image && fuse-overlayfs -o lowerdir="$JCD/prefix-mnt",upperdir="$PWD/files/data/user-data",workdir="$PWD/files/data/work" "$PWD/files/data/prefix-tmp";
 echo "mounted prefix"; }
 
-unmount-dwarfs() { wineserver -k && killall gamescope && fuser -k "$PWD/files/groot-mnt"
+unmount-dwarfs() { killall gamescope && fuser -k "$PWD/files/groot-mnt"
 fusermount3 -u -z "$PWD/files/groot"
 fusermount3 -u -z "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-work"
 echo "unmounted game"; }
 
-unmount-prefix() { wineserver -k && fuser -k "$JCD/prefix-mnt"
+unmount-prefix() { fuser -k "$JCD/prefix-mnt"
 fusermount3 -u -z "$PWD/files/data/prefix-tmp" && rm -d -f "$PWD/files/data/prefix-tmp";
 fusermount3 -u -z "$JCD/prefix-mnt" && rm -d -f "$JCD/prefix-mnt"
 echo "unmounted prefix"; }
