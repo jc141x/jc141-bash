@@ -9,7 +9,7 @@ BTI="$JCD/bindToInterface.so"; BTIARCH="bindToInterface.tar.lzma";
 
 [ ! -f "$BTI" ] && aria2c -d "$JCD" --seed-time=0 "magnet:?xt=urn:btih:B4A7E30D153FD5B44856AE95EF015496F1D114C8&dn=bindToInterface.tar.lzma&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce" && tar -xvf "$JCD/$BTIARCH" -C "$JCD" && rm -Rf "$JCD/$BTIARCH"
 
-mount-game() { unmount-game &> /dev/null;
+mount-dwarfs() { unmount-game &> /dev/null;
 [ -d "$PWD/files/groot" ] && echo -n "mounting path exists | " && [ "$( ls -A "$PWD/files/groot")" ] && echo -n "game is already mounted or extracted | " && exit
 mkdir -p {"$PWD/files/groot-mnt","$PWD/files/groot-rw","$PWD/files/groot-work","$PWD/files/groot"} && dwarfs "$PWD/files/groot.dwarfs" "$PWD/files/groot-mnt" && fuse-overlayfs -o lowerdir="$PWD/files/groot-mnt",upperdir="$PWD/files/groot-rw",workdir="$PWD/files/groot-work" "$PWD/files/groot" && echo -n "mounted game | "; }
 
@@ -29,7 +29,7 @@ export WINEPREFIX="$JCD/prefix"
 [ ! -d "$WINEPREFIX" ] && mkdir -p {"$JCD/prefix-mnt","$PWD/files/data/user-data","$PWD/files/data/work","$PWD/files/data/prefix-tmp"} && dwarfs "$JCD/prefix.dwarfs" "$JCD/prefix-mnt" -o cache_image && fuse-overlayfs -o lowerdir="$JCD/prefix-mnt",upperdir="$PWD/files/data/user-data",workdir="$PWD/files/data/work" "$PWD/files/data/prefix-tmp";
 echo -n "mounted prefix | "; }
 
-unmount-game() { wineserver -k && killall gamescope && fuser -k "$PWD/files/groot-mnt"
+unmount-dwarfs() { wineserver -k && killall gamescope && fuser -k "$PWD/files/groot-mnt"
 fusermount3 -u -z "$PWD/files/groot"
 fusermount3 -u -z "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-work"
 echo -n "unmounted game | "; }
