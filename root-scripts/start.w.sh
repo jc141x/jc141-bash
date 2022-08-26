@@ -7,7 +7,7 @@ cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; export
 export WINE_LARGE_ADDRESS_AWARE=1; export WINEFSYNC=1; export WINEDLLOVERRIDES="mshtml=d;";
 
 # image handling and muting output
-bash "$STS" mount-dwarfs; bash "$STS" mount-prefix; [ "${DBG:=0}" = "1" ] || exec &>/dev/null
+bash "$STS" mount-dwarfs; bash "$STS" mount-prefix; zcat "$LOGO"; [ "${DBG:=0}" = "1" ] || exec &>/dev/null
 
 # path defining
 export WINEPREFIX="$PWD/files/data/prefix-tmp"; export BINDIR="$PWD/files/groot"; BIN="game.exe"
@@ -22,8 +22,6 @@ bash "$VLK" dxvk
 # exit trap for auto-unmount
 function cleanup { cd "$OLDPWD" && bash "$STS" unmount-prefix unmount-dwarfs; }
 trap 'cleanup' EXIT INT SIGINT SIGTERM
-
-zcat "$LOGO"
 
 # block non-lan networking
 export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD="/home/$USER/.local/share/jc141/bindToInterface.so"
