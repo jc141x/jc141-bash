@@ -21,7 +21,7 @@ DLRLS="$(echo "$BASELNK" | awk -F '["]' '/"browser_download_url":/ && /tar.lzma/
 
 # prefix generation
 export WINEPREFIX="$JCD/prefix"
-[ -f "$PRF" ] && find "$PRF" -mtime +15 -type f -delete
+[ -f "$PRF" ] && find "$PRF" -mtime +7 -type f -delete
 [ -f "$JCD/$BASEARCH" ] && [ ! -f "$PRF" ] && tar -xvf "$JCD/$BASEARCH" -C "$JCD" > /dev/null
 [ -f "$JCD/$BASEARCH" ] && [ ! -f "$PRF" ] && WINEPREFIX="$JCD/prefix" bash "$BASEINSTALL" && sleep 2 && mkdwarfs -l7 -B5 -i "$JCD/prefix" -o "$JCD/prefix.dwarfs" && rm -Rf "$WINEPREFIX" && rm -Rf "$BASE";
 
