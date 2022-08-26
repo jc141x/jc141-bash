@@ -48,10 +48,10 @@ extracts groot.dwarfs to groot directory if it is empty
 bash settings.sh extract-xz
 extracts groot.tar.xz to groot directory if it is empty
 
-bash settings.sh unmount-game
+bash settings.sh unmount-dwarfs
 unmounts groot
 
-bash settings.sh mount-game
+bash settings.sh mount-dwarfs
 mounts groot.dwarfs to groot-mnt and overlay to groot
 
 bash settings.sh mount-prefix
