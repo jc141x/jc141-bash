@@ -32,20 +32,17 @@ echo "mounted prefix"; }
 unmount-dwarfs() { killall gamescope && fuser -k "$PWD/files/groot-mnt"
 fusermount3 -u -z "$PWD/files/groot"
 fusermount3 -u -z "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-work"
-echo "unmounted game"; }
+echo "unmounted dwarfs"; }
 
-unmount-prefix() { fuser -k "$JCD/prefix-mnt"
-fusermount3 -u -z "$PWD/files/data/prefix-tmp" && rm -d -f "$PWD/files/data/prefix-tmp";
-fusermount3 -u -z "$JCD/prefix-mnt" && rm -d -f "$JCD/prefix-mnt"
-echo "unmounted prefix"; }
+unmount-prefix() { fuser -k "$JCD/prefix-mnt"; fusermount3 -u -z "$PWD/files/data/prefix-tmp" && rm -d -f "$PWD/files/data/prefix-tmp"; fusermount3 -u -z "$JCD/prefix-mnt" && rm -d -f "$JCD/prefix-mnt"; echo "unmounted prefix"; }
 
 extract-dwarfs() { [ -d "$PWD/files/groot" ] && echo "extraction path exists" && [ "$( ls -A "$PWD/files/groot")" ] && echo "game is already mounted or extracted" && exit
-echo "extracting game, this may take a while"; tstart="$(date +%s)" && mkdir "$PWD/files/groot"; dwarfsextract -i "$PWD/files/groot.dwarfs" -o "$PWD/files/groot" && tend="$(date +%s)"; elapsed="$((tend - tstart))" && echo "done in $((elapsed / 60)) min and $((elapsed % 60)) sec"; }
+mkdir "$PWD/files/groot"; dwarfsextract -i "$PWD/files/groot.dwarfs" -o "$PWD/files/groot"; }
 
 extract-xz() { [ -d "$PWD/files/groot" ] && echo "extraction path exists" && [ "$( ls -A "$PWD/files/groot")" ] && echo "game is already extracted" && exit
 mkdir "$PWD/files/groot"; tar -xvf "$PWD/files/groot.tar.xz" -C "$PWD/files"; }
 
-delete-dwarfs-image() { rm -Rf "$PWD/files/groot.dwarfs" && echo "deleting dwarfs image"; }
+delete-dwarfs-image() { rm -Rf "$PWD/files/groot.dwarfs"; }
 
 compress-game() { [ ! -f "$PWD/files/groot.dwarfs" ] && mkdwarfs -l7 -B30 -i "$PWD/files/groot" -o "$PWD/files/groot.dwarfs"; }
 
