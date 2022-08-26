@@ -10,9 +10,6 @@
 #### [Fedora](fedora.md) - Base support
  - prefer Rawhide but 36 is ok
 
-- Your system requires vulkan support to play a majority of our releases. Native ones are mostly playable without vulkan support.
-- NTFS partitions are not supported.
-
 ### not supported distros (as well as any others based on them)
    - Debian Stable (outdated)
      - Ubuntu (malware, outdated)
@@ -22,6 +19,9 @@
    - SteamOS (malware, read-only, lack of packages)
    - Fedora Silverblue (read-only)
    - OpenSUSE (outdated/lack of packages)
+
+- Your system requires vulkan support to play a majority of our releases. Native ones are mostly playable without vulkan support.
+- NTFS partitions are not supported.
 
 #### running
 
