@@ -1,5 +1,15 @@
 <h1>jc141 setup guide</h1>
 
+### supported distros (click on one of the links)
+
+#### [Arch](arch.md) - Full offline support
+ - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
+   - don't install Manjaro but if you already have then ok
+#### [Debian Sid](debiansid.md) - Almost full support
+ - or: Sparky Rolling, Siduction, Nitrux
+#### [Fedora](fedora.md) - Base support
+ - prefer Rawhide but 36 is ok
+
 - Your system requires vulkan support to play a majority of our releases. Native ones are mostly playable without vulkan support.
 - NTFS partitions are not supported.
 
@@ -12,18 +22,6 @@
    - SteamOS (malware, read-only, lack of packages)
    - Fedora Silverblue (read-only)
    - OpenSUSE (outdated/lack of packages)
-
-### supported distros (click on one of the links)
-
-- Support for SteamDeck is work in progress. Documented [here](steamdeck.md). SteamDeck testers who are open to try other distros are needed.
-
-#### [Arch](arch.md) - Full offline support
- - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
-   - don't install Manjaro but if you already have then ok
-#### [Debian Sid](debiansid.md) - Almost full support
- - or: Sparky Rolling, Siduction, Nitrux
-#### [Fedora](fedora.md) - Base support
- - prefer Rawhide but 36 is ok
 
 #### running
 
