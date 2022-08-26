@@ -20,8 +20,8 @@
    - Fedora Silverblue (read-only)
    - OpenSUSE (outdated/lack of packages)
 
-- Your system requires vulkan support to play a majority of our releases. Native ones are mostly playable without vulkan support.
-- NTFS partitions are not supported.
+#### Vulkan support is required
+#### NTFS not supported.
 
 #### running
 
