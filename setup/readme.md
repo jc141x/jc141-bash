@@ -1,6 +1,6 @@
 <h1>jc141 setup guide</h1>
 
-### supported distros (click on one of the links)
+### supported distro packages
 
 #### [Arch](arch.md) - Full offline support
  - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
@@ -10,7 +10,7 @@
 #### [Fedora](fedora.md) - Base support
  - prefer Rawhide but 36 is ok
 
-### not supported distros (as well as any others based on them)
+### not supported distros
    - Debian Stable (outdated)
      - Ubuntu (malware, outdated)
           - Kubuntu, Lubuntu, Xubuntu
@@ -21,7 +21,7 @@
    - OpenSUSE (outdated/lack of packages)
 
 #### Vulkan support is required
-#### NTFS not supported.
+#### NTFS not supported
 
 #### running
 
