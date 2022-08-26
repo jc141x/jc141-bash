@@ -9,11 +9,9 @@ BINDIR="$R/files/groot"; BIN="game.bin"; CMD=(./"$BIN")
 : ${GAMESCOPE:=$(command -v gamescope)}; [ -x "$GAMESCOPE" ] && CMD=("$GAMESCOPE" -f -- "${CMD[@]}");
 
 # image handling, muting output and exit trap for auto-unmount
-bash "$STS" mount-dwarfs; [ "${DBG:=0}" = "1" ] || exec &>/dev/null
+bash "$STS" mount-dwarfs; zcat "$LOGO"; [ "${DBG:=0}" = "1" ] || exec &>/dev/null
 function cleanup { cd "$OLDPWD" && bash "$STS" unmount-dwarfs; }
 trap 'cleanup' EXIT INT SIGINT SIGTERM
-
-zcat "$LOGO"
 
 # block non-lan networking and redirect home path to isolation
 export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD="/home/$USER/.local/share/jc141/bindToInterface.so"
