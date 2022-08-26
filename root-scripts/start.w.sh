@@ -14,7 +14,7 @@ bash "$VLK" dxvk
 
 : ${GAMESCOPE:=$(command -v gamescope)}; [ -x "$GAMESCOPE" ] && CMD=("$GAMESCOPE" -f -- "${CMD[@]}");
 
-function cleanup { cd "$OLDPWD" && bash "$DWRF" unmount-prefix unmount-game; }
+function cleanup { cd "$OLDPWD" && bash "$STS" unmount-prefix unmount-dwarfs; }
 trap 'cleanup' EXIT INT SIGINT SIGTERM
 
 zcat "$LOGO"
