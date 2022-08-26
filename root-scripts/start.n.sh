@@ -1,13 +1,13 @@
 #!/bin/bash
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed" && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed" && exit
-cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; R="$PWD"; DWRF="$R/dwarfsettings.sh"; LOGO="$PWD/files/logo.txt.gz"; [ ! -e "$LOGO" ] && cp /opt/jc141-bash/logo.txt.gz "$LOGO";
+cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; R="$PWD"; STS="$R/settings.sh"; LOGO="$PWD/files/logo.txt.gz"; [ ! -e "$LOGO" ] && cp /opt/jc141-bash/logo.txt.gz "$LOGO";
 
 BINDIR="$R/files/groot"; BIN="game.bin"; CMD=(./"$BIN")
 
 : ${GAMESCOPE:=$(command -v gamescope)}; [ -x "$GAMESCOPE" ] && CMD=("$GAMESCOPE" -f -- "${CMD[@]}");
 
-bash "$DWRF" mount-game; echo ''
-function cleanup { cd "$OLDPWD" && bash "$DWRF" unmount-game; }
+bash "$STS" mount-dwarfs
+function cleanup { cd "$OLDPWD" && bash "$STS" unmount-dwarfs; }
 trap 'cleanup' EXIT INT SIGINT SIGTERM
 
 zcat "$LOGO"
