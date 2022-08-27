@@ -61,11 +61,15 @@ mounts prefix.dwarfs to prefix-mnt and overlay to prefix-tmp
 bash settings.sh unmount-prefix
 unmounts prefix.dwarfs from prefix-mnt and overlay to prefix-tmp
 
-From August 2022
-
 bash settings.sh delete-dwarfs-image
 deletes dwarfs image which contains the game files
 
 bash settings.sh compress-game
 compresses extracted game files to groot.dwarfs
 ```
+
+### Modding support
+
+- Addding mods is supported through groot-rw directory. Before mounting, any files included in it will go above the mounted image and override any of the files. The path required for the mod may need to be created manually if its not directly in root next to the game binary.
+
+- Some type of mods will not work with wine, such as ones that make use of dinput will likely cause crashes. Hooking use is also not supported by wine, regularly used in mods for games like GTA V.
