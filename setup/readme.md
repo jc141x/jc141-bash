@@ -1,16 +1,16 @@
-<h1>jc141 setup guide</h1>
+#jc141 setup guide</h1>
 
-### supported distro packages
+## supported distro packages
 
-#### [Arch](arch.md) - Full offline support
+### [Arch](arch.md) - Full offline support
  - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
    - don't install Manjaro but if you already have then ok
-#### [Debian Sid](debiansid.md) - Almost full support
+### [Debian Sid](debiansid.md) - Almost full support
  - or: Sparky Rolling, Siduction, Nitrux
-#### [Fedora](fedora.md) - Base support
+### [Fedora](fedora.md) - Base support
  - prefer Rawhide but 36 is ok
 
-### not supported distros
+## not supported distros
    - Debian Stable (outdated)
      - Ubuntu (malware, outdated)
           - Kubuntu, Lubuntu, Xubuntu
@@ -20,10 +20,11 @@
    - Fedora Silverblue (read-only)
    - OpenSUSE (outdated/lack of packages)
 
-#### Vulkan support is required
-#### NTFS not supported
+**Vulkan support is required**
 
-### running
+**NTFS not supported**
+
+## running
 
 ```sh
 cd "path to extracted game"
@@ -40,7 +41,7 @@ WINEFSYNC=0 - for disabling fsync.
 
 - game can also be ran directly from file manager by right clicking on start.x.sh and giving executable permission.
 
-#### settings.sh commands (formerly dwarfsettings.sh)
+### settings.sh commands (formerly dwarfsettings.sh)
 ```
 bash settings.sh extract-dwarfs (formerly extract-game)
 extracts groot.dwarfs to groot directory if it is empty
