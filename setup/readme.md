@@ -73,3 +73,5 @@ compresses extracted game files to groot.dwarfs
 - Addding mods is supported through groot-rw directory. Before mounting, any files included in it will go above the mounted image and override any of the files. The path required for the mod may need to be created manually if its not directly in root next to the game binary.
 
 - Some type of mods will not work with wine, such as ones that make use of dinput will likely cause crashes. Hooking use is also not supported by wine, regularly used in mods for games like GTA V.
+
+- Note that groot-rw only applies for games that mount instead of extract.
