@@ -23,7 +23,7 @@
 #### Vulkan support is required
 #### NTFS not supported
 
-#### running
+### running
 
 ```sh
 cd "path to extracted game"
