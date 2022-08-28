@@ -7,7 +7,6 @@ PRF="$JCD/prefix.dwarfs"; BASEINSTALL="$JCD/base/install.sh";
 BTI="$JCD/bindToInterface.so"; BTIARCH="bindToInterface.tar.lzma"; 
 [ -f "/opt/jc141-bash/base.tar.lzma" ] && rm -Rf "$JCD/$BASEARCH" && ln -s "/opt/jc141-bash/base.tar.lzma" "$JCD/$BASEARCH"
 [ ! -f "$BTI" ] && BTILNK="$(curl -s https://api.github.com/repos/jc141x/BindToInterface/releases/latest)" && DLBTI="$(echo "$BTILNK" | awk -F '["]' '/"browser_download_url":/ && /tar.lzma/ {print $4}')" && curl -L "$DLBTI" -o "$JCD/$BTIARCH" && tar -xvf "$JCD/$BTIARCH" -C "$JCD"
-[ ! -f "$BTI" ] && aria2c -d "$JCD" --seed-time=0 "magnet:?xt=urn:btih:B4A7E30D153FD5B44856AE95EF015496F1D114C8&dn=bindToInterface.tar.lzma&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce" && tar -xvf "$JCD/$BTIARCH" -C "$JCD" && rm -Rf "$JCD/$BTIARCH"
 
 mount-dwarfs() { unmount-game &> /dev/null;
 [ -d "$PWD/files/groot" ] && echo "mounting path exists" && [ "$( ls -A "$PWD/files/groot")" ] && echo "game is already mounted or extracted" && exit
