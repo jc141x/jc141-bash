@@ -16,7 +16,7 @@ mount-prefix() { unmount-prefix &> /dev/null;
 # downloading
 BASELNK="$(curl -s https://api.github.com/repos/jc141x/WINDEP/releases/latest)"
 DLRLS="$(echo "$BASELNK" | awk -F '["]' '/"browser_download_url":/ && /tar.xz/ {print $4}')"
-[ ! -f "$JCD/$BASEARCH" ] && [ ! -d "$BASE" ] && curl -L "$DLRLS" -o "$JCD/$BASEARCH" && [ ! -f "$JCD/$BASEARCH" ] && echo "download failed, trying to download from torrent with aria2" && aria2c -d "$JCD" --seed-time=0 "magnet:?xt=urn:btih:57C47B6A554BF5887850C28060F0AFE50924E5C8&dn=base.tar.lzma&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce" && [ ! -f "$JCD/$BASEARCH" ] && echo "download failed with aria2 as well" && exit
+[ ! -f "$JCD/$BASEARCH" ] && [ ! -d "$BASE" ] && curl -L "$DLRLS" -o "$JCD/$BASEARCH" && [ ! -f "$JCD/$BASEARCH" ] && echo "download failed, trying to download from torrent with aria2" && aria2c -d "$JCD" --seed-time=0 "magnet:?xt=urn:btih:A350F52826740B67A00075F0A1CADC0CDB356334&dn=base.tar.xz&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce" && [ ! -f "$JCD/$BASEARCH" ] && echo "download failed with aria2 as well" && exit
 
 # prefix generation
 export WINEPREFIX="$JCD/prefix"
