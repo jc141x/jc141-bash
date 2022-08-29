@@ -1,7 +1,7 @@
 #!/bin/bash
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed" && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed" && exit
 JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD" ] && mkdir -p "$JCD"; BASE="$JCD/base"; BASEARCH="base.tar.lzma";
-PRF="$JCD/prefix.dwarfs"; BASEINSTALL="$JCD/base/install.sh";
+PRF="$JCD/prefix-v2.dwarfs"; BASEINSTALL="$JCD/base/install.sh";
 
 # bindtointerface
 BTI="$JCD/bindToInterface.so"; BTIARCH="bindToInterface.tar.lzma"; 
@@ -22,10 +22,10 @@ DLRLS="$(echo "$BASELNK" | awk -F '["]' '/"browser_download_url":/ && /tar.xz/ {
 export WINEPREFIX="$JCD/prefix"
 [ -f "$PRF" ] && find "$PRF" -mtime +7 -type f -delete
 [ -f "$JCD/$BASEARCH" ] && [ ! -f "$PRF" ] && tar -xvf "$JCD/$BASEARCH" -C "$JCD" > /dev/null
-[ -f "$JCD/$BASEARCH" ] && [ ! -f "$PRF" ] && WINEPREFIX="$JCD/prefix" bash "$BASEINSTALL" && sleep 2 && mkdwarfs -l7 -B5 -i "$JCD/prefix" -o "$JCD/prefix.dwarfs" && rm -Rf "$WINEPREFIX" && rm -Rf "$BASE";
+[ -f "$JCD/$BASEARCH" ] && [ ! -f "$PRF" ] && WINEPREFIX="$JCD/prefix" bash "$BASEINSTALL" && sleep 2 && mkdwarfs -l7 -B5 -i "$JCD/prefix" -o "$JCD/prefix-v2.dwarfs" && rm -Rf "$WINEPREFIX" && rm -Rf "$BASE";
 
 # mounting prefix
-[ ! -d "$WINEPREFIX" ] && mkdir -p {"$JCD/prefix-mnt","$PWD/files/data/user-data","$PWD/files/data/work","$PWD/files/data/prefix-tmp"} && dwarfs "$JCD/prefix.dwarfs" "$JCD/prefix-mnt" -o cache_image && fuse-overlayfs -o lowerdir="$JCD/prefix-mnt",upperdir="$PWD/files/data/user-data",workdir="$PWD/files/data/work" "$PWD/files/data/prefix-tmp";
+[ ! -d "$WINEPREFIX" ] && mkdir -p {"$JCD/prefix-mnt","$PWD/files/data/user-data","$PWD/files/data/work","$PWD/files/data/prefix-tmp"} && dwarfs "$JCD/prefix-v2.dwarfs" "$JCD/prefix-mnt" -o cache_image && fuse-overlayfs -o lowerdir="$JCD/prefix-mnt",upperdir="$PWD/files/data/user-data",workdir="$PWD/files/data/work" "$PWD/files/data/prefix-tmp";
 echo "mounted prefix"; }
 
 unmount-dwarfs() { killall gamescope && fuser -k "$PWD/files/groot-mnt"
