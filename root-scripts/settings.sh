@@ -1,11 +1,11 @@
 #!/bin/bash
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed" && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed" && exit
-JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD" ] && mkdir -p "$JCD"; BASE="$JCD/base"; BASEARCH="base.tar.lzma";
+JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD" ] && mkdir -p "$JCD"; BASE="$JCD/base"; BASEARCH="base.tar.xz";
 PRF="$JCD/prefix-v2.dwarfs"; BASEINSTALL="$JCD/base/install.sh";
 
 # bindtointerface
-BTI="$JCD/bindToInterface.so"; BTIARCH="bindToInterface.tar.lzma"; 
-[ -f "/opt/jc141-bash/base.tar.lzma" ] && rm -Rf "$JCD/$BASEARCH" && ln -s "/opt/jc141-bash/base.tar.lzma" "$JCD/$BASEARCH"
+BTI="$JCD/bindToInterface.so"; BTIARCH="bindToInterface.tar.xz"; 
+[ -f "/opt/jc141-bash/base.tar.xz" ] && rm -Rf "$JCD/$BASEARCH" && ln -s "/opt/jc141-bash/base.tar.xz" "$JCD/$BASEARCH"
 [ ! -f "$BTI" ] && BTILNK="$(curl -s https://api.github.com/repos/jc141x/BindToInterface/releases/latest)" && DLBTI="$(echo "$BTILNK" | awk -F '["]' '/"browser_download_url":/ && /tar.lzma/ {print $4}')" && curl -L "$DLBTI" -o "$JCD/$BTIARCH" && tar -xvf "$JCD/$BTIARCH" -C "$JCD"
 
 mount-dwarfs() { unmount-game &> /dev/null;
