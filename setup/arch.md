@@ -20,11 +20,6 @@ sudo pacman -Syyu
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf && sudo pacman -Syyu
 ```
 
-#### yay
-```sh
-git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
-```
-
 ------------------------------------------------------------------------------------------------------
 
 ### main packages
@@ -57,13 +52,6 @@ Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 sudo pacman -S --needed rumpowered/wine-staging-tkg rumpowered/dxvk-bin rumpowered/vkd3d-proton-bin rumpowered/windep wine-mono
 ```
 
-#### gstreamer
-```sh
-yay -S --needed gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
-# 32bit
-yay -S --needed lib32-gst-plugins-base lib32-gst-plugins-good lib32-gst-plugins-ugly lib32-gst-plugins-bad
-```
-
 #### multilib libraries
 ```sh
 sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-v4l-utils lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib
@@ -72,6 +60,15 @@ sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libx
 #### other libraries
 ```sh
 sudo pacman -S --needed giflib libgphoto2 libxcrypt-compat zlib aria2
+```
+
+#### gstreamer
+```sh
+git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
+
+yay -S --needed gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
+# 32bit
+yay -S --needed lib32-gst-plugins-base lib32-gst-plugins-good rumpowered/lib32-gst-plugins-ugly lib32-gst-plugins-bad
 ```
 
 -------------------------------------------------------------------------------------------------------------------
