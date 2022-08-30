@@ -2,6 +2,8 @@
 
 - Also applies to Sparky Rolling, Siduction, Nitrux which are rolling by default.
 
+## QUITE BIG ISSUE: Debian does not provide any package for wine-mono, missing it can cause crashes in specific games. It is not available on MPR either. This issue will not be fixed until the package becomes available.
+
 ### pre-configuration
 
 #### How to switch Debian 11 to Rolling/Sid.
