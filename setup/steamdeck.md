@@ -65,7 +65,7 @@ Follow our [requirements guide](arch.md) for Arch, and reboot once more.
 | Touchpad | Yes ||
 | Touchscreen | Yes ||
 | Controller | Required packages coming soon |
-| Gyroscope | Untested ||
+| Gyroscope | Same as above ||
 | Card reader (microSD) | Yes ||
 | Bluetooth | Yes ||
 | Battery | Yes ||
