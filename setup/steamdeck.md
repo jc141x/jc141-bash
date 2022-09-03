@@ -4,8 +4,8 @@
 
 #### Install any Arch distro. We recommend EndeavourOS.
 
-1. Create a bootable EndeavourOS usb drive ([link](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/))
-2. Use a usb-c adapter to connect the drive to your deck.
+1. Create a bootable EndeavourOS usb drive. - ([Guide](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/))
+2. Use a USB-C adapter to connect the drive to your deck.
 3. Turn off your deck, hold 'Volume Down' and click the Power button, when you hear a sound let go of the volume button.
 4. Select the usb efi device.
 5. Follow the instructions on the screen. (online install)
