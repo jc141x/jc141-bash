@@ -8,15 +8,13 @@
 
 > Report issues you are having to us on matrix 
 
-> If you need to revert back to steamOS, follow the [guide by valve](https://help.steampowered.com/en/faqs/view/1B71-EDF2-EB6D-2BB3)
-
-#### install EndeavourOS
+#### Install any Arch distro. We recommend EndeavourOS.
 
 1. Create a bootable EndeavourOS usb drive ([link](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/))
-2. Use a usb-c adapter to connect the drive to your deck
+2. Use a usb-c adapter to connect the drive to your deck.
 3. Turn off your deck, hold 'Volume Down' and click the Power button, when you hear a sound let go of the volume button.
-4. Select the usb efi device
-5. Follow the instructions on the screen (online install)
+4. Select the usb efi device.
+5. Follow the instructions on the screen. (online install)
 
 
 #### prepare download sources
@@ -62,10 +60,10 @@ follow our [requirements guide](arch.md) for Arch, and reboot once more.
 |---|---|---|
 | GPU | Yes ||
 | Wireless | Yes ||
-| Audio | No | External devices with sound cards work |
+| Audio | About to be fixed by kernel |
 | Touchpad | Yes ||
 | Touchscreen | Yes ||
-| Controller | Partial | Some buttons work |
+| Controller | Required packages coming soon |
 | Gyroscope | Untested ||
 | Card reader (microSD) | Yes ||
 | Bluetooth | Yes ||
