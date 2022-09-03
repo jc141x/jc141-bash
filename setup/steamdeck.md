@@ -23,7 +23,7 @@ Add the lines to the __end__ of the pacman configuration file.
 
 `sudoedit /etc/pacman.conf`
 
-```toml
+```sh
 [jupiter]
 Server = https://steamdeck-packages.steamos.cloud/archlinux-mirror/$repo/os/$arch
 SigLevel = Never
