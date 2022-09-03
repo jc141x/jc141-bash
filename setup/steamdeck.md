@@ -1,12 +1,8 @@
 <h3>Setup Guide - SteamDeck</h3>
 
-<br>
-
-> When the guide says `edit` it means you edit the file with sudo using an editor like `nano` or `vim`.
-> 
-> e.g. `sudo nano /etc/pacman.conf` OR `sudoedit /etc/pacman.conf`
-
-> Report issues you are having to us on matrix 
+- When the guide says `edit` it means you edit the file with sudo using an editor like `nano` or `vim`.
+    - e.g. `sudo nano /etc/pacman.conf` OR `sudoedit /etc/pacman.conf`
+- Report issues you are having to us on matrix.
 
 #### Install any Arch distro. We recommend EndeavourOS.
 
@@ -16,10 +12,12 @@
 4. Select the usb efi device.
 5. Follow the instructions on the screen. (online install)
 
-
 #### prepare download sources
 
-Do a full system update before you start. `sudo pacman -Syyu`, and reboot.
+```sh
+sudo pacman -Syyu
+```
+- Updates your system. Reboot after finishing it.
 
 Add the lines to the __end__ of the pacman configuration file.
 
@@ -35,7 +33,10 @@ Server = https://steamdeck-packages.steamos.cloud/archlinux-mirror/$repo/os/$arc
 SigLevel = Never
 ```
 
-`sudo pacman -Syyu` to update the package database and install any replacement packages.
+```sh
+sudo pacman -Syyu
+```
+- To update the package database and install any replacement packages.
 
 #### finalize
 
@@ -48,11 +49,11 @@ to get drivers for the hardware (based on guesses), install the following packag
 
 > -- insert gude how to change default boot option here --
 
-run `sudo grub-mkconfig -o /boot/grub/grub.cfg`
+Run `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 
-reboot and select the option with `linux neptune` using the arrow keys.
+Reboot and select the option with `linux neptune` using the arrow keys.
 
-follow our [requirements guide](arch.md) for Arch, and reboot once more.
+Follow our [requirements guide](arch.md) for Arch, and reboot once more.
 
 <br>
 
