@@ -1,7 +1,5 @@
 <h3>Setup Guide - SteamDeck</h3>
 
-- When the guide says `edit` it means you edit the file with sudo using an editor like `nano` or `vim`.
-    - e.g. `sudo nano /etc/pacman.conf` OR `sudoedit /etc/pacman.conf`
 - Report issues you are having to us on matrix.
 
 #### Install any Arch distro. We recommend EndeavourOS.
