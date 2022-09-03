@@ -77,9 +77,3 @@ sudo apt install libva2 zstd aria2 giflib-tools libgphoto2-6 libxcrypt-source
 ```sh
 sudo apt install gamescope
 ```
-
-##### yuzu
-- for Nintendo
-```sh
-una install yuzu-mainline-bin
-```
