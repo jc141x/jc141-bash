@@ -57,15 +57,15 @@ Follow our [requirements guide](arch.md) for Arch, and reboot once more.
 
 <br>
 
-| Hardware | Working? | Note |
-|---|---|---|
-| GPU | Yes ||
-| Wireless | Yes ||
-| Audio | About to be fixed by kernel |
-| Touchpad | Yes ||
-| Touchscreen | Yes ||
-| Controller | Required packages coming soon |
-| Gyroscope | Same as above ||
-| Card reader (microSD) | Yes ||
-| Bluetooth | Yes ||
-| Battery | Yes ||
+| Hardware | Working?
+|---|---|
+| GPU | Yes
+| Wireless | Yes
+| Audio | About to be fixed by kernel
+| Touchpad | Yes
+| Touchscreen | Yes
+| Controller | Required packages coming soon
+| Gyroscope | Same as above
+| Card reader (microSD) | Yes
+| Bluetooth | Yes
+| Battery | Yes
