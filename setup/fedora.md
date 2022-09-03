@@ -38,9 +38,3 @@ sudo dnf install libxcrypt zlib aria2 alsa-lib alsa-plugins fluidsynth pulseaudi
 ```sh
 sudo dnf install gamescope
 ```
-
-##### yuzu
-- for Nintendo
-```sh
-export API_URL="https://api.github.com/repos/yuzu-emu/yuzu-mainline/releases/latest" && export DOWNLOAD_URL=$(curl -s $API_URL | grep -oP '"browser_download_url": "\K(.*AppImage)(?=")') && curl -Lo /tmp/yuzu --progress-meter $DOWNLOAD_URL && chmod +x /tmp/yuzu && sudo mv /tmp/yuzu /usr/local/bin/yuzu
-```
