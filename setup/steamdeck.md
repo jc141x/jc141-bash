@@ -29,12 +29,9 @@ Server = https://steamdeck-packages.steamos.cloud/archlinux-mirror/$repo/os/$arc
 SigLevel = Never ' | sudo tee -a /etc/pacman.conf
 
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
-```
 
-```sh
 sudo pacman -Syyu
 ```
-- Update system again.
 
 #### finalize
 
