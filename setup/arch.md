@@ -52,14 +52,9 @@ Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 sudo pacman -S --needed rumpowered/wine-staging-tkg rumpowered/dxvk-bin rumpowered/vkd3d-proton-bin rumpowered/windep wine-mono
 ```
 
-#### multilib libraries
+#### various libraries required by some games
 ```sh
-sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-v4l-utils lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib
-```
-
-#### other libraries
-```sh
-sudo pacman -S --needed giflib libgphoto2 libxcrypt-compat zlib aria2
+sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-v4l-utils lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib giflib libgphoto2 libxcrypt-compat zlib aria2
 ```
 
 #### gstreamer
