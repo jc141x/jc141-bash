@@ -33,17 +33,17 @@ sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 sudo pacman -Syyu
 ```
 
-#### finalize
-
-To get drivers for the hardware, install the following packages
+### SteamDeck Hardware drivers
 
 ```sh
 sudo pacman -S jupiter/linux-neptune jupiter/linux-neptune-headers jupiter/linux-firmware-neptune jupiter/jupiter-hw-support
 ```
 
-> -- insert gude how to change default boot option here --
+### Make new kernel default
 
-Run `sudo grub-mkconfig -o /boot/grub/grub.cfg`
+```sh
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
 
 Reboot and select the option with `linux neptune` using the arrow keys.
 
