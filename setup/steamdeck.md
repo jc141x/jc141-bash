@@ -85,7 +85,7 @@ sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs
 #### graphics packages
 ```sh
 # Universal
-sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-vulkan-radeon vulkan-radeon
+sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-vulkan-radeon vulkan-radeon gamescope
 ```
 
 #### wine-staging-tkg + wine-mono + dxvk + vkd3d (offline support)
@@ -110,17 +110,4 @@ git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 yay -S --needed gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
 # 32bit
 yay -S --needed lib32-gst-plugins-base lib32-gst-plugins-good rumpowered/lib32-gst-plugins-ugly lib32-gst-plugins-bad
-```
-
--------------------------------------------------------------------------------------------------------------------
-
-### optional packages
-
-#### gamescope
-- highly recommended
-- Nvidia not supported yet
-- requires full vulkan support, old architectures with none or semi are not compatible
-
-```sh
-sudo pacman -S --needed gamescope
 ```
