@@ -3,7 +3,7 @@
 - Report issues you are having to us on matrix.
 - SteamOS not supported or planned to be.
 
-#### Install any Arch distro. We recommend EndeavourOS.
+### Install any Arch distro. We recommend EndeavourOS.
 
 1. Create a bootable usb drive with the distro iso. - [Guide](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/)
 2. Use a USB-C adapter to connect the drive to your deck.
@@ -34,13 +34,13 @@ sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 sudo pacman -Syyu
 ```
 
-### SteamDeck Hardware drivers
+#### SteamDeck Hardware drivers
 
 ```sh
 sudo pacman -S jupiter/linux-neptune jupiter/linux-neptune-headers jupiter/linux-firmware-neptune jupiter/jupiter-hw-support
 ```
 
-### Make new kernel default
+#### Make new kernel default
 
 ```sh
 sudo grub-mkconfig -o /boot/grub/grub.cfg
