@@ -10,7 +10,7 @@
 4. Select the usb efi device.
 5. Follow installer steps. (online install)
 
-#### prepare download sources
+#### add required repos
 
 ```sh
 sudo pacman -Syyu
@@ -32,6 +32,16 @@ SigLevel = Never
 ```
 
 ```sh
+echo '
+
+[rumpowered]
+SigLevel = Never
+Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
+
+sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+```
+
+```sh
 sudo pacman -Syyu
 ```
 - Update system again.
@@ -49,19 +59,6 @@ sudo pacman -S jupiter/linux-neptune jupiter/linux-neptune-headers jupiter/linux
 Run `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 
 Reboot and select the option with `linux neptune` using the arrow keys.
-
-#### add rumpowered repo and multilib
-```sh
-echo '
-
-[rumpowered]
-SigLevel = Never
-Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
-
-sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
-
-sudo pacman -Syyu
-```
 
 ------------------------------------------------------------------------------------------------------
 
