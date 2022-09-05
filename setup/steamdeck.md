@@ -12,7 +12,7 @@
 5. Follow installer steps. (online install)
 6. Boot into new system and run `sudo pacman -Syyu` then reboot again.
 
-#### add required repos
+#### Add required repos.
 
 ```sh
 echo '
@@ -40,7 +40,7 @@ sudo pacman -Syyu
 sudo pacman -S jupiter/linux-neptune jupiter/linux-neptune-headers jupiter/linux-firmware-neptune jupiter/jupiter-hw-support
 ```
 
-#### Make new kernel default
+#### Make new kernel default.
 
 ```sh
 sudo grub-mkconfig -o /boot/grub/grub.cfg
