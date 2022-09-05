@@ -4,7 +4,7 @@
 
 ### pre-configuration
 
-#### rumpowered arch repo
+#### add rumpowered repo and multilib
 ```sh
 echo '
 
@@ -12,13 +12,11 @@ echo '
 SigLevel = Never
 Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
 
+sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+
 sudo pacman -Syyu
 ```
 
-#### multilib
-```sh
-sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf && sudo pacman -Syyu
-```
 
 ------------------------------------------------------------------------------------------------------
 
