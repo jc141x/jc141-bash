@@ -9,13 +9,9 @@
 3. Turn off your deck, hold 'Volume Down' and click the Power button, when you hear a sound let go of the volume button.
 4. Select the usb efi device.
 5. Follow installer steps. (online install)
+6. Boot into new system and run `sudo pacman -Syyu` then reboot again.
 
 #### add required repos
-
-```sh
-sudo pacman -Syyu
-```
-- Updates your system. Reboot after finishing it.
 
 Add the lines to the __end__ of the pacman configuration file.
 
