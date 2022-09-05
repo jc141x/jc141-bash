@@ -8,7 +8,7 @@
 2. Use a USB-C adapter to connect the drive to your deck.
 3. Turn off your deck, hold 'Volume Down' and click the Power button, when you hear a sound let go of the volume button.
 4. Select the usb efi device.
-5. Follow the instructions on the screen. (online install)
+5. Follow installer steps. (online install)
 
 #### prepare download sources
 
