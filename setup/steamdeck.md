@@ -4,7 +4,7 @@
 
 #### Install any Arch distro. We recommend EndeavourOS.
 
-1. Create a bootable EndeavourOS usb drive. - ([Guide](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/))
+1. Create a bootable EndeavourOS usb drive. - [Guide](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/)
 2. Use a USB-C adapter to connect the drive to your deck.
 3. Turn off your deck, hold 'Volume Down' and click the Power button, when you hear a sound let go of the volume button.
 4. Select the usb efi device.
@@ -34,16 +34,15 @@ SigLevel = Never
 ```sh
 sudo pacman -Syyu
 ```
-- To update the package database and install any replacement packages.
+- Update system again.
 
 #### finalize
 
-to get drivers for the hardware (based on guesses), install the following packages with `sudo pacman -S`
+To get drivers for the hardware, install the following packages
 
-    jupiter/linux-neptune
-    jupiter/linux-neptune-headers
-    jupiter/linux-firmware-neptune
-    jupiter/jupiter-hw-support
+```sh
+sudo pacman -S jupiter/linux-neptune jupiter/linux-neptune-headers jupiter/linux-firmware-neptune jupiter/jupiter-hw-support
+```
 
 > -- insert gude how to change default boot option here --
 
@@ -51,11 +50,7 @@ Run `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 
 Reboot and select the option with `linux neptune` using the arrow keys.
 
-<h3>Setup Guide - Arch</h3>
-
-- Also applies to EndeavourOS, Artix, ArcoLinux, Manjaro etc.
-
-### pre-configuration
+### pre-configuration of system
 
 #### rumpowered arch repo
 ```sh
