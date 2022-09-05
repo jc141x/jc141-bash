@@ -13,26 +13,20 @@
 
 #### add required repos
 
-Add the lines to the __end__ of the pacman configuration file.
+```sh
+echo '
 
-`sudoedit /etc/pacman.conf`
+[rumpowered]
+SigLevel = Never
+Server = https://repo.rumpowered.org/$arch
 
-```
 [jupiter]
 Server = https://steamdeck-packages.steamos.cloud/archlinux-mirror/$repo/os/$arch
 SigLevel = Never
 
 [holo]
 Server = https://steamdeck-packages.steamos.cloud/archlinux-mirror/$repo/os/$arch
-SigLevel = Never
-```
-
-```sh
-echo '
-
-[rumpowered]
-SigLevel = Never
-Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
+SigLevel = Never ' | sudo tee -a /etc/pacman.conf
 
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 ```
