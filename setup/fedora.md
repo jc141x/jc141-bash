@@ -26,7 +26,7 @@ sudo dnf install wine-mono
 
 #### other libraries
 ```sh
-sudo dnf install libxcrypt zlib aria2 alsa-lib alsa-plugins fluidsynth pulseaudio openal
+sudo dnf install libxcrypt zlib alsa-lib alsa-plugins fluidsynth pulseaudio openal
 ```
 
 #### optional packages
