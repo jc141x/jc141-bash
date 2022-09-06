@@ -27,23 +27,24 @@ sudo pacman -Syyu
 sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs
 ```
 
-#### graphics packages
+#### AMD graphics packages
 ```sh
-# Universal
-sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader
-
-# INTEL specific
-sudo pacman -S --needed lib32-vulkan-intel vulkan-intel
-
-# AMD specific
-sudo pacman -S --needed lib32-vulkan-radeon vulkan-radeon
-sudo pacman -R amdvlk
-
-# NVIDIA specific
-sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia
-
-Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
+sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-vulkan-radeon vulkan-radeon && sudo pacman -R amdvlk
 ```
+
+#### INTEL graphics packages
+
+```sh
+sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-vulkan-intel vulkan-intel
+```
+
+#### NVIDIA graphics packages
+
+```sh
+sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-libglvnd lib32-nvidia-utils libglvnd nvidia
+```
+
+- Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
 #### wine-staging-tkg + wine-mono + dxvk + vkd3d (offline support)
 ```sh
