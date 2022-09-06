@@ -6,7 +6,7 @@
  - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
  
 ### [SteamDeck](steamdeck.md) - Full offline support
- *Only on Arch distros. SteamOS not supported.
+ - Only on Arch distros. SteamOS not supported.
  
 ### [Debian Sid](debiansid.md) - Almost full support
  - or: Sparky Rolling, Siduction, Nitrux
