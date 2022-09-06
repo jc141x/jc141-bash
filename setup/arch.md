@@ -47,7 +47,7 @@ Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
 #### wine-staging-tkg + wine-mono + dxvk + vkd3d (offline support)
 ```sh
-sudo pacman -S --needed rumpowered/wine-staging-tkg rumpowered/dxvk-bin rumpowered/vkd3d-proton-bin rumpowered/windep wine-mono
+sudo pacman -S --needed rumpowered/wine-staging-tkg rumpowered/dxvk-bin rumpowered/vkd3d-proton-bin wine-mono
 ```
 
 #### various libraries required by some games
