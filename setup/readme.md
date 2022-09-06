@@ -4,7 +4,10 @@
 
 ### [Arch](arch.md) - Full offline support
  - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
-   - don't install Manjaro but if you already have then ok
+ 
+### [SteamDeck](steamdeck.md) - Full offline support
+ *Only on Arch distros. SteamOS not supported.
+ 
 ### [Debian Sid](debiansid.md) - Almost full support
  - or: Sparky Rolling, Siduction, Nitrux
 ### [Fedora](fedora.md) - Base support
