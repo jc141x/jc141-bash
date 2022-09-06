@@ -37,7 +37,7 @@ sudo pacman -Syyu
 #### SteamDeck Hardware drivers
 
 ```sh
-sudo pacman -S jupiter/linux-neptune jupiter/linux-neptune-headers jupiter/linux-firmware-neptune jupiter/jupiter-hw-support
+sudo pacman -S jupiter/linux-neptune jupiter/linux-neptune-headers jupiter/linux-firmware-neptune jupiter/jupiter-hw-support rumpowered/sc-controller
 ```
 
 #### Make new kernel default.
