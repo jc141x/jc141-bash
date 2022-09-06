@@ -1,13 +1,13 @@
 #!/bin/bash
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed" && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed" && exit
 JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD" ] && mkdir -p "$JCD"; F="$PWD/files"; BASE="$JCD/base";
-PRF="$JCD/prefix-v3.dwarfs"; VLK="$PWD/files/vlk.sh"; GAME="$F/groot.dwarfs"; GRT="$F/groot"; PRFMT="$JCD/prefix-mnt"; GMNT="$F/groot-mnt"
+PRF="$JCD/prefix-v3.dwarfs"; GAME="$F/groot.dwarfs"; GRT="$F/groot"; PRFMT="$JCD/prefix-mnt"; GMNT="$F/groot-mnt"
 
 mount-dwarfs() { unmount-game &> /dev/null; [ -d "$GRT" ] && [ "$( ls -A "$GRT")" ] && echo "game is already mounted or extracted" && exit
 mkdir -p {"$GMNT","$F/groot-rw","$F/groot-work","$GRT"} && dwarfs "$GAME" "$GMNT" && fuse-overlayfs -o lowerdir="$GMNT",upperdir="$F/groot-rw",workdir="$F/groot-work" "$GRT" && echo "mounted game"; }
 
 mount-prefix() { unmount-prefix &> /dev/null; export WINEPREFIX="$JCD/prefix"; [ -f "$PRF" ] && find "$PRF" -mtime +7 -type f -delete
-[ ! -f "$PRF" ] && WINEPREFIX="$JCD/prefix" && wine winecfg -v win10 && bash "$VLK" dxvk && bash "$VLK" vkd3d && mkdwarfs -l6 -i "$JCD/prefix" -o "$PRF" && rm -Rf "$WINEPREFIX";
+[ ! -f "$PRF" ] && export WINEPREFIX="$JCD/prefix" && wine winecfg -v win10 && bash "$PWD/files/vlk.sh" dxvk && bash "$PWD/files/vlk.sh" vkd3d && mkdwarfs -l6 -i "$JCD/prefix" -o "$PRF" && rm -Rf "$WINEPREFIX";
 [ ! -d "$WINEPREFIX" ] && mkdir -p {"$PRFMT","$F/data/user-data","$F/data/work","$F/data/prefix-tmp"} && dwarfs "$PRF" "$PRFMT" -o cache_image && fuse-overlayfs -o lowerdir="$PRFMT",upperdir="$F/data/user-data",workdir="$F/data/work" "$F/data/prefix-tmp"; echo "mounted prefix"; }
 
 unmount-dwarfs() { killall gamescope && fuser -k "$GMNT"; fusermount3 -u -z "$GRT"; fusermount3 -u -z "$GMNT" && rm -d -f "$GMNT" && rm -d -f "$F/groot-work"; echo "unmounted dwarfs"; }
