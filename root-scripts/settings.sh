@@ -7,7 +7,7 @@ mount-dwarfs() { unmount-game &> /dev/null; [ -d "$GRT" ] && [ "$( ls -A "$GRT")
 mkdir -p {"$GMNT","$F/groot-rw","$F/groot-work","$GRT"} && dwarfs "$GAME" "$GMNT" && fuse-overlayfs -o lowerdir="$GMNT",upperdir="$F/groot-rw",workdir="$F/groot-work" "$GRT" && echo "mounted game"; }
 
 mount-prefix() { unmount-prefix &> /dev/null; BASELNK="$(curl -s https://api.github.com/repos/jc141x/WINDEP/releases/latest)"; DLRLS="$(echo "$BASELNK" | awk -F '["]' '/"browser_download_url":/ && /tar.xz/ {print $4}')"
-[ ! -f "$BASEARCH" ] && [ ! -d "$BASE" ] && curl -L "$DLRLS" -o "$BASEARCH" && [ ! -f "$BASEARCH" ] && echo "download failed, trying to download from torrent with aria2" && aria2c -d "$JCD" --seed-time=0 "magnet:?xt=urn:btih:A350F52826740B67A00075F0A1CADC0CDB356334&dn=base.tar.xz&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce" && [ ! -f "$JCD/$BASEARCH" ] && echo "download failed with aria2 as well" && exit
+[ ! -f "$BASEARCH" ] && [ ! -d "$BASE" ] && curl -L "$DLRLS" -o "$BASEARCH" && [ ! -f "$BASEARCH" ] && echo "download failed" && exit
 
 export WINEPREFIX="$JCD/prefix"; [ -f "$PRF" ] && find "$PRF" -mtime +7 -type f -delete
 [ -f "$BASEARCH" ] && [ ! -f "$PRF" ] && tar -xvf "$BASEARCH" -C "$JCD" > /dev/null
