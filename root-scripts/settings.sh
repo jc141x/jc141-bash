@@ -13,7 +13,6 @@ mount-prefix() { unmount-prefix &> /dev/null; export WINEPREFIX="$JCD/prefix"; [
 unmount-dwarfs() { killall gamescope && fuser -k "$GMNT"; fusermount3 -u -z "$GRT"; fusermount3 -u -z "$GMNT" && rm -d -f "$GMNT" && rm -d -f "$F/groot-work"; echo "unmounted dwarfs"; }
 unmount-prefix() { fuser -k "$PRFMT"; fusermount3 -u -z "$F/data/prefix-tmp" && rm -d -f "$F/data/prefix-tmp"; fusermount3 -u -z "$PRFMT" && rm -d -f "$PRFMT"; echo "unmounted prefix"; }
 extract-dwarfs() { [ -d "$GRT" ] && [ "$( ls -A "$GRT")" ] && echo "game is already mounted or extracted" && exit; mkdir "$GRT"; dwarfsextract -i "$GAME" -o "$GRT"; }
-extract-xz() { [ -d "$GRT" ] && [ "$( ls -A "$GRT")" ] && echo "game is already extracted" && exit; mkdir "$GRT"; tar -xvf "$F/groot.tar.xz" -C "$F"; }
 delete-dwarfs-image() { rm -Rf "$GAME"; }
 compress-game() { [ ! -f "$GAME" ] && mkdwarfs -l7 -B30 -i "$GRT" -o "$GAME"; }
 
