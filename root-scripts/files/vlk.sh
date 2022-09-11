@@ -1,6 +1,4 @@
 #!/bin/bash
-[ "$EUID" = "0" ] && exit; cd "$(dirname "$(realpath "$0")")" || exit 1
-
 extract() { tar -xvf "$1" &>/dev/null; }; applied() { echo -n "${FUNCNAME[1]} applied"; }
 download() { command -v curl >/dev/null 2>&1 && curl -LO "$1"; }
 
