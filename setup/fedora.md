@@ -1,10 +1,8 @@
 <h3>Setup Guide - Fedora</h3>
 
 #### dwarfs and fuse-overlayfs
-Dwarfs isn't available in the repos and copr, so our temporarily solution is this rpm we made.
 ```sh
-wget -qO ~/Downloads/dwarfs-0.6.1-1.fc36.x86_64.rpm https://github.com/jc141x/jc141-bash/releases/download/420/dwarfs-0.6.1-1.fc36.x86_64.rpm && sudo dnf install ~/Downloads/dwarfs-0.6.1-1.fc36.x86_64.rpm
-sudo dnf install fuse-overlayfs
+sudo dnf copr enable linuxredneck/DwarFS && sudo dnf install fuse-overlayfs dwarfs
 ```
 
 #### graphics packages
