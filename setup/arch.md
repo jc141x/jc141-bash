@@ -14,6 +14,9 @@ Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
 
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 
+sudo pacman-key --recv-keys cc7a2968b28a04b3
+sudo pacman-key --lsing-key cc7a2968b28a04b3
+
 sudo pacman -Syyu
 ```
 
