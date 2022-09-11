@@ -9,7 +9,7 @@
 echo '
 
 [rumpowered]
-SigLevel = Never
+Server = https://jc141x.github.io/rumpowered-packages/$arch
 Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
 
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
