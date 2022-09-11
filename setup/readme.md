@@ -8,7 +8,7 @@
 ### [SteamDeck](steamdeck.md) - Full offline support
  - Only on Arch distros. SteamOS not supported.
  
-### [Debian Sid](debiansid.md) - Almost full support
+### [Debian Sid](debiansid.md) - Base support
  - or: Sparky Rolling, Siduction, Nitrux
 ### [Fedora](fedora.md) - Base support
  - prefer Rawhide but 36 is ok
