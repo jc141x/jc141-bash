@@ -1,6 +1,6 @@
 #!/bin/bash
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed" && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed" && exit
-JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD" ] && mkdir -p "$JCD"; F="$PWD/files"; BASE="$JCD/base";
+JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD" ] && mkdir -p "$JCD"; BASE="$JCD/base";
 PRF="$JCD/prefix-v3.dwarfs"; GAME="$PWD/files/groot.dwarfs"; GRT="$PWD/files/groot"; PRFMT="$JCD/prefix-mnt"; GMNT="$PWD/files/groot-mnt";
 
 mount-dwarfs() { unmount-game &> /dev/null; [ -d "$GRT" ] && [ "$( ls -A "$GRT")" ] && echo "game is already mounted or extracted" && exit
