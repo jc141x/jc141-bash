@@ -11,7 +11,7 @@ mount-prefix() { unmount-prefix &> /dev/null; export WINEPREFIX="$JCD/prefix"; [
 
 unmount-dwarfs() { killall gamescope && fuser -k "$PWD/files/groot-mnt"; fusermount3 -u -z "$PWD/files/groot"; fusermount3 -u -z "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-mnt" && rm -d -f "$PWD/files/groot-work"; echo "unmounted dwarfs"; }
 unmount-prefix() { fuser -k "$JCD/prefix-mnt"; fusermount3 -u -z "$PWD/files/data/prefix-tmp" && rm -d -f "$PWD/files/data/prefix-tmp"; fusermount3 -u -z "$JCD/prefix-mnt" && rm -d -f "$JCD/prefix-mnt"; echo "unmounted prefix"; }
-extract-dwarfs() { fusermount3 -u "$PWD/files/groot-mnt" && [ -d "$PWD/files/groot" ] && [ "$( ls -A "$PWD/files/groot")" ] && echo "game is already mounted or extracted" && exit; echo "extracting game files, this can take a while" && mkdir "$PWD/files/groot" & mkdir "$PWD/files/groot-mnt"; dwarfs "$PWD/files/groot.dwarfs" "$PWD/files/groot-mnt" -o clone_fd && cp -r "$PWD/files/groot-mnt"/* "$PWD/files/groot" && fusermount3 -u "$PWD/files/groot-mnt" && rm -Rf "$PWD/files/groot-mnt"; }
+extract-dwarfs() { fusermount3 -u "$PWD/files/groot-mnt" && [ -d "$PWD/files/groot" ] && [ "$( ls -A "$PWD/files/groot")" ] && echo "game is already mounted or extracted" && exit && echo "extracting game files, this can take a while" && mkdir "$PWD/files/groot" & mkdir "$PWD/files/groot-mnt"; dwarfs "$PWD/files/groot.dwarfs" "$PWD/files/groot-mnt" -o clone_fd && cp -r "$PWD/files/groot-mnt"/* "$PWD/files/groot" && fusermount3 -u "$PWD/files/groot-mnt" && rm -Rf "$PWD/files/groot-mnt"; }
 delete-dwarfs-image() { rm -Rf "$PWD/files/groot.dwarfs"; }
 compress-game() { [ ! -f "$PWD/files/groot.dwarfs" ] && mkdwarfs -l7 -B30 -i "$PWD/files/groot" -o "$PWD/files/groot.dwarfs"; }
 
