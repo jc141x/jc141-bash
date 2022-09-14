@@ -12,6 +12,8 @@
  - or: Sparky Rolling, Siduction, Nitrux
 ### [Fedora](fedora.md) - Base support
  - prefer Rawhide but 36 is ok
+### [OpenSUSE](opensuse.md) - Base support
+ - tumbleweed only
 
 ## not supported distros
    - Debian Stable (outdated)
@@ -21,7 +23,6 @@
           - LXLE, KDE Neon 
    - SteamOS (malware, read-only, lack of packages)
    - Fedora Silverblue (read-only)
-   - OpenSUSE (outdated/lack of packages)
 
 **Vulkan support is required**
 
