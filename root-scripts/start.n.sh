@@ -15,7 +15,7 @@ function cleanup { cd "$OLDPWD" && bash "$STS" unmount-dwarfs; }
 trap 'cleanup' EXIT INT SIGINT SIGTERM
 
 # block non-lan networking and redirect home path to isolation
-export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD="/usr/bin/bindToInterface.so"
+export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD="/usr/lib/bindToInterface.so"
 export HOME="$JCDN"; export XDG_DATA_HOME="$JCDN/local"; export XDG_CONFIG_HOME="$JCDN/config"; mkdir -p {"$HOME","$XDG_CONFIG_HOME","$XDG_DATA_HOME"};
 
 # start
