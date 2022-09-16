@@ -1,7 +1,7 @@
 #!/bin/bash
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed" && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed" && exit
 cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; R="$PWD"; STS="$R/settings.sh"; LOGO="$PWD/files/logo.txt.gz"; [ ! -e "$LOGO" ] && cp /opt/jc141-bash/logo.txt.gz "$LOGO";
-export JCDN="${XDG_DATA_HOME:-$HOME/.local/share}/jc141/native"; [ ! -d "$JCD" ] && mkdir -p "$JCDN"
+export JCDN="${XDG_DATA_HOME:-$HOME/.local/share}/jc141/native"; [ ! -d "$JCDN" ] && mkdir -p "$JCDN"
 
 # path defining
 BINDIR="$R/files/groot"; BIN="game.bin"; CMD=(./"$BIN")
