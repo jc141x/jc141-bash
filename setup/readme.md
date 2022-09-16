@@ -45,9 +45,9 @@ WINEFSYNC=0 - for disabling fsync.
 
 - game can also be ran directly from file manager by right clicking on start.x.sh and giving executable permission.
 
-### settings.sh commands (formerly dwarfsettings.sh)
+### settings.sh commands
 ```
-bash settings.sh extract-dwarfs (formerly extract-game)
+bash settings.sh extract-dwarfs
 extracts groot.dwarfs to groot directory if it is empty
 
 bash settings.sh unmount-dwarfs
@@ -56,16 +56,10 @@ unmounts groot
 bash settings.sh mount-dwarfs
 mounts groot.dwarfs to groot-mnt and overlay to groot
 
-bash settings.sh mount-prefix
-mounts prefix.dwarfs to prefix-mnt and overlay to prefix-tmp
-
-bash settings.sh unmount-prefix
-unmounts prefix.dwarfs from prefix-mnt and overlay to prefix-tmp
-
-bash settings.sh delete-dwarfs-image
+bash settings.sh delete-dwarfs
 deletes dwarfs image which contains the game files
 
-bash settings.sh compress-game
+bash settings.sh compress-to-dwarfs
 compresses extracted game files to groot.dwarfs
 ```
 
