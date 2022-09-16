@@ -7,7 +7,7 @@ cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; export
 export WINE_LARGE_ADDRESS_AWARE=1; export WINEFSYNC=1; export WINEDLLOVERRIDES="mshtml=d;";
 
 # image handling and muting output
-bash "$STS" mount-dwarfs; bash "$STS" mount-prefix; zcat "$LOGO"; [ "${DBG:=0}" = "1" ] || exec &>/dev/null
+bash "$STS" mount-dwarfs; zcat "$LOGO"; [ "${DBG:=0}" = "1" ] || exec &>/dev/null
 
 # path defining
 export WINEPREFIX="$PWD/files/data/prefix-tmp"; export BINDIR="$PWD/files/groot"; BIN="game.exe"
@@ -19,7 +19,7 @@ _WINE="wine-tkg"; bash "$WHA" "$_WINE"; [ -x "$BINDIR/wine/bin/wine" ] && export
 : ${GAMESCOPE:=$(command -v gamescope)}; [ -x "$GAMESCOPE" ] && CMD=("$GAMESCOPE" -f -- "${CMD[@]}");
 
 # exit trap for auto-unmount
-function cleanup { cd "$OLDPWD" && bash "$STS" unmount-prefix && bash "$STS" unmount-dwarfs; }
+function cleanup { cd "$OLDPWD" && bash "$STS" unmount-dwarfs; }
 trap 'cleanup' EXIT INT SIGINT SIGTERM
 
 # block non-lan networking
