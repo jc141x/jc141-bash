@@ -11,7 +11,7 @@ export WINE_LARGE_ADDRESS_AWARE=1; export WINEFSYNC=1; export WINEDLLOVERRIDES="
 bash "$STS" mount-dwarfs; zcat "$LOGO"; [ "${DBG:=0}" = "1" ] || exec &>/dev/null
 
 # path defining
-export WINEPREFIX="$PWD/files/data/prefix-tmp"; export BINDIR="$PWD/files/groot"; BIN="game.exe"
+export WINEPREFIX="$JCDW/prefix"; export BINDIR="$PWD/files/groot"; BIN="game.exe"
 
 # wine handling
 _WINE="wine-tkg"; bash "$WHA" "$_WINE"; [ -x "$BINDIR/wine/bin/wine" ] && export WINE="$BINDIR/wine/bin/wine" || export WINE="$(command -v wine)"; CMD=("$WINE" "$BIN");
