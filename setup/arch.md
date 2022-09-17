@@ -80,3 +80,8 @@ yay -S --needed lib32-gst-plugins-base lib32-gst-plugins-good rumpowered/lib32-g
 ```sh
 sudo pacman -S --needed gamescope
 ```
+
+#### bindtointerface - block non-LAN network activity by default
+```
+sudo pacman -S rumpowered/bindtointerface
+```
