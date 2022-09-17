@@ -83,5 +83,5 @@ sudo pacman -S --needed gamescope
 
 #### bindtointerface - block non-LAN network activity by default
 ```
-sudo pacman -S rumpowered/bindtointerface
+sudo pacman -S --needed rumpowered/bindtointerface
 ```
