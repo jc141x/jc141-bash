@@ -49,9 +49,9 @@ sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-libglvnd
 
 - Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
-#### wine-staging-tkg + wine-mono + dxvk + vkd3d (offline support)
+#### wine-staging-tkg + wine-mono
 ```sh
-sudo pacman -S --needed rumpowered/wine-staging-tkg rumpowered/dxvk-bin rumpowered/vkd3d-proton-bin wine-mono
+sudo pacman -S --needed rumpowered/wine-staging-tkg wine-mono
 ```
 
 #### various libraries required by some games
