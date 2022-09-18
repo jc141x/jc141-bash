@@ -15,7 +15,7 @@ export WINEPREFIX="$JCDW/prefix"; export BINDIR="$PWD/files/groot"; BIN="game.ex
 
 # wine handling
 [ ! -x "$(command -v wine-tkg)" ] && export WINE="$JCDW/wine-tkg/wine/bin/wine" && bash "$WHA" wine-tkg || export WINE="$(command -v wine)"; CMD=("$WINE" "$BIN");
-bash "$VLK" dxvk && bash "$VLK" vkd3d
+[ ! -x "$(command -v vlk-jc141)" ] && bash "$VLK" || command -v vlk-jc141
 
 # gamescope
 : ${GAMESCOPE:=$(command -v gamescope)}; [ -x "$GAMESCOPE" ] && CMD=("$GAMESCOPE" -f -- "${CMD[@]}");
