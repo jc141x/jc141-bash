@@ -1,7 +1,7 @@
 #!/bin/bash
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed" && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed" && exit
 cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; export R="$PWD"; STS="$R/settings.sh"; WHA="$R/files/wha.sh"; VLK="$R/files/vlk.sh"; LOGO="$PWD/files/logo.txt.gz"
-[ ! -e "$WHA" ] && cp /opt/jc141-bash/wha.sh "$WHA"; [ ! -e "$LOGO" ] && cp /opt/jc141-bash/logo.txt.gz "$LOGO"; [ ! -e "$VLK" ] && cp /opt/jc141-bash/vlk.sh "$VLK"
+[ ! -e "$WHA" ] && cp /opt/jc141/bash/wha.sh "$WHA"; [ ! -e "$LOGO" ] && cp /opt/jc141/bash/logo.txt.gz "$LOGO"; [ ! -e "$VLK" ] && cp /opt/jc141/bash/vlk.sh "$VLK"
 export JCDW="${XDG_DATA_HOME:-$HOME/.local/share}/jc141/wine"; [ ! -d "$JCDW" ] && mkdir -p "$JCDW"
 
 # wine settings
