@@ -1,7 +1,7 @@
 #!/bin/bash
 cd "$(dirname "$(readlink -f "$0")")" || exit
 ping -c 3 github.com >/dev/null || { echo "Github could not be reached, probably no network." ; exit; }
-VLKLOG="$JCDW/vulkan.log"; VULKAN="$PWD/vulkan"
+VLKLOG="$WINEPREFIX/vulkan.log"; VULKAN="$PWD/vulkan"
 
 status-vulkan() { [[ ! -f "$VLKLOG" || -z "$(awk "/^${FUNCNAME[1]}\$/ {print \$1}" "$VLKLOG" 2>/dev/null)" ]] || { echo "${FUNCNAME[1]} present" && return 1; }; }
 
