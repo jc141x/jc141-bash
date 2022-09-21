@@ -5,7 +5,7 @@
 ### [Arch](arch.md) - Full offline support
  - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
  
-### [SteamDeck](steamdeck.md) - Full offline support
+### [SteamDeck (also Arch)](steamdeck.md) - Full offline support
  - Only on Arch distros. SteamOS not supported.
  
 ### [Debian Sid](debiansid.md) - Base support
