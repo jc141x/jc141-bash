@@ -49,9 +49,9 @@ sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-libglvnd
 
 - Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
-#### wine-staging-tkg + wine-mono
+#### wine-staging + wine-mono
 ```sh
-sudo pacman -S --needed rumpowered/wine-staging-tkg wine-mono
+sudo pacman -S --needed wine-staging wine-mono
 ```
 
 #### various libraries required by some games
@@ -73,9 +73,8 @@ yay -S --needed lib32-gst-plugins-base lib32-gst-plugins-good rumpowered/lib32-g
 ### optional packages
 
 #### gamescope
-- highly recommended
-- Nvidia not supported yet
-- requires full vulkan support, old architectures with none or semi are not compatible
+- Nvidia not supported yet.
+- Requires full vulkan support, old architectures with none or semi are not compatible.
 
 ```sh
 sudo pacman -S --needed gamescope
