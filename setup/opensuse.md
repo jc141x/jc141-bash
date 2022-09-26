@@ -41,10 +41,10 @@ sudo zypper install libglvnd-32bit libglvnd # what other packages?
 
 - Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
-#### wine-staging + wine-mono + dxvk + vkd3d (offline support)
+#### wine-staging + wine-mono
 
 ```sh
-sudo zypper install wine-staging dxvk vkd3d-devel wine-mono
+sudo zypper install wine-staging wine-mono
 ```
 
 #### various libraries required by some games
