@@ -44,6 +44,7 @@ WINEFSYNC=0 - for disabling fsync.
 ```
 
 - game can also be ran directly from file manager by right clicking on start.x.sh and giving executable permission.
+  - May result in failure to boot sometimes. Best to run from terminal.
 
 ### settings.sh commands
 ```
