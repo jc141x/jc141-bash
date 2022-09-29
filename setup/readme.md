@@ -2,18 +2,15 @@
 
 ## supported distro packages
 
-### [Arch](arch.md) - Full offline support
+### [Arch](arch.md)
  - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
- 
-### [SteamDeck (also Arch)](steamdeck.md) - Full offline support
- - Only on Arch distros. SteamOS not supported.
- 
-### [Debian Sid](debiansid.md) - Base support
+
+### [Debian Sid](debiansid.md)
  - or: Sparky Rolling, Siduction, Nitrux
-### [Fedora](fedora.md) - Base support
- - prefer Rawhide but 36 is ok
-### [OpenSUSE](opensuse.md) - Base support
- - tumbleweed only
+### [Fedora/Rawhide](fedora.md)
+### [OpenSUSE Tumbleweed](opensuse.md)
+
+### [SteamDeck Hardware support on Arch](steamdeck.md)
 
 ## not supported distros
    - Debian Stable (outdated)
