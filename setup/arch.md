@@ -53,6 +53,7 @@ sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-libglvnd
 ```sh
 sudo pacman -S --needed wine-staging wine-mono
 ```
+- wine-staging-tkg can be used instead of wine-staging, to the user's choice.
 
 #### various libraries required by some games
 ```sh
