@@ -7,6 +7,6 @@ unmount-dwarfs() { fuser -k "$PWD/files/groot-mnt"; fusermount3 -u -z "$PWD/file
 extract-dwarfs() { [ -d "$PWD/files/groot" ] && [ "$( ls -A "$PWD/files/groot")" ] && echo "game is already mounted or extracted" && exit; mkdir "$PWD/files/groot"; dwarfsextract -i "$PWD/files/groot.dwarfs" -o "$PWD/files/groot"; }
 delete-dwarfs() { rm -Rf "$PWD/files/groot.dwarfs"; }
 compress-to-dwarfs() { [ ! -f "$PWD/files/groot.dwarfs" ] && mkdwarfs -l7 -B30 -i "$PWD/files/groot" -o "$PWD/files/groot.dwarfs"; }
-extract-xz() { [ -d "$PWD/files/groot" ] && [ "$( ls -A "$PWD/files/groot")" ] && echo "game is already extracted" && exit; mkdir "$PWD/files/groot"; tar -xvf "$PWD/groot.tar.xz" -C "$PWD"; }
+extract-xz() { [ -d "$PWD/files/groot" ] && [ "$( ls -A "$PWD/files/groot")" ] && echo "game is already extracted" && exit; mkdir "$PWD/files/groot"; tar -xvf "$PWD/files/groot.tar.xz" -C "$PWD"; }
 
 for i in "$@"; do if type "$i" &>/dev/null; then "$i"; else exit; fi; done
