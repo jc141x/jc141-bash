@@ -78,6 +78,7 @@ yay -S --needed lib32-gst-plugins-base lib32-gst-plugins-good rumpowered/lib32-g
 - Requires full vulkan support, old architectures with none or semi are not compatible.
 - May cause failure to run from first try in certain cases.
 - Isolates system display server from game, no desktop res changing when in use.
+- Can provide FSR support.
 
 ```sh
 sudo pacman -S --needed gamescope
