@@ -32,8 +32,9 @@ sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs
 
 #### AMD graphics packages
 ```sh
-sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-vulkan-radeon vulkan-radeon && sudo pacman -R amdvlk
+sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-vulkan-radeon vulkan-radeon
 ```
+- Make sure you do not have amdvlk with `sudo pacman -R amdvlk`. Having it installed will cause a lot of issues.
 
 #### INTEL graphics packages
 
