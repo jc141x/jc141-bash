@@ -66,13 +66,13 @@ sudo apt install libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386
 
 #### other libraries
 ```sh
-sudo apt install libva2 zstd aria2 giflib-tools libgphoto2-6 libxcrypt-source
+sudo apt install libva2 giflib-tools libgphoto2-6 libxcrypt-source
 ```
 
 #### optional packages
 
 ##### gamescope
-- highly recommended
+
 - Nvidia not supported yet
 ```sh
 sudo apt install gamescope
