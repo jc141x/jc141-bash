@@ -2,7 +2,7 @@
 
 - Also applies to Sparky Rolling, Siduction, Nitrux which are rolling by default.
 
-### Debian does not provide any package for wine-mono, missing it can cause crashes in specific games. It is not available on MPR either. This issue will not be fixed until the package becomes available. Alternatively, install mono when asked by wine when running our releases.
+#### Debian does not provide any package for wine-mono, missing it can cause crashes in specific games. It is not available on MPR either. This issue will not be fixed until the package becomes available. Alternatively, install mono when asked by wine when running our releases.
 
 ### pre-configuration
 
