@@ -30,9 +30,8 @@ sudo dnf install libxcrypt zlib alsa-lib alsa-plugins fluidsynth pulseaudio open
 #### optional packages
 
 ##### gamescope
-- highly recommended
+
 - Nvidia not supported yet
-- requires full vulkan support, old architectures with none or semi are not compatible
 ```sh
 sudo dnf install gamescope
 ```
