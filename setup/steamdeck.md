@@ -9,7 +9,7 @@
 2. Use a USB-C adapter to connect the drive to your deck.
 3. Turn off your deck, hold 'Volume Down' and click the Power button, when you hear a sound let go of the volume button.
 4. Select the usb efi device.
-5. Follow installer steps. (online install)
+5. Follow installer steps. Pick KDE Plasma if you want to deal with least amount of issues. (online install)
 6. Boot into new system and run `sudo pacman -Syyu` then reboot again.
 
 #### Add required repos.
