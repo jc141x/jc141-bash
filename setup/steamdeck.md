@@ -72,5 +72,5 @@ sudo pacman -S --needed wine-staging wine-mono
 sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-v4l-utils lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib giflib libgphoto2 libxcrypt-compat zlib gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
 ```
 
-### Post-setup
+### post-setup
 - On KDE Plasma, you might need to go into settings and set the correct screen position. On other DE's you might be stuck with no such options.
