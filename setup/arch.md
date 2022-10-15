@@ -66,15 +66,16 @@ sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libx
 ### optional packages
 
 #### gamescope
-- Nvidia not supported yet.
-- Requires full vulkan support, old architectures with none or semi are not compatible.
-- May cause failure to run from first try in certain cases.
-- Isolates game from system display server, no desktop res changing when in use. As well as forcing games into fullscreen and scaling when necessary.
-- Can provide FSR support.
+Isolates game from system display server, no desktop res changing when in use. As well as forcing games into fullscreen and scaling when necessary. Can provide AMD FidelityFX Super Resolution or NVIDIA Image Scaling support.
 
-```sh
+```bash {lineNos=false}
 sudo pacman -S --needed gamescope
 ```
+
+- NVIDIA drivers may have some issues with this.
+- Requires **full** Vulkan support. (old architectures with none or semi are not compatible)
+- May cause failure to run from first try in certain cases.
+
 
 #### bindtointerface - block non-LAN network activity by default
 ```
