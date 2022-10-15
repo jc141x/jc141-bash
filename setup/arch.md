@@ -20,10 +20,7 @@ sudo pacman-key --lsign-key cc7a2968b28a04b3
 sudo pacman -Syyu
 ```
 
-
-------------------------------------------------------------------------------------------------------
-
-### main packages
+### Install the following packages
 
 #### dwarfs and fuse-overlayfs
 ```sh
@@ -68,7 +65,7 @@ sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libx
 #### gamescope
 Isolates game from system display server, no desktop res changing when in use. As well as forcing games into fullscreen and scaling when necessary. Can provide AMD FidelityFX Super Resolution or NVIDIA Image Scaling support.
 
-```bash {lineNos=false}
+```bash
 sudo pacman -S --needed gamescope
 ```
 
