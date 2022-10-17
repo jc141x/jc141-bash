@@ -1,5 +1,7 @@
 # jc141 setup guide</h1>
 
+Haven't installed linux yet? check out [EndeavourOS](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/)
+
 ## supported distro packages
 
 ### [Arch](arch.md)
