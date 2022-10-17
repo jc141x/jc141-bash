@@ -4,6 +4,7 @@
 
 ### [Arch](arch.md)
  - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
+ - uploads are tested on Archlinux or EndeavourOS
 
 ### [Debian Sid](debiansid.md)
  - or: Sparky Rolling, Siduction, Nitrux
@@ -13,6 +14,9 @@
 ### [SteamDeck Hardware support on Arch](steamdeck.md)
 
 ## not supported distros
+
+Releases might work but we can't porimise anything and don't want to waste time troubleshooting, for setup look at what most closely resembles your distro and use common sense. For example, if you use apt as your package manager you go for debian.
+
    - Debian Stable (outdated)
      - Ubuntu (malware, outdated)
           - Kubuntu, Lubuntu, Xubuntu
