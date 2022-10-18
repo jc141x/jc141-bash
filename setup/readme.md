@@ -1,6 +1,6 @@
 # jc141 setup guide</h1>
 
-Haven't installed linux yet? check out [EndeavourOS](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/)
+Haven't installed GNU/Linux yet? check out [EndeavourOS](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/)
 
 ## supported distro packages
 
@@ -17,7 +17,7 @@ Haven't installed linux yet? check out [EndeavourOS](https://discovery.endeavour
 
 ## not supported distros
 
-Releases might work but we can't porimise anything and don't want to waste time troubleshooting, for setup look at what most closely resembles your distro and use common sense. For example, if you use apt as your package manager you go for debian.
+Releases might work but we can't promise anything and don't want to waste time troubleshooting, for setup look at what most closely resembles your distro and use common sense. For example, if you use apt as your package manager you go for debian.
 
    - Debian Stable (outdated)
      - Ubuntu (malware, outdated)
