@@ -72,8 +72,13 @@ sudo apt install libva2 giflib-tools libgphoto2-6 libxcrypt-source
 #### optional packages
 
 ##### gamescope
+Isolates game from system display server, no desktop res changing when in use. As well as forcing games into fullscreen and scaling when necessary. Can provide AMD FidelityFX Super Resolution or NVIDIA Image Scaling support.
 
-- Nvidia not supported yet
 ```sh
 sudo apt install gamescope
 ```
+
+- NVIDIA drivers may have some issues with this.
+- Requires **full** Vulkan support. (old architectures with none or semi are not compatible)
+- May cause failure to run from first try in certain cases.
+- Is not always used by scripts, testing is done to confirm that it is compatible.
