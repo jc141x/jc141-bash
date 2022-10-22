@@ -42,8 +42,6 @@ Available variables are: (added before bash)
 DBG=1 - for enabling terminal output from the game binary and other software ran.
 
 GAMESCOPE=0 - for disabling gamescope.
-
-WINEFSYNC=0 - for disabling fsync.
 ```
 
 - game can also be ran directly from file manager by right clicking on start.x.sh and giving executable permission.
