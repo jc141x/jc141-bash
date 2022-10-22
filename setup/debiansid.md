@@ -55,7 +55,7 @@ Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
 #### gstreamer
 ```
-sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi libav-tools
+sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi gstreamer1.0-libav
 ```
 
 #### multilib libraries
