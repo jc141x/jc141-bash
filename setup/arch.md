@@ -72,6 +72,7 @@ sudo pacman -S --needed gamescope
 - NVIDIA drivers may have some issues with this.
 - Requires **full** Vulkan support. (old architectures with none or semi are not compatible)
 - May cause failure to run from first try in certain cases.
+- Is not always used by scripts, testing is done to confirm that it is compatible.
 
 
 #### bindtointerface - block non-LAN network activity by default
