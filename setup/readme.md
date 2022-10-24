@@ -13,8 +13,6 @@ Haven't installed GNU/Linux yet? check out [EndeavourOS](https://discovery.endea
 ### [Fedora/Rawhide](fedora.md)
 ### [OpenSUSE Tumbleweed](opensuse.md)
 
-### [SteamDeck Hardware support on Arch](steamdeck.md)
-
 ## not supported distros
 
 Releases might work but we can't promise anything and don't want to waste time troubleshooting, for setup look at what most closely resembles your distro and use common sense. For example, if you use apt as your package manager you go for debian.
@@ -27,9 +25,13 @@ Releases might work but we can't promise anything and don't want to waste time t
    - SteamOS (malware, read-only, lack of packages)
    - Fedora Silverblue (read-only)
 
-**Vulkan support is required**
+## hardware support
 
-**NTFS not supported**
+- The GPU must have vulkan support otherwise hardly any releases with wine will run.
+
+- The dwarfs mounting system requires modern speed standards from storing devices as well as RAM.
+
+### [SteamDeck support on Arch](steamdeck.md)
 
 ## running
 
