@@ -27,7 +27,7 @@ Releases might work but we can't promise anything and don't want to waste time t
 
 ## hardware support
 
-- The GPU must have vulkan support otherwise hardly any releases with wine will run.
+- The GPU/APU must have vulkan support otherwise hardly any releases with wine will run.
 
 - The dwarfs mounting system requires modern speed standards from storing devices as well as RAM.
 
@@ -74,3 +74,7 @@ compresses extracted game files to groot.dwarfs
 - Some type of mods will not work with wine, such as ones that make use of dinput will likely cause crashes. Hooking use is also not supported by wine, regularly used in mods for games like GTA V.
 
 - Note that groot-rw only applies for games that mount instead of extract.
+
+### other notes
+
+- The testing is done on stable filesystems such as EXT4, BTRFS or XFS.
