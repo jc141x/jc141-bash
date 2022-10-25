@@ -2,7 +2,7 @@
 
 #### dwarfs and fuse-overlayfs
 ```sh
-sudo dnf copr enable linuxredneck/DwarFS && sudo dnf install fuse-overlayfs dwarfs
+sudo dnf copr enable jc141/DwarFS && sudo dnf install fuse-overlayfs dwarfs
 ```
 
 #### graphics packages
