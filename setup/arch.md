@@ -2,8 +2,6 @@
 
 - Also applies to EndeavourOS, Artix, ArcoLinux, Manjaro etc.
 
-### pre-configuration
-
 #### add rumpowered repo and multilib
 ```sh
 echo '
