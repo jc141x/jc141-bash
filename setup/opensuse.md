@@ -1,7 +1,5 @@
 <h3>Setup Guide - OpenSUSE Tumbleweed</h3>
 
-### main packages
-
 #### dwarfs, also available in nix package manager
 
 ```sh
