@@ -59,22 +59,20 @@ sudo zypper install libvulkan1 vulkan-tools xwayland giflib-devel-32bit libXcomp
 sudo zypper install gstreamer-plugins-base gstreamer-plugins-good gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-plugins-vaapi gstreamer-plugins-libav
 ```
 
-# 32bit
-```sh
-sudo zypper install gstreamer-plugins-base-32bit gstreamer-plugins-good-32bit gstreamer-plugins-ugly-32bit gstreamer-plugins-bad-32bit gstreamer-plugins-libav-32bit
-```
-
 -------------------------------------------------------------------------------------------------------------------
 
 ### optional packages
 
 #### gamescope
-- highly recommended
-- Nvidia not supported yet
-- requires full vulkan support, old architectures with none or semi are not compatible
+Isolates game from system display server, no desktop res changing when in use. As well as forcing games into fullscreen and scaling when necessary. Can provide AMD FidelityFX Super Resolution or NVIDIA Image Scaling support.
 
 ```sh
 sudo zypper install opi
 #when running opi, install from home:VortexAcherontic:Nightly
 opi gamescope
 ```
+
+- NVIDIA drivers may have some issues with this.
+- Requires **full** Vulkan support. (old architectures with none or semi are not compatible)
+- May cause failure to run from first try in certain cases.
+- Is not always used by scripts, testing is done to confirm that it is compatible.
