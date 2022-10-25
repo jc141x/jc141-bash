@@ -3,7 +3,7 @@
 #### dwarfs, also available in nix package manager
 
 ```sh
-sudo zypper ar https://copr.fedorainfracloud.org/coprs/linuxredneck/DwarFS/repo/epel-9/linuxredneck-DwarFS-epel-9.repo
+sudo zypper ar https://copr.fedorainfracloud.org/coprs/jc141/DwarFS/repo/epel-9/jc141-DwarFS-epel-9.repo
 sudo zypper refresh
 sudo zypper install dwarfs
 # Solution 2: break dwarfs-0.6.1-1.el9.x86_64 by ignoring some of its dependencies
