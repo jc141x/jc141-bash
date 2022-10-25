@@ -1,8 +1,5 @@
 <h3>Setup Guide - OpenSUSE Tumbleweed</h3>
 
-
-------------------------------------------------------------------------------------------------------
-
 ### main packages
 
 #### dwarfs, also available in nix package manager
@@ -24,19 +21,19 @@ sudo zypper install fuse-overlayfs
 #### AMD graphics packages
 
 ```sh
-sudo zypper install libvulkan_radeon libvulkan_radeon-32bit
+sudo zypper install libvulkan_radeon libvulkan_radeon-32bit libvulkan1 vulkan-tools
 ```
 
 #### INTEL graphics packages
 
 ```sh
-sudo zypper install libvulkan_intel libvulkan_intel-32bit
+sudo zypper install libvulkan_intel libvulkan_intel-32bit libvulkan1 vulkan-tools
 ```
 
 #### NVIDIA graphics packages
 
 ```sh
-sudo zypper install libglvnd-32bit libglvnd # what other packages?
+sudo zypper install libglvnd-32bit libglvnd libvulkan1 vulkan-tools
 ```
 
 - Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
@@ -50,13 +47,7 @@ sudo zypper install wine-staging wine-mono
 #### various libraries required by some games
 
 ```sh
-sudo zypper install libvulkan1 vulkan-tools xwayland giflib-devel-32bit libXcomposite-devel-32bit libXinerama-devel-32bit libxslt-devel-32bit mpg123-devel-32bit mpg123-openal-32bit zlib-devel-32bit libpulse-devel-32bit giflib-devel libgphoto2-6 zlib-devel libva2 zstd aria2
-```
-
-#### gstreamer (video rendering)
-
-```sh
-sudo zypper install gstreamer-plugins-base gstreamer-plugins-good gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-plugins-vaapi gstreamer-plugins-libav
+sudo zypper install giflib-devel-32bit libXcomposite-devel-32bit libXinerama-devel-32bit libxslt-devel-32bit mpg123-devel-32bit mpg123-openal-32bit zlib-devel-32bit libpulse-devel-32bit giflib-devel libgphoto2-6 zlib-devel libva2 gstreamer-plugins-base gstreamer-plugins-good gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-plugins-vaapi gstreamer-plugins-libav
 ```
 
 -------------------------------------------------------------------------------------------------------------------
