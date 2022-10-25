@@ -20,8 +20,6 @@ sudo pacman-key --lsign-key cc7a2968b28a04b3
 sudo pacman -Syyu
 ```
 
-### Install the following packages
-
 #### dwarfs and fuse-overlayfs
 ```sh
 sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs
