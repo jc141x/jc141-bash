@@ -6,7 +6,6 @@ Haven't installed GNU/Linux yet? check out [EndeavourOS](https://discovery.endea
 
 ### [Arch](arch.md)
  - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
- - uploads are tested on Archlinux or EndeavourOS
 
 ### [Debian Sid](debiansid.md)
  - or: Sparky Rolling, Siduction, Nitrux
@@ -75,4 +74,4 @@ compresses extracted game files to groot.dwarfs
 
 ### other notes
 
-- The testing is done on stable filesystems such as EXT4, BTRFS or XFS.
+- The testing is done on Arch or EndeavourOS with EXT4, BTRFS or XFS filesystems.
