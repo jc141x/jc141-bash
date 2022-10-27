@@ -51,7 +51,7 @@ echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.d
 
 sudo apt update && sudo apt upgrade -y
 
-sudo apt install nvidia-driver nvidia-settings nvidia-smi nvidia-xconfig nvidia-opencl-icd nvidia-opencl-common nvidia-detect linux-image-amd64 linux-headers-amd64 nvidia-driver-libs-i386
+sudo apt install nvidia-driver nvidia-settings nvidia-smi nvidia-xconfig nvidia-opencl-icd nvidia-opencl-common nvidia-detect linux-image-amd64 linux-headers-amd64
 ```
 
 - NVIDIA: Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
