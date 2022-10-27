@@ -12,4 +12,4 @@ export WINEPREFIX="$JCDW/prefix"; export WINE="$(command -v wine)"; export WINE_
 export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD="/usr/lib/bindToInterface.so"
 
 # start
-cd "R/files/groot"; "$WINE" "game.exe" "$@"
+cd "$R/files/groot"; "$WINE" "game.exe" "$@"
