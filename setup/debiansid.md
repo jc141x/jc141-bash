@@ -53,18 +53,8 @@ sudo apt install nvidia-driver-510 nvidia-settings libvulkan1 vulkan-tools
 Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 ```
 
-#### gstreamer
-```
-sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi gstreamer1.0-libav
-```
-
-#### multilib libraries
+#### various libraries required by some games
 ```sh
 sudo dpkg --add-architecture i386
-sudo apt install libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386
-```
-
-#### other libraries
-```sh
-sudo apt install libva2 giflib-tools libgphoto2-6 libxcrypt-source
+sudo apt install libva2 giflib-tools libgphoto2-6 libxcrypt-source libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386 gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi gstreamer1.0-libav
 ```
