@@ -40,26 +40,9 @@ bash start.w.sh - or however the script is named.
 
 To enable terminal output, add DBG=1 before bash command.
 ```
-
-- game can also be ran directly from file manager by right clicking on start.x.sh and giving executable permission.
-  - May result in failure to boot sometimes. Best to run from terminal.
-
-#### settings.sh commands
+- settings.sh commands
 ```
-bash settings.sh extract-dwarfs
-extracts groot.dwarfs to groot directory if it is empty
-
-bash settings.sh unmount-dwarfs
-unmounts groot
-
-bash settings.sh mount-dwarfs
-mounts groot.dwarfs to groot-mnt and overlay to groot
-
-bash settings.sh delete-dwarfs
-deletes dwarfs image which contains the game files
-
-bash settings.sh compress-to-dwarfs
-compresses extracted game files to groot.dwarfs
+bash settings.sh extract-dwarfs / unmount-dwarfs / mount-dwarfs / delete-dwarfs / compress-to-dwarfs
 ```
 
 #### modding on dwarfs
