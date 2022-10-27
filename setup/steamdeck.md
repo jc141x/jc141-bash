@@ -1,9 +1,9 @@
-<h3>Setup Guide - SteamDeck</h3>
+## Setup Guide - SteamDeck
 
 - Report issues you are having to us on matrix.
 - SteamOS not supported or planned to be.
 
-### Install any Arch distro. We recommend EndeavourOS.
+### install any Arch distro. We recommend EndeavourOS.
 
 1. Create a bootable usb drive with the distro iso. - [Guide](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/)
 2. Use a USB-C adapter to connect the drive to your deck.
@@ -12,7 +12,7 @@
 5. Follow installer steps. Pick KDE Plasma if you want to deal with least amount of issues. (online install)
 6. Boot into new system and run `sudo pacman -Syyu` then reboot again.
 
-#### Add required repos.
+#### add required repos.
 
 ```sh
 echo '
@@ -40,7 +40,7 @@ sudo pacman -Syyu
 sudo pacman -S jupiter/linux-neptune jupiter/linux-neptune-headers jupiter/linux-firmware-neptune jupiter/jupiter-hw-support rumpowered/sc-controller
 ```
 
-#### Make new kernel default.
+#### make new kernel default.
 
 ```sh
 sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -48,23 +48,15 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 Reboot and select the option with `linux neptune` using the arrow keys.
 
-------------------------------------------------------------------------------------------------------
 
-### main packages
-
-#### dwarfs and fuse-overlayfs
+#### core packages
 ```sh
-sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs
+sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs wine-staging wine-mono
 ```
 
 #### graphics packages
 ```sh
 sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-vulkan-radeon vulkan-radeon
-```
-
-#### wine-staging + wine-mono
-```sh
-sudo pacman -S --needed wine-staging wine-mono
 ```
 
 #### various libraries required by some games
