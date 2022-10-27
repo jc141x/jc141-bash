@@ -10,14 +10,11 @@ function cleanup { cd "$OLDPWD" && bash "$STS" unmount-dwarfs; }
 trap 'cleanup' EXIT INT SIGINT SIGTERM
 
 # wine
-export WINEPREFIX="$JCDW/prefix"; export WINE="$(command -v wine)"; export BINDIR="$PWD/files/groot"; BIN="game.exe"; CMD=("$WINE" "$BIN")
+export WINEPREFIX="$JCDW/prefix"; export WINE="$(command -v wine)"; export BINDIR="$PWD/files/groot"; BIN="game.exe";
 if [ ! -x "$(command -v vlk-jc141)" ]; then bash "$VLK"; else vlk-jc141; fi
-
-# gamescope
-: ${GAMESCOPE:=$(command -v gamescope)}; [ -x "$GAMESCOPE" ] && CMD=("$GAMESCOPE" -f -- "${CMD[@]}");
 
 # block non-lan networking
 export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD="/usr/lib/bindToInterface.so"
 
 # start
-cd "$BINDIR"; "${CMD[@]}" "$@"
+cd "$BINDIR"; "$WINE" "$BIN" "$@"
