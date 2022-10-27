@@ -25,7 +25,7 @@ sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs wine-staging wine-m
 
 #### graphics packages
 ```sh
-Vulkan drivers
+Vulkan drivers (AMD/INTEL/NVIDIA)
 sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader 
 AMD drivers
 sudo pacman -S --needed lib32-vulkan-radeon vulkan-radeon
