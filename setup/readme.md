@@ -16,13 +16,10 @@ Haven't installed GNU/Linux yet? check out [EndeavourOS](https://discovery.endea
 
 Releases might work but we can't promise anything and don't want to waste time troubleshooting, for setup look at what most closely resembles your distro and use common sense. For example, if you use apt as your package manager you go for debian.
 
-   - Debian Stable (outdated)
-     - Ubuntu (malware, outdated)
-          - Kubuntu, Lubuntu, Xubuntu
-          - Mint, Elementary OS, Zorin OS, POP! OS
-          - LXLE, KDE Neon 
-   - SteamOS (malware, read-only, lack of packages)
-   - Fedora Silverblue (read-only)
+ - Ubuntu (malware)
+   - And all distros based on it: Kubuntu, Lubuntu, Xubuntu, Mint, Elementary OS, Zorin OS, POP! OS, LXLE, KDE Neon 
+ - SteamOS (malware, read-only, lack of packages)
+ - Fedora Silverblue (read-only)
 
 ### hardware support
 
