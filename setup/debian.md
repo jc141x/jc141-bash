@@ -40,12 +40,22 @@ sudo apt install fuse-overlayfs winehq-staging
 
 #### graphics packages
 ```sh
-Vulkan drivers (AMD/INTEL/NVIDIA)
+Vulkan drivers (AMD/INTEL)
 sudo apt install libvulkan1 vulkan-tools
-
-NVIDIA drivers
-sudo apt install nvidia-driver nvidia-settings nvidia-smi nvidia-xconfig nvidia-opencl-icd nvidia-opencl-common nvidia-detect linux-image-amd64 linux-headers-amd64
 ```
+```sh
+NVIDIA drivers
+sudo wget -O- https://developer.download.nvidia.com/compute/cuda/repos/debian11/x86_64/3bf863cc.pub | gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg
+
+echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian11/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
+
+sudo add-apt-repository contrib
+
+sudo apt update && sudo apt upgrade -y
+
+sudo apt install nvidia-driver nvidia-settings nvidia-smi nvidia-xconfig nvidia-opencl-icd nvidia-opencl-common nvidia-detect linux-image-amd64 linux-headers-amd64 nvidia-driver-libs-i386
+```
+
 - NVIDIA: Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
 #### various libraries required by some games
