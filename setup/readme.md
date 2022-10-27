@@ -7,7 +7,7 @@ Haven't installed GNU/Linux yet? check out [EndeavourOS](https://discovery.endea
 #### [Arch](arch.md)
  - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
 
-#### [Debian](debiansid.md)
+#### [Debian](debian.md)
  - or: Sparky Rolling, Siduction, Nitrux
 #### [Fedora and Rawhide](fedora.md)
 #### [OpenSUSE Tumbleweed](opensuse.md)
