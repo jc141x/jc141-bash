@@ -18,36 +18,24 @@ sudo pacman-key --lsign-key cc7a2968b28a04b3
 sudo pacman -Syyu
 ```
 
-#### dwarfs and fuse-overlayfs
+#### core packages
 ```sh
-sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs
+sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs wine-staging wine-mono
 ```
 
-#### AMD graphics packages
+#### graphics packages
 ```sh
-sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-vulkan-radeon vulkan-radeon
-```
-- Make sure you do not have amdvlk with `sudo pacman -R amdvlk`. Having it installed will cause a lot of issues.
-
-#### INTEL graphics packages
-
-```sh
-sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-vulkan-intel vulkan-intel
-```
-
-#### NVIDIA graphics packages
-
-```sh
+Vulkan drivers
+sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader 
+AMD drivers
+sudo pacman -S --needed lib32-vulkan-radeon vulkan-radeon
+INTEL drivers
+sudo pacman -S --needed lib32-vulkan-intel vulkan-intel
+NVIDIA drivers
 sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-libglvnd lib32-nvidia-utils libglvnd nvidia
 ```
-
-- Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
-
-#### wine-staging + wine-mono
-```sh
-sudo pacman -S --needed wine-staging wine-mono
-```
-- wine-staging-tkg can be used instead of wine-staging, to the user's choice.
+- AMD: Make sure you do not have amdvlk with `sudo pacman -R amdvlk`. Having it installed will cause a lot of issues.
+- NVIDIA: Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
 #### various libraries required by some games
 ```sh
