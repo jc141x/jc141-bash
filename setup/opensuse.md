@@ -47,21 +47,3 @@ sudo zypper install wine-staging wine-mono
 ```sh
 sudo zypper install giflib-devel-32bit libXcomposite-devel-32bit libXinerama-devel-32bit libxslt-devel-32bit mpg123-devel-32bit mpg123-openal-32bit zlib-devel-32bit libpulse-devel-32bit giflib-devel libgphoto2-6 zlib-devel libva2 gstreamer-plugins-base gstreamer-plugins-good gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-plugins-vaapi gstreamer-plugins-libav
 ```
-
--------------------------------------------------------------------------------------------------------------------
-
-### optional packages
-
-#### gamescope
-Isolates game from system display server, no desktop res changing when in use. As well as forcing games into fullscreen and scaling when necessary. Can provide AMD FidelityFX Super Resolution or NVIDIA Image Scaling support.
-
-```sh
-sudo zypper install opi
-#when running opi, install from home:VortexAcherontic:Nightly
-opi gamescope
-```
-
-- NVIDIA drivers may have some issues with this.
-- Requires **full** Vulkan support. (old architectures with none or semi are not compatible)
-- May cause failure to run from first try in certain cases.
-- Is not always used by scripts, testing is done to confirm that it is compatible.
