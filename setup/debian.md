@@ -40,15 +40,13 @@ sudo apt install fuse-overlayfs winehq-staging
 
 #### graphics packages
 ```sh
-Vulkan universal drivers
+Vulkan drivers (AMD/INTEL/NVIDIA)
 sudo apt install libvulkan1 vulkan-tools
 
 NVIDIA drivers
-sudo add-apt-repository ppa:oibaf/graphics-drivers
-sudo apt install nvidia-driver-510 nvidia-settings libvulkan1 vulkan-tools
-
-Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
+sudo apt install nvidia-driver nvidia-settings nvidia-smi nvidia-xconfig nvidia-opencl-icd nvidia-opencl-common nvidia-detect linux-image-amd64 linux-headers-amd64
 ```
+- NVIDIA: Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
 #### various libraries required by some games
 ```sh
