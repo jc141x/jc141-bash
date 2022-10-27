@@ -1,5 +1,5 @@
-<h3>Setup Guide - Arch</h3>
-
+### Setup Guide - Arch 
+  
 - Also applies to EndeavourOS, Artix, ArcoLinux, Manjaro etc.
 
 #### add rumpowered repo and multilib
