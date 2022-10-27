@@ -1,4 +1,4 @@
-<h3>Setup Guide - Debian Sid</h3>
+## Setup Guide - Debian
 
 - Also applies to Sparky Rolling, Siduction, Nitrux which are rolling by default.
 
