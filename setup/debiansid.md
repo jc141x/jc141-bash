@@ -2,11 +2,9 @@
 
 - Also applies to Sparky Rolling, Siduction, Nitrux which are rolling by default.
 
-- Debian does not provide any package for wine-mono, missing it can cause crashes in specific games. It is not available on MPR either. This issue will not be fixed until the package becomes available. Alternatively, install mono when asked by wine when running our releases.
-
 ### pre-configuration
 
-#### How to switch Debian 11 to Rolling/Sid.
+#### We recommend the repositories to be switched to the Rolling/Sid for an optimal and up to date experience.
 ```sh
 1. Edit /etc/apt/sources.list:
 sudo nano /etc/apt/sources.list
@@ -44,7 +42,6 @@ sudo apt install fuse-overlayfs winehq-staging
 ```sh
 Vulkan universal drivers
 sudo apt install libvulkan1 vulkan-tools
-sudo apt remove amdvlk
 
 NVIDIA drivers
 sudo add-apt-repository ppa:oibaf/graphics-drivers
