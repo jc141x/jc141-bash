@@ -54,24 +54,7 @@ sudo pacman -S --needed wine-staging wine-mono
 sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-v4l-utils lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib giflib libgphoto2 libxcrypt-compat zlib gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
 ```
 
--------------------------------------------------------------------------------------------------------------------
-
-### optional packages
-
-#### gamescope
-Isolates game from system display server, no desktop res changing when in use. As well as forcing games into fullscreen and scaling when necessary. Can provide AMD FidelityFX Super Resolution or NVIDIA Image Scaling support.
-
-```bash
-sudo pacman -S --needed gamescope
-```
-
-- NVIDIA drivers may have some issues with this.
-- Requires **full** Vulkan support. (old architectures with none or semi are not compatible)
-- May cause failure to run from first try in certain cases.
-- Is not always used by scripts, testing is done to confirm that it is compatible.
-
-
-#### bindtointerface - block non-LAN network activity by default
+#### (OPTIONAL) bindtointerface - block non-LAN network activity by default
 ```
 sudo pacman -S --needed rumpowered/bindtointerface
 ```
