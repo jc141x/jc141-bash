@@ -20,7 +20,7 @@ sudo pacman -Syyu
 
 #### core packages
 ```sh
-sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs wine-staging wine-mono
+sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono
 ```
 
 #### graphics packages
