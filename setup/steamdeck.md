@@ -59,7 +59,7 @@ sudo pacman -S --needed rumpowered/dwarfs-bin fuse-overlayfs
 
 #### graphics packages
 ```sh
-sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-vulkan-radeon vulkan-radeon gamescope
+sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-vulkan-radeon vulkan-radeon
 ```
 
 #### wine-staging + wine-mono
