@@ -5,10 +5,10 @@ Haven't installed GNU/Linux yet? check out [EndeavourOS](https://discovery.endea
 ### supported distro packages
 
 #### [Arch](arch.md)
- - or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
+or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
 
 #### [Debian](debian.md)
- - or: Sparky Rolling, Siduction, Nitrux
+or: Sparky Rolling, Siduction, Nitrux
 #### [Fedora and Rawhide](fedora.md)
 #### [OpenSUSE Tumbleweed](opensuse.md)
 
