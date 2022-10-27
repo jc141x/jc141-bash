@@ -24,6 +24,7 @@ sudo apt update && sudo apt full-upgrade && sudo reboot
 
 #### MPR, MPR helper and wine repos
 ```sh
+sudo dpkg --add-architecture i386
 wget -qO - 'https://proget.hunterwittenborn.com/debian-feeds/makedeb.pub' | \
 gpg --dearmor | \
 sudo tee /usr/share/keyrings/makedeb-archive-keyring.gpg &> /dev/null && echo 'deb [signed-by=/usr/share/keyrings/makedeb-archive-keyring.gpg arch=all] https://proget.hunterwittenborn.com/ makedeb main' | \
@@ -54,6 +55,5 @@ Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
 #### various libraries required by some games
 ```sh
-sudo dpkg --add-architecture i386
 sudo apt install libva2 giflib-tools libgphoto2-6 libxcrypt-source libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386 gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi gstreamer1.0-libav
 ```
