@@ -12,7 +12,7 @@
 5. Follow installer steps. Pick KDE Plasma if you want to deal with least amount of issues. (online install)
 6. Boot into new system and run `sudo pacman -Syyu` then reboot again.
 
-#### add required repos.
+#### add required repos
 
 ```sh
 echo '
@@ -40,7 +40,7 @@ sudo pacman -Syyu
 sudo pacman -S jupiter/linux-neptune jupiter/linux-neptune-headers jupiter/linux-firmware-neptune jupiter/jupiter-hw-support rumpowered/sc-controller
 ```
 
-#### make new kernel default.
+#### make new kernel default
 
 ```sh
 sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -64,5 +64,5 @@ sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-vulkan-r
 sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-v4l-utils lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib giflib libgphoto2 libxcrypt-compat zlib gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
 ```
 
-### post-setup
+#### post-setup
 - On KDE Plasma, you might need to go into settings and set the correct screen position. On other DE's you might be stuck with no such options.
