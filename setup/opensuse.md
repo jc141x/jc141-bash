@@ -1,4 +1,4 @@
-## Setup Guide - OpenSUSE Tumbleweed
+### Setup Guide - OpenSUSE Tumbleweed
 
 #### core packages
 ```sh
