@@ -10,4 +10,4 @@ trap 'cleanup' EXIT INT SIGINT SIGTERM
 export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD="/usr/lib/bindToInterface.so"
 
 # start
-cd "$R/files/groot""; ./"game.bin" "$@"
+cd "$R/files/groot"; ./"game.bin" "$@"
