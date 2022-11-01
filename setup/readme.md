@@ -44,7 +44,7 @@ bash settings.sh extract-dwarfs / unmount-dwarfs / mount-dwarfs / delete-dwarfs 
 
 #### modding on dwarfs
 
-- Addding mods is supported through groot-rw directory. Before mounting, any files included in it will go above the mounted image and override any of the files. The path required for the mod may need to be created manually.
+- Adding mods is supported through groot-rw directory. Before mounting, any files included in it will go above the mounted image and override any of the files. The path required for the mod may need to be created manually.
 
 - Games which are extracted do not require this method.
 
