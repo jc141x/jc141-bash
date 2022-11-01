@@ -2,7 +2,7 @@
 
 #### core packages
 ```sh
-sudo zypper ar https://copr.fedorainfracloud.org/coprs/jc141/DwarFS/repo/epel-9/jc141-DwarFS-epel-9.repo
+sudo zypper ar https://copr.fedorainfracloud.org/coprs/jc141/DwarFS/repo/fedora-rawhide/jc141-DwarFS-fedora-rawhide.repo
 sudo zypper refresh
 sudo zypper install dwarfs fuse-overlayfs wine-staging wine-mono
 ```
