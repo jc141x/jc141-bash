@@ -27,10 +27,16 @@ sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono
 ```sh
 Vulkan drivers (AMD/INTEL/NVIDIA)
 sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader 
+```
+```sh
 AMD drivers
 sudo pacman -S --needed lib32-vulkan-radeon vulkan-radeon
+```
+```sh
 INTEL drivers
 sudo pacman -S --needed lib32-vulkan-intel vulkan-intel
+```
+```sh
 NVIDIA drivers
 sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-libglvnd lib32-nvidia-utils libglvnd nvidia
 ```
