@@ -6,8 +6,8 @@ cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; export
 # dwarfs
 bash "$STS" mount-dwarfs; zcat "$LOGO"; [ "${DBG:=0}" = "1" ] || exec &>/dev/null
 function cleanup { cd "$OLDPWD" && bash "$STS" unmount-dwarfs; }
-
 trap 'cleanup' EXIT INT SIGINT SIGTERM
+
 # wine
 export WINEPREFIX="$JCDW/prefix"; export WINE="$(command -v wine)"; export WINE_LARGE_ADDRESS_AWARE=1; export WINEDLLOVERRIDES="mshtml=d;"; if [ ! -x "$(command -v vlk-jc141)" ]; then bash "$VLK"; else vlk-jc141; fi
 
