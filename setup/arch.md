@@ -38,7 +38,7 @@ sudo pacman -S --needed lib32-vulkan-intel vulkan-intel
 ```
 ```sh
 NVIDIA drivers
-sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-libglvnd lib32-nvidia-utils libglvnd nvidia
+sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia
 ```
 - AMD: Make sure you do not have amdvlk with `sudo pacman -R amdvlk`. Having it installed will cause a lot of issues.
 - NVIDIA: Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
