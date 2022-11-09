@@ -7,8 +7,7 @@
 echo '
 
 [rumpowered]
-Server = https://jc141x.github.io/rumpowered-packages/$arch
-Server = https://repo.rumpowered.org/$arch ' | sudo tee -a /etc/pacman.conf
+Server = https://jc141x.github.io/rumpowered-packages/$arch ' | sudo tee -a /etc/pacman.conf
 
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 
