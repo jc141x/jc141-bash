@@ -21,4 +21,4 @@ if [ ! -x "$(command -v vlk-jc141)" ]; then bash "$VLK"; else vlk-jc141; fi
 export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD="/usr/lib/bindToInterface.so"; export LD_PRELOAD="/usr/lib32/bindToInterface.so"
 
 # start
-cd "$R/files/groot"; "$WINE" "game.exe" "$@"
+cd "$PWD/files/groot"; "$WINE" "game.exe" "$@"
