@@ -9,7 +9,7 @@ function cleanup { cd "$OLDPWD" && bash "$STS" unmount-dwarfs; }
 trap 'cleanup' EXIT INT SIGINT SIGTERM
 
 # wine
-export WINEPREFIX="$JCDW/prefix"; export WINE="$(command -v wine)"; export WINE_LARGE_ADDRESS_AWARE=1; export WINEDLLOVERRIDES="mshtml=d;"; if [ ! -x "$(command -v vlk-jc141)" ]; then bash "$VLK"; else vlk-jc141; fi
+export WINEPREFIX="$JCDW/prefix"; export WINE="$(command -v wine)"; export WINE_LARGE_ADDRESS_AWARE=1; export WINEDLLOVERRIDES="mshtml=d;nvapi,nvapi64=n"; if [ ! -x "$(command -v vlk-jc141)" ]; then bash "$VLK"; else vlk-jc141; fi
 
 # block non-lan networking
 export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD="/usr/lib/bindToInterface.so"
