@@ -1,10 +1,9 @@
-## Setup Guide - Debian
+## Setup Guide - Debian Rolling/Sid
 
 - Also applies to Sparky Rolling, Siduction, Nitrux which are rolling by default.
 
-### pre-configuration
-
-#### We recommend the repositories to be switched to the Rolling/Sid for an optimal and up to date experience.
+#### Switch to the Rolling/Sid repo for an optimal and up to date experience.
+Note: Debian Stable repo is no longer compatible with latest DXVK, thus it is not supported.
 ```sh
 1. Edit /etc/apt/sources.list:
 sudo nano /etc/apt/sources.list
