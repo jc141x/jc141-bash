@@ -19,7 +19,7 @@ sudo pacman -Syyu
 
 #### core packages
 ```sh
-sudo pacman -S --needed rumpowered/dwarfs rumpowered/vlk-jc141 fuse-overlayfs wine-staging wine-mono openssl-1.1
+sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono openssl-1.1
 ```
 
 #### graphics packages
