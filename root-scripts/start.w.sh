@@ -18,7 +18,7 @@ function cleanup { cd "$OLDPWD" && bash "$STS" unmount-dwarfs; }; trap 'cleanup'
 VLK="$PWD/files/vlk.sh"; [ ! -e "$VLK" ] && cp /opt/jc141/bash/vlk.sh "$VLK"; if [ ! -x "$(command -v vlk-jc141)" ]; then bash "$VLK"; else vlk-jc141; fi; export DXVK_ENABLE_NVAPI=1
 
 # block non-lan networking
-export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD="/usr/lib/bindToInterface.so"; export LD_PRELOAD="/usr/lib32/bindToInterface.so"
+export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD='/usr/$LIB/bindToInterface.so';
 
 # start
 cd "$PWD/files/groot"; "$WINE" "game.exe" "$@"
