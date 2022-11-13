@@ -47,7 +47,7 @@ sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia
 sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-v4l-utils lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib giflib libgphoto2 libxcrypt-compat zlib gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
 ```
 
-#### (OPTIONAL) bindtointerface - block non-LAN network activity by default
+#### OPTIONAL - bindtointerface - block non-LAN network activity by default
 ```
 sudo pacman -S --needed rumpowered/bindtointerface
 ```
