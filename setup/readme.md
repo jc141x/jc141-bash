@@ -19,7 +19,6 @@ Releases might work but we can't promise anything and don't want to waste time t
 
  - Ubuntu (malware)
    - And all distros based on it: Kubuntu, Lubuntu, Xubuntu, Mint, Elementary OS, Zorin OS, POP! OS, LXLE, KDE Neon 
- - SteamOS (malware, read-only, lack of packages)
 
 ### hardware support
 
