@@ -9,7 +9,8 @@ or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
 
 #### [Debian](debian.md)
 or: Sparky Rolling, Siduction, Nitrux
-#### [Fedora and Rawhide](fedora.md)
+#### [Fedora](fedora.md)
+or: Rawhide, Silverblue.
 #### [OpenSUSE Tumbleweed](opensuse.md)
 
 ### not supported distros
@@ -19,7 +20,6 @@ Releases might work but we can't promise anything and don't want to waste time t
  - Ubuntu (malware)
    - And all distros based on it: Kubuntu, Lubuntu, Xubuntu, Mint, Elementary OS, Zorin OS, POP! OS, LXLE, KDE Neon 
  - SteamOS (malware, read-only, lack of packages)
- - Fedora Silverblue (read-only)
 
 ### hardware support
 
