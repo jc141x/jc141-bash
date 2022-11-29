@@ -1,7 +1,6 @@
 ## Setup Guide - SteamDeck
 
 - Report issues you are having to us on matrix.
-- SteamOS not supported or planned to be.
 
 #### install any Arch distro. We recommend EndeavourOS.
 
