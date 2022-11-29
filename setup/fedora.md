@@ -22,7 +22,9 @@ Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 sudo dnf install libxcrypt zlib alsa-lib alsa-plugins fluidsynth pulseaudio openal
 ```
 
-<h3>Silverblue alternate setup (not throughly tested)</h3>
+<br><br>
+
+<h3>Silverblue only alternate setup (not throughly tested)</h3>
 
 #### core packages
 ```sh
