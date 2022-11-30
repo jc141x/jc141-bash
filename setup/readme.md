@@ -26,7 +26,7 @@ Releases might work but we can't promise anything and don't want to waste time t
 
 - The dwarfs mounting system requires modern speed standards from storing devices as well as RAM.
 
-- [SteamDeck support on Arch](steamdeck.md)
+- [SteamDeck support on Arch](steamdeck/arch.md)
 
 ### running
 
