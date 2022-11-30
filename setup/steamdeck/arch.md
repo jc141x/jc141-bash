@@ -1,8 +1,8 @@
-## Setup Guide - SteamDeck
+## Setup Guide - SteamDeck - Arch
 
 - Report issues you are having to us on matrix.
 
-#### install any Arch distro. We recommend EndeavourOS.
+#### Install any Arch distro. We recommend EndeavourOS.
 
 1. Create a bootable usb drive with the distro iso. - [Guide](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/)
 2. Use a USB-C adapter to connect the drive to your deck.
