@@ -51,3 +51,10 @@ sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libx
 ```
 sudo pacman -S --needed rumpowered/bindtointerface
 ```
+
+#### other nots
+
+The arch system is supposed to be kept up to date and the releases also use software that requires latest drivers. Update your system at least weekly with:
+```sh
+sudo pacman -Syyu
+```
