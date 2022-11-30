@@ -4,7 +4,7 @@
 
 - For any launcher, you can use [SteamGridDB](https://www.steamgriddb.com/) or otherwise [SteamDB](https://steamdb.info/) to add banners to your library.
 
-<br><br>
+<br>
 
 ### [Rum](https://github.com/jc141x/rum)
 
@@ -12,9 +12,11 @@ Our own attempt at creating a single purpose launcher which focuses on interface
 
 It remains usable but development has stalled due to no active developers.
 
-![](https://i.postimg.cc/nL9MJ4Df/ytryrty.png)
+<br>
 
-<br><br>
+<div align=center><img src="https://i.postimg.cc/nL9MJ4Df/ytryrty.png" width="800"/></div>
+
+<br>
 
 #### [Lutris](https://github.com/lutris/lutris)
 
@@ -22,9 +24,11 @@ The releases can be added as 'Native' and selecting either start.w.sh or start.n
 
 Using it's implementation of wine falls out of our support.
 
-![](https://i.postimg.cc/fW9Qkr95/4234.png)
+<br>
 
-<br><br>
+<div align=center><img src="https://i.postimg.cc/fW9Qkr95/4234.png" width="800"/></div>
+
+<br>
 
 ### [Gamehub](https://tkashkin.github.io/projects/gamehub/)
 
@@ -32,8 +36,11 @@ Selecting start.w.sh or start.n.sh as executable works. (or otherwise however th
 
 Using it's implementation of wine falls out of our support.
 
-![](https://i.postimg.cc/2yFkPcdQ/gamehub-game-library-816921-full.webp)
+<br>
 
+<div align=center><img src="https://i.postimg.cc/6qtVJQ4y/43423.png" width="800"/></div>
+
+<br>
 
 ### [Heroic Games Launcher](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher)
 
@@ -41,4 +48,6 @@ When adding a game, go to Select Platform Version to Install: and choose 'Linux'
 
 Using it's implementation of wine falls out of our support.
 
-![](https://i.postimg.cc/V6FshZWj/435345.webp)
+<br>
+
+<div align=center><img src="https://i.postimg.cc/V6FshZWj/435345.webp" width="800"/></div>
