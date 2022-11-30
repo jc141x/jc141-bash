@@ -22,7 +22,7 @@ The releases can be added as 'Native' and selecting either start.w.sh or start.n
 
 Using it's implementation of wine falls out of our support.
 
-![]([https://i.postimg.cc/C5VMrT8M/lutris-112300-full.webp](https://i.postimg.cc/fW9Qkr95/4234.png))
+![](https://i.postimg.cc/fW9Qkr95/4234.png)
 
 <br><br>
 
