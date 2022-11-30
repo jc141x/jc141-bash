@@ -3,37 +3,20 @@
 - Report issues you are having to us on matrix.
 - We recommend the installation of a malware free GNU/Linux system. For that we currently support [Arch/EndeavourOS/Others](arch.md).
 
-#### add required repos
+#### add required repos and enable rwfus
 
 ```sh
+git clone https://github.com/ValShaped/rwfus.git
+cd rwfus
+./rwfus -iI
+
 echo '
 [rumpowered]
 SigLevel = Never
 Server = https://repo.rumpowered.org/$arch
-[jupiter]
-Server = https://steamdeck-packages.steamos.cloud/archlinux-mirror/$repo/os/$arch
-SigLevel = Never
-[holo]
-Server = https://steamdeck-packages.steamos.cloud/archlinux-mirror/$repo/os/$arch
-SigLevel = Never ' | sudo tee -a /etc/pacman.conf
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
-sudo pacman -Syyu
+sudo pacman -Sy
 ```
-
-#### SteamDeck Hardware drivers
-
-```sh
-sudo pacman -S jupiter/linux-neptune jupiter/linux-neptune-headers jupiter/linux-firmware-neptune jupiter/jupiter-hw-support rumpowered/sc-controller
-```
-
-#### make new kernel default
-
-```sh
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-```
-
-Reboot and select the option with `linux neptune` using the arrow keys.
-
 
 #### core packages
 ```sh
