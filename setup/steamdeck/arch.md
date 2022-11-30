@@ -65,3 +65,10 @@ sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libx
 
 #### post-setup
 - On KDE Plasma, you might need to go into settings and set the correct screen position. On other DE's you might be stuck with no such options.
+
+#### other notes
+
+The arch system is supposed to be kept up to date and the releases also use software that requires latest drivers. Update your system at least weekly with:
+```sh
+sudo pacman -Syyu
+```
