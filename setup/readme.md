@@ -1,6 +1,8 @@
 ## jc141 setup guide
 
-Haven't installed GNU/Linux yet? check out [EndeavourOS](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/)
+Haven't installed GNU/Linux yet? check out [EndeavourOS](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/).
+
+Suggestions for any changes to this repo are welcome on Matrix.
 
 ### supported distro packages
 
