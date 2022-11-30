@@ -1,4 +1,4 @@
-## Setup Guide - SteamDeck - SteamOS
+## Setup Guide - SteamDeck - SteamOS (work in progress guide, do not use)
 
 - Report issues you are having to us on matrix.
 - We recommend the installation of a malware free GNU/Linux system. For that we currently support [Arch/EndeavourOS/Others](arch.md).
