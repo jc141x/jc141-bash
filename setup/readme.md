@@ -54,3 +54,5 @@ bash settings.sh extract-dwarfs / unmount-dwarfs / mount-dwarfs / delete-dwarfs 
 - The testing is done on Arch or EndeavourOS with EXT4, BTRFS or XFS filesystems.
 
 - WM's are known to have more issues related to displaying. Freezes or crashes can occur in some rare cases.
+
+- For creating a GUI library of your games, see [launchers](launchers.md) page.
