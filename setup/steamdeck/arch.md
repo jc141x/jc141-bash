@@ -1,4 +1,4 @@
-## Setup Guide - SteamDeck
+## Setup Guide - SteamDeck - Arch
 
 - Report issues you are having to us on matrix.
 
