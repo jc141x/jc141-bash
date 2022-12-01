@@ -1,6 +1,4 @@
-## optional user inteface launchers list (which can be used with our releases easily)
-
-- The page is a stub with more complete info to come.
+## optional user inteface launchers which can be used with our releases easily
 
 - Running our releases without the use of the provided start scripts falls out of our support.
 
