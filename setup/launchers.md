@@ -1,4 +1,4 @@
-## optional user inteface launchers which can be used with our releases easily
+#### optional user inteface launchers which can be used with our releases easily
 
 - Running our releases without the use of the provided start scripts falls out of our support.
 
@@ -22,7 +22,7 @@ Programming language: Rust
 
 The releases are detected automatically if they exist in a path configured in the launcher.
 
-#### [Lutris](https://github.com/lutris/lutris)
+### [Lutris](https://github.com/lutris/lutris)
 
 Programming language: Python
 
