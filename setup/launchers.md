@@ -12,6 +12,8 @@ Our own attempt at creating a single purpose launcher which focuses on interface
 
 It remains usable but development has stalled due to no active developers.
 
+Programming language: Rust
+
 <br>
 
 <div align=center><img src="https://i.postimg.cc/nL9MJ4Df/ytryrty.png" width="800"/></div>
@@ -23,6 +25,8 @@ It remains usable but development has stalled due to no active developers.
 The releases can be added as 'Native' and selecting either start.w.sh or start.n.sh as the executable. (or otherwise however the script that starts the game is called)
 
 Using it's implementation of wine falls out of our support.
+
+Programming language: Python
 
 <br>
 
@@ -36,6 +40,8 @@ Selecting start.w.sh or start.n.sh as executable works. (or otherwise however th
 
 Using it's implementation of wine falls out of our support.
 
+Programming language: Vala
+
 <br>
 
 <div align=center><img src="https://i.postimg.cc/6qtVJQ4y/43423.png" width="800"/></div>
@@ -47,6 +53,8 @@ Using it's implementation of wine falls out of our support.
 When adding a game, go to Select Platform Version to Install: and choose 'Linux'. Then select the executable as start.w.sh or start.n.sh. (or otherwise however the script that starts the game is called)
 
 Using it's implementation of wine falls out of our support.
+
+Programming language: TypeScript
 
 <br>
 
