@@ -2,6 +2,8 @@
 
 - The page is a stub with more complete info to come.
 
+- Running our releases without the use of the provided start scripts falls out of our support.
+
 - For any launcher, you can use [SteamGridDB](https://www.steamgriddb.com/) or otherwise [SteamDB](https://steamdb.info/) to add banners to your library.
 
 <br>
@@ -20,11 +22,9 @@ Programming language: Rust
 
 <br>
 
+The releases are detected automatically if they exist in a path configured in the launcher.
+
 #### [Lutris](https://github.com/lutris/lutris)
-
-The releases can be added as 'Native' and selecting either start.w.sh or start.n.sh as the executable. (or otherwise however the script that starts the game is called)
-
-Using it's implementation of wine falls out of our support.
 
 Programming language: Python
 
@@ -34,11 +34,9 @@ Programming language: Python
 
 <br>
 
+The releases can be added as 'Native' and selecting the start script as the executable.
+
 ### [Gamehub](https://tkashkin.github.io/projects/gamehub/)
-
-Selecting start.w.sh or start.n.sh as executable works. (or otherwise however the script that starts the game is called)
-
-Using it's implementation of wine falls out of our support.
 
 Programming language: Vala
 
@@ -48,14 +46,16 @@ Programming language: Vala
 
 <br>
 
+The releases can be added by selecting the start script as the executable.
+
 ### [Heroic Games Launcher](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher)
-
-When adding a game, go to Select Platform Version to Install: and choose 'Linux'. Then select the executable as start.w.sh or start.n.sh. (or otherwise however the script that starts the game is called)
-
-Using it's implementation of wine falls out of our support.
 
 Programming language: TypeScript
 
 <br>
 
 <div align=center><img src="https://i.postimg.cc/V6FshZWj/435345.webp" width="800"/></div>
+
+<br>
+
+When adding a game, go to Select Platform Version to Install: and choose 'Linux'. Then select the start script as executable.
