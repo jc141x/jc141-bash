@@ -12,7 +12,7 @@ Our own attempt at creating a single purpose launcher which focuses on interface
 
 It remains usable but development has stalled due to no active developers.
 
-Programming language: Rust
+Programming language: Rust/Svelte
 
 <br>
 
