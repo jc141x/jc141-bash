@@ -33,7 +33,7 @@ Releases might work but we can't promise anything and don't want to waste time t
 ### running
 
 ```sh
-cd "path to extracted game"
+cd "path to game"
 bash start.w.sh - or however the script is named.
 
 To enable terminal output, add DBG=1 before bash command.
