@@ -56,5 +56,5 @@ sudo pacman -S --needed rumpowered/bindtointerface
 
 The arch system is supposed to be kept up to date and the releases also use software that requires latest drivers. Update your system at least weekly with:
 ```sh
-sudo pacman -Syyu
+sudo pacman -Syu
 ```
