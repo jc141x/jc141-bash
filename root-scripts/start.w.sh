@@ -9,7 +9,7 @@ STS="$PWD/settings.sh"; LOGO="$PWD/files/logo.txt.gz"; [ ! -e "$LOGO" ] && cp /o
 export WINE="$(command -v wine)"; export WINEPREFIX="$JCDW/prefix"; export WINEDLLOVERRIDES="mshtml=d;nvapi,nvapi64=n"; export WINE_LARGE_ADDRESS_AWARE=1;
 
 # dwarfs
-bash "$STS" mount-dwarfs; zcat "$LOGO"; [ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && exec &>/dev/null; }
+bash "$STS" mount-dwarfs; zcat "$LOGO"; [ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && exec &>/dev/null; echo "Output muted by default for avoiding performance impact. Unmute with DBG=1." }
 
 # auto-unmount
 function cleanup { cd "$OLDPWD" && bash "$STS" unmount-dwarfs; }; trap 'cleanup' EXIT INT SIGINT SIGTERM
