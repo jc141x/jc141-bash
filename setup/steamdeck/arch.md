@@ -20,11 +20,11 @@ echo '
 SigLevel = Never
 Server = https://repo.rumpowered.org/$arch
 
-[jupiter]
+[jupiter-staging]
 Server = https://steamdeck-packages.steamos.cloud/archlinux-mirror/$repo/os/$arch
 SigLevel = Never
 
-[holo]
+[holo-staging]
 Server = https://steamdeck-packages.steamos.cloud/archlinux-mirror/$repo/os/$arch
 SigLevel = Never ' | sudo tee -a /etc/pacman.conf
 
@@ -36,7 +36,7 @@ sudo pacman -Syyu
 #### SteamDeck Hardware drivers
 
 ```sh
-sudo pacman -S jupiter/linux-neptune jupiter/linux-neptune-headers jupiter/linux-firmware-neptune jupiter/jupiter-hw-support rumpowered/sc-controller
+sudo pacman -S jupiter-staging/linux-neptune jupiter-staging/linux-neptune-headers jupiter-staging/linux-firmware-neptune jupiter-staging/jupiter-hw-support rumpowered/sc-controller
 ```
 
 #### make new kernel default
