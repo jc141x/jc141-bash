@@ -17,15 +17,15 @@ function cleanup { cd "$OLDPWD" && bash "$STS" unmount-dwarfs; }; trap 'cleanup'
 
 # external vulkan translation
 if [ ! -x "$(command -v vlk-jc141)" ];
-   then { ping -c 3 github.com >/dev/null || { echo "Github could not be reached, probably no network. This may mean that the necessary requisites to run the game will be missing if this is the first run. If it worked before then nothing should change given the requisites are provided already." ; }; VLKLOG="$WINEPREFIX/vulkan.log"; VULKAN="$PWD/vulkan"
-          status-vulkan() { [[ ! -f "$VLKLOG" || -z "$(awk "/^${FUNCNAME[1]}\$/ {print \$1}" "$VLKLOG" 2>/dev/null)" ]] || { echo "${FUNCNAME[1]} present" && return 1; }; }
-          vulkan() { DL_URL="$(curl -s https://api.github.com/repos/jc141x/vulkan/releases/latest | awk -F '["]' '/"browser_download_url":/ {print $4}')"; VLK="$(basename "$DL_URL")"
-          [ ! -f "$VLK" ] && command -v curl >/dev/null 2>&1 && curl -LO "$DL_URL" && tar -xvf "vulkan.tar.xz" || { rm "$VLK" && echo "ERROR: failed to extract vulkan translation" && return 1; }
-          rm -rf "vulkan.tar.xz" && wineboot -i && bash "$PWD/vulkan/setup-vulkan.sh" && wineserver -w && rm -Rf "$VULKAN"; }
-          vulkan-dl() { echo "using vulkan translation from github" && vulkan && echo "$VLKVER" >"$VLKLOG"; }
-          VLKVER="$(curl -s -m 5 https://api.github.com/repos/jc141x/vulkan/releases/latest | awk -F '["/]' '/"browser_download_url":/ {print $11}' | cut -c 1-)"
-          [[ ! -f "$VLKLOG" && -z "$(status-vulkan)" ]] && vulkan-dl;
-          [[ -f "$VLKLOG" && -n "$VLKVER" && "$VLKVER" != "$(awk '{print $1}' "$VLKLOG")" ]] && { rm -f vulkan.tar.xz || true; } && echo "updating external vulkan translation" && vulkan-dl && echo "external vulkan translation is up-to-date"; }
+  then { ping -c 3 github.com >/dev/null || { echo "Github could not be reached, probably no network. This may mean that the necessary requisites to run the game will be missing if this is the first run. If it worked before then nothing should change given the requisites are provided already." ; }; VLKLOG="$WINEPREFIX/vulkan.log"; VULKAN="$PWD/vulkan"
+    status-vulkan() { [[ ! -f "$VLKLOG" || -z "$(awk "/^${FUNCNAME[1]}\$/ {print \$1}" "$VLKLOG" 2>/dev/null)" ]] || { echo "${FUNCNAME[1]} present" && return 1; }; }
+    vulkan() { DL_URL="$(curl -s https://api.github.com/repos/jc141x/vulkan/releases/latest | awk -F '["]' '/"browser_download_url":/ {print $4}')"; VLK="$(basename "$DL_URL")"
+    [ ! -f "$VLK" ] && command -v curl >/dev/null 2>&1 && curl -LO "$DL_URL" && tar -xvf "vulkan.tar.xz" || { rm "$VLK" && echo "ERROR: failed to extract vulkan translation" && return 1; }
+    rm -rf "vulkan.tar.xz" && wineboot -i && bash "$PWD/vulkan/setup-vulkan.sh" && wineserver -w && rm -Rf "$VULKAN"; }
+    vulkan-dl() { echo "using vulkan translation from github" && vulkan && echo "$VLKVER" >"$VLKLOG"; }
+    VLKVER="$(curl -s -m 5 https://api.github.com/repos/jc141x/vulkan/releases/latest | awk -F '["/]' '/"browser_download_url":/ {print $11}' | cut -c 1-)"
+    [[ ! -f "$VLKLOG" && -z "$(status-vulkan)" ]] && vulkan-dl;
+    [[ -f "$VLKLOG" && -n "$VLKVER" && "$VLKVER" != "$(awk '{print $1}' "$VLKLOG")" ]] && { rm -f vulkan.tar.xz || true; } && echo "updating external vulkan translation" && vulkan-dl && echo "external vulkan translation is up-to-date"; }
 else vlk-jc141; fi; export DXVK_ENABLE_NVAPI=1
 
 # block non-lan networking
