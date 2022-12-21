@@ -7,7 +7,7 @@ STS="$PWD/settings.sh"; LOGO="$PWD/logo.txt.gz"; export JCDW="${XDG_DATA_HOME:-$
 
 # wine
 export WINE="$(command -v wine)"; 
-export WINEPREFIX="$JCDW/prefix"; export WINEDLLOVERRIDES="mshtml=d;nvapi,nvapi64=n"; export WINE_LARGE_ADDRESS_AWARE=1;
+export WINEPREFIX="$JCDW/prefix" && echo "Path of the wineprefix (where saves are stored) is: $WINEPREFIX"; export WINEDLLOVERRIDES="mshtml=d;nvapi,nvapi64=n"; export WINE_LARGE_ADDRESS_AWARE=1;
 
 # dwarfs
 bash "$STS" mount-dwarfs; zcat "$LOGO"; [ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && exec &>/dev/null; echo "Output muted by default for avoiding performance impact. Unmute with DBG=1."; echo "For any misunderstandings or need of support, join the community on Matrix."; }
