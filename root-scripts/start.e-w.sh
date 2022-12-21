@@ -10,7 +10,7 @@ export WINE="$(command -v wine)";
 export WINEPREFIX="$JCDW/prefix"; export WINEDLLOVERRIDES="mshtml=d;nvapi,nvapi64=n"; export WINE_LARGE_ADDRESS_AWARE=1;
 
 # dwarfs
-bash "$STS" mount-dwarfs; zcat "$LOGO"; [ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && exec &>/dev/null; echo "Output muted by default for avoiding performance impact. Unmute with DBG=1."; echo "For any misunderstandings or need of support, join the community and Matrix."; }
+bash "$STS" mount-dwarfs; zcat "$LOGO"; [ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && exec &>/dev/null; echo "Output muted by default for avoiding performance impact. Unmute with DBG=1."; echo "For any misunderstandings or need of support, join the community on Matrix."; }
 
 # auto-unmount
 function cleanup { cd "$OLDPWD" && bash "$STS" unmount-dwarfs; }; trap 'cleanup' EXIT INT SIGINT SIGTERM
