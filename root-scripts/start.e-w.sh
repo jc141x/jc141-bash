@@ -10,7 +10,7 @@ export WINE="$(command -v wine)";
 export WINEPREFIX="$JCDW/prefix"; export WINEDLLOVERRIDES="mshtml=d;nvapi,nvapi64=n"; export WINE_LARGE_ADDRESS_AWARE=1;
 
 # dwarfs
-bash "$STS" mount-dwarfs; zcat "$LOGO"; echo "Path of the wineprefix is: $WINEPREFIX (where saves are stored -- except those stored in groot/groot-rw)"; echo "For any misunderstandings or need of support, join the community on Matrix.";
+bash "$STS" mount-dwarfs; zcat "$LOGO"; echo "Path of the wineprefix is: $WINEPREFIX"; echo "For any misunderstandings or need of support, join the community on Matrix.";
 
 # auto-unmount
 function cleanup { cd "$OLDPWD" && bash "$STS" unmount-dwarfs; }; trap 'cleanup' EXIT INT SIGINT SIGTERM
