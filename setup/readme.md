@@ -4,8 +4,8 @@ Haven't installed GNU/Linux yet? check out [EndeavourOS](https://discovery.endea
 
 Suggestions for any changes to this repo are welcome on [Matrix](https://matrix.to/#/%21aRyMmzPUzcUKRXpVtP%3Amatrix.org?via=catgirl.cloud&via=grin.hu&via=matrix.org) .
 
-### Supported Linux Distributions
-Please click the following links to take you how to setup on your Linux distribution. If you distribution isn't here please check the Unsupported Distributions area. 
+### Supported GNU/Linux Distributions
+Please click the following links to take you how to setup on your GNU/Linux distribution. If you distribution isn't here please check the Unsupported Distributions area. 
 
 * [Arch](arch.md) including: Endeavour OS, Arco, Artix, Manjaro and others
 * [Debian](debian.md) including: Nitrix, Sparky Rolling and Siduction
@@ -13,7 +13,7 @@ Please click the following links to take you how to setup on your Linux distribu
 * [OpenSUSE Tumbleweed](opensuse.md)
 
 ### Unsupported Distributions
-Unfortunately we are a voluntary group and have very limited resources at our disposal, we do this for fun. This means that we don't have the resources to support every single Linux distribution or Linux distributions that are more prone to errors.
+Unfortunately we are a voluntary group and have very limited resources at our disposal, we do this for fun. This means that we don't have the resources to support every single GNU/Linux distribution or GNU/Linux distributions that are more prone to errors.
 
 Please feel free to try the release with whatever instructions more closely match your own system. For example if you use "Apt" as a package manager please try [Debian](debian.md). Otherwise we encourage you to switch to a distribution we do support.
 
