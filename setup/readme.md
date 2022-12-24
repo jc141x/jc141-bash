@@ -7,10 +7,10 @@ Suggestions for any changes to this repo are welcome on [Matrix](https://matrix.
 ### Supported GNU/Linux Distributions
 Please click the following links to take you how to setup on your GNU/Linux distribution. If you distribution isn't here please check the Unsupported Distributions area. 
 
-  * [Arch](arch.md) including: Endeavour OS, Arco, Artix, Manjaro and others
-  * [Debian](debian.md) including: Nitrix, Sparky Rolling and Siduction
-  * [Fedora](fedora.md) including: Rawhide and Silverblue
-  * [OpenSUSE Tumbleweed](opensuse.md)
+*   [Arch](arch.md) including: Endeavour OS, Arco, Artix, Manjaro and others
+*   [Debian](debian.md) including: Nitrix, Sparky Rolling and Siduction
+*   [Fedora](fedora.md) including: Rawhide and Silverblue
+*   [OpenSUSE Tumbleweed](opensuse.md)
 
 ### Unsupported Distributions
 Unfortunately we are a voluntary group and have very limited resources at our disposal, we do this for fun. This means that we don't have the resources to support every single GNU/Linux distribution or GNU/Linux distributions that are more prone to errors.
