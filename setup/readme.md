@@ -18,24 +18,28 @@ Unfortunately we are a voluntary group and have very limited resources at our di
 Please feel free to try the release with whatever instructions more closely match your own system. For example if you use "Apt" as a package manager please try [Debian](debian.md). Otherwise we encourage you to switch to a distribution we do support.
 
 Specifically we do not support:
-  * Ubuntu including any derivatives e.g. Linux Mint or POP OS.
-    * Packages are frequently out of date or conflicting.
+*   Ubuntu including any derivatives e.g. Linux Mint or POP OS.
+  *   Packages are frequently out of date or conflicting.
 
 ### Hardware Support
 Not all hardware will run our releases. Please ensure your hardware meets the following specifications:
 
-  * GPU/APU
-    * **Must** have Vulkan support. Without it many releases simply will not run.
-  * CPU
-    * **Should** be at least an Intel i3 or equivalent
-  * RAM
-    * **Should** be at least 8GB.
-  * HDD
-    * **Should** be up to modern standards. The Dwarfs mounting system may fail without a modern HDD.
+* GPU/APU
+  *   **Must** have Vulkan support. Without it many releases simply will not run.
 
-**Recommended Requirements**
+* CPU
+  *   **Should** be at least an Intel i3 or equivalent
 
-  * [SteamDeck support on Arch](steamdeck/arch.md)
+* RAM
+  *   **Should** be at least 8GB.
+
+* HDD
+  *   **Should** be up to modern standards. The Dwarfs mounting system may fail without a modern HDD.
+
+
+#### Recommended Requirements
+
+*   [SteamDeck support on Arch](steamdeck/arch.md)
 
 ### How to Run the Game
 Open up a terminal and then run the following commands. Please edit where appropriate.
@@ -83,6 +87,6 @@ All releases are tested on an either Arch Linux or EndeavourOS using either an E
 
 Window Managers are known to have more issues related to displaying, including freezing and crashing in rare cases.
 
-#####GUI Libary#####
+##### GUI Libary
 
 If you would like a GUI library for your games, see [launchers](launchers.md) page.
