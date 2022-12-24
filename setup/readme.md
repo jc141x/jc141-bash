@@ -24,18 +24,17 @@ Specifically we do not support:
 ### Hardware Support
 Not all hardware will run our releases. Please ensure your hardware meets the following specifications:
 
-* GPU/APU
+*   GPU/APU
   *   **Must** have Vulkan support. Without it many releases simply will not run.
 
-* CPU
+*   CPU
   *   **Should** be at least an Intel i3 or equivalent
 
-* RAM
+*   RAM
   *   **Should** be at least 8GB.
 
-* HDD
+*   HDD
   *   **Should** be up to modern standards. The Dwarfs mounting system may fail without a modern HDD.
-
 
 #### Recommended Requirements
 
