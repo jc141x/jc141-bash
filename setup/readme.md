@@ -27,7 +27,7 @@ Not all hardware will run our releases. Please ensure your hardware meets the fo
 * GPU/APU
   * **Must** have Vulkan support. Without it many releases simply will not run.
 * CPU
-  * **Should** be at least an Intel i4 or equivalent
+  * **Should** be at least an Intel i3 or equivalent
 * RAM
   * **Should** be at least 8GB.
 * HDD
