@@ -36,8 +36,6 @@ Not all hardware will run our releases. Please ensure your hardware meets the fo
 * HDD/SSD
   *   **Should** be up to modern standards. The Dwarfs mounting system is demanding.
 
-#### Recommended Requirements
-
 *   [SteamDeck support on Arch](steamdeck/arch.md)
 
 ### How to Run the Game
