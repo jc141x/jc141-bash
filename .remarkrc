@@ -1,6 +1,6 @@
 {
     "plugins": {
         "remark-lint-maximum-line-length": ["error", 100]
-        "remark-lint-list-item-indent": ["warning", space]
+        "remark-lint-list-item-indent": ["error", space]
     }
 }
