@@ -5,7 +5,7 @@ Haven't installed GNU/Linux yet? check out [EndeavourOS](https://discovery.endea
 Suggestions for any changes to this repo are welcome on [Matrix](https://matrix.to/#/%21aRyMmzPUzcUKRXpVtP%3Amatrix.org?via=catgirl.cloud&via=grin.hu&via=matrix.org) .
 
 ### Supported GNU/Linux Distributions
-Please click the following links to take you how to setup on your GNU/Linux distribution. If you distribution isn't here please check the Unsupported Distributions area. 
+Please click the following links to take you how to setup on your GNU/Linux distribution. If your distribution isn't here please check the Unsupported Distributions area. 
 
 *   [Arch](arch.md) including: Endeavour OS, Arco, Artix, Manjaro and others
 *   [Debian](debian.md) including: Nitrix, Sparky Rolling and Siduction
@@ -44,20 +44,20 @@ Not all hardware will run our releases. Please ensure your hardware meets the fo
 Open up a terminal and then run the following commands. Please edit where appropriate.
 
 ```
-bash /Path/to/Game/start.{n/we-w/n-w}.sh
+bash /Path/to/Game/start.{n/w/e-w/n-w}.sh
 ```
-The please check the script for the exact name, of course you can navigate to the directory and run the command there, negating the `/Path/to/Game`.
+Please check the script for the exact name, of course you can navigate to the directory and run the command there, negating the `/Path/to/Game`.
 
 #### Troubleshooting
 If for whatever you have a problem running the game please consider the following command to help with debugging.
 
 ```
-DBG=1 bash /Path/to/Game/start.{n/we-w/n-w}.sh
+DBG=1 bash /Path/to/Game/start.{n/w/e-w/n-w}.sh
 ```
 This will produce output that will help us diagnose the problem. please also ensure you have the `start.{n/we-w/n-w}.sh` to hand.
 
 #### Operating Dwarfs
-Should your game exit in an inappropriate fashion or you would like to extract, there are a number of inbuilt commands to help you.
+Should your game exit in an inappropriate fashion or you would like to extract, there are a number of built-in commands to help you.
 
 ```
 bash settings.sh <COMMAND>
