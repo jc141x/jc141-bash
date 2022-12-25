@@ -1,11 +1,11 @@
 ### Setup Guide - Arch Linux
 This document will take you step by step through the process to run our games on an Arch Linux based GNU/Linux distribution. This includes:
 
-* ArcoLinux
-* Artix
-* EndeavourOS
-* Manjaro
-* and many others.
+- ArcoLinux
+- Artix
+- EndeavourOS
+- Manjaro
+- and many others.
 
 Please follow each step to ensure that your system is set up correctly.
 
