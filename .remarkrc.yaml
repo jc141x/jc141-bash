@@ -1,4 +1,3 @@
 plugins:
-    lint:
-        maximum-line-length: 100
-        list-item-indent: mixed
+    - remark-lint-maximum-line-length: 100
+    - remark-lint-list-item-indent: space
