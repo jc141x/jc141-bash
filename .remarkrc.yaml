@@ -1,7 +1,7 @@
 plugins:
-  preset-lint-consistent
-  preset-lint-markdown-style-guide
-  preset-lint-recommended
+  preset-lint-consistent:
+  preset-lint-markdown-style-guide:
+  preset-lint-recommended:
   # Customized Settings
-  lint-list-item-indent: space 
+  lint-list-item-indent: space
   lint-maximum-line-length: 100
