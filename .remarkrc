@@ -1,6 +1,0 @@
-{
-    "plugins": {
-        "remark-lint-maximum-line-length": ["warn", 100]
-        "remark-lint-list-item-indent": ["warn", 'mixed']
-    }
-}

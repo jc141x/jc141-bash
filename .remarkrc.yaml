@@ -1,0 +1,4 @@
+plugins:
+    lint:
+        maximum-line-length: 100
+        list-item-indent: mixed
