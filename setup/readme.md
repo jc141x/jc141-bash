@@ -33,8 +33,8 @@ Not all hardware will run our releases. Please ensure your hardware meets the fo
 * RAM
   *   **Should** be at least 8GB.
 
-* HDD
-  *   **Should** be up to modern standards. The Dwarfs mounting system may fail without a modern HDD.
+* HDD/SSD
+  *   **Should** be up to modern standards. The Dwarfs mounting system is demanding.
 
 #### Recommended Requirements
 
