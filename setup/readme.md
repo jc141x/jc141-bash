@@ -1,60 +1,91 @@
-## jc141 setup guide
+## jc141 Setup Guide
 
 Haven't installed GNU/Linux yet? check out [EndeavourOS](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/).
 
-Suggestions for any changes to this repo are welcome on Matrix.
+Suggestions for any changes to this repo are welcome on [Matrix](https://matrix.to/#/%21aRyMmzPUzcUKRXpVtP%3Amatrix.org?via=catgirl.cloud&via=grin.hu&via=matrix.org) .
 
-### supported distro packages
+### Supported GNU/Linux Distributions
+Please click the following links to take you how to setup on your GNU/Linux distribution. If your distribution isn't here please check the Unsupported Distributions area. 
 
-#### [Arch](arch.md)
-or: EndeavourOS (recommended), Arco, Artix, Manjaro etc.
+*   [Arch](arch.md) including: Endeavour OS, Arco, Artix, Manjaro and others
+*   [Debian](debian.md) including: Nitrix, Sparky Rolling and Siduction
+*   [Fedora](fedora.md) including: Rawhide and Silverblue
+*   [OpenSUSE Tumbleweed](opensuse.md)
 
-#### [Debian](debian.md)
-or: Sparky Rolling, Siduction, Nitrux
-#### [Fedora](fedora.md)
-or: Rawhide, Silverblue.
-#### [OpenSUSE Tumbleweed](opensuse.md)
+### Unsupported Distributions
+Unfortunately we are a voluntary group and have very limited resources at our disposal, we do this for fun. This means that we don't have the resources to support every single GNU/Linux distribution or GNU/Linux distributions that are more prone to errors.
 
-### not supported distros
+Please feel free to try the release with whatever instructions more closely match your own system. For example if you use "Apt" as a package manager please try [Debian](debian.md). Otherwise we encourage you to switch to a distribution we do support.
 
-Releases might work but we can't promise anything and don't want to waste time troubleshooting, for setup look at what most closely resembles your distro and use common sense. For example, if you use apt as your package manager you go for debian.
+Specifically we do not support:
+*   Ubuntu including any derivatives e.g. Linux Mint or POP OS.
+  *   Packages are frequently out of date or conflicting.
 
- - Ubuntu (malware)
-   - And all distros based on it: Kubuntu, Lubuntu, Xubuntu, Mint, Elementary OS, Zorin OS, POP! OS, LXLE, KDE Neon 
+### Hardware Support
+Not all hardware will run our releases. Please ensure your hardware meets the following specifications:
 
-### hardware support
+* GPU/APU
+  *   **Must** have Vulkan support. Without it many releases simply will not run.
+   
+* CPU
+  *   **Should** be at least an Intel i3 or equivalent.   
 
-- The GPU/APU must have vulkan support otherwise hardly any releases with wine will run.
+* RAM
+  *   **Should** be at least 8GB.
 
-- The dwarfs mounting system requires modern speed standards from storing devices as well as RAM.
+* HDD
+  *   **Should** be up to modern standards. The Dwarfs mounting system may fail without a modern HDD.
 
-- [SteamDeck support on Arch](steamdeck/arch.md)
+#### Recommended Requirements
 
-### running
+*   [SteamDeck support on Arch](steamdeck/arch.md)
 
-```sh
-cd "path to game"
-bash start.{n/w/e-w/n-w}.sh - or however the script is named.
+### How to Run the Game
+Open up a terminal and then run the following commands. Please edit where appropriate.
 
-To enable terminal output, add DBG=1 before bash command.
 ```
-- settings.sh commands
+bash /Path/to/Game/start.{n/w/e-w/n-w}.sh
 ```
-bash settings.sh extract-dwarfs / unmount-dwarfs / mount-dwarfs / delete-dwarfs / compress-to-dwarfs
+Please check the script for the exact name, of course you can navigate to the directory and run the command there, negating the `/Path/to/Game`.
+
+#### Troubleshooting
+If for whatever you have a problem running the game please consider the following command to help with debugging.
+
+```
+DBG=1 bash /Path/to/Game/start.{n/w/e-w/n-w}.sh
+```
+This will produce output that will help us diagnose the problem. please also ensure you have the `start.{n/we-w/n-w}.sh` to hand.
+
+#### Operating Dwarfs
+Should your game exit in an inappropriate fashion or you would like to extract, there are a number of built-in commands to help you.
+
+```
+bash settings.sh <COMMAND>
+
+Available Commands
+  extract-dwarfs
+  unmount-dwarfs
+  mount-dwarfs
+  delete-dwarfs
+  compress-to-dwarfs
 ```
 
-#### modding on dwarfs
+#### Modding Games with Dwarfs
 
-- Adding mods is supported through groot-rw directory. Before mounting, any files included in it will go above the mounted image and override any of the files. The path required for the mod may need to be created manually.
+Modding games with Dwarfs is somewhat different from the normal process, please follow the instructions here if you wish to add mods to your game.
 
-- groot-rw directory only exists after the first run of mounted games. However, it can be created manually and content can be added without running.
+Adding a mod is supported through using the `groot-rw` directory. Before mounting, any files included in it will go above the mounted image and override any of the files. The path required for the mod may need to be created manually.
 
-- Games which are extracted do not require this method.
+The `groot-rw` directory only exists after the first run of mounted games. However, the directory can be created manually and content can be added without running.
 
-#### other notes
+**Note:** Games which are extracted do not require this method.
 
-- The testing is done on Arch or EndeavourOS with EXT4, BTRFS or XFS filesystems.
+#### Additional Information
 
-- WM's are known to have more issues related to displaying. Freezes or crashes can occur in some rare cases.
+All releases are tested on an either Arch Linux or EndeavourOS using either an EXT4, BTRFS or XFS filesystem.
 
-- For creating a GUI library of your games, see [launchers](launchers.md) page.
+Window Managers are known to have more issues related to displaying, including freezing and crashing in rare cases.
+
+##### GUI Libary
+
+If you would like a GUI library for your games, see [launchers](launchers.md) page.
