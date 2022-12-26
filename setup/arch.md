@@ -19,19 +19,18 @@ Copy and paste the following commands into your terminal, you may need to use `C
     ```
 2. Add the multilib packages
 
-```sh
-sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
-```
+    ```sh
+    sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+    ```
 3. Add and the keys for the repository
 
-```sh
-sudo pacman-key --recv-keys cc7a2968b28a04b3
-```
+    ```sh
+    sudo pacman-key --recv-keys cc7a2968b28a04b3
+    ```
 
-```sh
-sudo pacman-key --lsign-key cc7a2968b28a04b3
-```
-
+    ```sh
+    sudo pacman-key --lsign-key cc7a2968b28a04b3
+    ```
 4. Force refresh (even if apparently in date) all packages and update
 
 ```sh
