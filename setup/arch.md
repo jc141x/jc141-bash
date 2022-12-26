@@ -42,7 +42,7 @@ Copy and paste the following commands into your terminal, you may need to use `C
 These packages are all required for our releases to work, if you don't have them the games will not run.
 
 ```sh
-sudo pacman -Syu --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono openssl-1.1
+sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono openssl-1.1
 ```
 
 ### Step 3: Add graphics packages for your set up.
@@ -78,17 +78,23 @@ Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associa
 Some games require additional libaries to run successfully. We strongly recommend the following libraries are installed.
 
 ```sh
-sudo pacman -Syu --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-v4l-utils lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib giflib libgphoto2 libxcrypt-compat zlib gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
+sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-v4l-utils lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib giflib libgphoto2 libxcrypt-compat zlib gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
 ```
 
-### OPTIONAL - bindtointerface - block non-LAN network activity by default
+### Step 5: OPTIONAL - Prevent non-LAN activity by default. bindtointerface - block non-LAN network activity by default
+
+It is recommended that you prevent access to the WAN for our releases.
+
 ```
 sudo pacman -S --needed rumpowered/bindtointerface
 ```
 
-### other notes
+### Step 6: Update your system
 
-The arch system is supposed to be kept up to date and the releases also use software that requires latest drivers. Update your system at least weekly with:
+Arch Linux is a rolling release and to keep it working properly a full update needs to be conducted regularly, this will ensure that your system will have the latest drivers available to Arch Linux. Do so now:
+
 ```sh
 sudo pacman -Syu
 ```
+
+If you have a kernel update, please restart your system and run this command again..
