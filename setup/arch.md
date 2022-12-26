@@ -6,7 +6,7 @@ This guide will allow you to set up our releases on an Arch Linux based set up. 
 *   ArcoLinux
 *   Manjaro
 *   Other Arch Linux based distributions
- 
+
 
 #### add rumpowered repo and multilib
 ```sh
