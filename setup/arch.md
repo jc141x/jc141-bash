@@ -1,26 +1,12 @@
 ### Setup Guide - Arch Linux
 
 This guide will allow you to set up our releases on an Arch Linux based set up. Other GNU/Linux distributions that can use this guide include the following:
-<<<<<<< HEAD
-*   EndeavourOS
-*   Artix
-*   ArcoLinux
-*   Manjaro
-*   Other Arch Linux based distributions
 
-=======
 * EndeavourOS
 * Artix
 * ArcoLinux
 * Manjaro
 * Other Arch Linux based distributions
- 
-<<<<<<< HEAD
->>>>>>> 4f5b4a2... Introduction Changes
-=======
-#### Step 1: Add rumpowered repository and multilib packages
->>>>>>> 3d0e221... Increasing readibility
->>>>>>> abe293d... Increasing readibility
 
 Copy and paste the following commands into your terminal, you may need to use `Ctrl + Shift + V` to paste.
 
