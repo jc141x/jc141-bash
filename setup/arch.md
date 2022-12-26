@@ -11,29 +11,37 @@ This guide will allow you to set up our releases on an Arch Linux based set up. 
 Copy and paste the following commands into your terminal, you may need to use `Ctrl + Shift + V` to paste.
 
 1. Add the rumpowered repository
+
 ```sh
 echo '
 
 [rumpowered]
 Server = https://jc141x.github.io/rumpowered-packages/$arch ' | sudo tee -a /etc/pacman.conf
 ```
+
 2. Add the multilib packages
+
 ```sh
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 ```
 3. Add and the keys for the repository
+
 ```sh
 sudo pacman-key --recv-keys cc7a2968b28a04b3
 ```
+
 ```sh
 sudo pacman-key --lsign-key cc7a2968b28a04b3
 ```
+
 4. Force refresh (even if apparently in date) all packages and update
+
 ```sh
 sudo pacman -Syyu
 ```
 
 #### Step 2: Add required core packages
+
 ```sh
 sudo pacman -Syu --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono openssl-1.1
 ```
@@ -41,27 +49,31 @@ sudo pacman -Syu --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mon
 #### Step 3: Add graphics packages for your set up.
 Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associated instructions below. Paste them into your terminal.
 
-
 ```sh
 Vulkan drivers (AMD/INTEL/NVIDIA)
 sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader 
 ```
+
 ```sh
 AMD drivers
 sudo pacman -S --needed lib32-vulkan-radeon vulkan-radeon
 ```
+
 ```sh
 INTEL drivers
 sudo pacman -S --needed lib32-vulkan-intel vulkan-intel
 ```
+
 ```sh
 NVIDIA drivers
 sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia
 ```
+
 - AMD: Make sure you do not have amdvlk with `sudo pacman -R amdvlk`. Having it installed will cause a lot of issues.
 - NVIDIA: Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
 #### various libraries required by some games
+
 ```sh
 sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-v4l-utils lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib giflib libgphoto2 libxcrypt-compat zlib gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
 ```
