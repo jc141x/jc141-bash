@@ -45,7 +45,7 @@ sudo pacman -Syu --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mon
 ```
 
 ### Step 3: Add graphics packages for your set up.
-Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associated instructions below. Paste them into your terminal.
+Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associated instructions below. Paste them into your terminal. You will need to follow the instructions for the Vulkan Drivers and one of the GPU instructions.
 
 - Vulkan Drivers required by AMD/INTEL/NVIDIA
 
@@ -69,9 +69,7 @@ Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associa
     ```sh
     sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia
     ```
-
-- AMD: Make sure you do not have amdvlk with `sudo pacman -R amdvlk`. Having it installed will cause a lot of issues.
-- NVIDIA: Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
+    - *Note*: For NVIDIA GPUs, please add `nvidia-drm.modeset=1` as a kernel parameter to improve compatability with our releases.
 
 ### various libraries required by some games
 
