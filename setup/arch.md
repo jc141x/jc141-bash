@@ -38,6 +38,7 @@ Copy and paste the following commands into your terminal, you may need to use `C
     ```
 
 ### Step 2: Add required core packages
+
 These packages are all required for our releases to work, if you don't have them the games will not run.
 
 ```sh
@@ -45,6 +46,7 @@ sudo pacman -Syu --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mon
 ```
 
 ### Step 3: Add graphics packages for your set up.
+
 Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associated instructions below. Paste them into your terminal. You will need to follow the instructions for the Vulkan Drivers and one of the GPU instructions.
 
 - Vulkan Drivers required by AMD/INTEL/NVIDIA
@@ -71,10 +73,12 @@ Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associa
     ```
     - *Note*: For NVIDIA GPUs, please add `nvidia-drm.modeset=1` as a kernel parameter to improve compatability with our releases.
 
-### various libraries required by some games
+### Step 4: Install additional libraries
+
+Some games require additional libaries to run successfully. We strongly recommend the following libraries are installed.
 
 ```sh
-sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-v4l-utils lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib giflib libgphoto2 libxcrypt-compat zlib gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
+sudo pacman -Syu --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-v4l-utils lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib giflib libgphoto2 libxcrypt-compat zlib gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
 ```
 
 ### OPTIONAL - bindtointerface - block non-LAN network activity by default
