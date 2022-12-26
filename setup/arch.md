@@ -11,14 +11,11 @@ This guide will allow you to set up our releases on an Arch Linux based set up. 
 Copy and paste the following commands into your terminal, you may need to use `Ctrl + Shift + V` to paste.
 
 1. Add the rumpowered repository
-
-```sh
-echo '
-
-[rumpowered]
-Server = https://jc141x.github.io/rumpowered-packages/$arch ' | sudo tee -a /etc/pacman.conf
-```
-
+    ```sh
+    echo '
+    [rumpowered]
+    Server = https://jc141x.github.io/rumpowered-packages/$arch ' | sudo tee -a /etc/pacman.conf
+    ```
 2. Add the multilib packages
 
 ```sh
