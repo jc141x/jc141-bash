@@ -1,34 +1,61 @@
 ### Setup Guide - Arch Linux
 
 This guide will allow you to set up our releases on an Arch Linux based set up. Other GNU/Linux distributions that can use this guide include the following:
+<<<<<<< HEAD
 *   EndeavourOS
 *   Artix
 *   ArcoLinux
 *   Manjaro
 *   Other Arch Linux based distributions
 
+=======
+* EndeavourOS
+* Artix
+* ArcoLinux
+* Manjaro
+* Other Arch Linux based distributions
+ 
+<<<<<<< HEAD
+>>>>>>> 4f5b4a2... Introduction Changes
+=======
+#### Step 1: Add rumpowered repository and multilib packages
+>>>>>>> 3d0e221... Increasing readibility
+>>>>>>> abe293d... Increasing readibility
 
-#### add rumpowered repo and multilib
+Copy and paste the following commands into your terminal, you may need to use `Ctrl + Shift + V` to paste.
+
+1. Add the rumpowered repository
 ```sh
 echo '
 
 [rumpowered]
 Server = https://jc141x.github.io/rumpowered-packages/$arch ' | sudo tee -a /etc/pacman.conf
-
+```
+2. Add the multilib packages
+```sh
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
-
+```
+3. Add and the keys for the repository
+```sh
 sudo pacman-key --recv-keys cc7a2968b28a04b3
+```
+```sh
 sudo pacman-key --lsign-key cc7a2968b28a04b3
-
+```
+4. Force refresh (even if apparently in date) all packages and update
+```sh
 sudo pacman -Syyu
 ```
 
-#### core packages
+#### Step 2: Add required core packages
 ```sh
-sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono openssl-1.1
+sudo pacman -Syu --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono openssl-1.1
 ```
 
-#### graphics packages
+#### Step 3: Add graphics packages for your set up.
+Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associated instructions below. Paste them into your terminal.
+
+
 ```sh
 Vulkan drivers (AMD/INTEL/NVIDIA)
 sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader 
