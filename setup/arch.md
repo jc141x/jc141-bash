@@ -22,7 +22,7 @@ Copy and paste the following commands into your terminal, you may need to use `C
     ```sh
     sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
     ```
-3. Add and the keys for the repository
+3. Add and locally sign the keys for the repository
 
     ```sh
     sudo pacman-key --recv-keys cc7a2968b28a04b3
@@ -31,7 +31,7 @@ Copy and paste the following commands into your terminal, you may need to use `C
     ```sh
     sudo pacman-key --lsign-key cc7a2968b28a04b3
     ```
-4. Force refresh (even if apparently in date) all packages and update
+4. Force refresh all packages (even if in-date) and update
 
     ```sh
     sudo pacman -Syyu
@@ -59,7 +59,7 @@ Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associa
     ```sh
     sudo pacman -S --needed lib32-vulkan-radeon vulkan-radeon
     ```
-    - *Note*: For AMD GPUs please ensure you remove amdvlk with `sudo pacman -R amdvlk`. This software conflicts with our releases.
+    - *Note*: For AMD GPUs please ensure you remove `amdvlk` with `sudo pacman -R amdvlk`. This software conflicts with our releases.
 
 - GPU Drivers for INTEL GPUs
 
