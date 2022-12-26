@@ -81,7 +81,7 @@ Some games require additional libaries to run successfully. We strongly recommen
 sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-v4l-utils lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib giflib libgphoto2 libxcrypt-compat zlib gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
 ```
 
-### Step 5: OPTIONAL - Prevent non-LAN activity by default. bindtointerface - block non-LAN network activity by default
+### Step 5: OPTIONAL - Prevent non-LAN activity by default.
 
 It is recommended that you prevent access to the WAN for our releases.
 
@@ -97,4 +97,4 @@ Arch Linux is a rolling release and to keep it working properly a full update ne
 sudo pacman -Syu
 ```
 
-If you have a kernel update, please restart your system and run this command again..
+If you have a kernel update, please restart your system and run this command again.
