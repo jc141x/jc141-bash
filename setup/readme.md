@@ -19,13 +19,13 @@ Please feel free to try the release with whatever instructions more closely matc
 
 Specifically we do not support:
 *   Ubuntu (which is malware) including any derivatives e.g. Linux Mint or POP OS.
-  *   Packages are frequently out of date or conflicting.
+  *   Packages are frequently out of date.
 
 ### Hardware Support
 Not all hardware will run our releases. Please ensure your hardware meets the following specifications:
 
 * GPU/APU
-  *   **Must** have Vulkan support. Without it many releases simply will not run.
+  *   **Must** have Vulkan 1.3 support. Without it many releases simply will not run.
    
 * CPU
   *   **Should** be at least an Intel i3 or equivalent.   
