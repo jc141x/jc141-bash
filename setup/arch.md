@@ -54,24 +54,24 @@ Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associa
     ```sh
     sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader 
     ```
-- GPU Drivers for AMD GPUs
+- GPU/APU Drivers required for AMD GPUs
 
     ```sh
     sudo pacman -S --needed lib32-vulkan-radeon vulkan-radeon
     ```
     - *Note*: For AMD GPUs please ensure you remove `amdvlk` with `sudo pacman -R amdvlk`. This software conflicts with our releases.
 
-- GPU Drivers for INTEL GPUs
+- GPU/APU Drivers required for INTEL GPUs
 
     ```sh
     sudo pacman -S --needed lib32-vulkan-intel vulkan-intel
     ```
-- GPU Drivers for NVIDIA GPUs
+- GPU Drivers for required NVIDIA GPUs
 
     ```sh
     sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia
     ```
-    - *Note*: For NVIDIA GPUs, please add `nvidia-drm.modeset=1` as a kernel parameter to improve compatability with our releases.
+    - *Note* Optional: For NVIDIA GPUs, please add `nvidia-drm.modeset=1` as a kernel parameter to improve compatability with our releases.
 
 ### Step 4: Install additional libraries
 
