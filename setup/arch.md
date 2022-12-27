@@ -2,7 +2,7 @@
 
 This guide will allow you to set up our releases on an Arch Linux based set up. Other GNU/Linux distributions that can use this guide include the following:
 
-- EndeavourOS (recommended easy alternative to Arch)
+- EndeavourOS (recommended easy installer and preconfiguration for Arch)
 - Artix
 - ArcoLinux
 - Manjaro
