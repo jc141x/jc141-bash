@@ -4,7 +4,7 @@ Instructions tools and resouces to help you play our releases. Please follow the
 
 #### [setup guide](setup/readme.md)
 
-Setup Guide will allow you to play our releases and it contains instructions for supported Linux distributions
+Setup Guide will allow you to play our releases and it contains instructions for supported GNU/Linux distributions.
 
 #### [bash scripts](root-scripts)
 
