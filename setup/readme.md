@@ -34,7 +34,7 @@ Not all hardware will run our releases. Please ensure your hardware meets the fo
   *   **Should** be at least 8GB.
 
 * HDD/SSD
-  *   **Should** be up to modern standards. The Dwarfs mounting system is demanding.
+  *   **Should** be up to modern standards. The Dwarfs mounting system is demanding in some cases.
 
 *   [SteamDeck support on Arch](steamdeck/arch.md)
 
