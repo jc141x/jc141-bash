@@ -12,15 +12,6 @@ Please click the following links to take you how to setup on your GNU/Linux dist
 *   [Fedora](fedora.md) including: Rawhide and Silverblue
 *   [OpenSUSE Tumbleweed](opensuse.md)
 
-### Unsupported Distributions
-Unfortunately we are a voluntary group and have very limited resources at our disposal, we do this for fun. This means that we don't have the resources to support every single GNU/Linux distribution or GNU/Linux distributions that are more prone to errors.
-
-Please feel free to try the release with whatever instructions more closely match your own system. For example if you use "Apt" as a package manager please try [Debian](debian.md). Otherwise we encourage you to switch to a distribution we do support.
-
-Specifically we do not support:
-*   Ubuntu (which is malware) including any derivatives e.g. Linux Mint or POP OS.
-  *   Packages are frequently out of date.
-
 ### Hardware Support
 Not all hardware will run our releases. Please ensure your hardware meets the following specifications:
 
