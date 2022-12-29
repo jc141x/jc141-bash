@@ -14,6 +14,8 @@ Please click the following links to take you how to setup on your GNU/Linux dist
 *   [OpenSUSE Tumbleweed](opensuse.md)
 
 ### Hardware Support
+*   [SteamDeck support on Arch](steamdeck/arch.md)
+
 Not all hardware will run our releases. Please ensure your hardware meets the following specifications:
 
 * GPU/APU
@@ -27,8 +29,6 @@ Not all hardware will run our releases. Please ensure your hardware meets the fo
 
 * HDD/SSD
   *   **Should** be up to modern standards. The Dwarfs mounting system is demanding in some cases.
-
-*   [SteamDeck support on Arch](steamdeck/arch.md)
 
 ### How to Run the Game
 Open up a terminal and then run the following commands. Please edit where appropriate.
