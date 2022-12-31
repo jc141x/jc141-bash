@@ -76,6 +76,6 @@ All releases are tested on an either Arch Linux or EndeavourOS using either an E
 
 Window Managers are known to have more issues related to displaying, including freezing and crashing in rare cases.
 
-##### GUI Libary
+#### GUI Libary
 
 If you would like a GUI library for your games, see [launchers](launchers.md) page.
