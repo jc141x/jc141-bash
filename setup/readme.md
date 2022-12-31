@@ -19,7 +19,7 @@ Please click the following links to take you how to setup on your GNU/Linux dist
 Not all hardware will run our releases. Please ensure your hardware meets the following specifications:
 
 * GPU/APU
-  *   **Must** have Vulkan 1.3 support. Without it many releases simply will not run.
+  *   **Must** have Vulkan 1.3 support. Without it many releases will not run.
    
 * CPU
   *   **Should** be at least an Intel i3 or equivalent.   
