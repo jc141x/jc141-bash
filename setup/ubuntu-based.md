@@ -2,6 +2,13 @@
 
 - Also applies to Mint, PopOS and some others.
 
+#### Update system
+```
+sudo apt update
+sudo apt full-upgrade -y
+```
+- If changes were made, reboot.
+
 #### MPR, MPR helper and wine repos
 ```sh
 sudo dpkg --add-architecture i386
@@ -11,7 +18,7 @@ sudo tee /usr/share/keyrings/makedeb-archive-keyring.gpg &> /dev/null && echo 'd
 sudo tee /etc/apt/sources.list.d/makedeb.list && sudo apt update && sudo apt install makedeb git && git clone https://mpr.hunterwittenborn.com/una-bin.git && cd una-bin && makedeb -si
 sudo mkdir -pm755 /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
-sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bullseye/winehq-bullseye.sources
+sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/kinetic/winehq-kinetic.sources
 ```
 
 #### core packages
