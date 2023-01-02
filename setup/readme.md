@@ -9,7 +9,7 @@ Please click the following links to take you how to setup on your GNU/Linux dist
 *Using a supported distro means you can assume the releases will run mostly without issues.
 
 *   [Arch](arch.md) including: Endeavour OS, Arco, Artix, Manjaro and others
-*   [Debian](debian.md) including: Nitrux, Sparky Rolling and Siduction
+*   [Debian Sid/Rolling](debian.md) including: Nitrux, Sparky Rolling and Siduction
 *   [Ubuntu](ubuntu-based.md) including: Mint, PopOS, ElementaryOS, Zorin OS, KDE Neon and others
 *   [Fedora](fedora.md) including: Rawhide and Silverblue
 *   [OpenSUSE Tumbleweed](opensuse.md)
