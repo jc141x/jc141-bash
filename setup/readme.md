@@ -10,6 +10,7 @@ Please click the following links to take you how to setup on your GNU/Linux dist
 
 *   [Arch](arch.md) including: Endeavour OS, Arco, Artix, Manjaro and others
 *   [Debian](debian.md) including: Nitrux, Sparky Rolling and Siduction
+*   [Ubuntu](ubuntu-based.md) including: Mint, PopOS, ElementaryOS, Zorin OS, KDE Neon and others
 *   [Fedora](fedora.md) including: Rawhide and Silverblue
 *   [OpenSUSE Tumbleweed](opensuse.md)
 
