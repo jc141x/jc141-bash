@@ -1,4 +1,4 @@
-## Setup Guide - Ubuntu Based
+## Setup Guide - Ubuntu
 
 - Also applies to Mint, PopOS and some others.
 
