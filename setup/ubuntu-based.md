@@ -1,6 +1,6 @@
 ## Setup Guide - Ubuntu
 
-- Also applies to Mint, PopOS and some others.
+- Also applies to Mint, PopOS, ElementaryOS, Zorin OS, KDE Neon etc.
 
 #### Update system
 ```
