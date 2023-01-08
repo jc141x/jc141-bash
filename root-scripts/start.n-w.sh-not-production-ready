@@ -20,4 +20,4 @@ export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PR
 
 # start
 [ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && echo "Output muted by default for avoiding performance impact. Unmute with DBG=1." && exec &>/dev/null; }
-cd "$PWD/files/groot/Towers/Binaries/Win64"; "$WINE" "Towers-Win64-Shipping.exe" "$@"
+cd "$PWD/files/groot"; "$WINE" "game.exe" "$@"
