@@ -22,7 +22,7 @@ if [ ! -x "$(command -v vlk-jc141)" ];
     vulkan() { DL_URL="$(curl -s https://api.github.com/repos/jc141x/vulkan/releases/latest | awk -F '["]' '/"browser_download_url":/ {print $4}')"; VLK="$(basename "$DL_URL")"
     [ ! -f "$VLK" ] && command -v curl >/dev/null 2>&1 && curl -LO "$DL_URL" && tar -xvf "vulkan.tar.xz" || { rm "$VLK" && echo "ERROR: failed to extract vulkan translation" && return 1; }
     rm -rf "vulkan.tar.xz" && wineboot -i && bash "$PWD/vulkan/setup-vulkan.sh" && wineserver -w && rm -Rf "$VULKAN"; }
-    vulkan-dl() { echo "using vulkan translation from github" && vulkan && echo "$VLKVER" >"$VLKLOG"; }
+    vulkan-dl() { echo "Using external vulkan translation from github." && vulkan && echo "$VLKVER" >"$VLKLOG"; }
     VLKVER="$(curl -s -m 5 https://api.github.com/repos/jc141x/vulkan/releases/latest | awk -F '["/]' '/"browser_download_url":/ {print $11}' | cut -c 1-)"
     [[ ! -f "$VLKLOG" && -z "$(status-vulkan)" ]] && vulkan-dl;
     [[ -f "$VLKLOG" && -n "$VLKVER" && "$VLKVER" != "$(awk '{print $1}' "$VLKLOG")" ]] && { rm -f vulkan.tar.xz || true; } && echo "updating external vulkan translation" && vulkan-dl && echo "external vulkan translation is up-to-date"; }
