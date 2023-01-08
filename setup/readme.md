@@ -6,7 +6,6 @@ Suggestions for any changes to this repo are welcome on [Matrix](https://matrix.
 
 ### Supported GNU/Linux Distributions
 Please click the following links to take you how to setup on your GNU/Linux distribution.
-*Using a supported distro means you can assume the releases will run mostly without issues.
 
 *   [Arch](arch.md) including: Endeavour OS, Arco, Artix, Manjaro and others
 *   [Debian Sid/Rolling](debian.md) including: Nitrux, Sparky Rolling and Siduction
