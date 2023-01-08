@@ -25,7 +25,7 @@ if [ ! -x "$(command -v vlk-jc141)" ];
     vulkan-dl() { echo "Using external vulkan translation from github." && vulkan && echo "$VLKVER" >"$VLKLOG"; }
     VLKVER="$(curl -s -m 5 https://api.github.com/repos/jc141x/vulkan/releases/latest | awk -F '["/]' '/"browser_download_url":/ {print $11}' | cut -c 1-)"
     [[ ! -f "$VLKLOG" && -z "$(status-vulkan)" ]] && vulkan-dl;
-    [[ -f "$VLKLOG" && -n "$VLKVER" && "$VLKVER" != "$(awk '{print $1}' "$VLKLOG")" ]] && { rm -f vulkan.tar.xz || true; } && echo "updating external vulkan translation" && vulkan-dl && echo "external vulkan translation is up-to-date"; }
+    [[ -f "$VLKLOG" && -n "$VLKVER" && "$VLKVER" != "$(awk '{print $1}' "$VLKLOG")" ]] && { rm -f vulkan.tar.xz || true; } && echo "Updating external vulkan translation." && vulkan-dl && echo "External vulkan translation is up-to-date."; }
 else vlk-jc141; fi; export DXVK_ENABLE_NVAPI=1
 
 # block non-lan networking
