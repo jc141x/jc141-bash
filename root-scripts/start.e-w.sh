@@ -32,5 +32,5 @@ else vlk-jc141; fi; export DXVK_ENABLE_NVAPI=1
 export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD='/usr/$LIB/bindToInterface.so'; [ -f "/usr/lib64/bindToInterface.so" ] && echo "Non-LAN network blocking is enabled." || echo "Non-LAN network blocking is not enabled due to no bindtointerface package."
 
 # start
-[ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && echo "Output muted by default for avoiding performance impact. Unmute with DBG=1." && exec &>/dev/null; }
+[ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && echo "Output muted by default to avoid performance impact. Unmute with DBG=1." && exec &>/dev/null; }
 cd "$PWD/files/groot"; "$WINE" "game.exe" "$@"
