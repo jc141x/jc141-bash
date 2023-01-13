@@ -4,7 +4,7 @@
 
 #### Switch to the Rolling/Sid repo for an optimal and up to date experience.
 Note: Debian Stable repo is no longer compatible with latest DXVK, thus it is not supported.
-#### ONLY FOR DEBIAN STABLE OR TESTING
+#### ONLY FOR DEBIAN STABLE OR TESTING DO NOT USE IT ON KALI OR OTHER MODIFIED DEBIAN BASED DISTRO
 ```sh
 1. Edit /etc/apt/sources.list:
 sudo nano /etc/apt/sources.list
