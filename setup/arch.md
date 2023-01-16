@@ -86,7 +86,7 @@ sudo pacman -S --needed lib32-giflib lib32-gnutls lib32-libxcomposite lib32-libx
 It is recommended that you prevent access to the WAN for our releases.
 
 ```
-sudo pacman -S --needed rumpowered/bindtointerface
+sudo pacman -S --needed rumpowered/bindtointerface rumpowered/lib32-bindtointerface
 ```
 
 ### Step 6: Update your system
