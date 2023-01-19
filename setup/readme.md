@@ -49,7 +49,7 @@ This will produce output that will help us diagnose the problem. please also ens
 #### Operating Dwarfs
 Should your game exit in an inappropriate fashion or you would like to extract, there are a number of built-in commands to help you.
 
-The extraction command will automatically make the start script use the extracted files and will not attempt to run mounted again until groot directory is missing again (if the script defaults to mounting).
+The extraction command will automatically make the start script use the extracted files and will not attempt to run mounted again until groot directory is missing/empty again (if the script defaults to mounting).
 
 ```
 bash settings.sh <COMMAND>
