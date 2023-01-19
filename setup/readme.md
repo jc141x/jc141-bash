@@ -68,7 +68,7 @@ Modding games with Dwarfs is somewhat different from the normal process, please 
 
 Adding a mod is supported through using the `groot-rw` directory. Before mounting, any files included in it will go above the mounted image and override any of the files. The path required for the mod may need to be created manually.
 
-The `groot-rw` directory only exists after the first run of mounted games. However, the directory can be created manually and content can be added without running.
+The `groot-rw` directory only exists after the first run of mounted games. However, the directory can be created manually and content can be added.
 
 **Note:** Games which are extracted do not require this method.
 
