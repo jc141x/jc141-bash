@@ -52,8 +52,6 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install nvidia-driver nvidia-settings nvidia-smi nvidia-xconfig nvidia-opencl-icd nvidia-opencl-common nvidia-detect linux-image-amd64 linux-headers-amd64
 ```
 
-- NVIDIA: Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
-
 #### various libraries required by some games
 ```sh
 sudo apt install libva2 giflib-tools libgphoto2-6 libxcrypt-source libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386 gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi gstreamer1.0-libav
