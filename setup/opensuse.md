@@ -18,7 +18,6 @@ sudo zypper install libvulkan_intel libvulkan_intel-32bit
 NVIDIA drivers (guide incomplete for now)
 sudo zypper install libglvnd-32bit libglvnd
 ```
-- NVIDIA: Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
 #### various libraries required by some games
 ```sh
