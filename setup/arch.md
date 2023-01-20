@@ -71,8 +71,7 @@ Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associa
     ```sh
     sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia
     ```
-    - *Note* Optional: For NVIDIA GPUs, add `nvidia-drm.modeset=1` as a kernel parameter to as it is recommended by Nvidia.
-
+    
 ### Step 4: Install additional libraries
 
 Some games require additional libaries to run successfully. We strongly recommend the following libraries are installed.
