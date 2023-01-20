@@ -90,10 +90,10 @@ sudo pacman -S --needed rumpowered/bindtointerface rumpowered/lib32-bindtointerf
 
 ### Step 6: Update your system
 
-Arch Linux is a rolling release and to keep it working properly a full update needs to be conducted regularly, this will ensure that your system will have the latest drivers available to Arch Linux. Do so now:
+Arch Linux is rolling release and to keep it working properly a full update needs to be conducted regularly, this will ensure that your system will have the latest drivers and tech/software.
 
 ```sh
 sudo pacman -Syu
 ```
 
-If you have a kernel update, please restart your system and run this command again.
+If you had a kernel update, please restart your system afterwards.
