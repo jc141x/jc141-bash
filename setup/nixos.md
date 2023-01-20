@@ -1,6 +1,6 @@
 ## Setup Guide - NixOS
 
-The guide is in construction and not guarateed to work.
+The guide is in construction and not guaranteed to work.
 
 ### core packages
 ```sh
