@@ -17,7 +17,7 @@ function cleanup { cd "$OLDPWD" && bash "$STS" unmount-dwarfs; }; trap 'cleanup'
 
 # external vulkan translation
 if [ ! -x "$(command -v vlk-jc141)" ];
-  then { ping -c 3 github.com >/dev/null || { echo "Github could not be reached, probably no network. This may mean that the necessary requisites to run the game will be missing if this is the first run. If it worked before then nothing should change given the requisites are provided already." ; }; VLKLOG="$WINEPREFIX/vulkan.log"; VULKAN="$PWD/vulkan"
+  then { ping -c 3 github.com >/dev/null || { echo "Github could not be reached, possibly no network. This may mean that the necessary requisites to run the game will be missing if this is the first run. If it worked before then nothing should change given the requisites are provided already." ; }; VLKLOG="$WINEPREFIX/vulkan.log"; VULKAN="$PWD/vulkan"
     status-vulkan() { [[ ! -f "$VLKLOG" || -z "$(awk "/^${FUNCNAME[1]}\$/ {print \$1}" "$VLKLOG" 2>/dev/null)" ]] || { echo "${FUNCNAME[1]} present" && return 1; }; }
     vulkan() { DL_URL="$(curl -s https://api.github.com/repos/jc141x/vulkan/releases/latest | awk -F '["]' '/"browser_download_url":/ {print $4}')"; VLK="$(basename "$DL_URL")"
     [ ! -f "$VLK" ] && command -v curl >/dev/null 2>&1 && curl -LO "$DL_URL" && tar -xvf "vulkan.tar.xz" || { rm "$VLK" && echo "ERROR: failed to extract vulkan translation" && return 1; }
