@@ -14,21 +14,10 @@ Please click the following links to take you how to setup on your GNU/Linux dist
 *   [OpenSUSE Tumbleweed](opensuse.md)
 
 ### Hardware Support
-*   [SteamDeck support on Arch](steamdeck/arch.md)
 
-Not all hardware will run our releases. Please ensure your hardware meets the following specifications:
+You graphic hardware (GPU/APU) **must** have Vulkan 1.3 support.
 
-* GPU/APU
-  *   **Must** have Vulkan 1.3 support. Without it many releases will not run.
-   
-* CPU
-  *   **Should** be at least an Intel i3 or equivalent.   
-
-* RAM
-  *   **Should** be at least 8GB.
-
-* HDD/SSD
-  *   **Should** be up to modern standards. The Dwarfs mounting system is demanding in some cases.
+* [SteamDeck support on Arch](steamdeck/arch.md)
 
 ### How to Run the Game
 Open up a terminal and then run the following commands. Please edit where appropriate.
