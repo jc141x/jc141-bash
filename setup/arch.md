@@ -59,7 +59,7 @@ Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associa
     ```sh
     sudo pacman -S --needed lib32-vulkan-radeon vulkan-radeon
     ```
-    - *Note*: For AMD GPUs please ensure you remove `amdvlk` with `sudo pacman -R amdvlk`. This software conflicts with the proper driver.
+    - *Note*: For AMD GPUs please ensure that you do not have installed improper drivers with `sudo pacman -R amdvlk && sudo pacman -R vulkan-amdgpu-pro`. This software breaks the proper driver.
 
 - GPU/APU Drivers required for INTEL GPUs
 
