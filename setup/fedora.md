@@ -17,7 +17,7 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 
 #### other libraries
 ```sh
-sudo dnf install libxcrypt zlib alsa-lib alsa-plugins fluidsynth pulseaudio openal
+sudo dnf install libxcrypt zlib alsa-lib alsa-plugins-pulseaudio fluidsynth pulseaudio openal
 ```
 
 <br><br>
@@ -44,5 +44,5 @@ Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
 
 #### other libraries
 ```sh
-rpm-ostree install libxcrypt zlib alsa-lib alsa-plugins fluidsynth pulseaudio openal --apply-live
+rpm-ostree install libxcrypt zlib alsa-lib alsa-plugins-pulseaudio fluidsynth pulseaudio openal --apply-live
 ```
