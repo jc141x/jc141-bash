@@ -19,30 +19,3 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 ```sh
 sudo dnf install libxcrypt zlib alsa-lib alsa-plugins-pulseaudio fluidsynth pulseaudio openal
 ```
-
-<br><br>
-
-<h3>Silverblue only alternate setup (not throughly tested)</h3>
-
-#### core packages
-```sh
-cd /etc/yum.repos.d && sudo wget https://copr.fedorainfracloud.org/coprs/jc141/DwarFS/repo/fedora-37/jc141-DwarFS-fedora-37.repo
-rpm-ostree install wine fuse-overlayfs dwarfs --apply-live
-```
-
-#### graphics packages
-
-```sh
-# Universal
-rpm-ostree install vulkan vulkan-loader --apply-live
-
-# NVIDIA specific
-rpm-ostree install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm --apply-live && rpm-ostree install xorg-x11-drv-nvidia akmod-nvidia --apply-live
-
-Add `nvidia-drm.modeset=1` as a kernel parameter for the best results.
-```
-
-#### other libraries
-```sh
-rpm-ostree install libxcrypt zlib alsa-lib alsa-plugins-pulseaudio fluidsynth pulseaudio openal --apply-live
-```
