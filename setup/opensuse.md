@@ -12,9 +12,9 @@ sudo zypper install dwarfs fuse-overlayfs wine-staging wine-mono
 Vulkan drivers
 sudo zypper install libvulkan1 vulkan-tools
 AMD drivers
-sudo zypper install libvulkan_radeon libvulkan_radeon-32bit
+sudo zypper install libvulkan_radeon
 INTEL drivers
-sudo zypper install libvulkan_intel libvulkan_intel-32bit
+sudo zypper install libvulkan_intel
 NVIDIA drivers (guide incomplete for now)
 sudo zypper install libglvnd-32bit libglvnd
 ```
