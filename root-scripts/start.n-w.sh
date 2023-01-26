@@ -7,7 +7,7 @@ STS="$PWD/settings.sh"; LOGO="$PWD/logo.txt.gz"; export JCDW="${XDG_DATA_HOME:-$
 
 # wine
 export WINE="$(command -v wine)";
-export WINEPREFIX="$JCDW/native-prefix"; export WINEDLLOVERRIDES="mshtml=d"; export WINE_LARGE_ADDRESS_AWARE=1; export WINE_D3D_CONFIG="renderer=vulkan";
+export WINEPREFIX="$JCDW/native-prefix"; export WINEDLLOVERRIDES="mshtml=d"; export WINE_LARGE_ADDRESS_AWARE=1; export WINE_D3D_CONFIG="renderer=vulkan" && echo "wined3d vulkan renderer is used.";
 
 # dwarfs
 bash "$STS" mount-dwarfs; zcat "$LOGO"; echo "Path of the wineprefix is: $WINEPREFIX"; echo "For any misunderstandings or need of support, join the community on Matrix.";
