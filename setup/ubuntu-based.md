@@ -14,10 +14,8 @@ sudo apt full-upgrade -y
 sudo dpkg --add-architecture i386
 export MAKEDEB_RELEASE='makedeb'
 bash -c "$(wget -qO - 'https://shlink.makedeb.org/install')" && sudo apt update && sudo apt install git && git clone https://mpr.hunterwittenborn.com/una-bin.git && cd una-bin && makedeb -si
-sudo mkdir -pm755 /etc/apt/keyrings
-sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
-sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/kinetic/winehq-kinetic.sources
 ```
+Add the correct (winehq)[https://wiki.winehq.org/Ubuntu] repo for your ubuntu version to apt.
 
 #### core packages
 ```sh
