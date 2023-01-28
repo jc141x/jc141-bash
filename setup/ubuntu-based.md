@@ -15,7 +15,7 @@ sudo dpkg --add-architecture i386
 export MAKEDEB_RELEASE='makedeb'
 bash -c "$(wget -qO - 'https://shlink.makedeb.org/install')" && sudo apt update && sudo apt install git && git clone https://mpr.hunterwittenborn.com/una-bin.git && cd una-bin && makedeb -si
 ```
-Add the correct (winehq)[https://wiki.winehq.org/Ubuntu] repo for your ubuntu version to apt.
+Add the correct [winehq](https://wiki.winehq.org/Ubuntu) repo for your ubuntu version to apt.
 
 #### core packages
 ```sh
