@@ -66,7 +66,7 @@ Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associa
     ```sh
     sudo pacman -S --needed vulkan-intel
     ```
-- GPU Drivers for required NVIDIA GPUs
+- GPU Drivers required for NVIDIA GPUs
 
     ```sh
     sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia
