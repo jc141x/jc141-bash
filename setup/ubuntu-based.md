@@ -2,6 +2,12 @@
 
 - Also applies to Mint, PopOS, ElementaryOS, Zorin OS, KDE Neon etc.
 
+
+### Warning
+
+Some of the older releases have a known issue specific to Ubuntu based distros. Ubuntu uses it's own custom DNS and it fails to reach github.com through ping command. The older scripts will exit from this issue and so the exit commands (next to ping) in the scripts need to be removed manually. Otherwise you can configure your system to not use the Ubuntu DNS or choose a different non-Ubuntu based distro.
+
+
 #### Update system
 ```
 sudo apt update
