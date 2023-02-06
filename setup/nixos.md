@@ -1,4 +1,4 @@
-## Setup Guide - NixOS
+## Setup Guide - NixOS/Void(?)
 
 The guide is in construction and not guaranteed to work.
 
