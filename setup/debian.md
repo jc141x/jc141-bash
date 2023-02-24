@@ -56,7 +56,7 @@ sudo apt install nvidia-driver nvidia-settings nvidia-smi nvidia-xconfig nvidia-
 ```sh
 sudo apt install libva2 giflib-tools libgphoto2-6 libxcrypt-source libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386 gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi gstreamer1.0-libav
 ```
-### OPTIONAL - Prevent non-LAN activity by default.
+### OPTIONAL - Prevent WAN activity by default.
 
 It is recommended that you prevent access to the WAN for our releases.
 
