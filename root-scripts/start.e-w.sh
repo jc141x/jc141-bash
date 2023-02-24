@@ -28,7 +28,7 @@ if [ ! -x "$(command -v vlk-jc141)" ];
     [[ -f "$VLKLOG" && -n "$VLKVER" && "$VLKVER" != "$(awk '{print $1}' "$VLKLOG")" ]] && { rm -f vulkan.tar.xz || true; } && echo "Updating external vulkan translation. (dxvk,vkd3d,dxvk-nvapi)" && vulkan-dl && echo "External vulkan translation is up-to-date."; }
 else vlk-jc141; fi; export DXVK_ENABLE_NVAPI=1
 
-# block non-lan networking
+# block WAN
 export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD='/usr/$LIB/bindToInterface.so'; [ -f "/usr/lib64/bindToInterface.so" ] && echo "WAN blocking is enabled." || echo "WAN blocking is not enabled due to no bindtointerface package."
 
 # start
