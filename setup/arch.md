@@ -80,7 +80,7 @@ Some games require additional libaries to run successfully. We strongly recommen
 sudo pacman -S --needed lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal giflib libgphoto2 libxcrypt-compat zlib gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
 ```
 
-### Step 5: OPTIONAL - Prevent non-LAN activity by default.
+### Step 5: OPTIONAL - Prevent WAN activity by default.
 
 It is recommended that you prevent access to the WAN for our releases.
 
