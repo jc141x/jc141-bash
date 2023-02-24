@@ -16,7 +16,7 @@ bash "$STS" mount-dwarfs; zcat "$LOGO"; echo "Path of the wineprefix is: $WINEPR
 function cleanup { cd "$OLDPWD" && bash "$STS" unmount-dwarfs; }; trap 'cleanup' EXIT INT SIGINT SIGTERM
 
 # block non-lan networking
-export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD='/usr/$LIB/bindToInterface.so'; [ -f "/usr/lib64/bindToInterface.so" ] && echo "Non-LAN network blocking is enabled." || echo "Non-LAN network blocking is not enabled due to no bindtointerface package."
+export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD='/usr/$LIB/bindToInterface.so'; [ -f "/usr/lib64/bindToInterface.so" ] && echo "WAN blocking is enabled." || echo "WAN blocking is not enabled due to no bindtointerface package."
 
 # start
 [ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && echo "Output muted by default for avoiding performance impact. Unmute with DBG=1." && exec &>/dev/null; }
