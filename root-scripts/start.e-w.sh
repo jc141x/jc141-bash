@@ -27,7 +27,7 @@ if [ ! -x "$(command -v vlk-jc141)" ];
 else vlk-jc141; fi; export DXVK_ENABLE_NVAPI=1
 
 # block WAN
-export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD='/usr/$LIB/bindToInterface.so'; [ -f "/usr/lib64/bindToInterface.so" ] && echo "WAN blocking is enabled." || echo "WAN blocking is not enabled due to no bindtointerface package."
+[ "${WANBLK:=1}" = "0" ] && echo "WAN blocking is not enabled due to no bindtointerface package or user input." || { export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD='/usr/$LIB/bindToInterface.so'; [ -f "/usr/lib64/bindToInterface.so" ] && echo "WAN blocking is enabled."; }
 
 # start
 [ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && echo "Output muted by default to avoid performance impact. Unmute with DBG=1." && exec &>/dev/null; }
