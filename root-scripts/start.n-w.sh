@@ -17,7 +17,7 @@ bash "$STS" mount-dwarfs; zcat "$LOGO"; echo "Path of the wineprefix is: $WINEPR
 [ ! -f "/usr/lib64/bindToInterface.so" ] && echo "bindtointerface package not installed, no WAN blocking." && exit 0 || [ "${WANBLK:=1}" = "0" ] && echo "WAN blocking is not enabled due to user input." || { export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD='/usr/$LIB/bindToInterface.so'; echo "bindtointerface WAN blocking enabled."; }
 
 # bwrap
-[ ! -f "/usr/bin/bwrap" ] && echo "BWRAP package not installed, no filesystem isolation." && exit || [ "${BWRAP:=1}" = "0" ] && echo "BWRAP isolation is not enabled due to user input." || { export BWRP="bwrap --bind / / --dev-bind /dev /dev --bind "$WINEPREFIX/drive_c/users/$USER" "$JCD/universal-saves-and-configuration" --bind "$PWD/files/groot-rw" "$JCD/universal-saves-and-configuration""; echo "BWRAP isolation enabled."; }
+[ ! -f "/usr/bin/bwrap" ] && echo "BWRAP package not installed, no filesystem isolation." && exit || [ "${BWRAP:=1}" = "0" ] && echo "BWRAP isolation is not enabled due to user input." || { export BWRP="bwrap --bind / / --dev-bind /dev /dev --bind "$WINEPREFIX/drive_c/users/$USER" "$JCD/universal-saves-and-configuration" --bind "$PWD/files/groot-rw" "$JCD/universal-saves-and-configuration""; echo "BWRAP isolation enabled." && echo "Path of universally isolated (BWRAP) saves and configurations is "$JCD/universal-saves-and-configuration"" }
 
 # start
 echo "For any misunderstandings or need of support, join the community on Matrix."
