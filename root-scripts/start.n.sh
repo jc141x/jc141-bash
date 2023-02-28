@@ -1,6 +1,7 @@
 #!/bin/bash
 # checks
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed." && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed." && exit; cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; STS="$PWD/settings.sh"; LOGO="$PWD/logo.txt.gz";
+export JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD" ] && mkdir -p "$JCD"
 
 # dwarfs
 bash "$STS" mount-dwarfs; zcat "$LOGO";
@@ -10,6 +11,9 @@ bash "$STS" mount-dwarfs; zcat "$LOGO";
 
 # block WAN
 [ ! -f "/usr/lib64/bindToInterface.so" ] && echo "bindtointerface package not installed, no WAN blocking." && exit 0 || [ "${WANBLK:=1}" = "0" ] && echo "WAN blocking is not enabled due to user input." || { export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD='/usr/$LIB/bindToInterface.so'; echo "bindtointerface WAN blocking enabled."; }
+
+# bwrap
+[ ! -f "/usr/bin/bwrap" ] && echo "BWRAP package not installed, no filesystem isolation." && exit || [ "${BWRAP:=1}" = "0" ] && echo "BWRAP isolation is not enabled due to user input." || { export BWRP="bwrap --bind / / --dev-bind /dev /dev --bind "$HOME" "$JCD/universal-saves-and-configuration" --bind "$PWD/files/groot-rw" "$JCD/universal-saves-and-configuration""; echo "BWRAP isolation enabled." && echo "Path of universally isolated (BWRAP) saves and configurations is "$JCD/universal-saves-and-configuration""; }
 
 # start
 echo "For any misunderstandings or need of support, join the community on Matrix."
