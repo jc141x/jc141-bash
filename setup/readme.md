@@ -26,6 +26,8 @@ Releases with start.n-w.sh require Vulkan support but not 1.3 necessarily. Relea
 ### How to Run the Game
 Open up a terminal and then run the following commands. Please edit where appropriate.
 
+ATTENTION! - Using sh instead of bash does not work!  Only use bash or ./ with x permission.
+
 ```
 bash /Path/to/Game/start.{n/w/e-w/n-w}.sh
 ```
