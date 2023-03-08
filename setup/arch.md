@@ -77,7 +77,7 @@ Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associa
 Some games require additional libaries to run successfully. We strongly recommend the following libraries are installed.
 
 ```sh
-sudo pacman -S --needed lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal giflib libgphoto2 libxcrypt-compat zlib gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav
+sudo pacman -S --needed lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal giflib libgphoto2 libxcrypt-compat zlib gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-plugins-base-libs lib32-gst-plugins-base lib32-gst-plugins-good
 ```
 
 ### Step 5: OPTIONAL - Prevent WAN activity by default.
