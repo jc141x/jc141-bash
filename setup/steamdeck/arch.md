@@ -18,7 +18,7 @@ echo '
 
 [rumpowered]
 SigLevel = Never
-Server = https://repo.rumpowered.org/$arch
+Server = https://jc141x.github.io/rumpowered-packages/$arch
 
 [jupiter-staging]
 Server = https://steamdeck-packages.steamos.cloud/archlinux-mirror/$repo/os/$arch
