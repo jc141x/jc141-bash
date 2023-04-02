@@ -64,7 +64,7 @@ Programming language: Bash
 
 <br>
 
-<div align=center><img src="https://i.postimg.cc/4424F8VF/chad-launcher.webp" </div>
+<div align=center><img src="https://i.postimg.cc/C5sGS30D/maim-region-2023-04-02-15-31m-44s.png" width="1366"/></div>
 
 <br>
 
