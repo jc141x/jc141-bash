@@ -57,3 +57,15 @@ Programming language: TypeScript
 <br>
 
 When adding a game, go to Select Platform Version to Install: and choose 'Linux'. Then select the start script as executable.
+
+### [Chad Laucher](https://github.com/JimPix1/chad-launcher)
+
+Programming language: Bash
+
+<br>
+
+<div align=center><img src="https://i.postimg.cc/C5sGS30D/maim-region-2023-04-02-15-31m-44s.png" width="1366"/></div>
+
+<br>
+
+When adding a game, place it in ~/.local/share/games as the launcher will look for games there.
