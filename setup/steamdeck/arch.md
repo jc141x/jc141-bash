@@ -63,6 +63,14 @@ sudo pacman -S --needed lib32-vulkan-icd-loader vulkan-icd-loader lib32-vulkan-r
 sudo pacman -S --needed lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib giflib libgphoto2 libxcrypt-compat zlib gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-plugins-base-libs lib32-gst-plugins-base lib32-gst-plugins-good
 ```
 
+#### OPTIONAL - Prevent WAN activity by default.
+
+It is recommended that you prevent access to the WAN for our releases.
+
+```
+sudo pacman -S --needed rumpowered/bindtointerface rumpowered/lib32-bindtointerface
+```
+
 #### post-setup
 - On KDE Plasma, you might need to go into settings and set the correct screen position. On other DE's you might be stuck with no such options.
 
