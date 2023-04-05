@@ -1,7 +1,7 @@
 #!/bin/bash
 # checks
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed." && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed." && exit; cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; STS="$PWD/settings.sh"; LOGO="$PWD/logo.txt.gz";
-export JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD/wine" ] && mkdir -p "$JCD/wine"; GAMENAME=$(basename "$(cd "$(dirname "$0")" && pwd)" | sed 's/-jc141$//'); [! -d "$JCD/saves/$GAMENAME" ] && mkdir -p "$JCD/saves/$GAMENAME"
+export JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD/wine" ] && mkdir -p "$JCD/wine"; GAMENAME=$(basename "$(cd "$(dirname "$0")" && pwd)" | sed 's/-jc141$//'); [! -d "$JCD/game-data/$GAMENAME" ] && mkdir -p "$JCD/game-data/$GAMENAME"
 
 # wine
 export WINE="$(command -v wine)";
@@ -30,7 +30,7 @@ else vlk-jc141; fi; export DXVK_ENABLE_NVAPI=1
 [ ! -f "/usr/lib64/bindToInterface.so" ] && echo "bindtointerface package not installed, no WAN blocking." || [ "${WANBLK:=1}" = "0" ] && echo "WAN blocking is not enabled due to user input." || { export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD='/usr/$LIB/bindToInterface.so'; echo "bindtointerface WAN blocking enabled."; }
 
 # bubblewrap isolation
-function box_prefix { bwrap --unshare-user --ro-bind / / --bind "$WINEPREFIX/drive_c/users/$USER" "$JCD/saves/$GAMENAME" --dev-bind /dev /dev --bind "$WINEPREFIX" "$WINEPREFIX" --bind "$PWD" "$PWD" --bind /tmp /tmp "$@"; }
+function box_prefix { bwrap --unshare-user --ro-bind / / --bind "$WINEPREFIX/drive_c/users/$USER" "$JCD/game-data/$GAMENAME" --dev-bind /dev /dev --bind "$WINEPREFIX" "$WINEPREFIX" --bind "$PWD" "$PWD" --bind /tmp /tmp "$@"; }
 
 # start
 echo "For any misunderstandings or need of support, join the community on Matrix.";
