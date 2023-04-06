@@ -1,8 +1,8 @@
 ## Setup Guide - Arch Linux
 
-This guide will allow you to set up our releases on an Arch Linux based set up. Other GNU/Linux distributions that can use this guide include the following:
+*Note* - Arch Linux is rolling release and to keep it working properly a full update needs to be conducted regularly.
 
-Arch Linux is rolling release and to keep it working properly a full update needs to be conducted regularly.
+This guide will allow you to set up our releases on an Arch Linux based set up. Other GNU/Linux distributions that can use this guide include the following:
 
 - EndeavourOS (recommended easy installer and preconfiguration for Arch)
 - Artix
