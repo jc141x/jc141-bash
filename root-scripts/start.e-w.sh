@@ -1,7 +1,7 @@
 #!/bin/bash
 # checks
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed." && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed." && exit; cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; STS="$PWD/settings.sh"; LOGO="$PWD/logo.txt.gz";
-export JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD/wine" ] && mkdir -p "$JCD/wine"; GAMENAME=$(basename "$(cd "$(dirname "$0")" && pwd)" | sed 's/-jc141$//'); [! -d "$JCD/game-data/$GAMENAME" ] && mkdir -p "$JCD/game-data/$GAMENAME"
+export JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD/wine" ] && mkdir -p "$JCD/wine"; GAMENAME=$(basename "$(cd "$(dirname "$0")" && pwd)" | sed 's/-jc141$//'); [ ! -d "$JCD/game-data/$GAMENAME" ] && mkdir -p "$JCD/game-data/$GAMENAME"
 
 # wine
 export WINE="$(command -v wine)";
