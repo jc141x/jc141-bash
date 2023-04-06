@@ -7,35 +7,38 @@ This guide will allow you to set up our releases on an Arch Linux based set up. 
 - ArcoLinux
 - Manjaro
 - Other Arch Linux based distributions
+<br>
+
+### Pacman configuration
 
 Copy and paste the following commands into your terminal, you may need to use `Ctrl + Shift + V` to paste.
 
-1. Add the rumpowered repository
+  1. Add the rumpowered repository
 
-    ```sh
-    echo '
-    [rumpowered]
-    Server = https://jc141x.github.io/rumpowered-packages/$arch ' | sudo tee -a /etc/pacman.conf
-    ```
-2. Add the multilib packages
+     ```sh
+     echo '
+     [rumpowered]
+     Server = https://jc141x.github.io/rumpowered-packages/$arch ' | sudo tee -a /etc/pacman.conf
+     ```
+  2. Add the multilib packages
 
-    ```sh
-    sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
-    ```
-3. Add and locally sign the keys for the repository
+     ```sh
+     sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+     ```
+  3. Add and locally sign the keys for the repository
 
-    ```sh
-    sudo pacman-key --recv-keys cc7a2968b28a04b3
-    ```
+     ```sh
+     sudo pacman-key --recv-keys cc7a2968b28a04b3
+     ```
 
-    ```sh
-    sudo pacman-key --lsign-key cc7a2968b28a04b3
-    ```
-4. Force refresh all packages (even if in-date) and update
+     ```sh
+     sudo pacman-key --lsign-key cc7a2968b28a04b3
+     ```
+  4. Force refresh all packages (even if in-date) and update
 
-    ```sh
-    sudo pacman -Syyu
-    ```
+     ```sh
+     sudo pacman -Syyu
+     ```
 <br>
 
 ### Add required core packages
