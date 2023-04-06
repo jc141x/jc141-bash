@@ -30,7 +30,7 @@ else vlk-jc141; fi; export DXVK_ENABLE_NVAPI=1
 [ ! -f "/usr/lib64/bindToInterface.so" ] && echo "bindtointerface package not installed, no WAN blocking." || [ "${WANBLK:=1}" = "0" ] && echo "WAN blocking is not enabled due to user input." || { export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD='/usr/$LIB/bindToInterface.so'; echo "bindtointerface WAN blocking enabled."; }
 
 # bubblewrap isolation
-function box_prefix { bwrap --unshare-user --ro-bind / / --bind "$WINEPREFIX/drive_c/users/$USER" "$JCD/game-data/$GAMENAME" --dev-bind /dev /dev --bind "$JCD" "$JCD" --bind "$WINEPREFIX" "$WINEPREFIX" --bind "$PWD" "$PWD" --bind /tmp /tmp "$@"; }
+function box_prefix { bwrap --unshare-user --ro-bind / / --dev-bind /dev /dev --bind "$JCD" "$JCD" --bind "$WINEPREFIX" "$WINEPREFIX" --bind "$PWD" "$PWD" --bind /tmp /tmp "$@"; }
 
 # start
 echo "For any misunderstandings or need of support, join the community on Matrix.";
