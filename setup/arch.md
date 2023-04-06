@@ -36,6 +36,7 @@ Copy and paste the following commands into your terminal, you may need to use `C
     ```sh
     sudo pacman -Syyu
     ```
+<br>
 
 ### Add required core packages
 
@@ -44,6 +45,7 @@ These packages are all required for our releases to work, if you don't have them
 ```sh
 sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono openssl-1.1
 ```
+<br>
 
 ### Add graphics packages for your set up.
 
@@ -66,7 +68,8 @@ Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associa
     ```sh
     sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia lib32-vulkan-icd-loader
     ```
-    
+<br>
+
 ### Install additional libraries
 
 Some games require additional libaries to run successfully. We strongly recommend the following libraries are installed.
@@ -74,6 +77,7 @@ Some games require additional libaries to run successfully. We strongly recommen
 ```sh
 sudo pacman -S --needed lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal libgphoto2 libxcrypt-compat gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-plugins-base-libs lib32-gst-plugins-base lib32-gst-plugins-good
 ```
+<br>
 
 ### Optional - Security features
 
@@ -82,6 +86,7 @@ Enables start scripts to block WAN activity and isolate game from having writing
 ```
 sudo pacman -S --needed rumpowered/bindtointerface rumpowered/lib32-bindtointerface bubblewrap
 ```
+<br>
 
 ### Update your system
 
