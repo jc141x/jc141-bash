@@ -49,27 +49,22 @@ sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono 
 
 Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associated instructions below. Paste them into your terminal. You will need to follow the instructions for the Vulkan Drivers and one of the GPU instructions.
 
-- Vulkan Drivers required by AMD/INTEL/NVIDIA
-
-    ```sh
-    sudo pacman -S --needed lib32-vulkan-icd-loader
-    ```
 - GPU/APU Drivers required for AMD GPUs
 
     ```sh
-    sudo pacman -S --needed lib32-vulkan-radeon vulkan-radeon
+    sudo pacman -S --needed lib32-vulkan-radeon vulkan-radeon lib32-vulkan-icd-loader
     ```
     - *Note*: For AMD GPUs please ensure that you do not have installed improper drivers with `sudo pacman -R amdvlk && sudo pacman -R vulkan-amdgpu-pro`. This software breaks the proper driver.
 
 - GPU/APU Drivers required for INTEL GPUs
 
     ```sh
-    sudo pacman -S --needed lib32-vulkan-intel vulkan-intel
+    sudo pacman -S --needed lib32-vulkan-intel vulkan-intel lib32-vulkan-icd-loader
     ```
 - GPU Drivers required for NVIDIA GPUs
 
     ```sh
-    sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia
+    sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia lib32-vulkan-icd-loader
     ```
     
 ### Step 4: Install additional libraries
