@@ -75,7 +75,7 @@ Some games require additional libaries to run successfully. We strongly recommen
 sudo pacman -S --needed lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal libgphoto2 libxcrypt-compat gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-plugins-base-libs lib32-gst-plugins-base lib32-gst-plugins-good
 ```
 
-### OPTIONAL - Security features
+### Optional - Security features
 
 Enables start scripts to block WAN activity and isolate game from having writing access to user space, except for the specific location of $HOME/$USER/.local/share/jc141/game-data
 
