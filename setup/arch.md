@@ -2,6 +2,8 @@
 
 This guide will allow you to set up our releases on an Arch Linux based set up. Other GNU/Linux distributions that can use this guide include the following:
 
+Arch Linux is rolling release and to keep it working properly a full update needs to be conducted regularly.
+
 - EndeavourOS (recommended easy installer and preconfiguration for Arch)
 - Artix
 - ArcoLinux
@@ -89,14 +91,3 @@ Enables start scripts to block WAN activity and isolate game from having writing
 ```
 sudo pacman -S --needed rumpowered/bindtointerface rumpowered/lib32-bindtointerface bubblewrap
 ```
-<br>
-
-### Update your system
-
-Arch Linux is rolling release and to keep it working properly a full update needs to be conducted regularly, this will ensure that your system will have the latest drivers and tech/software.
-
-```sh
-sudo pacman -Syu
-```
-
-If you had a kernel update, please restart your system afterwards.
