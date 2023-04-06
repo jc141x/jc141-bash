@@ -37,7 +37,7 @@ Copy and paste the following commands into your terminal, you may need to use `C
     sudo pacman -Syyu
     ```
 
-### Step 2: Add required core packages
+### Add required core packages
 
 These packages are all required for our releases to work, if you don't have them the games will not run.
 
@@ -45,7 +45,7 @@ These packages are all required for our releases to work, if you don't have them
 sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono openssl-1.1
 ```
 
-### Step 3: Add graphics packages for your set up.
+### Add graphics packages for your set up.
 
 Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associated instructions below. Paste them into your terminal. You will need to follow the instructions for the Vulkan Drivers and one of the GPU instructions.
 
@@ -67,7 +67,7 @@ Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associa
     sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia lib32-vulkan-icd-loader
     ```
     
-### Step 4: Install additional libraries
+### Install additional libraries
 
 Some games require additional libaries to run successfully. We strongly recommend the following libraries are installed.
 
@@ -75,7 +75,7 @@ Some games require additional libaries to run successfully. We strongly recommen
 sudo pacman -S --needed lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal libgphoto2 libxcrypt-compat gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-plugins-base-libs lib32-gst-plugins-base lib32-gst-plugins-good
 ```
 
-### Step 5: OPTIONAL - Security features
+### OPTIONAL - Security features
 
 Enables start scripts to block WAN activity and isolate game from having writing access to user space, except for the specific location of $HOME/$USER/.local/share/jc141/game-data
 
@@ -83,7 +83,7 @@ Enables start scripts to block WAN activity and isolate game from having writing
 sudo pacman -S --needed rumpowered/bindtointerface rumpowered/lib32-bindtointerface bubblewrap
 ```
 
-### Step 6: Update your system
+### Update your system
 
 Arch Linux is rolling release and to keep it working properly a full update needs to be conducted regularly, this will ensure that your system will have the latest drivers and tech/software.
 
