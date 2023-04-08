@@ -4,7 +4,7 @@
 
 - Report issues you are having to us on matrix.
 
-#### install any Arch distro. We recommend EndeavourOS.
+#### Install any Arch distro. We recommend EndeavourOS.
 
 1. Create a bootable usb drive with the distro iso. - [Guide](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/)
 2. Use a USB-C adapter to connect the drive to your deck.
@@ -12,8 +12,9 @@
 4. Select the usb efi device.
 5. Follow installer steps. Pick KDE Plasma if you want to deal with least amount of issues. (online install)
 6. Boot into new system and run `sudo pacman -Syyu` then reboot again.
+<br>
 
-#### add required repos
+#### Add required repos
 
 ```sh
 echo '
@@ -34,6 +35,7 @@ sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 
 sudo pacman -Syyu
 ```
+<br>
 
 #### SteamDeck Hardware drivers
 
@@ -48,22 +50,25 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 Reboot and select the option with `linux neptune` using the arrow keys.
-
+<br>
 
 #### core packages
 ```sh
 sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono
 ```
+<br>
 
 #### graphics packages
 ```sh
 sudo pacman -S --needed lib32-vulkan-icd-loader lib32-vulkan-radeon vulkan-radeon
 ```
+<br>
 
 #### various libraries required by some games
 ```sh
 sudo pacman -S --needed lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-openal lib32-zlib libgphoto2 libxcrypt-compat gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-plugins-base-libs lib32-gst-plugins-base lib32-gst-plugins-good
 ```
+<br>
 
 #### OPTIONAL - Security features
 
@@ -72,6 +77,8 @@ Enables start scripts to block WAN activity and isolate game from having writing
 ```
 sudo pacman -S --needed rumpowered/bindtointerface rumpowered/lib32-bindtointerface bubblewrap
 ```
+<br>
 
 #### post-setup
-- On KDE Plasma, you might need to go into settings and set the correct screen position. On other DE's you might be stuck with no such options.
+
+On KDE Plasma, you might need to go into settings and set the correct screen position. On other DE's you might be stuck with no such options.
