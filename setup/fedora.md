@@ -21,12 +21,3 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 ```sh
 sudo dnf install libxcrypt alsa-lib alsa-plugins-pulseaudio fluidsynth pulseaudio openal
 ```
-<br>
-
-#### Optional - Security features
-
-Enables start scripts to isolate game from having writing access to user space, except for the specific location of $HOME/$USER/.local/share/jc141/game-data
-
-```
-sudo dnf install bubblewrap
-```
