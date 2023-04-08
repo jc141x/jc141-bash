@@ -19,6 +19,7 @@ deb-src http://deb.debian.org/debian/ sid main
 sudo apt update && sudo apt full-upgrade && sudo reboot
 ```
 - Optionally you can install `apt-listbugs apt-listchanges` to read the bugs and see if any of them will break your distro.
+<br>
 
 #### MPR, MPR helper and wine repos
 ```sh
@@ -29,14 +30,16 @@ sudo mkdir -pm755 /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
 sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bullseye/winehq-bullseye.sources
 ```
+<br>
 
-#### core packages
+#### Core packages
 ```sh
 git clone https://mpr.makedeb.org/dwarfs-bin.git && cd dwarfs-bin && makedeb -si
 sudo apt install fuse-overlayfs winehq-staging
 ```
+<br>
 
-#### graphics packages
+#### Graphics packages
 ```sh
 Vulkan drivers (AMD/INTEL/NVIDIA)
 sudo apt install libvulkan1 vulkan-tools
@@ -51,15 +54,17 @@ sudo apt update && sudo apt upgrade -y
 
 sudo apt install nvidia-driver nvidia-settings nvidia-smi nvidia-xconfig nvidia-opencl-icd nvidia-opencl-common nvidia-detect linux-image-amd64 linux-headers-amd64
 ```
+<br>
 
-#### various libraries required by some games
+#### Various libraries required by some games
 ```sh
 sudo apt install libva2 giflib-tools libgphoto2-6 libxcrypt-source libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386 gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi gstreamer1.0-libav
 ```
+<br>
 
-### OPTIONAL - Security features
+#### Optional - Security features
 
-Enables start scripts to block WAN activity and isolate game from having writing access to user space, except for the specific location of $HOME/$USER/.local/share/jc141/game-data
+Enables start scripts to block WAN activity and isolate game from having writing access to user space.
 
 ```
 una install bindtointerface lib32-bindtointerface && sudo apt install bubblewrap
