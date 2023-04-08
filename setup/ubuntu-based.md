@@ -51,7 +51,7 @@ sudo apt install libva2 giflib-tools libgphoto2-6 libxcrypt-source libva2:i386 a
 
 #### Optional - Security features
 
-Enables start scripts to block WAN activity and isolate game from having writing access to user space, except for the specific location of $HOME/$USER/.local/share/jc141/game-data
+Enables start scripts to block WAN activity and isolate game from having writing access to user space.
 
 ```
 una install bindtointerface lib32-bindtointerface && sudo apt install bubblewrap
