@@ -23,7 +23,7 @@ sudo zypper install libglvnd-32bit libglvnd
 
 #### Various libraries required by some games
 ```sh
-sudo zypper install libpulse-devel-32bit giflib-devel libgphoto2-6 zlib-devel libva2 gstreamer-plugins-base gstreamer-plugins-good gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-plugins-vaapi gstreamer-plugins-libav
+sudo zypper install libpulse-devel-32bit giflib-devel libgphoto2-6 libva2 gstreamer-plugins-base gstreamer-plugins-good gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-plugins-vaapi gstreamer-plugins-libav
 ```
 <br>
 
