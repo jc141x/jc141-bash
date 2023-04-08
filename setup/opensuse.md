@@ -25,12 +25,3 @@ sudo zypper install libglvnd-32bit libglvnd
 ```sh
 sudo zypper install libpulse-devel-32bit giflib-devel libgphoto2-6 libva2 gstreamer-plugins-base gstreamer-plugins-good gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-plugins-vaapi gstreamer-plugins-libav
 ```
-<br>
-
-#### Optional - Security features
-
-Enables start scripts to isolate game from having writing access to user space, except for the specific location of $HOME/$USER/.local/share/jc141/game-data
-
-```
-sudo zypper install bubblewrap
-```
