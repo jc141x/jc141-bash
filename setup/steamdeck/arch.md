@@ -52,15 +52,9 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 Reboot and select the option with `linux neptune` using the arrow keys.
 <br>
 
-#### core packages
+#### main packages
 ```sh
-sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono
-```
-<br>
-
-#### graphics packages
-```sh
-sudo pacman -S --needed lib32-vulkan-icd-loader lib32-vulkan-radeon vulkan-radeon
+sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono lib32-vulkan-icd-loader lib32-vulkan-radeon vulkan-radeon
 ```
 <br>
 
@@ -79,6 +73,6 @@ sudo pacman -S --needed rumpowered/bindtointerface rumpowered/lib32-bindtointerf
 ```
 <br>
 
-#### post-setup
+#### Post-setup
 
 On KDE Plasma, you might need to go into settings and set the correct screen position. On other DE's you might be stuck with no such options.
