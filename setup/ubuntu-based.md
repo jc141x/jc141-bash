@@ -2,18 +2,13 @@
 
 - Also applies to Mint, PopOS, ElementaryOS, Zorin OS, KDE Neon etc.
 
-
-### Warning
-
-Some of the older releases have a known issue specific to Ubuntu based distros. Ubuntu uses it's own custom DNS and it fails to reach github.com through ping command. The older scripts will exit from this issue and so the exit commands (next to ping) in the scripts need to be removed manually. Otherwise you can configure your system to not use the Ubuntu DNS or choose a different non-Ubuntu based distro.
-
-
 #### Update system
 ```
 sudo apt update
 sudo apt full-upgrade -y
 ```
 - If changes were made, reboot.
+<br>
 
 #### MPR, MPR helper and wine repos
 ```sh
@@ -22,14 +17,16 @@ export MAKEDEB_RELEASE='makedeb'
 bash -c "$(wget -qO - 'https://shlink.makedeb.org/install')" && sudo apt update && sudo apt install git && git clone https://mpr.hunterwittenborn.com/una-bin.git && cd una-bin && makedeb -si
 ```
 Add the correct [winehq](https://wiki.winehq.org/Ubuntu) (click on the text) repo for your ubuntu version to apt.
+<br>
 
-#### core packages
+#### Core packages
 ```sh
 git clone https://mpr.makedeb.org/dwarfs-bin.git && cd dwarfs-bin && makedeb -si
 sudo apt install fuse-overlayfs winehq-staging
 ```
+<br>
 
-#### graphics packages
+#### Graphics packages
 ```sh
 Vulkan drivers (AMD/INTEL/NVIDIA)
 sudo apt install libvulkan1 vulkan-tools
@@ -44,13 +41,15 @@ sudo apt update && sudo apt upgrade -y
 
 sudo apt install nvidia-driver nvidia-settings nvidia-smi nvidia-xconfig nvidia-opencl-icd nvidia-opencl-common nvidia-detect linux-image-amd64 linux-headers-amd64
 ```
+<br>
 
-#### various libraries required by some games
+#### Various libraries required by some games
 ```sh
 sudo apt install libva2 giflib-tools libgphoto2-6 libxcrypt-source libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386 gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi gstreamer1.0-libav
 ```
+<br>
 
-### OPTIONAL - Security features
+#### Optional - Security features
 
 Enables start scripts to block WAN activity and isolate game from having writing access to user space, except for the specific location of $HOME/$USER/.local/share/jc141/game-data
 
