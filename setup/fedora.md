@@ -17,7 +17,7 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 
 #### other libraries
 ```sh
-sudo dnf install libxcrypt zlib alsa-lib alsa-plugins-pulseaudio fluidsynth pulseaudio openal
+sudo dnf install libxcrypt alsa-lib alsa-plugins-pulseaudio fluidsynth pulseaudio openal
 ```
 
 OPTIONAL - Security features
