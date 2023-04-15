@@ -48,7 +48,7 @@ Copy and paste the following commands into your terminal, you may need to use `C
 These packages are all required for our releases to work, if you don't have them the games will not run.
 
 ```sh
-sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono openssl-1.1
+sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono
 ```
 <br>
 
