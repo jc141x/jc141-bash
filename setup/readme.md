@@ -75,6 +75,8 @@ The `groot-rw` directory only exists after the first run of mounted games. Howev
 #### Additional Information
 All releases are tested on an either Arch Linux or EndeavourOS using either an EXT4, BTRFS or XFS filesystem.
 
+When possible, it is ideal to run the releases on an NVME or SSD partition. Generally HDD's can be the cause for decreased responsibility and general performance specially when running mounted.
+
 Window Managers are known to have more issues related to displaying, including freezing and crashing in rare cases.
 <br>
 
