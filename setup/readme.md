@@ -37,12 +37,11 @@ Please check the script for the exact name, of course you can navigate to the di
 <br>
 
 #### Troubleshooting
-If for whatever you have a problem running the game please consider the following command to help with debugging.
+If for whatever reason you have a problem with running the game, please consider the following command to help with debugging.
 
 ```
 DBG=1 bash /Path/to/Game/start.{n/w/e-w/n-w}.sh
 ```
-This will produce output that will help us diagnose the problem. please also ensure you have the `start.{n/we-w/n-w}.sh` to hand.
 <br>
 
 #### Operating Dwarfs
