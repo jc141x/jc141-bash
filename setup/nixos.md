@@ -1,18 +1,18 @@
-## Setup Guide - NixOS/Void(?)
+## Setup Guide - NixOS
 
-The guide is in construction and not guaranteed to work.
-
-### core packages
+### Core packages
 ```sh
 sudo nix-shell -p dwarfs wine-staging fuse-overlayfs
 ```
 
-### drivers
-- Vulkan Drivers required by AMD/INTEL/NVIDIA
+### Drivers
+- Vulkan Drivers required by AMD/INTEL/NVIDIA.
 
-```sh
-sudo nix-shell vulkan-tools
-```
+Follow the NixOS Wiki for your graphic unit:
+- [Nvidia](https://nixos.wiki/wiki/Nvidia)
+- [Radeon/AMD](https://nixos.wiki/wiki/AMD_GPU)
+- [Intel](https://nixos.wiki/wiki/Intel_Graphics)
+   - Intel page does not provide information about enabling Vulkan, follow Radeon page instead for that part.
 
 ### Install additional libraries
 
