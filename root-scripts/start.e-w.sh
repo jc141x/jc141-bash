@@ -24,7 +24,7 @@ if [ ! -x "$(command -v vlk-jc141)" ];
     VLKVER="$(curl -s -m 5 https://api.github.com/repos/jc141x/vulkan/releases/latest | awk -F '["/]' '/"browser_download_url":/ {print $11}' | cut -c 1-)"
     [[ ! -f "$VLKLOG" && -z "$(status-vulkan)" ]] && vulkan-dl;
     [[ -f "$VLKLOG" && -n "$VLKVER" && "$VLKVER" != "$(awk '{print $1}' "$VLKLOG")" ]] && { rm -f vulkan.tar.xz || true; } && echo "Updating external vulkan translation. (dxvk,vkd3d,dxvk-nvapi)" && vulkan-dl && echo "External vulkan translation is up-to-date."; }
-else vlk-jc141; fi; export DXVK_ENABLE_NVAPI=1
+fi; export DXVK_ENABLE_NVAPI=1
 
 # block WAN
 [ ! -f "/usr/lib64/bindToInterface.so" ] && echo "bindtointerface package not installed, no WAN blocking." || [ "${WANBLK:=1}" = "0" ] && echo "WAN blocking is not enabled due to user input." || { export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD='/usr/$LIB/bindToInterface.so'; echo "bindtointerface WAN blocking enabled."; }
