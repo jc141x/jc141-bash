@@ -15,11 +15,11 @@ Please click the following links to take you how to setup on your GNU/Linux dist
 *   [Fedora](fedora.md) including: Rawhide.
 *   [NixOS](nixos.md)
 *   [OpenSUSE Tumbleweed](opensuse.md)
-*   [Ubuntu](ubuntu-based.md) including: Mint, PopOS, ElementaryOS, Zorin OS, KDE Neon and others.
+*   [Ubuntu](ubuntu-based.md) including: Mint and others based on it.
 <br>
 
 ### Hardware Support
-You graphic hardware (GPU/APU) **must** have Vulkan 1.3 support for releases which use DXVK and VKD3D, recently marked as start.e-w.sh for the start script.
+You graphic hardware (GPU/APU) **must** have Vulkan 1.3 support for releases which use DXVK and VKD3D, marked as start.e-w.sh for the start script.
 
 Releases with start.n-w.sh require Vulkan support but not 1.3 necessarily. Releases with start.n.sh generally do not require vulkan support.
 
@@ -27,31 +27,28 @@ Releases with start.n-w.sh require Vulkan support but not 1.3 necessarily. Relea
 <br>
 
 ### How to Run the Game
-Open up a terminal and then run the following commands. Please edit where appropriate.
+Open up a terminal and then run the following command. Please edit where appropriate.
 
 ATTENTION! - Using sh instead of bash does not work!  Only use bash or ./ with x permission.
 
 ```
-bash /Path/to/Game/start.{n/w/e-w/n-w}.sh
+bash /Path/to/Game/start.{n/e-w/n-w}.sh
 ```
-Please check the script for the exact name, of course you can navigate to the directory and run the command there, negating the `/Path/to/Game`.
 <br>
 
 #### Troubleshooting
 If for whatever reason you have a problem with running the game, please consider the following command to help with debugging.
 
 ```
-DBG=1 bash /Path/to/Game/start.{n/w/e-w/n-w}.sh
+DBG=1 bash /Path/to/Game/start.{n/e-w/n-w}.sh
 ```
 <br>
 
 #### Operating Dwarfs
-Should your game exit in an inappropriate fashion or you would like to extract, there are a number of built-in commands to help you.
-
-The extraction command will automatically make the start script use the extracted files and will not attempt to run mounted again until groot directory is missing/empty again (if the script defaults to mounting).
+setting.sh file provides some optional commands which can be useful.
 
 ```
-bash settings.sh <COMMAND>
+bash settings.sh COMMAND
 
 Available Commands
   extract-dwarfs
@@ -60,24 +57,22 @@ Available Commands
   delete-dwarfs
   compress-to-dwarfs
 ```
+The extraction command will automatically make start script use the extracted files and will not attempt to run mounted again until groot directory is missing/empty again (if the script defaults to mounting).
 <br>
 
-#### Modding Games with Dwarfs
-Modding games with Dwarfs is somewhat different from the normal process, please follow the instructions here if you wish to add mods to your game.
+#### Modding
 
-Adding a mod is supported through using the `groot-rw` directory. Before mounting, any files included in it will go above the mounted image and override any of the files. The path required for the mod may need to be created manually.
+Adding a mod is supported through using the `files/groot-rw` directory. Add files to it directly or mount the game files with 'mount-dwarfs' as seen above and add or edit files in the 'files/groot' directory.
 
-The `groot-rw` directory only exists after the first run of mounted games. However, the directory can be created manually and content can be added.
-
-**Note:** Games which are extracted do not require this method.
+These files will be saved into the 'files/groot-rw' directory and override the base game files on each run.
 <br>
 
 #### Additional Information
-All releases are tested on an either Arch Linux or EndeavourOS using either an EXT4, BTRFS or XFS filesystem.
+All releases are tested on Arch Linux or EndeavourOS using either an EXT4, BTRFS or XFS filesystems.
 
-When possible, it is ideal to run the releases on an NVME or SSD partition. Generally HDD's can be the cause for decreased responsibility and general performance specially when running mounted.
+When possible, it is ideal to run the releases on an NVME or SSD based partition. Generally HDD's can be the cause for decreased responsibility and general performance especially when running mounted.
 
-Window Managers are known to have more issues related to displaying, including freezing and crashing in rare cases.
+Using wayland is known to bring some rare crashes.
 <br>
 
 #### GUI Libary
