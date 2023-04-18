@@ -51,11 +51,11 @@ setting.sh file provides some optional commands which can be useful.
 bash settings.sh COMMAND
 
 Available Commands
-  extract-dwarfs
-  unmount-dwarfs
-  mount-dwarfs
-  delete-dwarfs
-  compress-to-dwarfs
+  extract
+  unmount
+  mount
+  delete-image
+  compress
 ```
 The extraction command will automatically make start script use the extracted files and will not attempt to run mounted again until groot directory is missing/empty again (if the script defaults to mounting).
 <br><br>
