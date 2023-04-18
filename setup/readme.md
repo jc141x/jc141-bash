@@ -36,7 +36,7 @@ bash /Path/to/Game/start.{n/e-w/n-w}.sh
 ```
 <br>
 
-#### Troubleshooting
+### Troubleshooting
 If for whatever reason you have a problem with running the game, please consider the following command to help with debugging.
 
 ```
@@ -44,7 +44,7 @@ DBG=1 bash /Path/to/Game/start.{n/e-w/n-w}.sh
 ```
 <br>
 
-#### Operating Dwarfs
+### Dwarfs
 setting.sh file provides some optional commands which can be useful.
 
 ```
@@ -60,14 +60,13 @@ Available Commands
 The extraction command will automatically make start script use the extracted files and will not attempt to run mounted again until groot directory is missing/empty again (if the script defaults to mounting).
 <br>
 
-#### Modding
-
+### Modding
 Adding a mod is supported through using the `files/groot-rw` directory. Add files to it directly or mount the game files with 'mount-dwarfs' as seen above and add or edit files in the 'files/groot' directory.
 
 These files will be saved into the 'files/groot-rw' directory and override the base game files on each run.
 <br>
 
-#### Additional Information
+### Additional Information
 All releases are tested on Arch Linux or EndeavourOS using either an EXT4, BTRFS or XFS filesystems.
 
 When possible, it is ideal to run the releases on an NVME or SSD based partition. Generally HDD's can be the cause for decreased responsibility and general performance especially when running mounted.
@@ -75,6 +74,5 @@ When possible, it is ideal to run the releases on an NVME or SSD based partition
 Using wayland is known to bring some rare crashes.
 <br>
 
-#### GUI Libary
-
+### GUI Libary
 If you would like a GUI library for your games, see [launchers](launchers.md) page.
