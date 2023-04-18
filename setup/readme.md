@@ -10,12 +10,12 @@ Virtual Machines are not supported.
 ### Supported GNU/Linux Distributions
 Please click the following links to take you how to setup on your GNU/Linux distribution.
 
-*   [Arch](arch.md) including: Endeavour OS, Arco, Artix, Manjaro and others
-*   [Debian Sid/Rolling](debian.md) including: Nitrux, Sparky Rolling and Siduction
-*   [Fedora](fedora.md) including: Rawhide
+*   [Arch](arch.md) including: Endeavour OS, Arco, Artix, Manjaro and others.
+*   [Debian Sid/Rolling](debian.md) including: Nitrux, Sparky Rolling and Siduction.
+*   [Fedora](fedora.md) including: Rawhide.
 *   [NixOS](nixos.md)
 *   [OpenSUSE Tumbleweed](opensuse.md)
-*   [Ubuntu](ubuntu-based.md) including: Mint, PopOS, ElementaryOS, Zorin OS, KDE Neon and others
+*   [Ubuntu](ubuntu-based.md) including: Mint, PopOS, ElementaryOS, Zorin OS, KDE Neon and others.
 <br>
 
 ### Hardware Support
