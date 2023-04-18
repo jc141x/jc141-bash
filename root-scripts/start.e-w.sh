@@ -8,10 +8,10 @@ export WINE="$(command -v wine)";
 export WINEPREFIX="$JCD/wine/prefix"; export WINEDLLOVERRIDES="mshtml=d;nvapi,nvapi64=n"; export WINE_LARGE_ADDRESS_AWARE=1;
 
 # dwarfs
-bash "$STS" mount-dwarfs; zcat "$LOGO"; echo "Path of the wineprefix is: $WINEPREFIX";
+bash "$STS" mount; zcat "$LOGO"; echo "Path of the wineprefix is: $WINEPREFIX";
 
 # auto-unmount
-[ "${UNMOUNT:=1}" = "0" ] && echo "Game will not unmount automatically due to user input." || { function cleanup { cd "$OLDPWD" && bash "$STS" unmount-dwarfs; }; trap 'cleanup' EXIT INT SIGINT SIGTERM; echo "Game will unmount automatically once all child processes close. Can be disabled with UNMOUNT=0."; }
+[ "${UNMOUNT:=1}" = "0" ] && echo "Game will not unmount automatically due to user input." || { function cleanup { cd "$OLDPWD" && bash "$STS" unmount; }; trap 'cleanup' EXIT INT SIGINT SIGTERM; echo "Game will unmount automatically once all child processes close. Can be disabled with UNMOUNT=0."; }
 
 # external vulkan translation
 if [ ! -x "$(command -v vlk-jc141)" ];
