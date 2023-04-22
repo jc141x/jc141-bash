@@ -6,22 +6,6 @@
 
 <br>
 
-### [Rum](https://github.com/jc141x/rum)
-
-Our own attempt at creating a single purpose launcher which focuses on interface and leaving the configuration to the bash script.
-
-It remains usable but development has stalled due to no active developers.
-
-Programming language: Rust/Svelte
-
-<br>
-
-<div align=center><img src="https://i.postimg.cc/nL9MJ4Df/ytryrty.png" width="800"/></div>
-
-<br>
-
-The releases are detected automatically if they exist in a path configured in the launcher.
-
 ### [Lutris](https://github.com/lutris/lutris)
 
 Programming language: Python
