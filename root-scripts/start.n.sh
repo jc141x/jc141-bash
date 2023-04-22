@@ -14,5 +14,5 @@ bash "$STS" mount; zcat "$LOGO";
 
 # start
 echo "For any misunderstandings or need of support, join the community on Matrix."
-[ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && echo "Output muted by default to avoid performance impact. Can unmute with DBG=1." && exec &>/dev/null; }
+[ "${DBG:=0}" = "1" ] || { echo "Output muted by default to avoid performance impact. Can unmute with DBG=1." && exec &>/dev/null; }
 cd "$PWD/files/groot"; ./"game.bin" "$@"
