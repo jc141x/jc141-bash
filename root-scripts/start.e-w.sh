@@ -5,7 +5,8 @@ export JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD/wine" ] &&
 
 # wine
 export WINE="$(command -v wine)";
-export WINEPREFIX="$JCD/wine/prefix"; export WINEDLLOVERRIDES="mshtml=d;nvapi,nvapi64=n"; export WINE_LARGE_ADDRESS_AWARE=1;
+export WINEPREFIX="$JCD/wine/prefix"; export WINEDLLOVERRIDES="winemenubuilder.exe=d;mshtml=d;nvapi,nvapi64=n"; export WINE_LARGE_ADDRESS_AWARE=1;
+"$WINE" reg add "HKEY_CURRENT_USER\Software\Wine\FileOpenAssociations" /v Enable /d N &>/dev/null;
 
 # dwarfs
 bash "$STS" mount; zcat "$LOGO"; echo "Path of the wineprefix is: $WINEPREFIX";
