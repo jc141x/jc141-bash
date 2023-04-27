@@ -34,13 +34,16 @@ ATTENTION! - Using sh instead of bash does not work!  Only use bash or ./ with x
 ```
 bash /Path/to/Game/start.{n/e-w/n-w}.sh
 ```
-<br>
 
-### Troubleshooting
-If for whatever reason you have a problem with running the game, please consider the following command to help with debugging.
-
+Available environment variables:
 ```
-DBG=1 bash /Path/to/Game/start.{n/e-w/n-w}.sh
+CACHEPERCENT="15" - Percentage of total hardware RAM to be used by dwarfs as cache. Higher means better smoothness (not necessarily impactful if increased further). 15% is default.
+
+DBG=1 - Enables terminal output of of binary and/or wine.
+
+WANBLK=0 - Disables WAN blocking which is enabled by default if bindtointerface package is enabled.
+
+UNMOUNT=0 - Disables auto-unmounting of the dwarfs image from 'files/groot'.
 ```
 <br>
 
