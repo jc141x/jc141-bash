@@ -15,6 +15,27 @@ Follow the NixOS Wiki for your graphic unit:
 
 #### [Intel](https://nixos.wiki/wiki/Intel_Graphics) - Page does not provide information about enabling Vulkan, follow Radeon page instead for that part.
 
+<br>
+
+#### Configuring Hybrid setups (most likely laptops).
+
+A hybrid setup is one where both an integrated GPU and a dedicated one are ready to be used by the system. GNU/Linux will generally default to using the integrated GPU unless told otherwise. (which is not good for performance)
+
+The commands below will make the dedicated GPU the default when running commands such as the start scripts.
+
+If your dedicated GPU is Radeon then run the following command:
+
+```
+echo 'VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/radeon_icd.i686.json:/usr/share/vulkan/icd.d/radeon_icd.x86_64.json' | sudo tee -a /etc/environment
+```
+
+If your dedicated GPU is Nvidia then run the following command:
+
+```
+echo 'VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json' | sudo tee -a /etc/environment
+```
+<br>
+
 ### Install additional libraries
 
 Some games require additional libaries to run successfully. We strongly recommend the following libraries are installed.
