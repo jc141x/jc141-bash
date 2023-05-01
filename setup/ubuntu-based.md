@@ -43,6 +43,25 @@ sudo apt install nvidia-driver nvidia-settings nvidia-smi nvidia-xconfig nvidia-
 ```
 <br>
 
+#### Configuring Hybrid setups (most likely laptops).
+
+A hybrid setup is one where both an integrated GPU and a dedicated one are ready to be used by the system. GNU/Linux will generally default to using the integrated GPU unless told otherwise. (which is not good for performance)
+
+The commands below will make the dedicated GPU the default when running commands such as the start scripts.
+
+If your dedicated GPU is Radeon then run the following command:
+
+```
+echo 'VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/radeon_icd.i686.json:/usr/share/vulkan/icd.d/radeon_icd.x86_64.json' | sudo tee -a /etc/environment
+```
+
+If your dedicated GPU is Nvidia then run the following command:
+
+```
+echo 'VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json' | sudo tee -a /etc/environment
+```
+<br>
+
 #### Various libraries required by some games
 ```sh
 sudo apt install libva2 giflib-tools libgphoto2-6 libxcrypt-source libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386 gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi gstreamer1.0-libav gstreamer1.0-plugins-good:i386 gstreamer1.0-plugins-base:i386
