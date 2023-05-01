@@ -64,7 +64,7 @@ The extraction command will automatically make start script use the extracted fi
 <br><br>
 
 ### Modding
-Adding a mod is supported through using the `files/groot-rw` directory. Add files to it directly or mount the game files with 'mount-dwarfs' as seen above and add or edit files in the 'files/groot' directory.
+Adding a mod is supported through using the `files/groot-rw` directory. Add files to it directly or mount the game files as seen above and add or edit files in the 'files/groot' directory.
 
 These files will be saved into the 'files/groot-rw' directory and override the base game files on each run.
 <br><br>
