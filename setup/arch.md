@@ -92,6 +92,7 @@ If your dedicated GPU is Nvidia then run the following command:
 ```
 echo 'VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json' | sudo tee -a /etc/environment
 ```
+<br>
 
 ### Install additional libraries
 
