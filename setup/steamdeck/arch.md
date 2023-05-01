@@ -66,7 +66,7 @@ sudo pacman -S --needed lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-o
 
 #### Optional - Security features
 
-Enables start scripts to block WAN activity and isolate game from having writing access to user space, except for the specific location of $HOME/$USER/.local/share/jc141/game-data
+Enables start scripts to block WAN activity.
 
 ```
 sudo pacman -S --needed rumpowered/bindtointerface rumpowered/lib32-bindtointerface bubblewrap
