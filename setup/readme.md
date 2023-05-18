@@ -72,8 +72,6 @@ These files will be saved into the 'files/groot-rw' directory and override the b
 ### Additional Information
 All releases are tested on Arch Linux or EndeavourOS using either an EXT4, BTRFS or XFS filesystems.
 
-When possible, it is ideal to run the releases on an NVME or SSD based partition. Generally HDD's can be the cause for decreased responsibility and general performance especially when running mounted.
-
 Using wayland is known to bring some rare crashes.
 <br><br>
 
