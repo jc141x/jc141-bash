@@ -48,7 +48,7 @@ UNMOUNT=0 - Disables auto-unmounting of the dwarfs image from 'files/groot'.
 <br>
 
 ### Dwarfs
-setting.sh file provides some optional commands which can be useful.
+settings.sh file provides some optional commands which can be useful.
 
 ```
 bash settings.sh COMMAND
