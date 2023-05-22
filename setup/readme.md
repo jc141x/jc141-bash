@@ -70,7 +70,7 @@ These files will be saved into the 'files/groot-rw' directory and override the b
 <br><br>
 
 ### Additional Information
-All releases are tested on Arch Linux or EndeavourOS using either an EXT4, BTRFS or XFS filesystems.
+All releases are tested on Arch Linux or EndeavourOS using either EXT4, BTRFS or XFS filesystems.
 <br><br>
 
 ### GUI Libary
