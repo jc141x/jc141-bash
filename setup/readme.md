@@ -39,7 +39,7 @@ Available environment variables:
 ```
 CACHEPERCENT="15" - Percentage of total hardware RAM to be used by dwarfs as cache. Higher means better smoothness (not necessarily impactful if increased further). 15% is default.
 
-DBG=1 - Enables terminal output of of binary and/or wine.
+DBG=1 - Enables terminal output of binary and/or wine.
 
 WANBLK=0 - Disables WAN blocking which is enabled by default if bindtointerface package is enabled.
 
