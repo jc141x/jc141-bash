@@ -74,5 +74,5 @@ sudo apt install libva2 giflib-tools libgphoto2-6 libxcrypt-source libva2:i386 a
 Enables start scripts to block WAN activity.
 
 ```
-una install bindtointerface lib32-bindtointerface && sudo apt install
+una install bindtointerface lib32-bindtointerface
 ```
