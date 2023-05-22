@@ -71,8 +71,6 @@ These files will be saved into the 'files/groot-rw' directory and override the b
 
 ### Additional Information
 All releases are tested on Arch Linux or EndeavourOS using either an EXT4, BTRFS or XFS filesystems.
-
-Using wayland is known to bring some rare crashes.
 <br><br>
 
 ### GUI Libary
