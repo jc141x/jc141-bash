@@ -16,5 +16,5 @@ export WINE="$JCD/wine/wine-ge/wine/bin/wine" && { ping -c 3 github.com >/dev/nu
   rm -rf "wine-ge.tar.xz"; }
   wine-ge-dl() { echo "Using wine-ge from github." && github-wine-ge && echo "$GEVER" >"$WINEGELOG"; }
   GEVER="$(curl -s -m 5 https://api.github.com/repos/jc141x/wine-ge-custom/releases/latest | awk -F '["/]' '/"browser_download_url":/ {print $11}' | cut -c 1-)"
-[[ ! -f "$WINEGELOG" && -z "$(status-ge)" ]] && wine-ge-dl; [[ -f "$WINEGELOG" && -n "$TKGVER" && "$TKGVER" != "$(awk '{print $1}' "$WINEGELOG")" ]] && { rm -f wine-ge.tar.xz || true; } && echo "Updating wine-ge." && rm -Rf "$WINEGE" && mkdir -p "$WINEGE" && wine-ge-dl && echo "wine-ge is up-to-date."; }
+[[ ! -f "$WINEGELOG" && -z "$(status-ge)" ]] && wine-ge-dl; [[ -f "$WINEGELOG" && -n "$GEVER" && "$GEVER" != "$(awk '{print $1}' "$WINEGELOG")" ]] && { rm -f wine-ge.tar.xz || true; } && echo "Updating wine-ge." && rm -Rf "$WINEGE" && mkdir -p "$WINEGE" && wine-ge-dl && echo "wine-ge is up-to-date."; }
 ```
