@@ -23,7 +23,7 @@ You graphic hardware (GPU/APU) **must** have Vulkan 1.3 support for releases whi
 
 Releases with start.n-w.sh require Vulkan support but not 1.3 necessarily. Releases with start.n.sh generally do not require vulkan support.
 
-* [SteamDeck support on Arch](steamdeck/arch.md)
+#### [SteamDeck support on Arch](steamdeck/arch.md)
 <br>
 
 ### How to Run the Game
