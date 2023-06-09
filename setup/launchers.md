@@ -1,4 +1,4 @@
-#### optional user inteface launchers which can be used with our releases easily
+#### Optional user inteface launchers which can be used with our releases easily
 
 - Running our releases without the use of the provided start scripts falls out of our support.
 
