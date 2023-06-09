@@ -41,7 +41,7 @@ CACHEPERCENT=15 - Percentage of total hardware RAM to be used by dwarfs as cache
 
 DBG=1 - Enables terminal output of binary and/or wine.
 
-WANBLK=0 - Disables WAN blocking which is enabled by default if bindtointerface package is enabled.
+WANBLK=0 - Disables WAN blocking which is enabled by default if bindtointerface package is installed.
 
 UNMOUNT=0 - Disables auto-unmounting of the dwarfs image from 'files/groot'.
 ```
