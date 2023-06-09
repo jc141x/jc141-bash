@@ -4,7 +4,7 @@
 
 # wine
 export WINE="$(command -v wine)";
-export WINEPREFIX="$JCD/wine/native-prefix"; export WINEDLLOVERRIDES="mshtml=d"; export WINE_LARGE_ADDRESS_AWARE=1; export WINE_D3D_CONFIG="renderer=vulkan" && echo "wined3d vulkan renderer is used.";
+export WINEPREFIX="$JCD/wine/native-prefix"; export WINEDLLOVERRIDES="winemenubuilder.exe=d;mshtml=d"; export WINE_LARGE_ADDRESS_AWARE=1; export WINE_D3D_CONFIG="renderer=vulkan" && echo "wined3d vulkan renderer is used.";
 "$WINE" reg add "HKEY_CURRENT_USER\Software\Wine\FileOpenAssociations" /v Enable /d N &>/dev/null;
 
 # dwarfs
