@@ -1,6 +1,6 @@
 ### jc141-bash
 
-Instructions tools and resouces to help you play our releases. Please follow the links below.
+Instructions, tools and resouces to help you play our releases. Please follow the links below.
 
 #### [setup guide](setup/readme.md)
 
