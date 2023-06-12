@@ -67,6 +67,8 @@ The extraction command will automatically make start script use the extracted fi
 Adding a mod is supported through using the `files/groot-rw` directory. Add files to it directly or mount the game files as seen above and add or edit files in the 'files/groot' directory.
 
 These files will be saved into the 'files/groot-rw' directory and override the base game files on each run.
+
+Keep in mind that modding on Wine is not a guaranteed feature and depends on how the mod loads or if it interferes with wine. Generally if the mod can be loaded through a launcher or directly in game it should be fine.
 <br><br>
 
 ### Additional Information
