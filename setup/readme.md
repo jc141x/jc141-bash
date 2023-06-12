@@ -8,7 +8,7 @@ Virtual Machines are not supported.
 <br>
 
 ### Supported GNU/Linux Distributions
-Please click the following links to setup your GNU/Linux distribution.
+Please click one the following links to setup your GNU/Linux distribution.
 
 *   [Arch](arch.md) including: Endeavour OS, Arco, Artix, Manjaro and others.
 *   [Debian Sid/Rolling](debian.md) including: Nitrux, Sparky Rolling and Siduction.
