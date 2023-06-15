@@ -68,11 +68,13 @@ If your dedicated GPU is Radeon then run the following command:
 echo 'VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/radeon_icd.i686.json:/usr/share/vulkan/icd.d/radeon_icd.x86_64.json' | sudo tee -a /etc/environment
 ```
 
-If your dedicated GPU is Nvidia then run the following command:
+If your dedicated GPU is Nvidia then run the following command when starting the game:
 
 ```
-echo '__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json' | sudo tee -a /etc/environment
+__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia  __VK_LAYER_NV_optimus=NVIDIA_only VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json bash start-script.sh
 ```
+
+- We cannot provide a way to make this by default on system due to it breaking other software that runs better with integrated graphics. (due to the proprietary driver)
 <br>
 
 #### Various libraries required by some games
