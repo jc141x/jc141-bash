@@ -79,7 +79,7 @@ Check whether your graphics card is AMD, INTEL or NVIDIA then follow the associa
 
 A hybrid setup is one where both an integrated GPU and a dedicated one are ready to be used by the system. GNU/Linux will generally default to using the integrated GPU unless told otherwise. (which is not good for performance)
 
-The commands below will make the dedicated GPU the default when running commands such as the start scripts.
+The command below will make the dedicated GPU the default when running commands such as the start scripts.
 
 If your dedicated GPU is Radeon then run the following command:
 
