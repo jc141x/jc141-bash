@@ -1,8 +1,4 @@
-## Setup Guide - Ubuntu
-
-- Also applies to Mint, PopOS, ElementaryOS, Zorin OS, KDE Neon etc.
-
-- Canonical, the company behind Ubuntu has decided to take a very bad path of the future. The next LTS release will include a snap-only (proprietary) version and it is unacceptable to GNU/Linux standards. We suggest that the distro should be avoided.
+## Setup Guide - Mint
 
 #### Update system
 ```
