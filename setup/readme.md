@@ -15,7 +15,7 @@ Please click one the following links to setup your GNU/Linux distribution.
 *   [Fedora](fedora.md) including: Rawhide.
 *   [NixOS](nixos.md)
 *   [OpenSUSE Tumbleweed](opensuse.md)
-*   [Mint](Mint.md)
+*   [Mint](mint.md)
 <br>
 
 ### Hardware Support
