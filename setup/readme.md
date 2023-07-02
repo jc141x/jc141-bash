@@ -14,7 +14,6 @@ Please click one the following links to setup your GNU/Linux distribution.
 *   [Debian Sid/Rolling](debian.md) including: Nitrux, Sparky Rolling and Siduction.
 *   [Fedora](fedora.md) including: Rawhide.
 *   [NixOS](nixos.md)
-*   [OpenSUSE Tumbleweed](opensuse.md)
 *   [Mint](mint.md) including: Pop!_OS, KDE Neon, Elementary OS
 <br>
 
