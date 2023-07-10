@@ -15,6 +15,7 @@ Please click one the following links to setup your GNU/Linux distribution.
 *   [Fedora](fedora.md) including: Rawhide.
 *   [NixOS](nixos.md)
 *   [Mint](mint.md) including: Pop!_OS, KDE Neon, Elementary OS
+*   Question: Where is Ubuntu? Answer: Don't use Ubuntu.
 <br>
 
 ### Hardware Support
