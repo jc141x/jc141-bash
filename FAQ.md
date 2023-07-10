@@ -16,19 +16,20 @@ Q: Why do you have such a bad opinion of Ubuntu?
 
 A: Ubuntu is an OS more akin to Windows than GNU/Linux distros in the last few years. Their decisions gradually are more and more worrying. Just using the Linux kernel does not mean that the system is part of the community of distributions. Microsoft also uses Linux with their WSL project. What the community gathered around for is the ideology behind these distros, their commitment to enable freedom to their users. Ubuntu does not appeal to that idea.
 
+
 Q: Do you accept requests?
 
 
-A: Yes, though it will depend on our uploaders interest and priority. The game needs to meet our minimuim quality standards for us to upload it. This means that the game must be rated above 85% on steam; alternatively metacritic if the game does not have a steam release. The game also needs to run stabily and smoothely.
+A: Yes, we do accept requests, but it depends on our uploader's interest and priority. For us to upload a game, it needs to meet our minimum quality standards. This means that the game must be rated above 85% on Steam or Metacritic if the game does not have a Steam release. Additionally, the game needs to run stably and smoothly.
 
 
-Q: Why are games that have native ports uploaded using the WIndows release with WINE?
+Q: Why are games that have native ports uploaded using the Windows release with WINE?
 
 
-A: If the native port performs better than with WINE it will be uploaded if we can source the game files. If you see a WINE version of a game with a native port we either could not source the native files, the native performance does not differ, or the native port is buggy or broken. 
+A: If the native port performs better than with WINE, we will upload it if we can source the game files. If you see a WINE version of a game with a native port, we either could not source the native files, the native performance does not differ, or the native port is buggy or broken.
 
 
 Q: Why do you not post Empress Denuvo Cracks?
 
 
-A: Empress is a polarising member of the Piracy scene and has expressed signs of mental instability. Above this, due to their releases being heavily obfascated, the authenticity cannot be verified. For our, and our users security we recommend against the use of her releases.
+A: We do not post Empress Denuvo cracks because Empress is a polarizing member of the piracy scene and has expressed signs of mental instability. Additionally, due to their releases being heavily obfuscated, the authenticity cannot be verified. For our and our users' security, we recommend against the use of her releases.
