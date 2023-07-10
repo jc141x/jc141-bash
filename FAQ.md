@@ -33,3 +33,8 @@ Q: Why do you not post Empress Denuvo Cracks?
 
 
 A: We do not post Empress Denuvo cracks because Empress is a polarizing member of the piracy scene and has expressed signs of mental instability. Additionally, due to their releases being heavily obfuscated, the authenticity cannot be verified. For our and our users' security, we recommend against the use of her releases.
+
+
+Q: What is the reason for using Wine-ge and Wine-staging instead of Valve's Proton
+
+A: Firstly very few games require the patches from Proton and Wine-GE. Proton has some Steam-specific bloat, which may not be necessary and may interfere with crack functionality for Games. Wine-GE, on the other hand, is designed for use outside of Steam, and disables the steamuser and steamclient functionality that is specific to Proton.  Wine-GE offers these patches without the bloat for the select few games that need the patches.
