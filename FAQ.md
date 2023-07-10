@@ -4,7 +4,7 @@ This is a page in construction which will contain answers to frequently asked qu
 
 Q: Do the releases include all DLCs?
 
-Y: Yes. If there is a release where that is not the case, report it to us.
+A: Yes. If there is a release where that is not the case, report it to us.
 
 Q: Why use the dwarfs format? It makes it less convenient for users.
 
@@ -15,3 +15,20 @@ Q: Why do you have such a bad opinion of Ubuntu?
 
 
 A: Ubuntu is an OS more akin to Windows than GNU/Linux distros in the last few years. Their decisions gradually are more and more worrying. Just using the Linux kernel does not mean that the system is part of the community of distributions. Microsoft also uses Linux with their WSL project. What the community gathered around for is the ideology behind these distros, their commitment to enable freedom to their users. Ubuntu does not appeal to that idea.
+
+Q: Do you accept requests?
+
+
+A: Yes, though it will depend on our uploaders interest and priority. The game needs to meet our minimuim quality standards for us to upload it. This means that the game must be rated above 85% on steam; alternatively metacritic if the game does not have a steam release. The game also needs to run stabily and smoothely.
+
+
+Q: Why are games that have native ports uploaded using the WIndows release with WINE?
+
+
+A: If the native port performs better than with WINE it will be uploaded if we can source the game files. If you see a WINE version of a game with a native port we either could not source the native files, the native performance does not differ, or the native port is buggy or broken. 
+
+
+Q: Why do you not post Empress Denuvo Cracks?
+
+
+A: Empress is a polarising member of the Piracy scene and has expressed signs of mental instability. Above this, due to their releases being heavily obfascated, the authenticity cannot be verified. For our, and our users security we recommend against the use of her releases.
