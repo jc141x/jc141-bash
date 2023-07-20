@@ -16,6 +16,10 @@ Q: Why do you have such a bad opinion of Ubuntu?
 
 A: Ubuntu is an OS more akin to Windows than GNU/Linux distros in the last few years. Their decisions gradually are more and more worrying. Just using the Linux kernel does not mean that the system is part of the community of distributions. Microsoft also uses Linux with their WSL project. What the community gathered around for is the ideology behind these distros, their commitment to enable freedom to their users. Ubuntu does not appeal to that idea.
 
+Q: Why do you not support SteamOS, when you support SteamDeck through Arch?
+
+A: Besides the ideological issues of SteamOS being made by a mega corporation with their embedded proprietary software, it is not possible to setup a proper system which can operate normally. Very quirky workarounds are needed and which do not even work from our testing. The ideological issue is very important to us and so we won't change our stance. But we're looking to provide more supported Distros for SteamDeck.
+
 
 Q: Do you accept requests?
 
