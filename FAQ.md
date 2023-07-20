@@ -24,7 +24,7 @@ A: Besides the ideological issues of SteamOS being made by a mega corporation wi
 Q: Do you accept requests?
 
 
-A: Yes, we do accept requests, but it depends on our uploader's interest and priority. For us to upload a game, it needs to meet our minimum quality standards. This means that the game must be rated above 85% on Steam or Metacritic if the game does not have a Steam release. Additionally, the game needs to run stably and smoothly.
+A: Yes, we do accept requests, but it depends on our uploader's interest and priority. For us to upload a game, it needs to meet our minimum quality standards. This means that the game must be rated above 85% on Steam or Metacritic if the game does not have a Steam release. Additionally, the game needs to run stably and smoothly. (exceptions can be made)
 
 
 Q: Why are games that have native ports uploaded using the Windows release with WINE?
