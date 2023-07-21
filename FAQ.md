@@ -1,6 +1,6 @@
 ### Frequently Asked Questions
 
-#### This is a page in construction which will contain additonal answers to frequently asked questions in the future.
+#### This is a page under construction and shall contain additonal answers to frequently asked questions in the future.
 
 Q: Do the releases include all DLCs?
 
