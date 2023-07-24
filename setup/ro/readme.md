@@ -67,11 +67,11 @@ Comanda de extragere va face ca script-ul de pornirea sa foloseasca automat fisi
 <br><br>
 
 ### Modare
-Adaugarea de un mod este suportata prin utlizarea directoriului 'files/groot'. Adauga fisiere direct in el si monteaza jocul cum a fost precizat mai sus sau editeaza fisierele din 'files/direct' in mod direct in timp ce este montat.
+Monsteaza jocul cum este prceizat mai sus si adauga fisierele in 'files/groot'. 
 
-Aceste fisiere vor fi salvate in directoriul 'files/groot' si vor trece peste fisierele de baga ale jocului la fiecare rulare.
+Aceste fisiere vor fi salvate in directoriul 'files/groot-rw' si vor trece peste fisierele de baza ale jocului la fiecare rulare.
 
-Ia in considerare ca modarea prin Wine nu este garantate si depinde cum se incarca modul si daca interfereaza cu Wine. In general daca modul poate fi incarcat printr-un lansator sau direct din joc, ar trebui sa fie in regula.
+Ia in considerare ca modarea prin Wine nu este garantata si depinde cum se incarca modul si daca interfereaza cu Wine. In general daca modul poate fi incarcat printr-un lansator sau direct din joc, ar trebui sa fie in regula.
 <br><br>
 
 ### Informatii aditionale
