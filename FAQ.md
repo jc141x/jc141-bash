@@ -46,3 +46,7 @@ A: Firstly very few games require the patches from Proton and Wine-GE. Proton ha
 Q: Where do you trust source your game files or where would you recommend?
 
 A: We use clean steamfiles (the game depot dumped from steam servers with no modifactions) from cs.rin.ru and we apply the necessary cracks ourselves.  We alternatively use gog-games.to for sourcing gog rips (refering to the offline installer that is untouched sourced from gog) and scene releases or preservations of scene releases from myabandonware.com or an internal collection for any non-digital titles.
+
+Q: Do you or would you consider uploading cracked Software?
+
+A: No, we discourage the use of proprietary software and would rather encourage FOSS alternatives.
