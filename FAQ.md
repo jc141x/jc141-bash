@@ -65,4 +65,4 @@ A: We use our own clean steamfiles (the game depot dumped from steam servers wit
 
 Q: Do you or would you consider uploading cracked Software?
 
-A: It's not a area we're interested in or experienced with. And we don't really find the need for proprietary programs in on our systems. Besides games.
+A: It's not a area we're interested in or experienced with. And we don't really find the need for proprietary programs in our systems. Besides games.
