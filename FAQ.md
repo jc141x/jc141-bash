@@ -61,6 +61,8 @@ Q: Where do you trust source your game files or where would you recommend?
 
 A: We use our own clean steamfiles (the game depot dumped from steam servers with no modifactions) or from cs.rin.ru and we apply the necessary cracks ourselves.  We alternatively use gog-games.to for sourcing gog rips (refering to the offline installer that is untouched sourced from gog) and scene releases or preservations of scene releases from myabandonware.com or an internal collection for any non-digital titles.
 
+---
+
 Q: Do you or would you consider uploading cracked Software?
 
 A: It's not a area we're interested in or experienced with. And we don't really find the need for proprietary programs in on our systems. Besides games.
