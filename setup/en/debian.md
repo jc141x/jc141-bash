@@ -42,7 +42,7 @@ sudo apt install fuse-overlayfs winehq-staging
 #### Graphics packages
 ```sh
 Vulkan drivers (AMD/INTEL/NVIDIA)
-sudo apt install libvulkan1 vulkan-tools
+sudo apt install libvulkan1 libvulkan1:i386 vulkan-tools
 ```
 ```sh
 NVIDIA drivers

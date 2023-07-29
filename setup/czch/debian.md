@@ -43,7 +43,7 @@ sudo apt install fuse-overlayfs winehq-staging
 #### Grafické balíčky
 ```sh
 Vulkan řadiče (AMD/INTEL/NVIDIA)
-sudo apt install libvulkan1 vulkan-tools
+sudo apt install libvulkan1 libvulkan1:i386 vulkan-tools
 ```
 ```sh
 NVIDIA řadiče
