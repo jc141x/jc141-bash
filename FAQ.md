@@ -8,7 +8,7 @@ A: Yes. If there is a release where that is not the case, report it to us.
 
 Q: Which torrents are seeded?
 
-A: All of them. If what you are reffering to is the official list of torrents we have published at the moment you see them. We do not keep seeding torrents we removed from the public list. The seeding is done by seedboxes paid by us as well as individuals. When asking for a torrent to be seeded, the request is pointless. You would rather look into why your client cannot connect to peers. The torrent protocol is not perfect and you are likely to find torrents which you just can't download even though it has seeders as mentioned. We can't exactly fix this situation without a lot more investment.
+A: All of them. If what you are reffering to is the official list of torrents we have published at the moment you see them. We do not keep seeding torrents we removed from the public list. The seeding is done by seedboxes paid by us as well as individuals. When asking for a torrent to be seeded, the request is pointless. You would rather look into why your client cannot connect to peers. The torrent protocol is not perfect and you are likely to find torrents which you just can't download even though it has seeders as mentioned. We can't exactly fix this situation without a lot more investment. But more seeders would help with it.
 
 ---
 
