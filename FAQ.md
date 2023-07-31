@@ -37,6 +37,12 @@ A: Yes, we do accept requests, but it depends on our uploader's interest and pri
 
 ---
 
+Q: Why have such high expectations from games? Shouldn't you just upload new releases as they come?
+
+A: We have a different objective. It is building and improving a catalogue of games which we believe users will find very enjoyable to play and which do not have technical issues such as performance or bugs (ideally). Our idea is to maintain the releases and fix them if anything is wrong about them as well as systematically updating the oldest ones. Keeping up with newest game releases regardless of any standards would conflict with these ideals and frequently falls into the state of providing shovelware.
+
+---
+
 Q: Why are games that have native ports uploaded using the Windows release with WINE?
 
 
