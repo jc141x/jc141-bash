@@ -4,7 +4,7 @@
 
 # wine
 export WINE="$(command -v wine)";
-export WINEPREFIX="$JCD/wine/prefix"; export WINEDLLOVERRIDES="winemenubuilder.exe=d;mshtml=d;nvapi,nvapi64=n"; export WINE_LARGE_ADDRESS_AWARE=1;
+export WINEPREFIX="$JCD/wine/prefix"; export WINEDLLOVERRIDES="winemenubuilder.exe=d;mshtml=d;nvapi,nvapi64=n"; export WINE_LARGE_ADDRESS_AWARE=1; export RESTORE_RESOLUTION=1;
 
 # dwarfs
 bash "$PWD/settings.sh" mount; zcat "$PWD/logo.txt.gz"; echo "Path of the wineprefix is: $WINEPREFIX";
