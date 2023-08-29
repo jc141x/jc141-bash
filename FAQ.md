@@ -8,7 +8,7 @@ A: Yes. If there is a release where that is not the case, report it to us.
 
 Q: Which torrents are seeded?
 
-A: All of them. If what you are reffering to is the official list of torrents we have published at the moment you see them. We do not keep seeding torrents we removed from the public list. The seeding is done by seedboxes paid by us as well as individuals. When asking for a torrent to be seeded, the request is pointless. You would rather look into why your client cannot connect to peers. The torrent protocol is not perfect and you are likely to find torrents which you just can't download even though it has seeders as mentioned. We can't exactly fix this situation without a lot more investment.
+A: All of them. If what you are reffering to is the official list of torrents we have published at the moment you see them. We do not keep seeding torrents we removed from the public list. The seeding is done by seedboxes paid by us as well as individuals. When asking for a torrent to be seeded, the request is pointless. You would rather look into why your client cannot connect to peers. The torrent protocol is not perfect and you are likely to find torrents which you just can't download even though it has seeders as mentioned. We can't exactly fix this situation without a lot more investment. But more seeders would help with it.
 
 ---
 
@@ -34,6 +34,12 @@ Q: Do you accept requests?
 
 
 A: Yes, we do accept requests, but it depends on our uploader's interest and priority. For us to upload a game, it needs to meet our minimum quality standards. This means that the game must be rated above 85% on Steam or Metacritic if the game does not have a Steam release. Additionally, the game needs to run stably and smoothly. (exceptions can be made)
+
+---
+
+Q: Why have such high expectations from games? Shouldn't you just upload new releases as they come?
+
+A: We have a different objective. It is building and improving a catalogue of games which we believe users will find very enjoyable to play and which do not have technical issues such as performance or bugs (ideally). Our idea is to maintain the releases and fix them if anything is wrong about them as well as systematically updating the oldest ones. Keeping up with newest game releases regardless of any standards would conflict with these ideals and frequently falls into the state of providing shovelware.
 
 ---
 
