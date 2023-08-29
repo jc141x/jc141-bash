@@ -14,7 +14,7 @@ Please click one the following links to setup your GNU/Linux distribution.
 *   [Debian Sid/Rolling](debian.md) including: Nitrux, Sparky Rolling and Siduction.
 *   [Fedora](fedora.md) including: Rawhide. - Outdated dwarfs package. New releases temporarily unusable.
 *   [NixOS](nixos.md) - Outdated dwarfs package. New releases temporarily unusable.
-*   [Mint](mint.md) including: Pop!_OS, KDE Neon, Elementary OS
+*   [Mint](mint.md) including: Pop!_OS
 *   Question: Where is Ubuntu? Answer: Don't use Ubuntu.
 <br>
 

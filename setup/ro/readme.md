@@ -14,7 +14,7 @@ Te rog sa dai click pe unul dintre urmatoarele link-uri in functie de distributi
 *   [Debian Sid/Rolling](debian.md) incluzand: Nitrux, Sparky Rolling si Siduction.
 *   [Fedora](fedora.md) incluzand: Rawhide. - Pachetul DWARFS învechit. Noile lansari inutilizabile temporar.
 *   [NixOS](nixos.md) - Pachetul DWARFS învechit. Noile lansari inutilizabile temporar.
-*   [Mint](mint.md) incluzand: Pop!_OS, KDE Neon, Elementary OS
+*   [Mint](mint.md) incluzand: Pop!_OS
 <br>
 
 ### Suport pentru hardware

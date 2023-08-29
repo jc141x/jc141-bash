@@ -15,7 +15,7 @@ Clique nos seguintes links para configurar a sua distribuição GNU/Linux.
 *   [Debian Sid/Rolling](debian.md) incluindo: Nitrux, Sparky Rolling and Siduction.
 *   [Fedora](fedora.md) incluindo: Rawhide. - Pacote DWARFS desatualizado. Novos lançamentos temporariamente inutilizáveis.
 *   [NixOS](nixos.md) - Pacote DWARFS desatualizado. Novos lançamentos temporariamente inutilizáveis.
-*   [Mint](mint.md) incluindo: Pop!_OS, KDE Neon, Elementary OS
+*   [Mint](mint.md) incluindo: Pop!_OS
 <br>
 
 ### Suporte de Hardware

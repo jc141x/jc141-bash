@@ -14,7 +14,7 @@ Por favor, haz click en alguno de los siguientes enlaces para configurar tu dist
 *   [Debian Sid/Rolling](debian.md) incluye: Nitrux, Sparky Rolling y Siduction.
 *   [Fedora](fedora.md) incluye: Rawhide. - Paquete DWARFS desactualizado. Nuevos lanzamientos temporalmente inutilizables.
 *   [NixOS](nixos.md) - Paquete DWARFS desactualizado. Nuevos lanzamientos temporalmente inutilizables.
-*   [Mint](mint.md) incluye: Pop!_OS, KDE Neon, Elementary OS
+*   [Mint](mint.md) incluye: Pop!_OS
 <br>
 
 ### Soporte de Hardware
