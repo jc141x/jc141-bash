@@ -37,7 +37,14 @@ Copy and paste the following commands into your terminal, you may need to use `C
      ```sh
      sudo pacman-key --lsign-key cc7a2968b28a04b3
      ```
-  4. Force refresh all packages (even if in-date) and update
+
+  4. **Manjaro only**. Switch to unstable branch
+
+     ```sh
+     sudo pacman-mirrors --api --set-branch unstable && sudo pacman-mirrors --fasttrack 5
+     ```
+    
+  5. Force refresh all packages (even if in-date) and update
 
      ```sh
      sudo pacman -Syyu
