@@ -36,7 +36,14 @@ Copia y pega los siguientes comandos en tu terminal. Puede que necesites presion
      ```sh
      sudo pacman-key --lsign-key cc7a2968b28a04b3
      ```
-  4. Fuerza la actualización de todos los paquetes (incluso si están al día) y actualiza el sistema.
+
+  4. **Sólo para Manjaro**. Cambiar a la rama inestable
+
+     ```sh
+     sudo pacman-mirrors --api --set-branch unstable && sudo pacman-mirrors --fasttrack 5
+     ```
+     
+  5. Fuerza la actualización de todos los paquetes (incluso si están al día) y actualiza el sistema.
 
      ```sh
      sudo pacman -Syyu
