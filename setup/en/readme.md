@@ -63,12 +63,17 @@ Available Commands (older version)
 The extraction command will automatically make start script use the extracted files and will not attempt to run mounted again until groot directory is missing/empty again (if the script defaults to mounting).
 <br><br>
 
-### Modding
-Adding a mod is supported through using the `files/groot-rw` directory. Add files to it directly or mount the game files as seen above and add or edit files in the 'files/groot' directory.
+### Modding/Updating
+In order to add files or edit the existing game files, you need to mount them with `bash settings.sh mount`.
 
-These files will be saved into the 'files/groot-rw' directory and override the base game files on each run.
+Then you will have read-write access to the files/groot directory. Anything that you add or modify will not be saved into the dwarfs image which is read-only but instead be saved into the files/groot-rw directory.
 
-Keep in mind that modding on Wine is not a guaranteed feature and depends on how the mod loads or if it interferes with wine. Generally if the mod can be loaded through a launcher or directly in game it should be fine.
+Any data existing in this directory will override the game files when the mounting command is run. So also when you run the start script which does just that.
+
+Overriding means the modified/added files are shown to the game and the original ones are hidden. Even though they continue to exist in the dwarfs image.
+
+
+This point does not only work for modding but also for updating the files. However if the update is big then a lot of files will be duplicated to the files/groot-rw directory. Another option is to extract the files with `bash settings.sh extract`, run the update on them, delete or rename the dwarfs image and run `bash settings.sh compress`
 <br><br>
 
 ### Additional Information
