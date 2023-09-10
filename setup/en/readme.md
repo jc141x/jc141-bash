@@ -73,7 +73,7 @@ Any data existing in this directory will override the game files when the mounti
 Overriding means the modified/added files are shown to the game and the original ones are hidden. Even though they continue to exist in the dwarfs image.
 
 
-This point does not only work for modding but also for updating the files. However if the update is big then a lot of files will be duplicated to the files/groot-rw directory. Another option is to extract the files with `bash settings.sh extract`, run the update on them, delete or rename the dwarfs image and run `bash settings.sh compress`
+This point does not only work for modding but also for updating the files. However if the update is big then a lot of files will be duplicated to the files/groot-rw directory. Another option is to extract the files with `bash settings.sh extract`, run the update on them, delete or rename the dwarfs image and run `bash settings.sh compress`.
 <br><br>
 
 ### Additional Information
