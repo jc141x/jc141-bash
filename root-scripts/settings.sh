@@ -1,6 +1,8 @@
 #!/bin/bash
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs is not installed." && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs is not installed." && exit
-CACHEPERCENT=15; HWRAMTOTAL="$(grep MemTotal /proc/meminfo | awk '{print $2}')"; CACHEONRAM="$(echo $(( $HWRAMTOTAL*"$CACHEPERCENT"/100 )))"
+CACHEPERCENT=15; HWRAMTOTAL="$(grep MemTotal /proc/meminfo | awk '{print $2}')";
+if (( $HWRAMTOTAL > 24000000 )); then; export CACHEPERCENT=30;fi
+CACHEONRAM="$(echo $(( $HWRAMTOTAL*"$CACHEPERCENT"/100 )))"
 CORUID="$(id -u $USER)";CORGID="$(id -g $USER)"
 mount() { unmount &> /dev/null; [ -d "$PWD/files/groot" ] && [ "$( ls -A "$PWD/files/groot")" ] && echo "Game is already mounted or extracted." && exit
 mkdir -p {"$PWD/files/groot-mnt","$PWD/files/groot-rw","$PWD/files/groot-work","$PWD/files/groot"} && dwarfs "$PWD/files/groot.dwarfs" "$PWD/files/groot-mnt" -o cachesize="$CACHEONRAM"k -o clone_fd -o cache_image && fuse-overlayfs -o squash_to_uid="$CORUID" -o squash_to_gid="$CORGID" -o lowerdir="$PWD/files/groot-mnt",upperdir="$PWD/files/groot-rw",workdir="$PWD/files/groot-work" "$PWD/files/groot" && echo "Mounted game. Extraction not required. Please report performance issues to us. "bash settings.sh extract" will make script use extracted files instead."; }
