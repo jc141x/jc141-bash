@@ -3,7 +3,9 @@
 - Also applies to Sparky Rolling, Siduction, Nitrux which are rolling by default.
 
 #### Switch to the Rolling/Sid repo for an optimal and up to date experience.
-Note: Debian Stable repo is no longer compatible with latest DXVK, thus it is not supported.
+
+Note: You cannot switch to the Debian Sid repo as shown below on regular Mint since it is not based on Debian. However the LMDE version is based on Debian.
+
 #### ONLY FOR DEBIAN STABLE OR TESTING DO NOT USE IT ON KALI OR OTHER MODIFIED DEBIAN BASED DISTRO
 ```sh
 1. Edit /etc/apt/sources.list:

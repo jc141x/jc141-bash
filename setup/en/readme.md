@@ -11,9 +11,8 @@ Virtual Machines are not supported.
 Please click one the following links to setup your GNU/Linux distribution.
 
 *   [Arch](arch.md) including: Endeavour OS, Arco, Artix, Manjaro and others.
-*   [Debian Sid/Rolling](debian.md) including: Nitrux, Sparky Rolling and Siduction.
+*   [Debian Sid/Rolling](debian.md) including: Nitrux, Sparky Rolling, Siduction and Mint/LMDE.
 *   [NixOS](nixos.md)
-*   [Mint](mint.md) including: Pop!_OS
 <br>
 
 ### Hardware Support
