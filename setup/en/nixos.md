@@ -1,8 +1,27 @@
 ## Setup Guide - NixOS
 
+### Switch to the Unstable Repo (to have up to date dwarfs package)
+
+```
+sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
+```
+
 ### Core packages
+
+Add the following Nix code to your NixOS Configuration, usually located in /etc/nixos/configuration.nix
+
 ```sh
-sudo nix-shell -p dwarfs wine-staging fuse-overlayfs
+environment.systemPackages = [
+  pkgs.dwarfs
+  pkgs.wine-staging
+  pkgs.fuse-overlayfs
+  pkgs.gst-libav
+  pkgs.gst-plugins-bad1
+  pkgs.gst-plugins-base1
+  pkgs.gst-plugins-good1
+  pkgs.gst-plugins-ugly1
+  pkgs.gstreamer-vaapi
+];
 ```
 
 ### Drivers
@@ -36,12 +55,3 @@ __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia  __VK_LAYER_NV_opti
 ```
 
 - We cannot provide a way to make this by default on system due to it breaking other software that runs better with integrated graphics. (due to the proprietary driver)
-<br>
-
-### Install additional libraries
-
-Some games require additional libaries to run successfully. We strongly recommend the following libraries are installed.
-
-```sh
-sudo nix-shell gst-libav gst-plugins-bad1 gst-plugins-base1 gst-plugins-good1 gst-plugins-ugly1 gstreamer-vaapi
-```
