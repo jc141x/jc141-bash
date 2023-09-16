@@ -13,8 +13,7 @@ Clique nos seguintes links para configurar a sua distribuição GNU/Linux.
 
 *   [Arch](arch.md) incluindo: Endeavour OS, Arco, Artix, Manjaro and others.
 *   [Debian Sid/Rolling](debian.md) incluindo: Nitrux, Sparky Rolling and Siduction.
-*   [Fedora](fedora.md) incluindo: Rawhide. - Pacote DWARFS desatualizado. Novos lançamentos temporariamente inutilizáveis.
-*   [NixOS](nixos.md) - Pacote DWARFS desatualizado. Novos lançamentos temporariamente inutilizáveis.
+*   [NixOS](nixos.md)
 *   [Mint](mint.md) incluindo: Pop!_OS
 <br>
 

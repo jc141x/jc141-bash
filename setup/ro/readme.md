@@ -12,8 +12,7 @@ Te rog sa dai click pe unul dintre urmatoarele link-uri in functie de distributi
 
 *   [Arch](arch.md) incluzand: Endeavour OS, Arco, Artix, Manjaro si altele.
 *   [Debian Sid/Rolling](debian.md) incluzand: Nitrux, Sparky Rolling si Siduction.
-*   [Fedora](fedora.md) incluzand: Rawhide. - Pachetul DWARFS învechit. Noile lansari inutilizabile temporar.
-*   [NixOS](nixos.md) - Pachetul DWARFS învechit. Noile lansari inutilizabile temporar.
+*   [NixOS](nixos.md)
 *   [Mint](mint.md) incluzand: Pop!_OS
 <br>
 

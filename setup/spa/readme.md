@@ -12,8 +12,7 @@ Por favor, haz click en alguno de los siguientes enlaces para configurar tu dist
 
 *   [Arch](arch.md) incluye: Endeavour OS, Arco, Artix, Manjaro y otras.
 *   [Debian Sid/Rolling](debian.md) incluye: Nitrux, Sparky Rolling y Siduction.
-*   [Fedora](fedora.md) incluye: Rawhide. - Paquete DWARFS desactualizado. Nuevos lanzamientos temporalmente inutilizables.
-*   [NixOS](nixos.md) - Paquete DWARFS desactualizado. Nuevos lanzamientos temporalmente inutilizables.
+*   [NixOS](nixos.md)
 *   [Mint](mint.md) incluye: Pop!_OS
 <br>
 

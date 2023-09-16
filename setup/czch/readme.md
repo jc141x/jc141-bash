@@ -12,10 +12,8 @@ Klikněte na jeden z níže uvedených odkazů pro nastavení vaší GNU/Linux d
 
 *   [Arch](arch.md) včetně: Endeavour OS, Arco, Artix, Manjaro a dalších.
 *   [Debian Sid/Rolling](debian.md) včetně: Nitrux, Sparky Rolling a Siduction.
-*   [Fedora](fedora.md) včetně: Rawhide. - Zastaralý balíček DWARFS. Nová vydání dočasně nepoužitelná.
-*   [NixOS](nixos.md) - Zastaralý balíček DWARFS. Nová vydání dočasně nepoužitelná.
+*   [NixOS](nixos.md)
 *   [Mint](mint.md) včetně: Pop!_OS
-*   Otázka: Kde je Ubuntu? Odpověď: Nepoužívejte Ubuntu.
 <br>
 
 ### Podporovaný Hardware
