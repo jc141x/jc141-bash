@@ -1,7 +1,7 @@
 #!/bin/bash
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs is not installed." && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs is not installed." && exit
 CACHEPERCENT=15; HWRAMTOTAL="$(grep MemTotal /proc/meminfo | awk '{print $2}')";
-if (( $HWRAMTOTAL > 24000000 )); then; export CACHEPERCENT=30;fi
+if (( $HWRAMTOTAL > 24000000 )); then export CACHEPERCENT=30;fi
 CACHEONRAM="$(echo $(( $HWRAMTOTAL*"$CACHEPERCENT"/100 )))"
 CORUID="$(id -u $USER)";CORGID="$(id -g $USER)"
 mount() { unmount &> /dev/null; [ -d "$PWD/files/groot" ] && [ "$( ls -A "$PWD/files/groot")" ] && echo "Game is already mounted or extracted." && exit
