@@ -34,7 +34,7 @@ bash /Path/to/Game/start.{n/e-w/n-w}.sh
 
 Available environment variables: (all environment variables need to be added before the bash command, or they are not taken into effect)
 ```
-CACHEPERCENT=15 - Percentage of total hardware RAM to be used by dwarfs as cache. Higher means better smoothness (not necessarily impactful if increased further). 15% is default.
+CACHEPERCENT=15 - Percentage of total hardware RAM to be used by dwarfs as cache. Higher means better smoothness.
 
 DBG=1 - Enables terminal output of binary and/or wine.
 
