@@ -4,7 +4,7 @@
 
 #### Switch to the Rolling/Sid repo for an optimal and up to date experience.
 
-Note: You cannot switch to the Debian Sid repo as shown below on regular Mint since it is not based on Debian. However the LMDE version is based on Debian.
+Note: You cannot switch to the Debian Sid repo as shown below on regular Mint since it is not based on Debian.
 
 #### ONLY FOR DEBIAN STABLE OR TESTING DO NOT USE IT ON KALI OR OTHER MODIFIED DEBIAN BASED DISTRO
 ```sh
