@@ -13,7 +13,7 @@ Please click one the following links to setup your GNU/Linux distribution.
 *   [Arch](arch.md) including: Endeavour OS, Arco, Artix, Manjaro and others.
 *   [Debian Sid/Rolling](debian.md) including: Nitrux, Sparky Rolling, Siduction and Mint/LMDE.
 *   [NixOS](nixos.md)
-*   (Universal) [https://github.com/orgs/jc141x/discussions/20]
+*   [Universal](https://github.com/orgs/jc141x/discussions/20)
 <br>
 
 ### Hardware Support
