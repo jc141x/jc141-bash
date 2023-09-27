@@ -16,9 +16,11 @@ Please click one the following links to setup your GNU/Linux distribution.
 <br>
 
 ### Hardware Support
-You graphic hardware (GPU/APU) **must** have Vulkan 1.3 support for releases which use DXVK and VKD3D, marked as start.e-w.sh for the start script.
+Releases with start.e-w.sh must have Vulkan 1.3 support.
 
-Releases with start.n-w.sh require Vulkan support but not 1.3 necessarily. Releases with start.n.sh generally do not require vulkan support.
+Releases with start.n-w.sh require Vulkan support but not 1.3 necessarily. 
+
+Releases with start.n.sh generally do not require vulkan support.
 
 #### [SteamDeck support on Arch](steamdeck/arch.md)
 <br>
