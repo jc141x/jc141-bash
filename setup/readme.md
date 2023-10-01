@@ -289,5 +289,5 @@ This point does not only work for modding but also for updating the files. Howev
 
 -------------------------------------
 
-### GUI Libary
+#### GUI Libary
 If you would like a GUI library for your games, see [launchers](launchers.md) page.
