@@ -1,13 +1,267 @@
- ### Welcome to the setup guide.
+## jc141 Setup Guide
 
- First, please select one of the supported languages below:
+Haven't installed GNU/Linux yet or seek a recommendation? check out [EndeavourOS](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/).
+<br><br>
 
- - [English](en/readme.md)
+### Supported GNU/Linux Distributions
+Please click one the following links to setup your GNU/Linux distribution.
 
- - [Czech](czch/readme.md)
+*   Arch including: Endeavour OS, Arco, Artix, Manjaro, etc.
+*   Debian Sid/Rolling including: Nitrux, Sparky Rolling, Siduction and Mint/LMDE, etc.
+*   NixOS
+<br><br>
 
- - [Romanian](ro/readme.md)
+### Hardware Support
+Releases with start.e-w.sh must have Vulkan 1.3 support.
 
- - [Spanish](spa/readme.md)
+Releases with start.n-w.sh require Vulkan support but not 1.3 necessarily. 
 
- - [Portuguese](pt/readme.md)
+Releases with start.n.sh generally do not require vulkan support.
+<br>
+#### [SteamDeck support on Arch](steamdeck.md)
+
+- Follow instructions here first then come back to the main setup guide.
+
+<br><br><br><br>
+
+
+## Pre-configuration
+
+#### Arch
+
+Copy and paste the following commands into your terminal, you may need to use `Ctrl + Shift + V` to paste.
+
+1. Add the rumpowered repository
+
+```sh
+echo '
+[rumpowered]
+Server = https://jc141x.github.io/rumpowered-packages/$arch ' | sudo tee -a /etc/pacman.conf
+```
+2. Add the multilib packages
+
+```sh
+sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+```
+3. Add and locally sign the keys for the repository
+
+```sh
+sudo pacman-key --recv-keys cc7a2968b28a04b3
+sudo pacman-key --lsign-key cc7a2968b28a04b3
+```
+
+4. **Manjaro only**. Switch to unstable branch
+
+```sh
+sudo pacman-mirrors --api --set-branch unstable && sudo pacman-mirrors --fasttrack 5
+```
+
+5. Force refresh all packages (even if in-date) and update
+
+```sh
+sudo pacman -Syyu
+```
+<br><br>
+
+
+#### Debian
+
+- Switch to the Rolling/Sid repo for an optimal and up to date experience. Not necessary on Sparky Rolling, Siduction, Nitrux.
+
+##### ONLY FOR DEBIAN STABLE OR TESTING DO NOT USE IT ON KALI OR OTHER MODIFIED DEBIAN BASED DISTRO
+
+```sh
+1. Edit /etc/apt/sources.list:
+sudo nano /etc/apt/sources.list
+
+2. Edit sources.list to only use these repos:
+
+deb http://deb.debian.org/debian/ sid main contrib non-free
+deb-src http://deb.debian.org/debian/ sid main
+
+3. Save the file and update your system to Sid (This will reboot your system):
+
+sudo apt update && sudo apt full-upgrade && sudo reboot
+```
+- Optionally you can install `apt-listbugs apt-listchanges` to read the bugs and see if any of them will break your distro.
+<br>
+
+##### MPR and wine repos
+```sh
+sudo dpkg --add-architecture i386
+export MAKEDEB_RELEASE='makedeb'
+bash -c "$(wget -qO - 'https://shlink.makedeb.org/install')" && sudo apt update && sudo apt install git && git clone https://mpr.hunterwittenborn.com/una-bin.git && cd una-bin && makedeb -si
+sudo mkdir -pm755 /etc/apt/keyrings
+sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bullseye/winehq-bullseye.sources
+```
+<br>
+#### NixOS
+
+- Switch to the Unstable Repo (to have up to date dwarfs package)
+
+```
+sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
+```
+
+<br><br>
+
+## Required packages
+
+These packages are all required for our releases to work, if you don't have them the games will not run.
+<br>
+#### Arch based
+
+```sh
+sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-pipewire lib32-openal libgphoto2 libxcrypt-compat gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-plugins-base-libs lib32-gst-plugins-base lib32-gst-plugins-good rumpowered/bindtointerface rumpowered/lib32-bindtointerface
+```
+<br>
+#### Debian based
+
+```
+git clone https://mpr.makedeb.org/dwarfs-bin.git && cd dwarfs-bin && makedeb -si
+sudo apt install fuse-overlayfs winehq-staging libva2 giflib-tools libgphoto2-6 libxcrypt-source libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386 gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi gstreamer1.0-libav gstreamer1.0-plugins-good:i386 gstreamer1.0-plugins-base:i386 && una install bindtointerface lib32-bindtointerface
+```
+<br>
+#### NixOS based
+
+Add the following Nix code to your NixOS Configuration, usually located in /etc/nixos/configuration.nix
+
+```sh
+environment.systemPackages = [
+  pkgs.dwarfs
+  pkgs.wine-staging
+  pkgs.fuse-overlayfs
+  pkgs.gst-libav
+  pkgs.gst-plugins-bad1
+  pkgs.gst-plugins-base1
+  pkgs.gst-plugins-good1
+  pkgs.gst-plugins-ugly1
+  pkgs.gstreamer-vaapi
+];
+```
+
+<br><br>
+
+## Graphics Packages
+
+### AMD APU/GPUs
+<br>
+#### Arch based
+
+```sh
+sudo pacman -S --needed lib32-vulkan-radeon vulkan-radeon lib32-vulkan-icd-loader
+```
+- *Note*: For AMD GPUs please ensure that you do not have installed improper drivers with `sudo pacman -R amdvlk && sudo pacman -R vulkan-amdgpu-pro`. This software breaks the proper driver.
+<br>
+#### Debian based
+
+```sh
+sudo apt install libvulkan1 libvulkan1:i386 vulkan-tools
+```
+<br>
+#### NixOS based
+
+[Follow NixOS Wiki](https://nixos.wiki/wiki/AMD_GPU)
+
+### INTEL APU/GPUs
+<br>
+#### Arch based
+
+```sh
+sudo pacman -S --needed lib32-vulkan-intel vulkan-intel lib32-vulkan-icd-loader
+```
+<br>
+#### Debian based
+
+```sh
+sudo apt install libvulkan1 libvulkan1:i386 vulkan-tools
+```
+<br>
+#### NixOS based
+
+[Follow NixOS Wiki](https://nixos.wiki/wiki/Intel_Graphics) - Page does not provide information about enabling Vulkan, follow Radeon page instead for that part.
+
+### NVIDIA GPUs
+<br>
+
+#### Arch based
+
+```sh
+sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia lib32-vulkan-icd-loader
+```
+<br>
+#### Debian based
+
+```sh
+sudo wget -O- https://developer.download.nvidia.com/compute/cuda/repos/debian11/x86_64/3bf863cc.pub | gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg
+
+echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian11/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
+
+sudo apt update && sudo apt upgrade -y
+
+sudo apt install nvidia-driver nvidia-settings nvidia-smi nvidia-xconfig nvidia-opencl-icd nvidia-opencl-common nvidia-detect linux-image-amd64 linux-headers-amd64 libvulkan1 libvulkan1:i386 vulkan-tools
+```
+<br>
+#### NixOS based
+
+[Follow NixOS Wiki](https://nixos.wiki/wiki/Nvidia)
+
+
+<br><br><br><br>
+
+
+### How to Run the Game
+Open up a terminal and then run the following command. Please edit where appropriate.
+
+ATTENTION! - Using sh instead of bash does not work!  Only use bash or ./ with x permission.
+
+```
+bash /Path/to/Game/start.{n/e-w/n-w}.sh
+```
+
+Available environment variables: (all environment variables need to be added before the bash command, or they are not taken into effect)
+```
+CACHEPERCENT=15 - Percentage of total hardware RAM to be used by dwarfs as cache. Higher means better smoothness.
+
+DBG=1 - Enables terminal output of binary and/or wine.
+
+WANBLK=0 - Disables WAN blocking which is enabled by default if bindtointerface package is installed.
+
+UNMOUNT=0 - Disables auto-unmounting of the dwarfs image from 'files/groot'.
+
+__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia  __VK_LAYER_NV_optimus=NVIDIA_only VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json - Forces Nvidia to be used by default instead of integrated graphics.
+```
+<br><br>
+
+### Dwarfs
+settings.sh file provides some optional commands which can be useful.
+
+```
+bash settings.sh COMMAND
+
+Available Commands
+  extract
+  unmount
+  mount
+  delete-image
+  compress
+```
+The extraction command will automatically make start script use the extracted files and will not attempt to run mounted again until groot directory is missing/empty again (if the script defaults to mounting).
+<br><br>
+
+### Modding/Updating
+In order to add files or edit the existing game files, you need to mount them with `bash settings.sh mount`.
+
+Then you will have read-write access to the files/groot directory. Anything that you add or modify will not be saved into the dwarfs image which is read-only but instead be saved into the files/overlay-storage directory.
+
+Any data existing in this directory will override the game files when the mounting command is run. So also when you run the start script which does just that.
+
+Overriding means the modified/added files are shown to the game and the original ones are hidden. Even though they continue to exist in the dwarfs image.
+
+
+This point does not only work for modding but also for updating the files. However if the update is big then a lot of files will be duplicated to the files/overlay-storage directory. Another option is to extract the files with `bash settings.sh extract`, run the update on them, delete or rename the dwarfs image and run `bash settings.sh compress`.
+<br><br>
+
+### GUI Libary
+If you would like a GUI library for your games, see [launchers](launchers.md) page.
