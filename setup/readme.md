@@ -27,9 +27,6 @@ Releases with start.n.sh generally do not require vulkan support.
 
 ## Pre-configuration
 
--------------------------------------
-<br>
-
 #### Arch
 
 Copy and paste the following commands into your terminal.
@@ -64,10 +61,8 @@ sudo pacman-mirrors --api --set-branch unstable && sudo pacman-mirrors --fasttra
 ```sh
 sudo pacman -Syyu
 ```
-<br><br>
 
 -------------------------------------
-<br>
 
 #### Debian
 
@@ -100,10 +95,8 @@ sudo mkdir -pm755 /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
 sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bullseye/winehq-bullseye.sources
 ```
-<br>
 
 -------------------------------------
-<br>
 
 #### NixOS
 
@@ -112,27 +105,20 @@ sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/
 ```
 sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 ```
-<br>
+
 -------------------------------------
 
 <br><br>
 
 ## Required packages
 
-<br>
-
--------------------------------------
-<br>
-
 #### Arch based
 
 ```sh
 sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-pipewire lib32-openal libgphoto2 libxcrypt-compat gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-plugins-base-libs lib32-gst-plugins-base lib32-gst-plugins-good rumpowered/bindtointerface rumpowered/lib32-bindtointerface
 ```
-<br>
 
 -------------------------------------
-<br>
 
 #### Debian based
 
@@ -140,10 +126,8 @@ sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono 
 git clone https://mpr.makedeb.org/dwarfs-bin.git && cd dwarfs-bin && makedeb -si
 sudo apt install fuse-overlayfs winehq-staging libva2 giflib-tools libgphoto2-6 libxcrypt-source libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386 gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi gstreamer1.0-libav gstreamer1.0-plugins-good:i386 gstreamer1.0-plugins-base:i386 && una install bindtointerface lib32-bindtointerface
 ```
-<br>
 
 -------------------------------------
-<br>
 
 #### NixOS based
 
@@ -162,18 +146,12 @@ environment.systemPackages = [
   pkgs.gstreamer-vaapi
 ];
 ```
-<br>
 
 -------------------------------------
-<br>
 
 ## Graphics Packages
 
 ### AMD APU/GPUs
-<br>
-
--------------------------------------
-<br>
 
 #### Arch based
 
@@ -181,76 +159,56 @@ environment.systemPackages = [
 sudo pacman -S --needed lib32-vulkan-radeon vulkan-radeon lib32-vulkan-icd-loader
 ```
 - *Note*: For AMD GPUs please ensure that you do not have installed improper drivers with `sudo pacman -R amdvlk && sudo pacman -R vulkan-amdgpu-pro`. This software breaks the proper driver.
-<br>
 
 -------------------------------------
-<br>
 
 #### Debian based
 
 ```sh
 sudo apt install libvulkan1 libvulkan1:i386 vulkan-tools
 ```
-<br>
 
 -------------------------------------
-<br>
 
 #### NixOS based
 
 [Follow NixOS Wiki](https://nixos.wiki/wiki/AMD_GPU)
 
 -------------------------------------
-<br>
 
 ### INTEL APU/GPUs
-<br>
-
--------------------------------------
-<br>
 
 #### Arch based
 
 ```sh
 sudo pacman -S --needed lib32-vulkan-intel vulkan-intel lib32-vulkan-icd-loader
 ```
-<br>
 
 -------------------------------------
-<br>
 
 #### Debian based
 
 ```sh
 sudo apt install libvulkan1 libvulkan1:i386 vulkan-tools
 ```
-<br>
 
 -------------------------------------
-<br>
 
 #### NixOS based
 
 [Follow NixOS Wiki](https://nixos.wiki/wiki/Intel_Graphics) - Page does not provide information about enabling Vulkan, follow Radeon page instead for that part.
 
 -------------------------------------
-<br>
 
 ### NVIDIA GPUs
-<br>
-
--------------------------------------
-<br>
 
 #### Arch based
 
 ```sh
 sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia lib32-vulkan-icd-loader
 ```
-<br>
 
 -------------------------------------
-<br>
 
 #### Debian based
 
@@ -263,16 +221,12 @@ sudo apt update && sudo apt upgrade -y
 
 sudo apt install nvidia-driver nvidia-settings nvidia-smi nvidia-xconfig nvidia-opencl-icd nvidia-opencl-common nvidia-detect linux-image-amd64 linux-headers-amd64 libvulkan1 libvulkan1:i386 vulkan-tools
 ```
-<br>
 
 -------------------------------------
-<br>
 
 #### NixOS based
 
 [Follow NixOS Wiki](https://nixos.wiki/wiki/Nvidia)
-
-<br>
 -------------------------------------
 
 <br><br><br><br>
