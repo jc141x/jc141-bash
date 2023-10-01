@@ -1,6 +1,9 @@
 ## jc141 Setup Guide
 
 Haven't installed GNU/Linux yet or seek a recommendation? check out [EndeavourOS](https://discovery.endeavouros.com/installation/create-install-media-usb-key/2021/03/).
+
+This is a 4 step setup guide which takes a few moments to follow with streamlined commands for installation of required components.
+
 <br><br>
 
 ### Supported GNU/Linux Distributions
@@ -11,21 +14,19 @@ Haven't installed GNU/Linux yet or seek a recommendation? check out [EndeavourOS
 <br><br>
 
 ### Hardware Support
-Releases with start.e-w.sh must have Vulkan 1.3 support.
-
-Releases with start.n-w.sh require Vulkan support but not 1.3 necessarily. 
-
-Releases with start.n.sh generally do not require vulkan support.
+Releases with: start.e-w.sh must have Vulkan 1.3 support.
+               start.n-w.sh require Vulkan support but not 1.3 necessarily.
+               start.n.sh generally do not require vulkan support except for some bigger titles.
 <br>
 
 #### [SteamDeck support on Arch](steamdeck.md)
 
-- Follow instructions here first then come back to the main setup guide.
+- If you are on SteamDeck, follow instructions here first then come back to the main setup guide.
 
 <br><br><br><br>
 
 
-## Pre-configuration
+## 1. Pre-configuration
 
 #### Arch
 
@@ -38,25 +39,21 @@ echo '
 [rumpowered]
 Server = https://jc141x.github.io/rumpowered-packages/$arch ' | sudo tee -a /etc/pacman.conf
 ```
-2. Add the multilib packages.
+2. Add the multilib repo and sign keys for rumpowered.
 
 ```sh
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
-```
-3. Add and locally sign the keys for the repository.
-
-```sh
 sudo pacman-key --recv-keys cc7a2968b28a04b3
 sudo pacman-key --lsign-key cc7a2968b28a04b3
 ```
 
-4. **Manjaro only**. Switch to unstable branch.
+3. **Manjaro only**. Switch to unstable branch.
 
 ```sh
 sudo pacman-mirrors --api --set-branch unstable && sudo pacman-mirrors --fasttrack 5
 ```
 
-5. Force refresh all packages (even if in-date) and update.
+4. Force refresh all packages (even if in-date) and update.
 
 ```sh
 sudo pacman -Syyu
@@ -108,7 +105,7 @@ sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 
 <br><br>
 
-## Required packages
+## 2. Install required packages
 
 #### Arch based
 
@@ -147,7 +144,7 @@ environment.systemPackages = [
 
 <br><br>
 
-## Graphics Packages
+## 3. Install graphics packages
 
 ### AMD APU/GPUs
 
@@ -229,7 +226,7 @@ sudo apt install nvidia-driver nvidia-settings nvidia-smi nvidia-xconfig nvidia-
 <br><br><br><br>
 
 
-### How to Run the Game
+### 4. Run the games
 Open up a terminal and then run the following command. Please edit where appropriate.
 
 ATTENTION! - Using sh instead of bash does not work!  Only use bash or ./ with x permission.
@@ -238,7 +235,15 @@ ATTENTION! - Using sh instead of bash does not work!  Only use bash or ./ with x
 bash /Path/to/Game/start.{n/e-w/n-w}.sh
 ```
 
-Available environment variables: (environment variables need to be added before the bash command or they are not taken into effect)
+<br><br>
+
+### Optional actions
+
+
+
+#### Available environment variables
+
+- Environment variables need to be added before the bash command or they are not taken into effect)
 ```
 CACHEPERCENT=15 - Percentage of total hardware RAM to be used by dwarfs as cache. Higher means better smoothness.
 
@@ -252,7 +257,7 @@ __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia  __VK_LAYER_NV_opti
 ```
 <br><br>
 
-### Dwarfs
+#### Dwarfs Actions
 settings.sh file provides some optional commands which can be useful.
 
 ```
@@ -268,7 +273,7 @@ Available Commands
 The extraction command will automatically make start script use the extracted files and will not attempt to run mounted again until groot directory is missing/empty again (if the script defaults to mounting).
 <br><br>
 
-### Modding/Updating
+#### Modding/Updating
 In order to add files or edit the existing game files, you need to mount them with `bash settings.sh mount`.
 
 Then you will have read-write access to the files/groot directory. Anything that you add or modify will not be saved into the dwarfs image which is read-only but instead be saved into the files/overlay-storage directory.
