@@ -106,8 +106,6 @@ sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/
 sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 ```
 
--------------------------------------
-
 <br><br>
 
 ## Required packages
@@ -147,7 +145,7 @@ environment.systemPackages = [
 ];
 ```
 
--------------------------------------
+<br><br>
 
 ## Graphics Packages
 
@@ -174,7 +172,7 @@ sudo apt install libvulkan1 libvulkan1:i386 vulkan-tools
 
 [Follow NixOS Wiki](https://nixos.wiki/wiki/AMD_GPU)
 
--------------------------------------
+<br>
 
 ### INTEL APU/GPUs
 
@@ -198,7 +196,7 @@ sudo apt install libvulkan1 libvulkan1:i386 vulkan-tools
 
 [Follow NixOS Wiki](https://nixos.wiki/wiki/Intel_Graphics) - Page does not provide information about enabling Vulkan, follow Radeon page instead for that part.
 
--------------------------------------
+<br>
 
 ### NVIDIA GPUs
 
@@ -227,7 +225,6 @@ sudo apt install nvidia-driver nvidia-settings nvidia-smi nvidia-xconfig nvidia-
 #### NixOS based
 
 [Follow NixOS Wiki](https://nixos.wiki/wiki/Nvidia)
--------------------------------------
 
 <br><br><br><br>
 
