@@ -4,7 +4,6 @@ Haven't installed GNU/Linux yet or seek a recommendation? check out [EndeavourOS
 <br><br>
 
 ### Supported GNU/Linux Distributions
-Please click one the following links to setup your GNU/Linux distribution.
 
 *   Arch including: Endeavour OS, Arco, Artix, Manjaro, etc.
 *   Debian Sid/Rolling including: Nitrux, Sparky Rolling, Siduction and Mint/LMDE, etc.
