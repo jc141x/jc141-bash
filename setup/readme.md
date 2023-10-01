@@ -30,7 +30,7 @@ Releases with start.n.sh generally do not require vulkan support.
 
 #### Arch
 
-Copy and paste the following commands into your terminal, you may need to use `Ctrl + Shift + V` to paste.
+Copy and paste the following commands into your terminal.
 
 1. Add the rumpowered repository
 
