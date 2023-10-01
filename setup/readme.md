@@ -14,10 +14,7 @@ This is a 4 step setup guide which takes a few moments to follow with streamline
 <br><br>
 
 ### Hardware Support
-Releases with: start.e-w.sh must have Vulkan 1.3 support.
-               start.n-w.sh require Vulkan support but not 1.3 necessarily.
-               start.n.sh generally do not require vulkan support except for some bigger titles.
-<br>
+Vulkan support is required unless the start script is named start.n.sh. And even then there are some games which require it.
 
 #### [SteamDeck support on Arch](steamdeck.md)
 
