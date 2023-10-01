@@ -195,7 +195,7 @@ sudo apt install libvulkan1 libvulkan1:i386 vulkan-tools
 
 <br><br>
 
-### NVIDIA GPUs
+### NVIDIA GPUs (Warning: Some pacakges are proprietary, for now...)
 
 #### Arch based
 
