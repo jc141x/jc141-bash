@@ -223,7 +223,7 @@ sudo apt install nvidia-driver nvidia-settings nvidia-smi nvidia-xconfig nvidia-
 
 [Follow NixOS Wiki](https://nixos.wiki/wiki/Nvidia)
 
-<br><br><br><br>
+<br><br><br>
 
 
 ### 4. Run the games
@@ -235,11 +235,9 @@ ATTENTION! - Using sh instead of bash does not work!  Only use bash or ./ with x
 bash /Path/to/Game/start.{n/e-w/n-w}.sh
 ```
 
-<br><br>
+<br><br><br>
 
 ### Optional actions
-
-
 
 #### Available environment variables
 
