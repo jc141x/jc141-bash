@@ -243,7 +243,7 @@ bash /Path/to/Game/start.{n/e-w/n-w}.sh
 
 #### Available environment variables
 
-- Environment variables need to be added before the bash command or they are not taken into effect)
+- They need to be added before the bash command or they are not taken into effect.
 ```
 CACHEPERCENT=15 - Percentage of total hardware RAM to be used by dwarfs as cache. Higher means better smoothness.
 
