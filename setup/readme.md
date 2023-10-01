@@ -32,32 +32,32 @@ Releases with start.n.sh generally do not require vulkan support.
 
 Copy and paste the following commands into your terminal.
 
-1. Add the rumpowered repository
+1. Add the rumpowered repository.
 
 ```sh
 echo '
 [rumpowered]
 Server = https://jc141x.github.io/rumpowered-packages/$arch ' | sudo tee -a /etc/pacman.conf
 ```
-2. Add the multilib packages
+2. Add the multilib packages.
 
 ```sh
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 ```
-3. Add and locally sign the keys for the repository
+3. Add and locally sign the keys for the repository.
 
 ```sh
 sudo pacman-key --recv-keys cc7a2968b28a04b3
 sudo pacman-key --lsign-key cc7a2968b28a04b3
 ```
 
-4. **Manjaro only**. Switch to unstable branch
+4. **Manjaro only**. Switch to unstable branch.
 
 ```sh
 sudo pacman-mirrors --api --set-branch unstable && sudo pacman-mirrors --fasttrack 5
 ```
 
-5. Force refresh all packages (even if in-date) and update
+5. Force refresh all packages (even if in-date) and update.
 
 ```sh
 sudo pacman -Syyu
@@ -103,7 +103,7 @@ sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/
 
 #### NixOS
 
-- Switch to the Unstable Repo (to have up to date dwarfs package)
+- Switch to the Unstable Repo. (to have up to date dwarfs package)
 
 ```
 sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
@@ -141,7 +141,7 @@ sudo apt install fuse-overlayfs winehq-staging libva2 giflib-tools libgphoto2-6 
 
 #### NixOS based
 
-Add the following Nix code to your NixOS Configuration, usually located in /etc/nixos/configuration.nix
+Add the following Nix code to your NixOS Configuration, usually located in /etc/nixos/configuration.nix .
 
 ```sh
 environment.systemPackages = [
@@ -269,7 +269,7 @@ ATTENTION! - Using sh instead of bash does not work!  Only use bash or ./ with x
 bash /Path/to/Game/start.{n/e-w/n-w}.sh
 ```
 
-Available environment variables: (all environment variables need to be added before the bash command, or they are not taken into effect)
+Available environment variables: (environment variables need to be added before the bash command or they are not taken into effect)
 ```
 CACHEPERCENT=15 - Percentage of total hardware RAM to be used by dwarfs as cache. Higher means better smoothness.
 
