@@ -27,7 +27,7 @@ Releases with start.n.sh generally do not require vulkan support.
 ## Pre-configuration
 
 -------------------------------------
-
+<br>
 #### Arch
 
 Copy and paste the following commands into your terminal.
@@ -65,7 +65,7 @@ sudo pacman -Syyu
 <br><br>
 
 -------------------------------------
-
+<br>
 #### Debian
 
 - Switch to the Rolling/Sid repo for an optimal and up to date experience. Not necessary on Sparky Rolling, Siduction, Nitrux.
@@ -100,7 +100,7 @@ sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/
 <br>
 
 -------------------------------------
-
+<br>
 #### NixOS
 
 - Switch to the Unstable Repo. (to have up to date dwarfs package)
@@ -108,18 +108,17 @@ sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/
 ```
 sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 ```
-
+<br>
 -------------------------------------
 
 <br><br>
 
 ## Required packages
 
-These packages are all required for our releases to work, if you don't have them the games will not run.
 <br>
 
 -------------------------------------
-
+<br>
 #### Arch based
 
 ```sh
@@ -128,7 +127,7 @@ sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono 
 <br>
 
 -------------------------------------
-
+<br>
 #### Debian based
 
 ```
@@ -138,7 +137,7 @@ sudo apt install fuse-overlayfs winehq-staging libva2 giflib-tools libgphoto2-6 
 <br>
 
 -------------------------------------
-
+<br>
 #### NixOS based
 
 Add the following Nix code to your NixOS Configuration, usually located in /etc/nixos/configuration.nix .
@@ -156,17 +155,17 @@ environment.systemPackages = [
   pkgs.gstreamer-vaapi
 ];
 ```
-<br><br>
+<br>
 
 -------------------------------------
-
+<br>
 ## Graphics Packages
 
 ### AMD APU/GPUs
 <br>
 
 -------------------------------------
-
+<br>
 #### Arch based
 
 ```sh
@@ -176,7 +175,7 @@ sudo pacman -S --needed lib32-vulkan-radeon vulkan-radeon lib32-vulkan-icd-loade
 <br>
 
 -------------------------------------
-
+<br>
 #### Debian based
 
 ```sh
@@ -185,18 +184,18 @@ sudo apt install libvulkan1 libvulkan1:i386 vulkan-tools
 <br>
 
 -------------------------------------
-
+<br>
 #### NixOS based
 
 [Follow NixOS Wiki](https://nixos.wiki/wiki/AMD_GPU)
 
 -------------------------------------
-
+<br>
 ### INTEL APU/GPUs
 <br>
 
 -------------------------------------
-
+<br>
 #### Arch based
 
 ```sh
@@ -205,7 +204,7 @@ sudo pacman -S --needed lib32-vulkan-intel vulkan-intel lib32-vulkan-icd-loader
 <br>
 
 -------------------------------------
-
+<br>
 #### Debian based
 
 ```sh
@@ -214,18 +213,18 @@ sudo apt install libvulkan1 libvulkan1:i386 vulkan-tools
 <br>
 
 -------------------------------------
-
+<br>
 #### NixOS based
 
 [Follow NixOS Wiki](https://nixos.wiki/wiki/Intel_Graphics) - Page does not provide information about enabling Vulkan, follow Radeon page instead for that part.
 
 -------------------------------------
-
+<br>
 ### NVIDIA GPUs
 <br>
 
 -------------------------------------
-
+<br>
 #### Arch based
 
 ```sh
@@ -234,7 +233,7 @@ sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia lib32-
 <br>
 
 -------------------------------------
-
+<br>
 #### Debian based
 
 ```sh
@@ -249,12 +248,12 @@ sudo apt install nvidia-driver nvidia-settings nvidia-smi nvidia-xconfig nvidia-
 <br>
 
 -------------------------------------
-
+<br>
 #### NixOS based
 
 [Follow NixOS Wiki](https://nixos.wiki/wiki/Nvidia)
 
-
+<br>
 -------------------------------------
 
 <br><br><br><br>
