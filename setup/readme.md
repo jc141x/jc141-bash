@@ -169,7 +169,7 @@ sudo apt install libvulkan1 libvulkan1:i386 vulkan-tools
 
 [Follow NixOS Wiki](https://nixos.wiki/wiki/AMD_GPU)
 
-<br>
+<br><br>
 
 ### INTEL APU/GPUs
 
@@ -193,7 +193,7 @@ sudo apt install libvulkan1 libvulkan1:i386 vulkan-tools
 
 [Follow NixOS Wiki](https://nixos.wiki/wiki/Intel_Graphics) - Page does not provide information about enabling Vulkan, follow Radeon page instead for that part.
 
-<br>
+<br><br>
 
 ### NVIDIA GPUs
 
