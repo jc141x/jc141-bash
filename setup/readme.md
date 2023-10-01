@@ -255,7 +255,8 @@ UNMOUNT=0 - Disables auto-unmounting of the dwarfs image from 'files/groot'.
 
 __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia  __VK_LAYER_NV_optimus=NVIDIA_only VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json - Forces Nvidia to be used by default instead of integrated graphics.
 ```
-<br><br>
+
+-------------------------------------
 
 #### Dwarfs Actions
 settings.sh file provides some optional commands which can be useful.
@@ -271,7 +272,8 @@ Available Commands
   compress
 ```
 The extraction command will automatically make start script use the extracted files and will not attempt to run mounted again until groot directory is missing/empty again (if the script defaults to mounting).
-<br><br>
+
+-------------------------------------
 
 #### Modding/Updating
 In order to add files or edit the existing game files, you need to mount them with `bash settings.sh mount`.
@@ -284,7 +286,8 @@ Overriding means the modified/added files are shown to the game and the original
 
 
 This point does not only work for modding but also for updating the files. However if the update is big then a lot of files will be duplicated to the files/overlay-storage directory. Another option is to extract the files with `bash settings.sh extract`, run the update on them, delete or rename the dwarfs image and run `bash settings.sh compress`.
-<br><br>
+
+-------------------------------------
 
 ### GUI Libary
 If you would like a GUI library for your games, see [launchers](launchers.md) page.
