@@ -4,7 +4,7 @@ CACHEPERCENT=15; HWRAMTOTAL="$(grep MemTotal /proc/meminfo | awk '{print $2}')";
 if (( $HWRAMTOTAL > 24000000 )); then export CACHEPERCENT=30;fi
 CACHEONRAM="$(echo $(( $HWRAMTOTAL*"$CACHEPERCENT"/100 )))"
 CORUID="$(id -u $USER)";CORGID="$(id -g $USER)"
-L0="-B18 -S18"; L1="-B20 -S20"; L2="-B22 -S22"; L3="-B24 -S24"; L4="-B26 -S26"; BLOCK="$L4"
+L0="-B18 -S18"; L1="-B20 -S20"; L2="-B22 -S22"; L3="-B24 -S24"; L4="-B26 -S26"; BLOCK=$(echo "$PWD/files/block-lvl.txt")
 mount() { unmount &> /dev/null; [ -d "$PWD/files/groot" ] && [ "$( ls -A "$PWD/files/groot")" ] && echo "Game is already mounted or extracted." && exit
 mkdir -p {"$PWD/files/.groot-mnt","$PWD/files/overlay-storage","$PWD/files/.groot-work","$PWD/files/groot"} && dwarfs "$PWD/files/groot.dwarfs" "$PWD/files/.groot-mnt" -o cachesize="$CACHEONRAM"k -o clone_fd -o cache_image && fuse-overlayfs -o squash_to_uid="$CORUID" -o squash_to_gid="$CORGID" -o lowerdir="$PWD/files/.groot-mnt",upperdir="$PWD/files/overlay-storage",workdir="$PWD/files/.groot-work" "$PWD/files/groot" && echo "Mounted game. Extraction not required. "bash settings.sh extract" will make script use extracted files instead."; }
 unmount() { fuser -k "$PWD/files/.groot-mnt" 2>/dev/null; fusermount3 -u -z "$PWD/files/groot"; fusermount3 -u -z "$PWD/files/.groot-mnt"; echo "Unmounted game."; }
