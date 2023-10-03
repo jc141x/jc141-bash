@@ -48,6 +48,10 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 Reboot and select the option with `linux neptune` using the arrow keys.
 <br>
 
+### Done
+
+Please head back to the main setup page now and follow the instructions for Arch based distros there.
+
 ### Post-setup
 
 On KDE Plasma, you might need to go into settings and set the correct screen position. On other DE's you might be stuck with no such options.
