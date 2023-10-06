@@ -107,7 +107,7 @@ sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 #### Arch based
 
 ```sh
-sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-pipewire lib32-openal libgphoto2 libxcrypt-compat gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-plugins-base-libs lib32-gst-plugins-base lib32-gst-plugins-good rumpowered/bindtointerface rumpowered/lib32-bindtointerface sdl2_ttf sdl2_image
+sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging bubblewrap wine-mono lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-pipewire lib32-openal libgphoto2 libxcrypt-compat gst-plugins-base gst-plugins-good gst-plugins-ugly gst-plugins-bad gstreamer-vaapi gst-libav lib32-gst-plugins-base-libs lib32-gst-plugins-base lib32-gst-plugins-good rumpowered/bindtointerface rumpowered/lib32-bindtointerface sdl2_ttf sdl2_image
 ```
 
 -------------------------------------
@@ -116,7 +116,7 @@ sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging wine-mono 
 
 ```
 git clone https://mpr.makedeb.org/dwarfs-bin.git && cd dwarfs-bin && makedeb -si
-sudo apt install fuse-overlayfs winehq-staging libva2 giflib-tools libgphoto2-6 libxcrypt-source libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386 gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi gstreamer1.0-libav gstreamer1.0-plugins-good:i386 gstreamer1.0-plugins-base:i386 && una install bindtointerface lib32-bindtointerface
+sudo apt install fuse-overlayfs winehq-staging bubblewrap libva2 giflib-tools libgphoto2-6 libxcrypt-source libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386 gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi gstreamer1.0-libav gstreamer1.0-plugins-good:i386 gstreamer1.0-plugins-base:i386 && una install bindtointerface lib32-bindtointerface
 ```
 
 -------------------------------------
@@ -130,6 +130,7 @@ environment.systemPackages = [
   pkgs.dwarfs
   pkgs.wine-staging
   pkgs.fuse-overlayfs
+  pkgs.bubblewrap
   pkgs.gst-libav
   pkgs.gst-plugins-bad1
   pkgs.gst-plugins-base1
