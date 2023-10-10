@@ -7,5 +7,6 @@ unmount() { fuser -k "$PWD/files/.groot-mnt" 2> /dev/null; fusermount3 -u -z "$P
 extract() { [ -d "$PWD/files/groot" ] && [ "$( ls -A "$PWD/files/groot")" ] && echo "Game is already mounted or extracted." && exit; mkdir "$PWD/files/groot"; echo "Started extraction process." && dwarfsextract --stdout-progress -i "$PWD/files/groot.dwarfs" -o "$PWD/files/groot"; }
 delete-image() { rm -Rf "$PWD/files/groot.dwarfs"; }
 compress() { [ ! -f "$PWD/files/groot.dwarfs" ] && mkdwarfs -l7 "${BLOCK_FLAGS[@]}" --no-create-timestamp --order=nilsimsa:255:40000:40000 -i "$PWD/files/groot" -o "$PWD/files/groot.dwarfs" && echo "${BLOCK_FLAGS[@]}" > "$PWD/files/block-lvl.txt"; }
+check-integrity() { dwarfsck --check-integrity -i "$PWD/files/groot.dwarfs"; }
 
 for i in "$@"; do if type "$i" &> /dev/null; then "$i"; else exit; fi; done
