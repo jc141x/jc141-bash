@@ -15,4 +15,4 @@ bash "$STS" mount; zcat "$LOGO";
 # start
 echo "For any misunderstandings or need of support, join the community on Matrix."
 [ "${DBG:=0}" = "1" ] || { echo "Output muted by default to avoid performance impact. Can unmute with DBG=1." && exec &>/dev/null; }
-cd "$PWD/files/groot"; bwrap --bind / / --dev-bind /dev /dev --bind "$JCD"/native ~/ --bind "$(pwd)/" "$(pwd)/" ./"game.bin" "$@"
+cd "$PWD/files/groot"; bwrap --ro-bind / / --dev-bind /dev /dev --bind "$JCD"/native ~/ --bind "$(pwd)/" "$(pwd)/" ./"game.bin" "$@"
