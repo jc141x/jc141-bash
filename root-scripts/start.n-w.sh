@@ -1,6 +1,6 @@
 #!/bin/bash
 # checks
-[ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed." && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed." && exit; cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; export JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD/wine" ] && mkdir -p "$JCD/wine"
+[ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed." && exit; [ ! -x "$(command -v bwrap)" ] && echo "bubblewrap not installed." && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed." && exit; cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; export JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD/wine" ] && mkdir -p "$JCD/wine"
 
 # wine
 export WINE="$(command -v wine)";
@@ -17,4 +17,4 @@ bash "$PWD/settings.sh" mount; zcat "$PWD/logo.txt.gz"; echo "Path of the winepr
 # start
 echo "For any misunderstandings or need of support, join the community on Matrix."
 [ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && echo "Output muted by default to avoid performance impact. Can unmute with DBG=1." && exec &>/dev/null; }
-cd "$PWD/files/groot"; "$WINE" "game.exe" "$@"
+cd "$PWD/files/groot"; "$WINE" bwrap --ro-bind / / --dev-bind /dev /dev --tmpfs tmp/ --bind "$JCD"/wine ~/.local/share/jc141/wine --bind "$(pwd)/" "$(pwd)/" "game.exe" "$@"
