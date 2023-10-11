@@ -31,4 +31,4 @@ vulkan-dl() { echo "Using external vulkan translation (dxvk,vkd3d,dxvk-nvapi)." 
 # start
 echo "For any misunderstandings or need of support, join the community on Matrix.";
 [ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && echo "Output muted by default to avoid performance impact. Can unmute with DBG=1." && exec &>/dev/null; }
-cd "$PWD/files/groot"; "$WINE" bwrap --ro-bind / / --dev-bind /dev /dev --tmpfs tmp/ --bind "$JCD"/wine ~/.local/share/jc141/wine --bind "$(pwd)/" "$(pwd)/" "game.exe" "$@"
+cd "$PWD/files/groot"; bwrap --ro-bind / / --dev-bind /dev /dev --tmpfs tmp/ --bind "$JCD"/wine ~/.local/share/jc141/wine --bind "$(pwd)/" "$(pwd)/" "$WINE" "game.exe" "$@"
