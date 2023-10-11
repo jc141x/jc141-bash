@@ -268,6 +268,7 @@ Available Commands
   mount
   delete-image
   compress
+  check-integrity
 ```
 The extraction command will automatically make start script use the extracted files and will not attempt to run mounted again until groot directory is missing/empty again (if the script defaults to mounting).
 
