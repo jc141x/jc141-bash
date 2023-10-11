@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs is not installed." && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs is not installed." && exit
 HWRAMTOTAL="$(grep MemTotal /proc/meminfo | awk '{print $2}')"; [ "$HWRAMTOTAL" -gt 24000000 ] && CACHEPERCENT=30 || CACHEPERCENT=15; CACHEONRAM=$((HWRAMTOTAL * CACHEPERCENT / 100)); CORUID="$(id -u $USER)"; CORGID="$(id -g $USER)"
 declare -A BLOCK_LEVELS=(['L0']='-B18 -S18' ['L1']='-B20 -S20' ['L2']='-B22 -S22' ['L3']='-B24 -S24' ['L4']='-B26 -S26'); [ -n "$BLOCK" ] && BLOCK_FLAGS=(${BLOCK_LEVELS[$BLOCK]})
