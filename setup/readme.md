@@ -62,7 +62,7 @@ sudo pacman -Syyu
 
 - Switch to the Rolling/Sid repo for an optimal and up to date experience. Not necessary on Sparky Rolling, Siduction, Nitrux.
 
-##### ONLY FOR DEBIAN STABLE OR TESTING DO NOT USE IT ON KALI OR OTHER MODIFIED DEBIAN BASED DISTRO
+#### ONLY FOR DEBIAN STABLE OR TESTING DO NOT USE IT ON KALI OR OTHER MODIFIED DEBIAN BASED DISTRO
 
 ```sh
 1. Edit /etc/apt/sources.list:
