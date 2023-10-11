@@ -300,7 +300,7 @@ This point does not only work for modding but also for updating the files. Howev
 
 #### Dwarfs Image Recreation
 
-This is a pretty particular quirky yet interesting thing you can do. Takes this as an example: You download our release of a pretty big in size game and it is version 1.5. We release version 1.6 but it is standalone. You want to seed our current release but this means you would need to redownload the release. Well not quite. You can also re-create the dwarfs image we made by using a third party for the updated files and then compressing the files yourself.
+This is a pretty particular quirky yet interesting thing you can do. Take this as an example: You download our release of a pretty big in size game and it is version 1.5. We release version 1.6 but it is standalone. You want to seed our current release but this means you would need to redownload the release. Well not quite. You can also re-create the dwarfs image we made by using a third party for the updated files and then compressing the files yourself.
 
 This alone would not enable you to create a similar or identical dwarfs image. However, we have implemented some automatization for this use case. Recent releases include in the files directory a text file called dwarfs-tree.txt where you can see the listing of all the files included in the dwarfs image. In the block-lvl.txt there will be some values for the compression settings which vary depending on the release. These values are automatically used by the command `bash settings.sh compress` if the file is present.
 
