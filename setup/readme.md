@@ -16,7 +16,7 @@ In return for this extended involvment for your part towards running our release
 ### Supported GNU/Linux Distributions
 
 *   Arch including: Endeavour OS, Arco, Artix, Manjaro, etc.
-*   Debian Sid/Rolling including: Nitrux, Sparky Rolling, Siduction and Mint/LMDE, etc.
+*   Debian Sid/Rolling including: Sparky Rolling, Siduction and Mint/LMDE, etc.
 *   NixOS
 <br><br>
 
