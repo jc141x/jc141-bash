@@ -7,6 +7,7 @@
 # wine
 export WINE="$(command -v wine)";
 export WINEPREFIX="$JCD/wine/native-prefix"; export WINEDLLOVERRIDES="winemenubuilder.exe=d;mshtml=d"; export WINE_LARGE_ADDRESS_AWARE=1; export RESTORE_RESOLUTION=1; export WINE_D3D_CONFIG="renderer=vulkan" && echo "wined3d vulkan renderer is used.";
+
 # dwarfs
 bash "$PWD/settings.sh" mount; zcat "$PWD/logo.txt.gz"; echo "Path of the wineprefix is: $WINEPREFIX";
 
