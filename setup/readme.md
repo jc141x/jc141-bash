@@ -8,7 +8,6 @@ In return for this extended involvment for your part towards running our release
 
 - Running releases without extracting them through the use of DwarFS.
 - Blocking WAN activity through the use of bindToInterface. (optional)
-- Complete filesystem isolation through the use of bubblewrap. Guaranteeing safety for running proprietary files.
 - A highly flexible use of scripting which enables users to achieve a lot of wishes such as: recreating dwarfs files, using own compilation/custom versions of software since we rely on packages instead of static linking and some other options available.
 
 <br><br>
