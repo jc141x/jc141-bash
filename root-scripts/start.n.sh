@@ -5,9 +5,6 @@ export JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD/native" ] 
 [ "${WANBLOCK:=1}" = "0" ] || { echo "WAN blocking enabled." && UNSHARE="--unshare-net"; }
 [ -f "/bin/nvidia-modprobe" ] && MODPROBE="--ro-bind /usr/bin/true /usr/bin/nvidia-modprobe"; [ -f "$HOME/.Xauthority" ] && XAUTH="--ro-bind $HOME/.Xauthority $HOME/.Xauthority"; [ -f "/tmp/.X11-unix" ] && X11="--ro-bind /tmp/.X11-unix /tmp/.X11-unix";
 
-
-[ "${ISOLATION:=1}" = "0" ] && echo "Bubblewrap isolation is enabled." && BWRAP="bwrap $MODPROBE $UNSHARE --ro-bind / / --dev-bind /dev /dev --tmpfs /tmp --bind "$JCD"/native ~/ --bind "$(pwd)/" "$(pwd)/"" && export WANBLOCK=0 || echo "Bubblewrap isolation disabled."
-
 # dwarfs
 bash "$STS" mount; zcat "$LOGO";
 
