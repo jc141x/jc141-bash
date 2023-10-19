@@ -2,6 +2,7 @@
 # checks
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed." && exit; [ ! -x "$(command -v bwrap)" ] && echo "bubblewrap not installed." && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed." && exit; cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; export JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD/wine" ] && mkdir -p "$JCD/wine"
 [ -f "/bin/nvidia-modprobe" ] && MODPROBE="--ro-bind /usr/bin/true /usr/bin/nvidia-modprobe"
+[ "${ISOLATION:=1}" = "0" ] && echo "Bubblewrap isolation is enabled." && BWRAP="bwrap $MODPROBE $UNSHARE --ro-bind / / --dev-bind /dev /dev --tmpfs /tmp --bind "$JCD"/native ~/ --bind "$(pwd)/" "$(pwd)/"" && export WANBLOCK=0 || echo "Bubblewrap isolation disabled."
 [ "${WANBLOCK:=1}" = "0" ] && echo "WAN blocking enabled." && UNSHARE="--unshare-net" || echo "WAN blocking disabled."
 
 # wine
@@ -17,4 +18,4 @@ bash "$PWD/settings.sh" mount; zcat "$PWD/logo.txt.gz"; echo "Path of the winepr
 # start
 echo "For any misunderstandings or need of support, join the community on Matrix."
 [ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && echo "Output muted by default to avoid performance impact. Can unmute with DBG=1." && exec &>/dev/null; }
-cd "$PWD/files/groot"; bwrap $MODPROBE $UNSHARE --ro-bind / / --dev-bind /dev /dev --tmpfs tmp/ --bind "$JCD"/wine ~/.local/share/jc141/wine --bind "$(pwd)/" "$(pwd)/" "$WINE" "game.exe" "$@"
+cd "$PWD/files/groot"; $BWRAP "$WINE" "game.exe" "$@"
