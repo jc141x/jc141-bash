@@ -258,6 +258,8 @@ WANBLK=0 - Disables WAN blocking which is enabled by default if bindtointerface 
 
 UNMOUNT=0 - Disables auto-unmounting of the dwarfs image from 'files/groot'.
 
+ISOLATION=0 - Disabled bubblewrap filesystem isolation and networking blocking.
+
 __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia  __VK_LAYER_NV_optimus=NVIDIA_only VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json - Forces Nvidia to be used by default instead of integrated graphics.
 ```
 
