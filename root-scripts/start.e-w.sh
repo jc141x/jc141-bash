@@ -2,8 +2,8 @@
 # checks
 [ ! -x "$(command -v dwarfs)" ] && echo "dwarfs not installed." && exit; [ ! -x "$(command -v bwrap)" ] && echo "bubblewrap not installed." && exit; [ ! -x "$(command -v fuse-overlayfs)" ] && echo "fuse-overlayfs not installed." && exit; cd "$(dirname "$(readlink -f "$0")")" || exit; [ "$EUID" = "0" ] && exit; export JCD="${XDG_DATA_HOME:-$HOME/.local/share}/jc141"; [ ! -d "$JCD/wine" ] && mkdir -p "$JCD/wine"
 [ -f "/bin/nvidia-modprobe" ] && MODPROBE="--ro-bind /usr/bin/true /usr/bin/nvidia-modprobe"
-[ "${ISOLATION:=1}" = "0" ] && echo "Bubblewrap isolation is enabled." && BWRAP="bwrap $MODPROBE $UNSHARE --ro-bind / / --dev-bind /dev /dev --tmpfs /tmp --bind "$JCD"/native ~/ --bind "$(pwd)/" "$(pwd)/"" && export WANBLOCK=0 || echo "Bubblewrap isolation disabled."
-[ "${WANBLOCK:=1}" = "0" ] && echo "WAN blocking enabled." && UNSHARE="--unshare-net" || echo "WAN blocking disabled."
+[ "${ISOLATION:=1}" = "0" ] ||  { echo "Bubblewrap isolation is enabled." && BWRAP="bwrap $UNSHARE --ro-bind /usr /usr --symlink usr/bin /bin --symlink usr/bin /sbin --symlink usr/lib /lib --symlink usr/lib /lib64 --ro-bind /opt /opt --dev /dev --tmpfs /var --tmpfs /tmp --tmpfs /run --dir /run/user/$UID --ro-bind /etc /etc --proc /proc --bind "$JCD"/native $HOME --ro-bind $HOME/.Xauthority $HOME/.Xauthority --unshare-all --setenv PATH /usr/bin:/bin:/usr/local/sbin:/usr/local/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl --bind "$(pwd)/" "$(pwd)/" --ro-bind-try "${XDG_RUNTIME_DIR}"/"${wayland_socket}" "${XDG_RUNTIME_DIR}"/"${wayland_socket}"" && export WANBLOCK=0; }
+[ "${WANBLOCK:=1}" = "0" ] || { echo "WAN blocking enabled." && UNSHARE="--unshare-net"; }
 
 # wine
 export WINE="$(command -v wine)";
