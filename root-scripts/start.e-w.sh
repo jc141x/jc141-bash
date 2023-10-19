@@ -26,6 +26,9 @@ vulkan-dl() { echo "Using external vulkan translation (dxvk,vkd3d,dxvk-nvapi)." 
 [[ ! -f "$VLKLOG" && -z "$(status-vulkan)" ]] && vulkan-dl;
 [[ -f "$VLKLOG" && -n "$VLKVER" && "$VLKVER" != "$(awk '{print $1}' "$VLKLOG")" ]] && { rm -f vulkan.tar.xz || true; } && vulkan-dl; export DXVK_ENABLE_NVAPI=1
 
+# block WAN
+[ ! -f "/usr/lib64/bindToInterface.so" ] && echo "bindtointerface package not installed, no WAN blocking." || [ "${WANBLK:=1}" = "0" ] && echo "WAN blocking is not enabled due to user input." || { export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD='/usr/$LIB/bindToInterface.so'; echo "bindtointerface WAN blocking enabled. Can disable with WANBLK=0."; }
+
 # start
 echo "For any misunderstandings or need of support, join the community on Matrix.";
 [ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && echo "Output muted by default to avoid performance impact. Can unmute with DBG=1." && exec &>/dev/null; }
