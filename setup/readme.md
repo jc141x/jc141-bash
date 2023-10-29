@@ -122,7 +122,7 @@ sudo pacman -S --needed rumpowered/dwarfs fuse-overlayfs wine-staging bubblewrap
 
 ```
 git clone https://mpr.makedeb.org/dwarfs-bin.git && cd dwarfs-bin && makedeb -si
-sudo apt install fuse-overlayfs winehq-staging bubblewrap libva2 giflib-tools libgphoto2-6 libxcrypt-source libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386 gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi gstreamer1.0-libav gstreamer1.0-plugins-good:i386 gstreamer1.0-plugins-base:i386 && una install bindtointerface lib32-bindtointerface
+sudo apt install fuse-overlayfs winehq-staging bubblewrap libva2 giflib-tools libgphoto2-6 libxcrypt-source libva2:i386 alsa-utils:i386 libopenal1:i386 libpulse0:i386 gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-vaapi gstreamer1.0-libav gstreamer1.0-plugins-good:i386 gstreamer1.0-plugins-base:i386 libsdl2-image-2.0-0 libsdl2-ttf-2.0-0 && una install bindtointerface lib32-bindtointerface
 ```
 
 -------------------------------------
