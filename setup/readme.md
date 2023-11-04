@@ -206,7 +206,7 @@ sudo apt install libvulkan1 libvulkan1:i386 vulkan-tools
 #### Arch based
 
 ```sh
-sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils libglvnd nvidia lib32-vulkan-icd-loader
+sudo pacman -S --needed lib32-libglvnd lib32-nvidia-utils nvidia lib32-vulkan-icd-loader
 ```
 
 -------------------------------------
