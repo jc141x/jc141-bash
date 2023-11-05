@@ -18,7 +18,6 @@ bash "$PWD/settings.sh" mount; zcat "$PWD/logo.txt.gz"; echo "Path of the winepr
 # bwrap
 bubblewrap_run () { [ -n "${WAYLAND_DISPLAY}" ] && export wayland_socket="${WAYLAND_DISPLAY}" || export wayland_socket="wayland-0"
 [ -z "${XDG_RUNTIME_DIR}" ] && export XDG_RUNTIME_DIR="/run/user/${EUID}"
-[ -f "/bin/nvidia-modprobe" ] && MODPROBE="--ro-bind /usr/bin/true /usr/bin/nvidia-modprobe";
 
 if [ -n "${HOME}" ] && [ "$(echo "${HOME}" | head -c 6)" != "/home/" ]; then HOME_BASE_DIR="$(echo "${HOME}" | cut -d '/' -f2)"
 case "${HOME_BASE_DIR}" in tmp|mnt|media|run|var) ;; *)
@@ -32,19 +31,16 @@ else VAR+=(--ro-bind "${HOME_DIR}" "${HOME}"); fi; [ ! -d "${HOME_DIR}" ] && mkd
 for s in /tmp/.X11-unix/*; do VAR+=(--bind-try "${s}" "${s}"); done
 [ -n "${SPHOME[*]}" ] && VAR+=(--dir "${NEW_HOME}")
 
-bwrap --bind / / --dev-bind /dev /dev --ro-bind /sys /sys --ro-bind-try /tmp /tmp --proc /proc \
-	--ro-bind-try /mnt /mnt --ro-bind-try /run /run --ro-bind-try /var /var --ro-bind-try /etc/resolv.conf /etc/resolv.conf \
-	--ro-bind-try /etc/hosts /etc/hosts --ro-bind-try /etc/nsswitch.conf /etc/nsswitch.conf --tmpfs /tmp/.X11-unix \
-	--ro-bind-try /etc/passwd /etc/passwd --ro-bind-try /etc/group /etc/group --ro-bind-try /etc/machine-id /etc/machine-id \
-	--ro-bind-try /etc/asound.conf /etc/asound.conf --new-session --bind-try /opt /opt --tmpfs /tmp --new-session \
-	--ro-bind-try /usr/lib64 /usr/lib64 \
-	--ro-bind-try /usr/lib /usr/lib \
-	--ro-bind-try /usr/lib/x86_64-linux-gnu/nvidia/current /usr/lib/x86_64-linux-gnu/nvidia/current \
-	--ro-bind-try /usr/lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu \
-	--ro-bind "$JCD"/wine "$JCD"/wine "${VAR[@]}" "${SPHOME[@]}" $MODPROBE "$@"; }
+bwrap --ro-bind / / --dev-bind /dev /dev --ro-bind /sys /sys- --proc /proc \
+      --ro-bind-try /mnt /mnt --ro-bind-try /run /run --ro-bind-try /var /var --ro-bind-try /etc/resolv.conf /etc/resolv.conf \
+      --ro-bind-try /etc/hosts /etc/hosts --ro-bind-try /etc/nsswitch.conf /etc/nsswitch.conf --tmpfs /tmp/.X11-unix \
+      --ro-bind-try /etc/passwd /etc/passwd --ro-bind-try /etc/group /etc/group --ro-bind-try /etc/machine-id /etc/machine-id \
+      --ro-bind-try /etc/asound.conf /etc/asound.conf --new-session --bind-try /opt /opt --tmpfs /tmp --new-session \
+      --ro-bind-try /usr/lib64 /usr/lib64 --ro-bind-try /usr/lib /usr/lib \
+      --bind "$JCD"/wine "$JCD"/wine "${VAR[@]}" "${SPHOME[@]}" "$@"; }
 
 # start
-[ "${ISOLATION:=1}" = "0" ] && echo "Isolation is disabled." && BUBBLEWRAP="" || echo "Isolation is enabled." && BUBBLEWRAP=bubblewrap_run; [ ! -x "$(command -v bwrap)" ] && BUBBLEWRAP="" && echo "Isolation not enabled due to no bwrap package installed."; [ -f "/bin/nvidia-modprobe" ] && BUBBLEWRAP="" && echo "Isolation disabled, not supported on Nvidia proprietary driver yet."
+[ "${ISOLATION:=1}" = "0" ] && echo "Isolation is disabled." && BUBBLEWRAP="" || echo "Isolation is enabled." && BUBBLEWRAP=bubblewrap_run; [ ! -x "$(command -v bwrap)" ] && BUBBLEWRAP="" && echo "Isolation not enabled due to no bwrap package installed."; [ -f "/bin/nvidia-modprobe" ] && BUBBLEWRAP="" && echo "Isolation disabled, not supported on Nvidia proprietary driver."
 echo "For any misunderstandings or need of support, join the community on Matrix."
 [ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && echo "Output muted by default to avoid performance impact. Can unmute with DBG=1." && exec &>/dev/null; }
 cd "$PWD/files/groot"; $BUBBLEWRAP $WINE "game.exe" "$@"
