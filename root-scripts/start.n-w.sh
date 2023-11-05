@@ -12,12 +12,10 @@ bash "$PWD/settings.sh" mount; zcat "$PWD/logo.txt.gz";
 # auto-unmount
 [ "${UNMOUNT:=1}" = "0" ] && echo "Game will not unmount automatically due to user input." || { function cleanup { cd "$OLDPWD" && bash "$PWD/settings.sh" unmount; }; trap 'cleanup' EXIT INT SIGINT SIGTERM; echo "Game will unmount automatically once all child processes close. Can be disabled with UNMOUNT=0."; }
 
-# block WAN
-[ ! -f "/usr/lib64/bindToInterface.so" ] && echo "bindtointerface package not installed, no WAN blocking." || [ "${WANBLK:=1}" = "0" ] && echo "WAN blocking is not enabled due to user input." || { export BIND_INTERFACE=lo; export BIND_EXCLUDE=10.,172.16.,192.168.; export LD_PRELOAD='/usr/$LIB/bindToInterface.so'; echo "bindtointerface WAN blocking enabled. Can disable with WANBLK=0."; }
-
 # bwrap
 bubblewrap_run () { [ -n "${WAYLAND_DISPLAY}" ] && export wayland_socket="${WAYLAND_DISPLAY}" || export wayland_socket="wayland-0"
 [ -z "${XDG_RUNTIME_DIR}" ] && export XDG_RUNTIME_DIR="/run/user/${EUID}"
+[ "${BLOCK_NET:=1}" = "0" ] && echo "network blocking is not enabled due to user input." || UNSHARE="--unshare-net" && echo "network blocking enabled. Can disable with BLOCK_NET=0. (if on Nvidia proprietary driver then its still disabled)";
 
 if [ -n "${HOME}" ] && [ "$(echo "${HOME}" | head -c 6)" != "/home/" ]; then HOME_BASE_DIR="$(echo "${HOME}" | cut -d '/' -f2)"
 case "${HOME_BASE_DIR}" in tmp|mnt|media|run|var) ;; *)
@@ -37,7 +35,7 @@ bwrap --ro-bind / / --dev-bind /dev /dev --ro-bind /sys /sys- --proc /proc \
       --ro-bind-try /etc/passwd /etc/passwd --ro-bind-try /etc/group /etc/group --ro-bind-try /etc/machine-id /etc/machine-id \
       --ro-bind-try /etc/asound.conf /etc/asound.conf --new-session --bind-try /opt /opt --tmpfs /tmp --new-session \
       --ro-bind-try /usr/lib64 /usr/lib64 --ro-bind-try /usr/lib /usr/lib \
-      --bind "$JCD"/wine "$JCD"/wine "${VAR[@]}" "${SPHOME[@]}" "$@"; }
+      --bind "$JCD"/wine "$JCD"/wine "${VAR[@]}" "${SPHOME[@]}" $BLOCK_NET "$@"; }
 
 # start
 [ "${ISOLATION:=1}" = "0" ] && echo "Isolation is disabled." && BUBBLEWRAP="" || echo "Isolation is enabled." && BUBBLEWRAP=bubblewrap_run; [ ! -x "$(command -v bwrap)" ] && BUBBLEWRAP="" && echo "Isolation not enabled due to no bwrap package installed."; [ -f "/bin/nvidia-modprobe" ] && BUBBLEWRAP="" && echo "Isolation disabled, not supported on Nvidia proprietary driver."
