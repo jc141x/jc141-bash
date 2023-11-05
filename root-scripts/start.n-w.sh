@@ -38,7 +38,7 @@ bwrap --ro-bind / / --dev-bind /dev /dev --ro-bind /sys /sys- --proc /proc \
       --bind "$JCD"/wine "$JCD"/wine "${VAR[@]}" "${SPHOME[@]}" $BLOCK_NET "$@"; }
 
 # start
-[ "${ISOLATION:=1}" = "0" ] && echo "Isolation is disabled." && BUBBLEWRAP="" || echo "Isolation is enabled." && BUBBLEWRAP=bubblewrap_run; [ ! -x "$(command -v bwrap)" ] && BUBBLEWRAP="" && echo "Isolation not enabled due to no bwrap package installed."; [ -f "/bin/nvidia-modprobe" ] && BUBBLEWRAP="" && echo "Isolation disabled, not supported on Nvidia proprietary driver."
+[ "${ISOLATION:=1}" = "0" ] && echo "Isolation is disabled." && BUBBLEWRAP="" || echo "Isolation is enabled." && BUBBLEWRAP=bubblewrap_run; [ ! -x "$(command -v bwrap)" ] && BUBBLEWRAP="" && echo "Isolation not enabled due to no bwrap package installed."; lsmod | grep nvidia && BUBBLEWRAP="" && echo "Isolation disabled, not supported on Nvidia proprietary driver." || BUBBLEWRAP=bubblewrap_run;
 echo "For any misunderstandings or need of support, join the community on Matrix."
 [ "${DBG:=0}" = "1" ] || { export WINEDEBUG='-all' && echo "Output muted by default to avoid performance impact. Can unmute with DBG=1." && exec &>/dev/null; }
 cd "$PWD/files/groot"; $BUBBLEWRAP $WINE "game.exe" "$@"
