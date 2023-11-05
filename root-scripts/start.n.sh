@@ -12,7 +12,7 @@ bash "$STS" mount; zcat "$LOGO";
 # bwrap
 bubblewrap_run () { [ -n "${WAYLAND_DISPLAY}" ] && export wayland_socket="${WAYLAND_DISPLAY}" || export wayland_socket="wayland-0"
 [ -z "${XDG_RUNTIME_DIR}" ] && export XDG_RUNTIME_DIR="/run/user/${EUID}"
-[ "${BLOCK_NET:=1}" = "0" ] && echo "network blocking is not enabled due to user input." || UNSHARE="--unshare-net" && echo "network blocking enabled. Can disable with BLOCK_NET=0.";
+[ "${BLOCK_NET:=1}" = "0" ] && echo "network blocking is not enabled due to user input." || UNSHARE="--unshare-net" && echo "network blocking enabled. Can disable with BLOCK_NET=0. (if on Nvidia proprietary driver then its still disabled)";
 
 if [ -n "${HOME}" ] && [ "$(echo "${HOME}" | head -c 6)" != "/home/" ]; then HOME_BASE_DIR="$(echo "${HOME}" | cut -d '/' -f2)"
 case "${HOME_BASE_DIR}" in tmp|mnt|media|run|var) ;; *)
@@ -35,7 +35,7 @@ bwrap --ro-bind / / --dev-bind /dev /dev --ro-bind /sys /sys- --proc /proc \
       --ro-bind "$JCD"/native / "${VAR[@]}" "${SPHOME[@]}" $BLOCK_NET "$@"; }
 
 # start
-[ "${ISOLATION:=1}" = "0" ] && echo "Isolation is disabled." && BUBBLEWRAP="" || echo "Isolation is enabled." && BUBBLEWRAP=bubblewrap_run; [ ! -x "$(command -v bwrap)" ] && BUBBLEWRAP="" && echo "Isolation not enabled due to no bwrap package installed."; [ -f "/bin/nvidia-modprobe" ] && BUBBLEWRAP="" && echo "Isolation and network blocking disabled, not supported on Nvidia proprietary driver."
+[ "${ISOLATION:=1}" = "0" ] && echo "Isolation is disabled." && BUBBLEWRAP="" || echo "Isolation is enabled." && BUBBLEWRAP=bubblewrap_run; [ ! -x "$(command -v bwrap)" ] && BUBBLEWRAP="" && echo "Isolation not enabled due to no bwrap package installed."; [ -f "/bin/nvidia-modprobe" ] && BUBBLEWRAP="" && echo "Isolation disabled, not supported on Nvidia proprietary driver."
 echo "For any misunderstandings or need of support, join the community on Matrix."
 [ "${DBG:=0}" = "1" ] || { echo "Output muted by default to avoid performance impact. Can unmute with DBG=1." && exec &>/dev/null; }
 cd "$PWD/files/groot"; $BUBBLEWRAP ./"game.bin" "$@"
