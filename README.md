@@ -1,11 +1,6 @@
-### jc141-bash
 
-Instructions, tools and resouces to help you play our releases. Please follow the links below.
+This page has been moved
 
-#### [Setup Guide](setup/readme.md)
+Setup guide https://gitlab.com/jc141x/setup
 
-Setup Guide will allow you to play our releases and it contains instructions for supported GNU/Linux distributions.
-
-#### [Bash Scripts](root-scripts)
-
-Contains tools for adept users to either run their own games or to fix an out of date release on their own.
+Scripting https://gitlab.com/jc141x/scripting
